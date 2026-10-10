@@ -1,5 +1,17 @@
-import { getKnowledge, getCandidatePassages, hasStrongKnowledgeCoverage, resolveDepartmentFromQuery, KnowledgeChunk } from './knowledgeService.js';
-import { analyzeQueryAndSelectEvidence, generateAnswerWithGroq, isExplicitlyUnrelatedQuery, SemanticAnalysisResult } from './groqService.js';
+import {
+  getKnowledge,
+  getCandidatePassages,
+  hasStrongKnowledgeCoverage,
+  isMissingFromKnowledgeBase,
+  resolveDepartmentFromQuery,
+  KnowledgeChunk,
+} from './knowledgeService.js';
+import {
+  analyzeQueryAndSelectEvidence,
+  generateAnswerWithGroq,
+  isExplicitlyUnrelatedQuery,
+  SemanticAnalysisResult,
+} from './groqService.js';
 import { generateAnswerWithGemini } from './geminiService.js';
 import { searchWeb, WebSearchResult } from './webSearchService.js';
 
@@ -45,12 +57,13 @@ export async function processChatQuery(
     semanticResult = await analyzeQueryAndSelectEvidence(cleanQuery, history, candidatePassages);
   } catch (err: any) {
     console.warn('[Orchestrator] Groq semantic analysis failed, using heuristic fallback:', err?.message || err);
+    const hasCoverage = candidatePassages.length > 0 && hasStrongKnowledgeCoverage(cleanQuery, candidatePassages);
     semanticResult = {
       isKecRelated: !isExplicitlyUnrelatedQuery(cleanQuery, history),
       detectedLanguage: 'English',
       intent: cleanQuery,
-      selectedChunks: candidatePassages.slice(0, 4),
-      foundInFile: candidatePassages.length > 0 && !knowledge.isEmpty,
+      selectedChunks: hasCoverage ? candidatePassages.slice(0, 4) : [],
+      foundInFile: hasCoverage,
       suggestedWebQuery: `Kongu Engineering College ${cleanQuery}`,
     };
   }
@@ -74,8 +87,8 @@ export async function processChatQuery(
     };
   }
 
-  // 5. CRITICAL REQUIREMENT: Always check college-info.txt first!
-  // If strong knowledge coverage exists in the file, NEVER divert to live web search
+  // 5. STAGE 1 PREPARATION: Check college-info.txt first!
+  // If strong knowledge coverage exists in the file, prioritize college-info.txt
   if (
     (!semanticResult.foundInFile || semanticResult.selectedChunks.length === 0) &&
     hasStrongKnowledgeCoverage(cleanQuery, candidatePassages)
@@ -85,9 +98,16 @@ export async function processChatQuery(
     semanticResult.selectedChunks = candidatePassages.slice(0, 4);
   }
 
-  // STRICT DEPARTMENT VALIDATION:
-  // If the query targets a specific department, ensure NO chunks from other departments sneak into selected evidence
+  // If candidatePassages is completely empty or has no strong coverage and no department match,
+  // do not claim foundInFile (prevents sending unrelated faculty chunks for missing questions)
   const queryDept = resolveDepartmentFromQuery(cleanQuery);
+  if (!queryDept && !hasStrongKnowledgeCoverage(cleanQuery, candidatePassages)) {
+    semanticResult.foundInFile = false;
+    semanticResult.selectedChunks = [];
+  }
+
+  // STRICT DEPARTMENT VALIDATION:
+  // If the query targets a specific department, ensure NO chunks from other departments sneak in
   if (queryDept) {
     const validDeptChunks = semanticResult.selectedChunks.filter(
       (c) => c.departmentId === queryDept.id || c.departmentId === 'general'
@@ -95,7 +115,6 @@ export async function processChatQuery(
     if (validDeptChunks.length > 0) {
       semanticResult.selectedChunks = validDeptChunks;
     } else {
-      // Fallback to candidatePassages which are already strictly filtered for queryDept
       semanticResult.selectedChunks = candidatePassages.filter(
         (c) => c.departmentId === queryDept.id || c.departmentId === 'general'
       ).slice(0, 4);
@@ -106,12 +125,14 @@ export async function processChatQuery(
   let providerUsed = '';
   let citations: SourceCitation[] = [];
   let isWebFallback = false;
-  let webResults: WebSearchResult[] | null = null;
 
-  // 4. Determine if we have valid evidence in college-info.txt or need web search fallback
-  if (semanticResult.foundInFile && semanticResult.selectedChunks.length > 0) {
-    // Found in college-info.txt!
-    // Try Gemini first (with multi-key failover)
+  // =========================================================================
+  // STAGE 1: SEARCH THE EXISTING COLLEGE KNOWLEDGE BASE FIRST
+  // =========================================================================
+  const shouldAttemptStage1 = semanticResult.foundInFile && semanticResult.selectedChunks.length > 0;
+
+  if (shouldAttemptStage1) {
+    console.log(`[Orchestrator] Stage 1: Searching college-info.txt (${semanticResult.selectedChunks.length} chunks)...`);
     try {
       const geminiRes = await generateAnswerWithGemini(
         cleanQuery,
@@ -123,8 +144,7 @@ export async function processChatQuery(
       finalAnswer = geminiRes.text;
       providerUsed = `${geminiRes.provider} (Key #${geminiRes.usedKeyIndex})`;
     } catch (geminiErr: any) {
-      console.warn('[Orchestrator] Gemini failed, falling back to Groq for answer:', geminiErr?.message || geminiErr);
-      // Fallback to Groq for answer generation
+      console.warn('[Orchestrator] Gemini failed in Stage 1, falling back to Groq:', geminiErr?.message || geminiErr);
       try {
         const groqRes = await generateAnswerWithGroq(
           cleanQuery,
@@ -136,45 +156,64 @@ export async function processChatQuery(
         finalAnswer = groqRes.text;
         providerUsed = groqRes.provider;
       } catch (groqErr: any) {
-        throw new Error(
-          `Both AI providers failed. Gemini: ${geminiErr?.message}. Groq: ${groqErr?.message}`
-        );
+        console.warn('[Orchestrator] Both AI providers failed in Stage 1:', groqErr?.message || groqErr);
       }
     }
 
-    // Build citations from selected chunks in college-info.txt
-    const seenSections = new Set<string>();
-    for (const chunk of semanticResult.selectedChunks) {
-      if (!seenSections.has(chunk.sectionTitle)) {
-        seenSections.add(chunk.sectionTitle);
-        citations.push({
-          type: 'file',
-          title: `college-info.txt → ${chunk.sectionTitle}`,
-          section: chunk.sectionTitle,
-          snippet: chunk.content.slice(0, 160) + (chunk.content.length > 160 ? '...' : ''),
-        });
-      }
-      for (const url of chunk.urls) {
-        citations.push({
-          type: 'web',
-          title: `Official Link (${chunk.sectionTitle})`,
-          url,
-          section: chunk.sectionTitle,
-        });
+    // VERIFY STAGE 1 RESULT:
+    // If the answer explicitly states that the requested detail is not available, missing,
+    // or unverified in official college records, escalate to Stage 2 (Web Search Fallback)
+    if (finalAnswer && isMissingFromKnowledgeBase(finalAnswer)) {
+      console.log(
+        `[Orchestrator] Stage 1 answer indicates information is missing/unverified in college records: "${finalAnswer.trim()}". Automatically escalating to Stage 2 Web Search Fallback...`
+      );
+      finalAnswer = ''; // Reset so Stage 2 executes
+    } else if (finalAnswer) {
+      // Stage 1 successfully answered using reliable evidence from college-info.txt!
+      isWebFallback = false;
+      const seenSections = new Set<string>();
+      for (const chunk of semanticResult.selectedChunks) {
+        if (!seenSections.has(chunk.sectionTitle)) {
+          seenSections.add(chunk.sectionTitle);
+          citations.push({
+            type: 'file',
+            title: `college-info.txt → ${chunk.sectionTitle}`,
+            section: chunk.sectionTitle,
+            snippet: chunk.content.slice(0, 160) + (chunk.content.length > 160 ? '...' : ''),
+          });
+        }
+        for (const url of chunk.urls) {
+          citations.push({
+            type: 'web',
+            title: `Official Link (${chunk.sectionTitle})`,
+            url,
+            section: chunk.sectionTitle,
+          });
+        }
       }
     }
-  } else {
-    // 5. Information NOT found in college-info.txt -> Search all around the internet and reply!
+  }
+
+  // =========================================================================
+  // STAGE 2: SEARCH THE WEB WHEN INFORMATION IS MISSING OR INSUFFICIENT
+  // =========================================================================
+  if (!finalAnswer) {
     isWebFallback = true;
+    citations = [];
     const searchQuery = semanticResult.suggestedWebQuery || `Kongu Engineering College ${cleanQuery}`;
-    console.log(`[Orchestrator] Info not in college-info.txt. Searching the web for: "${searchQuery}"`);
+    console.log(`[Orchestrator] Stage 2: Searching the web for: "${searchQuery}"`);
 
-    webResults = await searchWeb(searchQuery, 4);
+    let webResults: WebSearchResult[] = [];
+    try {
+      webResults = await searchWeb(searchQuery, 5);
+    } catch (searchErr: any) {
+      console.warn('[Orchestrator] Web search error:', searchErr?.message || searchErr);
+    }
+
     const webText = webResults
       .map((r, i) => `[${i + 1}] ${r.title}\nURL: ${r.url}\nSummary: ${r.snippet}`)
       .join('\n\n');
 
-    // Try Gemini with web results
     try {
       const geminiRes = await generateAnswerWithGemini(
         cleanQuery,
@@ -198,9 +237,7 @@ export async function processChatQuery(
         finalAnswer = groqRes.text;
         providerUsed = `${groqRes.provider} [Web Search Fallback]`;
       } catch (groqErr: any) {
-        throw new Error(
-          `Both providers failed during web search answering. Gemini: ${geminiErr?.message}. Groq: ${groqErr?.message}`
-        );
+        console.warn('[Orchestrator] Both AI providers failed in Stage 2:', groqErr?.message || groqErr);
       }
     }
 
@@ -212,6 +249,30 @@ export async function processChatQuery(
         url: res.url,
         snippet: res.snippet,
       });
+    }
+
+    // MANDATORY UNAVAILABLE-INFORMATION RESPONSE REQUIREMENT:
+    // If web search produced no sufficient, reliable evidence or failed to verify, respond:
+    // "Information regarding this topic could not be verified from the available college records or reliable web sources."
+    const unavailableResponse =
+      'Information regarding this topic could not be verified from the available college records or reliable web sources.';
+
+    if (!finalAnswer || webResults.length === 0) {
+      finalAnswer = unavailableResponse;
+    } else {
+      const lowerAns = finalAnswer.toLowerCase();
+      if (
+        lowerAns.includes('could not be verified') ||
+        lowerAns.includes('cannot be verified') ||
+        lowerAns.includes('not available in the available college records') ||
+        lowerAns.includes('not available in official') ||
+        lowerAns.includes('is not specified') ||
+        lowerAns.includes('not mentioned in')
+      ) {
+        if (!finalAnswer.includes('could not be verified from the available college records or reliable web sources')) {
+          finalAnswer = unavailableResponse;
+        }
+      }
     }
   }
 

@@ -260,11 +260,12 @@ CORE ANSWERING RULES (STRICT):
      * NEVER substitute rank with cutoff marks when rank was asked!
    - Always understand the precise intent: Answer exactly what is asked with laser precision.
 
-3. NEVER REDIRECT USERS TO WEBSITE LINKS — PROVIDE THE DATA YOURSELF:
-   - NEVER tell the user to "visit the official website", "check the link below", "refer to the college portal", or "find the information online".
-   - You MUST extract, synthesize, and provide the actual data yourself. The user asked YOU for the answer, not for a link to browse.
-   - Do NOT include generic disclaimers telling the user to check the website.
-   - Only provide a URL if the user explicitly asked for a website link or portal address.
+3. DIRECT DATA WITH AUTHORITATIVE CITATIONS:
+   ${
+     isWebFallback
+       ? '- When answering from web search results, synthesize and state verified facts directly (e.g. the exact number/count, key members, names). Always include the relevant official source URL as a markdown or plain link. Do NOT tell the user to browse links or search online.'
+       : '- When answering from the official college records, provide the data directly. NEVER tell the user to visit the official website or check links. Only provide a URL if explicitly requested.'
+   }
 
 4. MULTILINGUAL FIDELITY:
    - Answer in the EXACT SAME LANGUAGE as the user's query (${detectedLanguage}):
@@ -276,8 +277,8 @@ CORE ANSWERING RULES (STRICT):
 5. FACTUAL ACCURACY & UNVERIFIED INFORMATION:
    ${
      isWebFallback
-       ? 'The requested topic was not in local files. Synthesize and provide verified facts directly from web search results without telling the student to browse links. If the information cannot be verified, clearly explain that it could not be verified in official KEC college records. Do NOT invent facts.'
-       : 'Use the provided college knowledge passages as your factual truth. Present the estimated cutoff figures directly if requested. If a specific detail is absent from the college records, clearly explain that it could not be verified in official college records. Do NOT invent facts.'
+       ? 'The requested topic was not in local files. Answer directly using verified evidence from the search results. If the web search results do not provide sufficient, reliable evidence to verify the answer, respond EXACTLY: "Information regarding this topic could not be verified from the available college records or reliable web sources." Do NOT invent facts.'
+       : 'Use the provided college knowledge passages as your factual truth. Present the estimated cutoff figures directly if requested. If a specific detail is absent from the college records, clearly explain: "Information regarding this detail is not available in the official college records." Do NOT invent facts.'
    }
    - NEVER respond with an unnecessary apology such as "Sorry, I cannot help with that" or "I apologize". State verified facts or unverified status directly and objectively.
 

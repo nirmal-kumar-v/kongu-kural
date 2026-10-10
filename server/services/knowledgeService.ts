@@ -690,7 +690,8 @@ const STOP_WORDS = new Set([
   'enna', 'yaaru', 'sollu', 'sollunga', 'paththi', 'available', 'show', 'need', 'want',
   'which', 'who', 'whom', 'where', 'when', 'why', 'are', 'was', 'were', 'will', 'would',
   'with', 'from', 'this', 'that', 'last', 'year', 'years',
-  'tamil', 'nadu', 'current', 'state', 'government'
+  'tamil', 'nadu', 'current', 'state', 'government',
+  'many', 'members', 'member', 'number', 'count', 'total'
 ]);
 
 const SYNONYM_MAP: Record<string, string[]> = {
@@ -719,7 +720,7 @@ const SYNONYM_MAP: Record<string, string[]> = {
   packages: ['package', 'packages', 'salary', 'salaries', 'lpa', 'ctc', 'placement', 'placements'],
   lpa: ['lpa', 'salary', 'package', 'placement'],
   faculty: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'assistant professor', 'associate professor', 'hod'],
-  staff: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'members'],
+  staff: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'teaching faculty'],
   cse: ['cse', 'computer science', 'computer science and engineering'],
   it: ['it', 'information technology'],
   aids: ['ai-ds', 'aids', 'ai & ds', 'artificial intelligence and data science', 'data science'],
@@ -845,7 +846,7 @@ export function getCandidatePassages(query: string, maxCandidates = 20): Knowled
     return topMatches.slice(0, maxCandidates);
   }
 
-  return candidatePool.slice(0, maxCandidates);
+  return [];
 }
 
 const SPECIFIC_DOMAIN_KEYWORDS = new Set([
@@ -894,3 +895,36 @@ export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeC
 
   return false;
 }
+
+/**
+ * Checks if the generated answer indicates that the requested information is absent,
+ * partial, or unverified in the official college records.
+ */
+export function isMissingFromKnowledgeBase(text: string): boolean {
+  if (!text) return true;
+  const lower = text.toLowerCase();
+  const missingIndicators = [
+    'not available in the official',
+    'not specified in the official',
+    'could not be verified from the available college records',
+    'could not be verified in official',
+    'cannot be verified from the available college records',
+    'cannot be verified in official',
+    'not mentioned in the official',
+    'not found in the official',
+    'not available in the college records',
+    'not specified in the college records',
+    'not mentioned in the college records',
+    'no information regarding',
+    'not present in the official records',
+    'records do not contain',
+    'records do not specify',
+    'records do not provide',
+    'not provided in the official',
+    'not available in the provided',
+    'not found in the provided',
+    'information regarding this detail is not available',
+  ];
+  return missingIndicators.some((indicator) => lower.includes(indicator));
+}
+
