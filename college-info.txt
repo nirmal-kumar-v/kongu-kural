@@ -1,0 +1,68 @@
+Hostel :
+KEC Hostel Staff Details
+Hostel	Staff Name	Designation	Contact Info	Email ID
+KEC HOSTELS	Dr. R. PARAMESHWARAN (PRINCIPAL)	CHIEF WARDEN	9942820583	principal@kongu.ac.in
+KEC HOSTELS	Dr. K. KANNAN Prof / CHEM	ASSOCIATE WARDEN	9842823432	kannank@kongu.ac.in
+KEC HOSTELS	Dr. K. MANJULA RANI ASP / CHEMISTRY	SENIOR DEPUTY WARDEN (Ladies Hostel)	9443087977	manjula@kongu.ac.in
+AMARAVATHI	Ms. D RAMYA AP / ENGLISH	DEPUTY WARDEN	9626233699	dramya@kongu.ac.in
+AMARAVATHI	Ms. KAVITHRA S / IT	ASSISTANT WARDEN	9489657063	—
+AMARAVATHI	Ms. N. KAYA / CT - UG	ASSISTANT WARDEN	8122253359	—
+KAVERI	Ms. K. SUVALAKSHMI AP / CSE	ASSISTANT WARDEN	9384538700	—
+KAVERI	Ms. G. DEEPIKA AP/CT UG	ASSISTANT WARDEN	8870110280	—
+KAVERI	Ms. S. SHOBANA / ENGLISH	ASSISTANT WARDEN	9360038345	—
+BHAVANI	Ms. V.N. KOWSALYA AP (Sr.G) / CHEMISTRY	DEPUTY WARDEN	7010877103	kowsalya@kongu.ac.in
+BHAVANI	Ms. D. PAVITHRA (Asst PED)	ASSISTANT WARDEN	6383289403	—
+BHAVANI	Ms. RAGAVI M / Phd Scholar (Chemistry)	ASSISTANT WARDEN	9500928696	—
+BHAVANI	Ms. N. RENUKA / AI	ASSISTANT WARDEN	8610949712	—
+NATUROPATHY HOSTEL (IV - BE)	Dr. K. SARASWATHI CT / UG	DEPUTY WARDEN	9665304338	saraswathik@kongu.ac.in
+NATUROPATHY HOSTEL (IV - BE)	Ms. S. KOKILA / ENGLISH	ASSISTANT WARDEN	9976185091	—
+VALLUVAR	Fly. Off. JEEVANANTHAM AP / IT	DEPUTY WARDEN	7373222233	—
+VALLUVAR	Mr. N. KANNAN / AI	ASSISTANT WARDEN	8870766648	—
+VALLUVAR	Mr. SELVARAJ S / CSD	ASSISTANT WARDEN	9994284106	selvarajs@kongu.ac.in
+VALLUVAR	Mr. S. ARUN PRAKASH / JRF // Mtrs	ASSISTANT WARDEN	8637435768	—
+KAMBAN	Mr. SELVA KARTHI AP / EIE	DEPUTY WARDEN	9789951541	—
+KAMBAN	Mr. MANIKANDAN C / Physical Training Instructor	ASSISTANT WARDEN	9095390690	—
+KAMBAN	Mr. S. YUVARAJ AP / CHEMICAL	ASSISTANT WARDEN	9626651594	—
+ILANGO	Mr. V. ARUN JOSHY AP / FT	ASSISTANT WARDEN	9360860428	—
+ILANGO	Mr. T. SURENDRAN / Mtrs	ASSISTANT WARDEN	7358761043	—
+ILANGO	Mr. M. VIGNESH / ECE	ASSISTANT WARDEN	8608606344	—
+PONNAR	Dr. M. BHUVANESHKUMAR / MECHANICAL	DEPUTY WARDEN	8667007051	bhuvaneshkumar@kongu.ac.in
+PONNAR	Mr. M. NEELAMEGAN AP / AI	ASSISTANT WARDEN	9788590654	—
+PONNAR	Mr. R. ARAVINDH / EEE	ASSISTANT WARDEN	9715495369	—
+PONNAR	Mr. D. SARATHKUMAR AP / EEE	ASSISTANT WARDEN	9688427208	—
+SANKAR	Dr. SURENDAR V / EEE	DEPUTY WARDEN	9952264648	surendar136@kongu.ac.in
+SANKAR	Mr. B. RAVISANKAR AP / CTUG	ASSISTANT WARDEN	9791409475	—
+SANKAR	Mr. R. GOWTHAM / Automobile	ASSISTANT WARDEN	9629702739	—
+DHEERAN	Dr. K. MAHESVARAN AP / PHYSICS	DEPUTY WARDEN	8973306570	maheshvarank@gmail.com
+DHEERAN	Mr. V. PARTHIBARAJ AP / PHYSICS	ASSISTANT WARDEN	9080554215	—
+DHEERAN	Mr. THIRUMALAIRAJAN AP / ENG	ASSISTANT WARDEN	7904544862	—
+DHEERAN	Mr. CHANDRU S Research Scholar (Physics)	ASSISTANT WARDEN	7598926469	—
+DHEERAN	Mr. S. MARIMUTHU / English	ASSISTANT WARDEN	9384902267	—
+Hostel Accommodation Details
+Category	Hostel / Facility	Details
+Boys' Hostels (7 Blocks)	Dheeran Men's Hostel	Boys' hostel
+Boys' Hostels (7 Blocks)	Valluvar Men's Hostel	Boys' hostel
+Boys' Hostels (7 Blocks)	Ilango Men's Hostel	Boys' hostel
+Boys' Hostels (7 Blocks)	Bharathi Men's Hostel	Boys' hostel
+Boys' Hostels (7 Blocks)	Kamban Men's Hostel	Boys' hostel
+Boys' Hostels (7 Blocks)	Ponnar Men's Hostel	Boys' hostel
+Boys' Hostels (7 Blocks)	Sankar Men's Hostel	Boys' hostel
+Girls' Hostels (4 Blocks)	Kaveri Ladies Hostel	Girls' hostel
+Girls' Hostels (4 Blocks)	Amaravathi Ladies Hostel	Girls' hostel
+Girls' Hostels (4 Blocks)	Bhavani Ladies Hostel	Girls' hostel
+Girls' Hostels (4 Blocks)	Additional Ladies Hostel Block	Listed under official KEC accommodation
+Guest Houses	On-campus Guest House	Guest accommodation
+Guest Houses	Alumni Guest House	Guest accommodation
+Key Details
+Item	Information
+Food	Strictly vegetarian meals provided in a hygienic mess system
+Annual Fees	Approximately ₹50,000 to ₹90,000, depending on year of study and room type
+Security	24/7 security
+Internet	Wi-Fi connectivity
+Utilities	Power and water supply
+Recreation	Gyms and sports grounds
+
+
+it department:
+
+hod name: varathaganapathy
