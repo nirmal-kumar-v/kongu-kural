@@ -68,7 +68,7 @@ export async function executeGroqWithFailover<T>(
 ): Promise<{ result: T; usedKeyIndex: number }> {
   const keys = getGroqKeys();
   if (keys.length === 0) {
-    throw new Error('No Groq API keys configured in .env (GROQ_API_KEY_1, GROQ_API_KEY_2, GROQ_API_KEY_3)');
+    throw new Error('No Groq API keys configured. Please set GROQ_API_KEY (or GROQ_API_KEY_1) in your environment variables.');
   }
 
   let lastError: any = null;

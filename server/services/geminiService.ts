@@ -18,7 +18,7 @@ export async function executeGeminiWithFailover<T>(
 ): Promise<{ result: T; usedKeyIndex: number }> {
   const keys = getGeminiKeys();
   if (keys.length === 0) {
-    throw new Error('No Gemini API keys configured in .env (GEMINI_API_KEY_1, GEMINI_API_KEY_2, GEMINI_API_KEY_3)');
+    throw new Error('No Gemini API keys configured. Please set GEMINI_API_KEY (or GEMINI_API_KEY_1) in your environment variables.');
   }
 
   let lastError: any = null;

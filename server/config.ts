@@ -1,15 +1,37 @@
-import dotenv from 'dotenv';
+import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
-// Load environment variables from .env at project root
-dotenv.config({ path: path.resolve(process.cwd(), '.env') });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load environment variables from .env if present (local development)
+try {
+  const envPath = path.resolve(process.cwd(), '.env');
+  if (fs.existsSync(envPath)) {
+    dotenv.config({ path: envPath });
+  } else {
+    dotenv.config();
+  }
+} catch {
+  // On Vercel, environment variables are injected directly into process.env
+}
 
 function cleanKey(val: string | undefined): string | null {
   if (!val) return null;
-  const trimmed = val.trim();
+  let trimmed = val.trim();
+  // Strip optional surrounding single or double quotes
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    trimmed = trimmed.slice(1, -1).trim();
+  }
   if (
     trimmed === '' ||
     trimmed.startsWith('your_') ||
+    trimmed.startsWith('PASTE_') ||
     trimmed.includes('PLACEHOLDER') ||
     trimmed === 'undefined' ||
     trimmed === 'null'
@@ -21,10 +43,10 @@ function cleanKey(val: string | undefined): string | null {
 
 export function getGeminiKeys(): string[] {
   const keys = [
+    cleanKey(process.env.GEMINI_API_KEY),
     cleanKey(process.env.GEMINI_API_KEY_1),
     cleanKey(process.env.GEMINI_API_KEY_2),
     cleanKey(process.env.GEMINI_API_KEY_3),
-    cleanKey(process.env.GEMINI_API_KEY),
   ].filter((k): k is string => Boolean(k));
 
   // Deduplicate while preserving order
@@ -33,19 +55,46 @@ export function getGeminiKeys(): string[] {
 
 export function getGroqKeys(): string[] {
   const keys = [
+    cleanKey(process.env.GROQ_API_KEY),
     cleanKey(process.env.GROQ_API_KEY_1),
     cleanKey(process.env.GROQ_API_KEY_2),
     cleanKey(process.env.GROQ_API_KEY_3),
-    cleanKey(process.env.GROQ_API_KEY),
   ].filter((k): k is string => Boolean(k));
 
   // Deduplicate while preserving order
   return Array.from(new Set(keys));
 }
 
+export function resolveCollegeInfoPath(): string {
+  // 1. Explicit environment variable if configured
+  if (process.env.COLLEGE_INFO_PATH && fs.existsSync(process.env.COLLEGE_INFO_PATH)) {
+    return process.env.COLLEGE_INFO_PATH;
+  }
+
+  // 2. Candidate paths across local dev & Vercel serverless lambda containers
+  const candidates = [
+    path.resolve(process.cwd(), 'college-info.txt'),
+    path.resolve(process.cwd(), '..', 'college-info.txt'),
+    path.resolve(__dirname, 'college-info.txt'),
+    path.resolve(__dirname, '..', 'college-info.txt'),
+    path.resolve(__dirname, '..', '..', 'college-info.txt'),
+  ];
+
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) {
+      return candidate;
+    }
+  }
+
+  // Fallback to project root
+  return path.resolve(process.cwd(), 'college-info.txt');
+}
+
 export const config = {
   port: parseInt(process.env.PORT || '5000', 10),
   geminiModel: process.env.GEMINI_MODEL?.trim() || 'gemini-2.5-flash',
   groqModel: process.env.GROQ_MODEL?.trim() || 'llama-3.3-70b-versatile',
-  collegeInfoPath: path.resolve(process.cwd(), 'college-info.txt'),
+  get collegeInfoPath() {
+    return resolveCollegeInfoPath();
+  },
 };
