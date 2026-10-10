@@ -516,6 +516,238 @@ Artificial Intelligence and Machine Learning	15
 Artificial Intelligence and Data Science	31
 Total	350
 
+
+-----------------------------------------------------------------------------------completed---------------------------------------------------------------------------------
+
+
+Placement Information :
+
+## 1. Placement Overview
+
+Kongu Engineering College (KEC), located at Perundurai, Erode, Tamil Nadu, publishes placement information through its official website, annual reports, mandatory disclosures, and placement-related updates. These sources contain information about students placed, salary packages, recruiting organizations, and department-wise placement performance.
+
+Official website: https://kongu.ac.in/
+
+## 2. Latest Placement Statistics Displayed on the Official Website
+
+The KEC homepage displays the following placement figures for the 2025–2026 placement period:
+
+- Placement offers: 1,784
+- Average salary: ₹5.6 lakh per annum (LPA)
+- Highest salary: ₹61.21 LPA
+- Offers above ₹8 LPA: 172
+- Companies visited: 355
+- Placement status: 94.1%
+
+These figures are the statistics displayed on the official homepage. The placement status should not automatically be interpreted as the percentage of all graduating students placed without checking the college's definition and calculation method.
+
+Source: https://kongu.ac.in/
+
+## 3. Placement Statistics for 2024–2025
+
+According to the KEC Mandatory Disclosure published in July 2025, the college reported the following overall placement figures:
+
+- Students placed: 1,360
+- Students graduated: 1,453
+
+The same disclosure lists department-wise placement counts and salary information for 2024–2025, 2023–2024, and 2022–2023. These figures belong to their respective academic years and should not be combined with the 2025–2026 homepage figures.
+
+Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 4. Placement Information for 2023–2024
+
+The KEC Annual Report for 2024–2025 states that 1,108 students secured 1,320 placement offers during the placement activity described in the report. It also states that more than 734 students were permitted to take part in internship-cum-job opportunities.
+
+The report identifies this as information for the relevant reporting year. These figures should not be presented as the latest placement results or as the number of students placed in 2025–2026.
+
+Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+
+## 5. Companies Recruiting at KEC
+
+The KEC Annual Report for 2024–2025 identifies the following organizations among those offering internship-cum-recruitment opportunities:
+
+- Rubrik
+- Zoho
+- Mr. Cooper
+- Zopsmart
+- FourKites
+- Presidio
+- Azentio
+- Infosys
+- Cognizant
+- Honeywell
+- Soliton Technologies
+- JGC
+- India Cements
+- SPIC
+- Tata Group
+- JSW
+- Adani Group
+- Applied Materials
+- Ford Motors
+- TVS Group
+
+This is a list of organizations identified in that annual report, not a guarantee that every organization recruits during every academic year.
+
+Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+
+## 6. Placement Salary Information by Department
+
+The KEC Mandatory Disclosure for 2024–2025 provides department-wise placement counts and minimum, maximum, and average salaries. The following are examples from the published table.
+
+**B.E. Civil Engineering**
+- Students placed in 2024–2025: 50
+- Minimum salary: ₹2.4 LPA
+- Maximum salary: ₹7.5 LPA
+- Average salary: ₹3.7 LPA
+
+**B.E. Mechanical Engineering**
+- Students placed in 2024–2025: 80
+- Minimum salary: ₹2.8 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹4.4 LPA
+
+**B.E. Mechatronics Engineering**
+- Students placed in 2024–2025: 104
+- Minimum salary: ₹2.6 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹4.4 LPA
+
+**B.E. Automobile Engineering**
+- Students placed in 2024–2025: 48
+- Minimum salary: ₹1.8 LPA
+- Maximum salary: ₹7.5 LPA
+- Average salary: ₹3.6 LPA
+
+**B.E. Electrical and Electronics Engineering**
+- Students placed in 2024–2025: 80
+- Minimum salary: ₹2.4 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹5.3 LPA
+
+**B.E. Electronics and Instrumentation Engineering**
+- Students placed in 2024–2025: 94
+- Minimum salary: ₹2.8 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹5.2 LPA
+
+**B.E. Electronics and Communication Engineering**
+- Students placed in 2024–2025: 166
+- Minimum salary: ₹2.2 LPA
+- Maximum salary: ₹24.5 LPA
+- Average salary: ₹5.1 LPA
+
+**B.E. Computer Science and Engineering**
+- Students placed in 2024–2025: 174
+- Minimum salary: ₹3 LPA
+- Maximum salary: ₹24.5 LPA
+- Average salary: ₹5.2 LPA
+
+**B.Tech. Information Technology**
+- Students placed in 2024–2025: 86
+- Minimum salary: ₹2.5 LPA
+- Maximum salary: ₹21 LPA
+- Average salary: ₹5.6 LPA
+
+**B.Tech. Chemical Engineering**
+- Students placed in 2024–2025: 67
+- Minimum salary: ₹1.8 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹4.4 LPA
+
+**B.Tech. Food Technology**
+- Students placed in 2024–2025: 19
+- Minimum salary: ₹1.9 LPA
+- Maximum salary: ₹7 LPA
+- Average salary: ₹3.6 LPA
+
+**Master of Business Administration (MBA)**
+- Students placed in 2024–2025: 92
+- Minimum salary: ₹2.4 LPA
+- Maximum salary: ₹7 LPA
+- Average salary: ₹4.3 LPA
+
+**Master of Computer Applications (MCA)**
+- Students placed in 2024–2025: 74
+- Minimum salary: ₹2 LPA
+- Maximum salary: ₹10 LPA
+- Average salary: ₹4.2 LPA
+
+Source for all department figures above: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 7. Computer Science and Information Technology Placements
+
+The mandatory disclosure reports the following 2024–2025 figures:
+
+- Computer Science and Engineering: 174 students placed; average salary ₹5.2 LPA; maximum salary ₹24.5 LPA.
+- Information Technology: 86 students placed; average salary ₹5.6 LPA; maximum salary ₹21 LPA.
+
+These figures apply specifically to the programmes and academic year named above. They should not be used as current salary guarantees for individual students or future graduating batches.
+
+Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 8. Computer Science and Design, Artificial Intelligence and Machine Learning, and Artificial Intelligence and Data Science
+
+The same mandatory disclosure reports 2024–2025 placement results for these programmes:
+
+**B.E. Computer Science and Design**
+- Students placed: 39
+- Minimum salary: ₹2.7 LPA
+- Maximum salary: ₹10 LPA
+- Average salary: ₹5.4 LPA
+
+**B.Tech. Artificial Intelligence and Machine Learning**
+- Students placed: 38
+- Minimum salary: ₹3 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹5.3 LPA
+
+**B.Tech. Artificial Intelligence and Data Science**
+- Students placed: 37
+- Minimum salary: ₹3 LPA
+- Maximum salary: ₹12.3 LPA
+- Average salary: ₹5.7 LPA
+
+Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 9. Internship-Cum-Job Opportunities
+
+The KEC Annual Report for 2024–2025 states that more than 734 students were permitted to take part in internship-cum-job opportunities during the reporting period. It names organizations including Rubrik, Zoho, Mr. Cooper, Zopsmart, FourKites, Presidio, Azentio, Infosys, Cognizant, Honeywell, Soliton Technologies, JGC, India Cements, SPIC, Tata Group, JSW, Adani Group, Applied Materials, Ford Motors, and TVS Group.
+
+Participation in an internship-cum-job opportunity does not necessarily mean that every participating student received a permanent job offer. The outcome depends on the specific opportunity and employer.
+
+Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+
+## 10. Placement Offers and Students Placed
+
+A placement offer and a student placed are different measures. One student may receive more than one offer. Therefore, the total number of offers can exceed the number of students placed.
+
+KEC's annual report for 2024–2025 records 1,108 students securing 1,320 placement offers for the placement activity described in that report. Its mandatory disclosure separately records 1,360 students placed out of 1,453 graduates for 2024–2025. These numbers are from different published reporting statements and should be quoted with their source and context rather than treated as interchangeable.
+
+Sources:
+- https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+- https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 11. Highest, Average, and Department-Wise Salary Figures
+
+The official homepage displays a highest salary of ₹61.21 LPA and an average salary of ₹5.6 LPA for its 2025–2026 placement summary. The mandatory disclosure contains separate salary statistics for individual programmes and earlier academic years.
+
+The highest salary is not the salary received by every student. The average salary represents a group-level statistic, and individual offers may be lower or higher. Department-wise salaries should be quoted with the relevant academic year.
+
+Source: https://kongu.ac.in/
+
+## 12. Placement Contact and Official Information
+
+Kongu Engineering College publishes institutional contact information on its official website. Placement-specific contact details, current recruitment schedules, company eligibility requirements, and placement policies should be taken from the college's latest official placement information.
+
+Official website: https://kongu.ac.in/
+
+## 13. Accuracy of Placement Information
+
+Placement statistics change by academic year. The college's homepage, annual reports, and mandatory disclosures may present different figures because they refer to different batches, reporting dates, or statistical measures.
+
+For accurate answers, placement information should always identify the academic year and the original official source. If a specific figure, recruiter, eligibility condition, or policy cannot be confirmed in an official KEC source, it should not be presented as an established fact.
+
 physical department: --done
 
 KEC DEPARTMENT OF PHYSICAL EDUCATION — CHATBOT KNOWLEDGE BASE
@@ -2068,243 +2300,1079 @@ CHATBOT ANSWERING RULES
 
 
 
-Placement Information :
 
-## 1. Placement Overview
 
-Kongu Engineering College (KEC), located at Perundurai, Erode, Tamil Nadu, publishes placement information through its official website, annual reports, mandatory disclosures, and placement-related updates. These sources contain information about students placed, salary packages, recruiting organizations, and department-wise placement performance.
 
-Official website: https://kongu.ac.in/
 
-## 2. Latest Placement Statistics Displayed on the Official Website
 
-The KEC homepage displays the following placement figures for the 2025–2026 placement period:
 
-- Placement offers: 1,784
-- Average salary: ₹5.6 lakh per annum (LPA)
-- Highest salary: ₹61.21 LPA
-- Offers above ₹8 LPA: 172
-- Companies visited: 355
-- Placement status: 94.1%
 
-These figures are the statistics displayed on the official homepage. The placement status should not automatically be interpreted as the percentage of all graduating students placed without checking the college's definition and calculation method.
 
-Source: https://kongu.ac.in/
 
-## 3. Placement Statistics for 2024–2025
+transport: 
+Kongu Engineering College (KEC) operates a fleet of 78 college buses across 26 distinct transport routes.
+As detailed on the official Kongu Engineering College Transport Page, the fleet is distributed across major hubs, including Erode (20 buses), Tiruppur (13 buses), Perundurai Bus Stand (7 buses), Gobi (6 buses), alongside several allocated buses for Kangeyam, Tiruchengode, and various surrounding towns
+Here is the breakdown of bus timings, fee details, and boarding procedures for Kongu Engineering College (KEC):
+The college operates on fixed daily operating hours. Regular route buses are strictly scheduled to align with campus hours, while local shuttles run all day: [1] 
 
-According to the KEC Mandatory Disclosure published in July 2025, the college reported the following overall placement figures:
+* 
+* Standard Departure: Route buses depart from the campus bus stand every evening at 4:45 PM. On special days, exam dates, or during open-house exhibitions, extended buses depart at 5:30 PM or 6:45 PM depending on requirements. [2, 3] 
+* Perundurai Stand Shuttles: Dedicated mini-buses and shuttles run frequent trips between the Perundurai Bus Stand and the college campus.
+* Morning slot: 7:40 AM to 8:20 AM
+   * Evening slot: 4:15 PM to 7:15 PM [1] 
+* 
 
-- Students placed: 1,360
-- Students graduated: 1,453
 
-The same disclosure lists department-wise placement counts and salary information for 2024–2025, 2023–2024, and 2022–2023. These figures belong to their respective academic years and should not be combined with the 2025–2026 homepage figures.
+* 
+* Payment Deadline: Bus fees are calculated annually and must be paid within 10 days from the opening date of each course for the academic year. [4] 
+* Fine Policies: If paid late, a fine of ₹50 per working day is charged for up to 10 working days. Beyond this 10-day grace period, transport fee payments are frozen, and bus access is revoked. [4] 
+* Rates: Exact route-wise tariffs vary based on the distance from your boarding hub (e.g., Erode vs. Tiruppur vs. local Perundurai). Students can verify individual stop fares at the KEC Transport Office or the official college cash counters. [4, 5] 
+* 
 
-Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+If you miss a college route bus, the [Kongu Engineering College Campus](https://www.kongu.ac.in/facilities/transport) is highly accessible via government and private public buses that drop off right at the KEC Arch: [1] 
+
+* 
+* From Erode: Route Nos. 18, 39, 39-A, and 20-B.
+* From Kodumudi / Modakkurichi: Connected via the Vellode route (Kongu Raja Bus Service & Route P-9). [1] 
+* 
+
+If you want to look at a specific route, tell me your hometown/boarding location so I can narrow down the details for you.
+
+[1] [https://www.kongu.ac.in](https://www.kongu.ac.in/facilities/transport)
+[2] [https://10089140746315875908.googlegroups.com](https://10089140746315875908.googlegroups.com/attach/18a014ff2c9f9/Circular%20303%20Change%20of%20bus%20timings.pdf?part=0.1&vt=ANaJVrGhTNKMUvEJh6UFSM0V4ACH23n1kUG9uXHvProTlKN2u7TF8TYnuNCpVihTstsfVEa2Xa_9zF74JnJyQsyfcKMTmLbN3nViTflPOE3iaaQXUA3lCFc)
+[3] [https://10089140746315875908.googlegroups.com](https://10089140746315875908.googlegroups.com/attach/d47d9ece70fe8/Circular%20130%20Additional%20working%20hours.pdf?part=0.1&vt=ANaJVrF0ZMZWrHO1LP5bFIrNlBDB1mN95RsDDXmB4oqf1X2n_GurCyfh3sl5O5CjMeHj_vPnGB6WYdwv5Pv2GRNaYIfI6K4sW-OAWgdcbiwaPley481WBjA)
+[4] [https://05321669399603289992.googlegroups.com](https://05321669399603289992.googlegroups.com/attach/a49ac1ec52dfe374/scan0065.pdf?part=0.1&vt=ANaJVrGyTQT3HLrSA0nWsSZV-r1Kff23V-3RtJ2q58-D0ZRqInvX_s1czu1BLAlYHS3_GcOq4ED9kNQ9q2a3iN7wI9WBqBwWqIDmka3JIq-0rPq4xoKp6BU)
+[5] [https://kongu.ac.in](https://kongu.ac.in/kongu.ac.in/facilities/transport.php)
+
+From the Kongu Engineering College (KEC) campus, the college fleet of 78 buses departs every evening at 4:45 PM to transport students and staff back to their respective home destinations across 26 primary routes. [1] 
+If you are commuting directly from the campus, the buses disperse into the following primary directional lines: [2] 
+
+* 
+* Toward Erode & Surrounding Localities (Eastbound):
+* Erode Main Hub: 20 buses allocated for extensive neighborhood drop-offs.
+   * Local Clusters: Buses travel toward [Perundurai Bus Stand](https://www.google.com/search?kgmid=/g/11cs4ycq9c) (7 buses), [Chennimalai](https://www.google.com/search?kgmid=/m/0f0n95) (2 buses), [Sivagiri](https://www.google.com/search?kgmid=/m/0kw5yv) (2 buses), [Kodumudi](https://www.google.com/search?kgmid=/m/0f589c) (1 bus), and Thandapalayam (1 bus). [2] 
+* Toward Tiruppur & Industrial Hubs (Westbound):
+* Tiruppur Main Hub: 13 buses deployed to cover different sectors of Tiruppur city.
+   * Tiruppur Suburban Lines: Routes extend directly out to [Kangeyam](https://www.google.com/search?kgmid=/m/0f53p3) (3 buses), [Vellakovil](https://www.google.com/search?kgmid=/m/02pl4d_) (1 bus), [Palladam](https://www.google.com/search?kgmid=/m/0f5xg1) (1 bus), [Avinashi](https://www.google.com/search?kgmid=/m/0f0761) (1 bus), and [Nathakadiyur](https://www.google.com/search?kgmid=/m/0k2bpy_) (1 bus). [2] 
+* Toward Gobi & Northern Towns (Northbound):
+* Gobichettipalayam Line: 6 buses dedicated to Gobi town commuters.
+   * North-Erode Networks: Routes actively branch out toward [Sathyamangalam](https://www.google.com/search?kgmid=/m/044hbx) (2 buses), [Athani](https://www.google.com/search?kgmid=/m/0fxnh9) (2 buses), [Anthiyur](https://www.google.com/search?kgmid=/m/0f05lt) (2 buses), [Bhavani](https://www.google.com/search?kgmid=/m/058pm9) (2 buses), [Ammapettai](https://www.google.com/search?kgmid=/m/0d__d4) (1 bus), [Nambiyur](https://www.google.com/search?kgmid=/m/0f5rhm) (1 bus), [Appakoodal](https://www.google.com/search?kgmid=/m/0f05q9) (1 bus), and [Getticheviyur](https://www.google.com/search?kgmid=/g/1tf6vsxt) (1 bus). [2] 
+* Cross-District Lines (Toward Namakkal & Salem boundaries):
+* Namakkal Border Line: Buses route through to [Tiruchengode](https://www.google.com/search?kgmid=/m/0c552d) (3 buses), [Komarapalayam](https://www.google.com/search?kgmid=/m/03gy9dx) (2 buses), and [SPB Colony](https://www.google.com/search?kgmid=/m/0b6lx5r) (2 buses).
+   * Salem Entry Line: Scheduled drops run toward [Sankagiri](https://www.google.com/search?kgmid=/m/0f6620) (2 buses) and [Edapadi](https://www.google.com/search?kgmid=/m/0f1g0v) (1 bus). [2] 
+* 
 
-## 4. Placement Information for 2023–2024
+If you need to leave the campus outside of the main 4:45 PM fleet departure window, you do not have to wait for a route bus. The college runs dedicated mini-buses making continuous round-trips from inside the campus out to the [Perundurai Bus Stand](https://www.google.com/search?kgmid=/g/11c6sr9655) during peak hours (4:15 PM to 7:15 PM). From [Perundurai Stand](https://www.google.com/search?kgmid=/g/11cs4ycq9c), you can easily board regular public or TNSTC state transport buses. [1, 3] 
+Are you looking for the exact boarding point locations within one of these specific lines, or do you need to check the morning arrival schedule back to campus?
 
-The KEC Annual Report for 2024–2025 states that 1,108 students secured 1,320 placement offers during the placement activity described in the report. It also states that more than 734 students were permitted to take part in internship-cum-job opportunities.
+[1] [https://www.kongu.ac.in](https://www.kongu.ac.in/facilities/transport)
+[2] [https://kongu.ac.in](https://kongu.ac.in/kongu.ac.in/facilities/transport.php)
+[3] [https://www.facebook.com](https://www.facebook.com/fb-answers/kongu-arts-and-science-college-erode-address/)
+The standard seating capacity of each major route bus in the Kongu Engineering College (KEC) fleet typically ranges between 50 to 60 seats. [1] 
 
-The report identifies this as information for the relevant reporting year. These figures should not be presented as the latest placement results or as the number of students placed in 2025–2026.
+* 
+* Standard Route Buses: Most of the 78 full-sized buses feature a standard 3x2 or 2x2 commercial layout designed to accommodate large numbers of commuting students comfortably over long distances across the 5 districts. [2] 
+* Campus Mini-Buses & Shuttles: The dedicated shuttle vehicles used for rapid, frequent trips between the campus and the Perundurai Bus Stand are smaller, typically seating around 25 to 30 passengers. [3] 
+* 
+
+According to the official [KEC Transport Rules](https://www.kongu.ac.in/static/media/rulesandhr20.8.26.c94f0b5064e45cd38e06.pdf), every student is allocated a specific bus and route based on their registration, and standing near doors or overcrowding is strictly prohibited for safety reasons. [4, 5] 
+
+[1] [https://www.scribd.com](https://www.scribd.com/document/881453883/DOC-20250626-WA0011)
+[2] [https://kongu.ac.in](https://kongu.ac.in/kongu.ac.in/facilities/transport.php)
+[3] [https://www.kongu.ac.in](https://www.kongu.ac.in/facilities/transport)
+[4] [https://www.kongu.ac.in](https://www.kongu.ac.in/static/media/rulesandhr20.8.26.c94f0b5064e45cd38e06.pdf)
+[5] [https://www.kongu.ac.in](https://www.kongu.ac.in/static/media/rulesandhr20.8.26.c94f0b5064e45cd38e06.pdf)
+
+🚌 Fleet Size & Vehicle Profiles
 
-Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+• Total Buses Operated: KEC operates a total fleet of 78 college buses.
+• Types of Buses Available: The network utilizes a mix of college-owned commercial route buses for long-distance commutes alongside smaller college mini-buses and shuttles used for rapid transfers to local transit points.
+• Seating Capacity: The large commercial route buses range in size to fit 50 to 60 seats to accommodate regional student bodies comfortably, while the local mini shuttles seat around 25 to 30 passengers.
+• Number of Routes Covered: The transport network covers 26 distinct primary destination routes branching across 5 surrounding districts.
+
+🎓 Eligibility & Student Policies
+
+• Staff Availability: Yes, the internal transport infrastructure explicitly supports daily commuting operations for both students and staff.
+• Applicability by Course (UG, PG, MBA, MCA, Ph.D.): Yes, transport registration is accessible to all registered scholars—including undergraduate (UG), postgraduate (PG), MBA, MCA, and research (Ph.D.) students.
+• Compulsory Travel Rule for Day Scholars: No, bus travel is not universally compulsory for all day scholars. Students living nearby can opt out or use personal two-wheelers, provided they follow mandatory campus guidelines (such as wearing helmets).
+• Use by Hostel Students: No, regular route buses are designated for daily off-campus commuters (day scholars). According to individual campus reviews on Quora, hostel students live on-site under distinct residential boundaries and generally walk to their departments rather than using the regional transport route fleet.
+• Separate Buses for Girls: No, separate distinct buses are not operated by gender. The college runs mixed-occupancy route buses where safety protocols, strict codes of conduct, and anti-ragging measures are strictly enforced for all passengers.
+
+📅 Schedules, Weekends & Special Events
+
+• Separate Morning & Evening Trips: Yes, the buses execute coordinated morning pickup routes to drop students off before the 8:40 AM college opening and assemble for a unified evening departure from the campus yard at 4:45 PM.
+• Availability on Saturdays: Yes, the bus service operates normally on regular working Saturdays. It scales down or does not run on institutional holidays like the second and fourth Saturdays of the month.
+• Availability on Holidays & During Exams: Yes, during university or autonomous end-semester examination cycles, the transport system adapts. Even if an exam falls on an unexpected public holiday, official notifications demonstrate that KEC coordinates dedicated transit schedules (such as morning/afternoon shuttle lines from Perundurai Bus Stand) to ensure student test participation.
+• Special Classes, Events & Tournaments: Yes, the transport department arranges altered exit windows (such as delayed runs at 5:30 PM or 6:45 PM) or provides specialized transit arrangements for students involved in approved campus events, extra laboratory classes, or sports tournaments.
+ Kongu Engineering College (KEC) maintains its official route sheets at its campus Transport Office. While a single comprehensive multi-page brochure PDF is typically handed out physically during annual admissions or updated on the internal intranet, students can check real-time notifications directly on the official Kongu Engineering College Transport Portal.
+The standard route breakdown across the 26 institutional routes covers specific regional hubs and boarding regions:
+
+🗺️ KEC Main Destination Routes & Area Coverage
+
+
+Destination Route / Town	Allocated Fleet	Key Areas & Intermediary Stops Covered
+Erode Line	20 Buses	Extensive city routes covering Erode Bus Stand, Palayapalayam, Solar, Lakkapuram, Transport Nagar, Ganapathipalayam, Karumandampalayam, and Naduppalayam.
+Tiruppur Line	13 Buses	Tiruppur city boundaries, Poondi, Rakkiapalayam Pirivu, and industrial textile corridors.
+Perundurai Bus Stand	7 Buses	Local rapid shuttles connecting the main Perundurai terminal area directly to the campus via Vaikkal Medu.
+Gobichettipalayam (Gobi)	6 Buses	Gobi town center, Modachur, and local surrounding residential patches.
+Kangeyam	3 Buses	Kangeyam central hub, Nallroad, and Thittuparai.
+Tiruchengode	3 Buses	Tiruchengode town and connecting links over the Namakkal border.
+Sathyamangalam	2 Buses	Northern Erode highway points stretching toward the Sathyamangalam foothills.
+Athani	2 Buses	Athani suburban sectors and local rural crossings.
+Anthiyur	2 Buses	Anthiyur marketplace area and connecting roads.
+Komarapalayam	2 Buses	Cross-river links servicing the regional highway borders.
+Bhavani	2 Buses	Bhavani Kooduthurai area, Kumarapalayam borders, and adjacent intersections.
+Sankagiri	2 Buses	Salem district borders crossing through the Sankagiri tollways.
+SPB Colony	2 Buses	Industrial housing areas around the SPB paper factory zones.
+Chennimalai	2 Buses	Chennimalai town proper and K.G. Valasu.
+Sivagiri	2 Buses	Sivagiri town, Vellakethi, and Arachallur lines.
+Ammapettai	1 Bus	Specific peripheral border villages near the Mettur highway link.
+Edapadi	1 Bus	Salem district boundary pocket route.
+Kodumudi	1 Bus	Kodumudi link connecting back via the Vellode public network.
+Vellakovil	1 Bus	Extended southern border limits on the Karur-Tiruppur link.
+Palladam	1 Bus	Western industrial transit point.
+Avinashi	1 Bus	Avinashi regional highways and surrounding rural stopovers.
+Nambiyur	1 Bus	Interior rural pockets connecting back to the Gobi highways.
+Appakoodal	1 Bus	Local sugar factory zones and surrounding agricultural sectors.
+Nathakadiyur	1 Bus	Nathakadaiyur villages and local student clusters.
+Thandapalayam	1 Bus	Southern rural extensions of the Erode district footprint.
+Getticheviyur	1 Bus	Kunnathur, Kunnathur R.S., and Gettiseviyur sectors.
+
+
+🎫 Route Number Assignment Policy
+
+The college designates dynamic route numbers (e.g., standard internal allocations typically numbered around the 101 to 112 series and up for specific regional buses). These route numbers correspond to your printed Bus Pass smart card.
+If you are a newly admitted student or a parent downloading the latest schedule:
+1. Long-distance route buses drop passengers right inside the designated KEC Campus Bus Yard.
+2. Detailed intermediate stop-by-stop timings and stage fees can be obtained by contacting the KEC Transport Officer at the central administration block.
+
+The contact details for the Kongu Engineering College (KEC) Transport Office are listed below for handling route changes, dynamic bus pass tracking, intermediate timings, or fee inquiries:
+
+📞 KEC Transport Desk Contact Information
+
+• Transport Maintenance Officer: Mr. K. Sakthivel
+• Mobile Number: +91 98427 20087
+• Official Email ID: transport@kongu.ac.in
+
+🏢 Central Administration & Reception Lines
+
+If you are unable to reach the transport desk directly or need general support, you can connect through the general campus line or access the KEC Administration Helpdesk Portal:
+• College Reception Desk: 04294-226555, 04294-226666, or 04294-226500
+• Admission & Query Mobile Help Desk: +91 94430 20583 or +91 99652 77765
+
+
+🗺️ Maps, Timings & Daily Route Operations
+
+• Map of Routes: There is no public visual map graphic online. Instead, the college publishes a text-based master route sheet outlining stops, which is updated annually on the KEC Linways ERP Portal and the Official KEC Transport Page.
+• Morning Pick-up Timings: Buses begin picking up students from distant terminal hubs starting between 6:45 AM and 7:15 AM, stopping sequentially at intermediate points.
+• Evening Drop Timings: Buses drop students back to their final destinations between 5:30 PM and 6:30 PM, depending on the route's distance from campus.
+• College Arrival Time: All routes are strictly scheduled to arrive at the campus bus yard before 8:30 AM so students can reach classrooms prior to the final 8:40 AM bell.
+• Evening Departure Time: The entire regular fleet leaves the college campus yard at 4:45 PM sharp.
+• Saturday Timings: On regular working Saturdays, the schedule remains identical to weekdays (8:40 AM – 4:30 PM). The bus service does not run on the 2nd and 4th Saturdays of the month when the college is closed.
+• Exam Timings: The transport department modifies schedules to align with autonomous or Anna University exam sessions. If exams end at midday, dynamic local shuttle routes operate out to major terminals like the Perundurai Bus Stand.
+• Late Classes & Lab Timings: For students engaged in special evening classes, the college runs delayed exit buses at 5:30 PM and 6:45 PM.
+• Missing the Bus: If you miss your designated route bus, you can take a public town bus to the KEC Arch or catch the college's rolling mini-bus shuttle that runs from the Perundurai Bus Stand straight to the campus center.
+• Stop Waiting Time: Buses pause for 1 to 2 minutes at each intermediate staging point. Students are mandated to stand at their stop 5 minutes prior to the scheduled time.
+• First-Year Timing Adjustments: The timings are identical for all years, though the college occasionally zones separate boarding lanes during the first week of fresh admissions to avoid initial confusion.
+• Seasonal Changes (Summer/Rainy): The baseline operating schedule remains unchanged during weather shifts. However, during heavy monsoon delays, real-time alerts are issued by the transport desk.
+• Sports & Club Trips: Dedicated late-evening drop vehicles are provided for athletes and club members who train past normal college hours.
+
+📣 Contingencies, Apps & Communication
+
+• Strikes & Bandh Days: If a general strike or public bandh is declared in the Erode/Tiruppur region, college transport is suspended in tandem with an official campus closure announcement.
+• Communication of Changes: Any flash timing changes are sent via institutional SMS alerts, posted inside the KEC Linways Portal, or broadcasted through department coordinators.
+• Notice Board or App Access: Route details are posted physically on central administrative boards and digitally via the internal KEC ERP/Linways dashboard.
+
+💳 Bus Fees, Payment Deadlines & Policies
+
+• Bus Fee Amount: The average annual transit fee is approximately ₹20,000, adjusting upward or downward depending on the distance zone of the specific route.
+• Fee Variation by Course: No, fees are calculated solely on the geographic distance of the route, not on whether a student is pursuing a UG, PG, MBA, or MCA degree.
+• Payment Cycle: The bus fee is collected as a single yearly payment at the start of the academic year.
+• Due Dates: The complete fee must be paid within 10 days from the re-opening date of the respective course.
+• Payment Modes: Payments are accepted via direct online banking portals or via cash/challan at designated campus counters.
+• Online Payment Availability: Yes, online registration and transaction modules are fully active via the integrated KEC BillDesk / Linways Portal.
+• Instalment Allowances: Part-payments are generally not accommodated unless special written clearance is approved by the KVIT Trust management under documented financial hardship cases.
+• Late Fee Penalty: A strict fine of ₹50 per working day is levied for up to 10 working days past the due date. If the fine window lapses without payment, the student's bus access is systematically deactivated
+
+💳 Refund Policies, Extensions & Hidden Fees
+
+• Refund Eligibility: No, the bus fee is generally non-refundable. If you decide to stop using the college bus mid-year, the college does not issue a partial refund for the remaining months.
+• Refund Process & Timeline: In exceptional circumstances (such as official college withdrawal or shifting into a college hostel), an application must be given to the Principal through the Transport Officer. If approved by the management, refunds are processed via bank transfer, typically taking 2 to 3 weeks.
+• Short-Term Usage Discounts: No, the transport system does not offer pro-rated fees. Even if you use the bus for only a few months, you must pay the full annual transport fee.
+• Sibling Concessions: There is no standard automatic discount if siblings study at KEC simultaneously. Both must pay the standard zone fare.
+• Staff Children Concessions: Yes, children of KVIT Trust employees or KEC faculty members are eligible for transport fee concessions based on internal institutional policies.
+• Concessions for Economically Weaker Students: Deserving students can submit a formal request letter to the Management/KVIT Trust requesting support. Meritorious students with high academic records or financial hardships are sometimes granted partial concessions on a case-by-case basis.
+• Tuition Fee Bundling: No, the bus fee is entirely separate and is never included in your academic tuition fees.
+• Vacation Fee Charges: The annual fee structure accounts for the entire academic year's operations. It is not reduced or altered for vacation months when classes are suspended.
+• Retrieving Fee Receipts: Digital receipts are auto-generated immediately after making an online payment via the Linways Student Portal. Physical receipts can be collected directly from the college cash counter if paid via challan.
+• Route Change Fees: A nominal administrative processing fee may be charged if you formally apply to alter your route mid-semester due to a change in residence.
+• Duplicate Bus Pass Charge: If your bus pass is damaged or lost, you will be charged a replacement fine (typically ranging between ₹100 and ₹200) to print a duplicate card at the Transport Office.
+• Annual Fee Hikes: Yes, the bus fee is subject to marginal annual increases to balance rising fuel prices and fleet maintenance costs.
+
+📝 Registration Processes & Pass Management
+
+• Registration Process: Students must log into their KEC Linways ERP Portal, select the transport module, choose their specific boarding point and route, and complete the payment process.
+• Registration Timeline: Transport registration begins alongside the start of annual academic fee collections, typically a few weeks before the reopening of the college for senior students and during the counselling/admission cycle for first-year students.
+• Last Date for Registration: The absolute deadline is exactly 10 days from the reopening date of the respective course.
+• Required Documents: You only need your KEC Student Roll Number/Admission Letter and the digital transaction reference or bank challan copy.
+• Getting the Registration Form: The entire process is paperless and completed via the internal student portal. For initial admissions, physical routing forms are available inside the central auditorium during onboarding days.
+• Bus Pass Smart Card: Yes, a dedicated Bus Pass / Transport Smart Card is officially issued to every registered commuter.
+• How to Collect Your Pass: Once the online payment is cleared, the Transport Office prints the cards and distributes them directly to students through their respective department coordinators.
+• Pass Validity: The bus pass is valid strictly for one academic year and must be renewed annually by clearing the next year's fees.
+• Lost Bus Pass Procedure: You must immediately report the loss to your department mentor and submit a written request to the Transport Maintenance Officer (Mr. K. Sakthivel) to issue a duplicate card.
+• Mandatory Boarding Rule: Yes, carrying and displaying your bus pass is completely mandatory. Transport checking staff regularly inspect cards at the campus yard before departures.
+• Occasional/One-Day Travel: No, the college does not allow one-day, ad-hoc, or casual travel for unregistered students. Only registered pass holders are permitted on route buses.
+• Mid-Year Route Changes: Yes, you can change your route during the year, but it is subject to seat availability on the requested bus. You must submit a formal change request form at the Transport Office.
+• Cancellation Process: To cancel your transport registration, submit a cancellation letter signed by your parents and Department Head to the Transport Officer to clear your name from the active transport roster
+The KEC Transport Office is located inside the Central Administration Block (Main Building) on the ground floor.
+Here are the step-by-step instructions to log into the portal and complete your transport registration or fee payment:
 
-## 5. Companies Recruiting at KEC
+🌐 Step-by-Step KEC Linways Portal Login Guide
 
-The KEC Annual Report for 2024–2025 identifies the following organizations among those offering internship-cum-recruitment opportunities:
-
-- Rubrik
-- Zoho
-- Mr. Cooper
-- Zopsmart
-- FourKites
-- Presidio
-- Azentio
-- Infosys
-- Cognizant
-- Honeywell
-- Soliton Technologies
-- JGC
-- India Cements
-- SPIC
-- Tata Group
-- JSW
-- Adani Group
-- Applied Materials
-- Ford Motors
-- TVS Group
+1. Access the Portal: Open your browser and navigate to the official KEC student management system portal via your student dashboard.
+2. Enter Credentials: Log in using your unique Student Roll Number (as the username) and your pre-set account password.
+3. Navigate to Fees: Once inside the dashboard, locate and click on the "Fees" or "Transport Module" tab listed on the left-side navigation menu.
+4. Select Route & Point: Choose your designated route number and boarding point from the drop-down menu. The system will automatically display the exact annual fee mapped to your destination.
+5. Complete Payment: Click on the integrated BillDesk payment gateway button to securely complete the transaction using UPI, Net Banking, or a Debit/Credit Card.
+6. Download Receipt: Make sure to immediately download and save the digital Fee Receipt from the portal's archive tab for smart card generation.
 
-This is a list of organizations identified in that annual report, not a guarantee that every organization recruits during every academic year.
+🔄 Boarding Stops & Allocation Policies
 
-Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+• Changing Your Boarding Stop: Yes, you can change your boarding stop, but you cannot do it arbitrarily. You must submit a formal written request or process a change request through the internal Linways ERP Portal, which is subject to seat availability on that specific route block.
+• Two Different Stops (Morning vs. Evening): No. The transport software issues passes based on fixed singular route stages to map vehicle capacity precisely. Using two distinct route lines for morning pick-up and evening drop-off is generally not permitted unless special administrative clearance is granted by the transport unit.
+• Travel for Friends, Visitors, or Parents: No. College-operated route buses are strictly restricted to registered student pass holders and authorized KEC staff members. Outside individuals, friends, or parents are not allowed to board regional route buses.
+• Seat Allotment Strategy: Seats are allotted systematically based on a first-come, first-served registration policy relative to the route layout during the annual transport payment window.
+• Waiting List for Full Buses: If a specific route bus fills up to its maximum legal capacity, the transport department creates an internal waiting list. If numbers justify it, the college reroutes or deploys an additional vehicle to handle the overflow.
+• Registration Approvals: All transport registration workflows and final digital bus pass clearances are authorized directly by the Transport Maintenance Officer in coordination with college administrative heads.
 
-## 6. Placement Salary Information by Department
+🏢 Administration Desk & Contact Details
 
-The KEC Mandatory Disclosure for 2024–2025 provides department-wise placement counts and minimum, maximum, and average salaries. The following are examples from the published table.
+• Transport In-charge Name: Mr. K. Sakthivel (Transport Maintenance Officer).
+• Direct Office Contacts:
+	• Mobile: +91 98427 20087
+	• Official Email: transport@kongu.ac.in
+• Office Location: Ground Floor, Central Administration Block (Main Building), KEC Campus, Perundurai.
+• Working Hours: 8:00 AM to 5:30 PM on all institutional working days.
+• Route Coordinators, Drivers & Numbers: Every bus has a designated faculty route coordinator and professional driver. Their active contact lists are shared directly within the respective departmental student WhatsApp grids and updated internally on the KEC Help Desk Portal at the start of the semester.
+• Transport Committee Head: The committee operates directly under the oversight of the Principal, Dr. R. Parameshwaran, who serves as the apex grievance head.
+• Filing Complaints: Transport grievances or issues with drivers/routes should be submitted in writing to the Transport Desk inside the Admin Block or filed digitally via the Linways student grievance module.
+• Emergency & Helpline Contacts: For immediate on-road assistance, students use the main transport desk line at +91 98427 20087. The college routes updates through institutional text alerts rather than an open public WhatsApp helpline.
 
-**B.E. Civil Engineering**
-- Students placed in 2024–2025: 50
-- Minimum salary: ₹2.4 LPA
-- Maximum salary: ₹7.5 LPA
-- Average salary: ₹3.7 LPA
+🛡️ Safety, Compliance & Live Tracking
 
-**B.E. Mechanical Engineering**
-- Students placed in 2024–2025: 80
-- Minimum salary: ₹2.8 LPA
-- Maximum salary: ₹8 LPA
-- Average salary: ₹4.4 LPA
+• Insurance & Fitness Certification: Yes. Every bus in the KEC fleet undergoes mandatory annual RTO inspection fitness testing and carries full active commercial vehicle insurance in absolute alignment with Tamil Nadu School/College Vehicle Special Regulations.
+• GPS Tracking & Live Monitoring: Yes. The college fleet is fully retrofitted with active GPS tracking devices linked directly to the institution's central monitoring console.
+• Mobile App for Tracking: Students can track their respective buses through the tracking portal integrated inside the KEC Linways ERP framework.
+• CCTV Surveillance: Security cameras are progressively integrated across the fleet to manage student safety, asset protection, and anti-ragging compliances.
+• First-Aid & Fire Safety: Yes. As mandated by safety norms, every college vehicle is strictly equipped with a certified first-aid kit and functional fire extinguishers.
+• Female Attendants: Mixed-occupancy regular college route buses run under the direct supervision of traveling faculty route coordinators, ensuring standard safety oversight for all female day scholars
 
-**B.E. Mechatronics Engineering**
-- Students placed in 2024–2025: 104
-- Minimum salary: ₹2.6 LPA
-- Maximum salary: ₹8 LPA
-- Average salary: ₹4.4 LPA
 
-**B.E. Automobile Engineering**
-- Students placed in 2024–2025: 48
-- Minimum salary: ₹1.8 LPA
-- Maximum salary: ₹7.5 LPA
-- Average salary: ₹3.6 LPA
+🚗 Private Transit & Ride-Hailing Availability
 
-**B.E. Electrical and Electronics Engineering**
-- Students placed in 2024–2025: 80
-- Minimum salary: ₹2.4 LPA
-- Maximum salary: ₹8 LPA
-- Average salary: ₹5.3 LPA
+• Autos and Taxis: Yes. Local auto-rickshaws and call-taxis are readily available right outside the KEC Main Arch on the Perundurai-Erode Highway. They frequently ferry students between the campus gates and the Perundurai Bus Stand.
+• Ola and Uber: Availability is highly limited or seasonal. Because Perundurai is a suburban educational cluster outside of main Erode city limits, app-based cabs like Ola or Uber rarely have active fleets nearby. Local call-taxi providers remain the primary choice for students.
 
-**B.E. Electronics and Instrumentation Engineering**
-- Students placed in 2024–2025: 94
-- Minimum salary: ₹2.8 LPA
-- Maximum salary: ₹8 LPA
-- Average salary: ₹5.2 LPA
+🏍️ Personal Vehicle Policies & Parking Rules
 
-**B.E. Electronics and Communication Engineering**
-- Students placed in 2024–2025: 166
-- Minimum salary: ₹2.2 LPA
-- Maximum salary: ₹24.5 LPA
-- Average salary: ₹5.1 LPA
+• Two-Wheelers on Campus: Yes. Day scholars and staff are permitted to ride two-wheelers to campus. However, as documented in institutional reviews, hostel students are strictly banned from bringing or keeping powered two-wheelers on campus.
+• Driving License & Helmet Rules: Yes, absolutely mandatory. KEC enforces a strict safety policy. You will not be allowed past the main security gate without a valid government-issued Driving License and a proper safety helmet (mandatory for both riders and pillions).
+• Vehicle Passes and Stickers: Yes. All student and staff vehicles must display an authorized KEC Vehicle Sticker on the front mudguard or visor.
+• How to Get a Sticker & Fee: Students must apply through their respective Department Advisors at the start of the academic year by submitting copies of their RC Book, Insurance, and Driving License. There is typically no fee for the sticker; it serves as a security clearance pass.
+• Parking Facilities & Capacities: Dedicated, spacious two-wheeler parking zones are located right near the main entry boundaries and designated department blocks to handle thousands of student bikes daily. Bicycle parking spaces are also provided adjacently.
+• Four-Wheelers (Cars) on Campus: Students are not permitted to bring cars inside the campus. Four-wheeler access and the central car parking facilities are strictly reserved for college faculty, management, and official campus visitors.
+• EV Charging Stations: Dedicated public EV charging infrastructure for student vehicles is limited on-site; charging is primarily restricted to institutional utility vehicles.
+• Campus Traffic Rules & Speed Limits: Pedestrians always have the right of way. The maximum speed limit inside the campus gates is strictly capped at 20 km/h. Triple riding, rash driving, and modified exhausts are punishable offenses that result in the confiscation of your vehicle pass.
+• Vehicle Entry/Exit Timings: The gates open for student vehicles from 7:30 AM onward and close shortly after the conclusion of standard operating hours or late-evening laboratory batches.
 
-**B.E. Computer Science and Engineering**
-- Students placed in 2024–2025: 174
-- Minimum salary: ₹3 LPA
-- Maximum salary: ₹24.5 LPA
-- Average salary: ₹5.2 LPA
+♿ Internal Mobility & Institutional Transit
 
-**B.Tech. Information Technology**
-- Students placed in 2024–2025: 86
-- Minimum salary: ₹2.5 LPA
-- Maximum salary: ₹21 LPA
-- Average salary: ₹5.6 LPA
+• Campus Shuttles & Battery Cars: KEC operates dedicated internal transport vehicles and environment-friendly battery-operated golf carts primarily used to assist guests, senior professors, and institutional evaluators across the massive 167-acre layout.
+• Facilities for Differently-Abled Students: The college provides wheel-chair accessible ramps across major blocks, lift facilities in newer departments, and grants special authorization for private drop-offs right up to classroom porches for students with physical disabilities.
 
-**B.Tech. Chemical Engineering**
-- Students placed in 2024–2025: 67
-- Minimum salary: ₹1.8 LPA
-- Maximum salary: ₹8 LPA
-- Average salary: ₹4.4 LPA
+🚍 Specialized & Event-Based Transport Services
 
-**B.Tech. Food Technology**
-- Students placed in 2024–2025: 19
-- Minimum salary: ₹1.9 LPA
-- Maximum salary: ₹7 LPA
-- Average salary: ₹3.6 LPA
+• Industrial Visits (IV) & Tours: Yes. The college transport wing deploys its own fleet or arranges authorized luxury coaches for department-sanctioned industrial visits and multi-day educational tours.
+• Off-Campus Placements & Sports Tournaments: Yes. KEC provides dedicated institutional buses to transport students to pooled campus placement drives at other colleges and to state/university-level sports meets.
+• NCC/NSS Camps: Yes. Transport setups are managed by the physical education and social service departments to carry cadets and volunteers to rural campsites.
+• Guest Lecturers & Institutional Visitors: The college operates a fleet of institutional cars (such as Innovas/sedans) to pick up visiting corporate executives, examiners, and VIPs from Coimbatore Airport (CJB) or the Erode Railway Station (ED).
+• Admissions & Parent Meetings: During annual engineering counseling sessions and master parent-teacher conferences, the frequency of the Perundurai Bus Stand-to-Campus shuttle is significantly boosted to assist families.
+• Hostel Vacation Transit: While standard route buses do not run out-of-station trips on festival weekends, the college administration coordinates with state authorities (TNSTC) during major holiday breaks (like Diwali or Pongal) to run direct buses to the Erode Railway Station and central bus terminals right from the campus grounds.
+• Ambulance Services: Yes. A fully equipped 24/7 emergency ambulance is permanently stationed on-site at the KEC campus health center to transport students or staff to nearby multi-specialty hospitals in Perundurai or Erode instantly if a medical emergency arises
 
-**Master of Business Administration (MBA)**
-- Students placed in 2024–2025: 92
-- Minimum salary: ₹2.4 LPA
-- Maximum salary: ₹7 LPA
-- Average salary: ₹4.3 LPA
 
-**Master of Computer Applications (MCA)**
-- Students placed in 2024–2025: 74
-- Minimum salary: ₹2 LPA
-- Maximum salary: ₹10 LPA
-- Average salary: ₹4.2 LPA
 
-Source for all department figures above: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
 
-## 7. Computer Science and Information Technology Placements
 
-The mandatory disclosure reports the following 2024–2025 figures:
 
-- Computer Science and Engineering: 174 students placed; average salary ₹5.2 LPA; maximum salary ₹24.5 LPA.
-- Information Technology: 86 students placed; average salary ₹5.6 LPA; maximum salary ₹21 LPA.
 
-These figures apply specifically to the programmes and academic year named above. They should not be used as current salary guarantees for individual students or future graduating batches.
 
-Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
 
-## 8. Computer Science and Design, Artificial Intelligence and Machine Learning, and Artificial Intelligence and Data Science
 
-The same mandatory disclosure reports 2024–2025 placement results for these programmes:
 
-**B.E. Computer Science and Design**
-- Students placed: 39
-- Minimum salary: ₹2.7 LPA
-- Maximum salary: ₹10 LPA
-- Average salary: ₹5.4 LPA
 
-**B.Tech. Artificial Intelligence and Machine Learning**
-- Students placed: 38
-- Minimum salary: ₹3 LPA
-- Maximum salary: ₹8 LPA
-- Average salary: ₹5.3 LPA
 
-**B.Tech. Artificial Intelligence and Data Science**
-- Students placed: 37
-- Minimum salary: ₹3 LPA
-- Maximum salary: ₹12.3 LPA
-- Average salary: ₹5.7 LPA
 
-Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
 
-## 9. Internship-Cum-Job Opportunities
 
-The KEC Annual Report for 2024–2025 states that more than 734 students were permitted to take part in internship-cum-job opportunities during the reporting period. It names organizations including Rubrik, Zoho, Mr. Cooper, Zopsmart, FourKites, Presidio, Azentio, Infosys, Cognizant, Honeywell, Soliton Technologies, JGC, India Cements, SPIC, Tata Group, JSW, Adani Group, Applied Materials, Ford Motors, and TVS Group.
 
-Participation in an internship-cum-job opportunity does not necessarily mean that every participating student received a permanent job offer. The outcome depends on the specific opportunity and employer.
 
-Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
 
-## 10. Placement Offers and Students Placed
 
-A placement offer and a student placed are different measures. One student may receive more than one offer. Therefore, the total number of offers can exceed the number of students placed.
 
-KEC's annual report for 2024–2025 records 1,108 students securing 1,320 placement offers for the placement activity described in that report. Its mandatory disclosure separately records 1,360 students placed out of 1,453 graduates for 2024–2025. These numbers are from different published reporting statements and should be quoted with their source and context rather than treated as interchangeable.
 
-Sources:
-- https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
-- https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+Kongu Engineering College (KEC) is a leading autonomous, self-financing engineering institution established in 1984 under the Kongu Vellalar Institute of Technology Trust. The college is affiliated with Anna University, approved by AICTE, and accredited by NAAC with an A++ grade.
 
-## 11. Highest, Average, and Department-Wise Salary Figures
+📍 Location & Transport
 
-The official homepage displays a highest salary of ₹61.21 LPA and an average salary of ₹5.6 LPA for its 2025–2026 placement summary. The mandatory disclosure contains separate salary statistics for individual programmes and earlier academic years.
+• Campus Address: Thoppupalayam, Perundurai, Erode - 638060, Tamil Nadu, India. The college features a sprawling, self-contained 167-acre green campus.
+• Proximity: The campus is positioned 3 km from the Perundurai Bus Stand (on the route toward Perundurai Railway Station).
+• Transit Hubs: The nearest major rail station is Erode Junction (18 km away), and the nearest airport is Coimbatore International Airport (70 km away).
+• Transport Facilities: KEC operates a comprehensive fleet of institutional buses connecting day scholars across surrounding regions including Erode, Tiruppur, Salem, Karur, Gobi, and more. Local public mini-buses and specific route buses also run frequent trips directly via the KEC Arch.
 
-The highest salary is not the salary received by every student. The average salary represents a group-level statistic, and individual offers may be lower or higher. Department-wise salaries should be quoted with the relevant academic year.
+🏫 Infrastructure & Facilities
 
-Source: https://kongu.ac.in/
+• Academic & Digital Setup: Entirely Wi-Fi enabled campus with over 1,200 computers, departmental laboratories, and a dedicated in-house ERP system for academic management.
+• Central Library: Houses a massive collection of physical and digital resources accessible via an internal intranet catalog.
+• Accommodation: Separate residential hostels for boys and girls equipped with basic amenities. Fees generally range between ₹50,000 to ₹80,000 per year.
+• Physical Education & Recreation: Features a dedicated sports complex, outdoor playground, running track, indoor stadium, gym, and basketball/volleyball courts.
+• On-Campus Conveniences: A food court, RO water purifiers, a dispensary with a resident doctor and 24/7 emergency ambulance service, an amenity center for stationery, a Karur Vysya Bank (KVB) ATM/branch, and an on-campus post office.
 
-## 12. Placement Contact and Official Information
+⏰ College Timings
 
-Kongu Engineering College publishes institutional contact information on its official website. Placement-specific contact details, current recruitment schedules, company eligibility requirements, and placement policies should be taken from the college's latest official placement information.
+• General Office Hours: The institutional and department administrative offices operate from 9:00 AM to 5:00 PM, Monday through Saturday.
+• Class Hours: Standard daily classes generally run between 8:45 AM / 9:00 AM and 4:15 PM / 4:30 PM, typically split into morning and afternoon sessions with built-in breaks. Saturdays are usually scheduled as half-days or utilized for club/practical activities.
+• Library Hours: The Central Library operates from 8:00 AM to 8:00 PM on standard working days and from 9:00 AM to 5:00 PM on holidays.
 
-Official website: https://kongu.ac.in/
+📞 General Enquiries & Contacts
 
-## 13. Accuracy of Placement Information
+For admissions, academic queries, or administrative operations, you can reach out via the official channels:
+• General Reception / Administration: 04294-226555, 04294-226666, 04294-226500
+• Admission Office Helpline: 04294-226515 / 04294-226517 (Mobile: 9965277765, 9443020583)
+• Principal Email: principal@kongu.ac.in
+• Placement & Training Cell: 04294-226644 / 04294-226564 (Email: placement@kongu.ac.in
 
-Placement statistics change by academic year. The college's homepage, annual reports, and mandatory disclosures may present different figures because they refer to different batches, reporting dates, or statistical measures.
 
-For accurate answers, placement information should always identify the academic year and the original official source. If a specific figure, recruiter, eligibility condition, or policy cannot be confirmed in an official KEC source, it should not be presented as an established fact.
 
+🛠️ Academic Tracks & Programmes Offered
 
+KEC operates under an autonomous framework affiliated with Anna University, offering 18 Undergraduate (UG) and 7 Postgraduate (PG) programmes:
+• Undergraduate (B.E. / B.Tech - 4 Years):
+	• Core Engineering: Civil, Mechanical, Electrical & Electronics (EEE), Electronics & Communication (ECE), Electronics & Instrumentation (EIE), Automobile, and Mechatronics Engineering.
+	• IT & Computer Sciences: Computer Science & Engineering (CSE), Information Technology (IT), Computer Science & Design, Artificial Intelligence & Machine Learning (AI&ML), and Artificial Intelligence & Data Science (AI&DS).
+	• Technology Specialities: Chemical Engineering and Food Technology.
+• Postgraduate (2 Years): Master of Business Administration (MBA), Master of Computer Applications (MCA), and M.E./M.Tech specialities (Structural, VLSI Design, CSE, Food Tech).
 
+🗳️ Admissions, Entry Quotas & Counseling Codes
 
+Seats across all streams are systematically allocated between Government Counseling (65%) and Management Quota (35%):
 
+Programme Pathway	Primary Mode of Intake	Official Admission Code
+B.E. / B.Tech Tracks	TNEA Counseling (Based on 12th Cut-Off)	TNEA Code: 2711
+MBA Track	TANCET Counseling / Management Entrance	TANCET Code: 233
+MCA Track	TANCET Counseling / Management Entrance	TANCET Code: 512
 
+Note: For Management Quota seats, students apply directly via the institutional cell based on Merit/HSC aggregate marks without requiring TNEA allocations.
+
+💳 Course Fee Structure (Estimated)
 
+Fees vary depending on the chosen entry quota. The institutional brackets for the entire course cycles are as follows:
+• Government Quota (Via TNEA Counseling): Approximately ₹50,000 to ₹55,000 per year (Totaling ~₹2,20,000 for the full 4-year duration).
+• Management Quota: Ranges between ₹1,00,000 to ₹2,00,000 per year depending on the high-demand branches (e.g., CSE, ECE, AI&DS).
+• PG Programmes: MBA totals approximately ₹2,00,000 across 2 years, while MCA is roughly ₹1,00,000 in total tuition costs.
+• Hostel Charges: An additional ₹50,000 to ₹80,000 annually covering accommodation, amenities, and mess utilities.
 
+🎓 Financial Aid & Fee Concessions
 
+KEC facilitates several tuition support waivers:
+1. 7.5% Government School Quota: Complete tuition, hostel, and mess fee waiver for eligible Tamil Nadu Government School students.
+2. First-Generation Graduate Concession: A deduction of ₹25,000 per year for students who are the first in their family to secure a degree.
+3. Institutional Merit: 50% tuition fee waiver for the top 5% of academic rank holders within the semester.
+If you would like to proceed, let me know:
+• Your 12th-standard PCM cut-off (or TANCET score).
+• The specific branch you are most interested in.
 
 
 
-transport:
+*Courses and Departments** — available branches, syllabus, and academic programmes:
+Kongu Engineering College (KEC) is an autonomous educational institution in Perundurai, Erode, Tamil Nadu, affiliated with Anna University. The college delivers a multi-disciplinary curriculum spanning engineering, next-gen technology, management, and basic sciences. [1] 
+------------------------------
+## 🏛️ Departments & Available Branches
+The engineering and technology branches at KEC are spread across dedicated academic departments offering undergraduate (UG) and postgraduate (PG) tracks: [1] 
+
+* 
+* Computing & Information Technologies:
+* B.E. Computer Science and Engineering
+   * B.Tech. Information Technology
+   * B.E. Computer Science and Design
+   * M.E. Computer Science and Engineering [1, 2] 
+* Artificial Intelligence & Data Sciences:
+* B.Tech. Artificial Intelligence and Machine Learning
+   * B.Tech. Artificial Intelligence and Data Science [2] 
+* Electrical, Electronics & Instrumentation:
+* B.E. Electronics and Communication Engineering
+   * B.E. Electrical and Electronics Engineering
+   * B.E. Electronics and Instrumentation Engineering
+   * M.E. VLSI Design [1, 2] 
+* Mechanical, Mechatronics & Automotive Sciences:
+* B.E. Mechanical Engineering
+   * B.E. Mechatronics Engineering
+   * B.E. Automobile Engineering [2] 
+* Civil Infrastructure & Design:
+* B.E. Civil Engineering
+   * B.Arch. (Architecture)
+   * M.E. Structural Engineering [1, 2] 
+* Chemical & Process Technologies:
+* B.Tech. Chemical Engineering
+   * B.Tech. Food Technology
+   * M.Tech. Food Technology [1, 2] 
+* 
+
+------------------------------
+## 🎓 Academic Programmes Framework
+Academic streams are classified into four major standard degrees and timeframes: [3] 
+
+   1. Undergraduate (UG): B.E. and B.Tech. programmes require 4 years (8 semesters), while the specialized B.Arch. course takes 5 years (10 semesters). [2] 
+   2. Postgraduate (PG): Technical options include 2-year M.E./M.Tech. specializations, alongside professional programmes like the Master of Business Administration (MBA) and Master of Computer Applications (MCA). [3, 4] 
+   3. Computer Technology & Applied Sciences: Regular 3-year B.Sc. tracks and 5-year Integrated M.Sc. software system degrees. [3] 
+   4. Doctorate Degrees: Full-time and part-time Ph.D. research paths across approved departments. [3, 4] 
+
+------------------------------
+## 📖 Autonomous Syllabus & Batch Regulations
+Because KEC holds a valid autonomous institution status, the college directly manages its choice-based credit curricula independently. [1, 5] 
+
+* 
+* Active Regulations Matrix: Syllabi and exam patterns are categorized according to specific batch admission versions, including R2018, R2020, R2022, R2024, R2025, and R2026. [6] 
+* Credit Structure: Standard courses are split uniformly between Humanities/Social Sciences (HS), Basic Sciences (BS), Engineering Sciences (ES), Professional Core (PC), and open industrial electives. [7] 
+* Portal Resources: Full curriculum framework maps, performance feedback, and scheme changes can be accessed directly on the [Kongu Engineering College Academic Portal](https://academic.kongu.edu/) and the primary [KEC Website](https://kongu.ac.in/).
+* 
+
+The current curriculum at Kongu Engineering College (KEC) operates under autonomous Batch Regulations. Depending on the year of admission, students follow the R2022, R2024, R2025, or R2026 regulations.
+The exact curriculum breakdown for each department follows a standardized autonomous structure:
+
+🏛️ Core Engineering Departments
+
+• Computer Science and Engineering (CSE) / Information Technology (IT)
+	• Core Syllabus Focus: Data Structures, Object-Oriented Programming, Design & Analysis of Algorithms, Database Management Systems (DBMS), Operating Systems, Software Engineering, Computer Networks, and Cloud Computing.
+• Artificial Intelligence (AI & ML / AI & DS) & Computer Science and Design
+	• Core Syllabus Focus: Foundations of AI, Machine Learning Techniques, Data Science & Analytics, Neural Networks, Deep Learning, Big Data Analytics, and Computer Vision.
+• Electronics and Communication Engineering (ECE)
+	• Core Syllabus Focus: Semiconductor Devices, Electronic Circuits, Digital Electronics, Signals & Systems, Analog and Digital Communications, Microprocessors & Microcontrollers, VLSI Design, and Antenna Theory.
+• Electrical and Electronics Engineering (EEE)
+	• Core Syllabus Focus: Electric Circuits, Electromagnetic Fields, Electrical Machines (DC and AC), Power Electronics, Control Systems, Power System Analysis, and Renewable Energy Systems.
+• Mechanical Engineering / Mechatronics Engineering / Automobile Engineering
+	• Core Syllabus Focus: Engineering Mechanics, Thermodynamics, Fluid Mechanics, Kinematics & Dynamics of Machinery, Manufacturing Technology, CAD/CAM, Robotics, Automation, Sensors & Instrumentation, and Automotive Engines.
+• Civil Engineering
+	• Core Syllabus Focus: Engineering Geology, Mechanics of Solids, Fluid Mechanics, Surveying, Structural Analysis, Concrete Technology, Environmental Engineering, and Geotechnical Engineering.
+• Chemical Engineering / Food Technology
+	• Core Syllabus Focus: Process Calculations, Fluid Mechanics for Chemical Engineers, Mass & Heat Transfer, Chemical Technology, Food Microbiology, Biochemistry, Food Processing & Preservation Engineering.
+
+[1] [https://kongu.ac.in](https://kongu.ac.in/blogs/kongu-engineering-college-the-best-engineering-college-in-erode/)
+[2] [https://kongu.ac.in](https://kongu.ac.in/ug)
+[3] https://kongu.ac.in
+[4] [https://collegedunia.com](https://collegedunia.com/college/14023-kongu-engineering-college-kec-erode)
+[5] [https://kongu.ac.in](https://kongu.ac.in/blogs/academic-structure-at-kongu-engineering-college-autonomous-perundurai/)
+[6] https://academic.kongu.edu
+[7] https://academic.kongu.edu
+
+
+Fees** — tuition fees, additional expenses, payment deadlines, and refunds.
+
+
+1. Tuition Fees
+
+Tuition fees at KEC vary primarily depending on whether admission is secured via the TNEA Government Counselling quota or the Management Quota.
+
+Programme	TNEA / Government Quota	Management Quota
+B.E. / B.Tech	₹55,000 per year (Total: ₹2.20 Lakhs)	₹1,25,000 per year (Total: ~₹5.00 Lakhs)
+MBA	₹1,00,000 per year (Total: ₹2.00 Lakhs)	₹1,40,000 per year (Total: ₹2.80 Lakhs)
+M.E. / M.Tech	₹50,000 per year (Total: ₹1.00 Lakhs)	Varies by specialization
+MCA	₹50,000 per year (Total: ₹1.00 Lakhs)	Varies by specialization
+
+Note: For B.E./B.Tech, the government quota fee is heavily reduced or fully waived for students under special provisions like the 7.5% Government School Reservation Scheme, First-Generation Graduate Concession (₹25,000 waiver), or institutional scholarships for the top 5% of students.
+
+2. Additional Expenses
+
+Apart from the base tuition fee, students should budget for the following yearly or one-time expenses:
+• Hostel and Mess Fees: Range between ₹60,000 and ₹80,000 per year depending on the choice of room configuration and facilities.
+• College Bus / Transportation: Approximately ₹20,000 per year (optional, based on the commute route).
+• Admission/Application Deposit: A one-time initial counselling or application deposit ranging from ₹500 to ₹10,000 depending on the entry method.
+
+3. Payment Deadlines
+
+• Initial Semesters: New admissions must pay the designated fees within the dates specified by the Anna University/TNEA counselling schedule (typically between July and September).
+• Subsequent Years: Annual institutional and semester fees must be cleared prior to the start of the respective academic term or as notified by the KEC Admission Cell.
+• Examination Fees: Regular or arrear exam registrations must be paid via the KEC COE Portal before the specific deadlines published on the department notice boards.
+
+4. Refunds & Cancellation Policy
+
+According to the official KEC Online Payment Terms:
+• Leaving Mid-Term: If a student voluntarily leaves Kongu Engineering College before completing their academic service period, there is no entitlement to a refund of paid service or institutional fees.
+• Discretionary Refunds: Exceptional refund requests are strictly evaluated at the sole discretion of the Management. Approved refunds are processed directly back to the original credit/debit card or account used for the transaction.
+• Examination Fees: Exam-related fees, once processed, are strictly non-refundable and cannot be adjusted under any circumstances.
+
+The KVIT Trust is not just a governing body. It also provides endowments and financial aid for students facing financial difficulties, one more layer of support that rounds out fees and scholarships in engineering college.
+
+A Note Before You Decide
+Fee structures naturally differ from one college to another, shaped by each institution’s own infrastructure, academic system, and approach. Understanding this early simply helps families feel more prepared and confident when the time comes to decide.
+
+Choosing the right college isn’t just about academics, it’s about finding manageable fees and real financial support, which is exactly why fees and scholarships in engineering college matter so much.
+
+While fees and scholarships are important, they are only part of choosing the right college. Academics, campus facilities, industry exposure, and placements also deserve careful consideration.
+Choosing an engineering college is one of the biggest decisions a family makes, and understanding fees and scholarships in engineering college often matters more than rankings alone. The real question is simple: how much will it cost, and is there help available? Here’s everything you need to know before deciding.
+
+What Does the Fee Structure Actually Look Like?
+At Kongu Engineering College in Erode, the fees in engineering colleges vary depending mainly on how you get admission.
+
+A General Overview 
+For UG programs like BE and B.Tech the annual fee generally falls in the range of Rs 1 lakh to Rs 2 lakh depending on whether admission is through TNEA counselling or management quota. 
+
+📞 For exact fee details and current fee structure, contact the KEC Admission Cell directly at kongu.ac.in or visit the campus.
+Understanding Fees and Scholarships in Engineering College Before You Join 
+The college offers a wide range of financial support that many families are not fully aware of before joining.
+
+Institutional Scholarships
+Scholarship	Benefit
+Top 5% Academic Excellence	50% tuition fee waiver
+Top Scorer Award	₹20,000 cash reward
+First Generation Graduate	₹25,000 fee concession
+Sports Scholarship	Tuition fee concession
+Government Scholarships for Engineering Students 
+Scholarship	Benefit
+SC and ST Post Matric	Up to ₹55,000 per year
+BC and MBC Scholarship	₹7,000 to ₹8,500 per year
+7.5 Reservation Scheme	Full fee waiver
+AICTE Pragathi	Special scholarship for girl students
+Students can also explore additional state-funded financial assistance through the Tamil Nadu Directorate of Collegiate Education Scholarship Portal, which provides information on various government scholarships, eligibility criteria, benefits, and application procedures.
+
+Corporate and Private Support
+Students can also apply for external scholarships from organizations like the Cognizant Foundation, Agaram Foundation, and Kongu Vellalar Sangangal Association. 
+
+The KVIT Trust also provides endowments and financial aid for students facing financial difficulties, one more layer of support that rounds out fees and scholarships in engineering college. 
+
+The KVIT Trust Advantage
+This is something most families discover only after joining. Kongu Engineering College is part of the KVIT Trust, the Kongu Vellalar Institute of Technology Trust, which is one of the most active educational trusts in Tamil Nadu running multiple institutions across engineering, arts, and science.
+
+Scholarships** — available scholarships, eligibility, and application procedures.
+
+Kongu Engineering College (KEC), located in Erode, Tamil Nadu, provides multiple institutional, state government, and corporate/private scholarships to support undergraduate and postgraduate students.
+
+Available Scholarships
+
+• Top 5% Academic Excellence Scholarship — Provides a 50% tuition fee waiver for top-performing students based on their cumulative grade point average (CGPA).
+• Top Scorer Award — Grants a cash award or scholarship of Rs. 20,000 annually to the top 5 students in each department.
+• First Generation Graduate Concession — Offers a Rs. 25,000 tuition fee reduction for students who are the first in their families to pursue higher education.
+• 7.5% Government School Students Reservation Scheme — Provides a full tuition fee waiver for eligible students who completed their schooling from class 6 to 12 in Tamil Nadu government schools and entered via TNEA counseling.
+• Sports Scholarship — Provides tuition fee concessions for state-level or national-level sports achievers.
+• Government Scholarships (SC/ST/BC/MBC) — Includes SC/ST Post-Matric scholarships worth up to Rs. 55,000 per year, and BC/MBC scholarships ranging from Rs. 7,000 to Rs. 8,500 per year (subject to family income limits).
+• AICTE Pragathi Scholarship — Financial assistance schemes facilitated for eligible female students.
+• Private Trusts and Corporate Aid — Financial aid and endowments provided through external organizations like the Cognizant Foundation, Agaram Foundation, Kongu Vellalar Sangangal Association, and the KVIT Trust.
+
+Eligibility Criteria
+
+• Academic Schemes: Must maintain high academic standing (e.g., top 5% or top rankers in department exams/CGPA).
+• Government School / 7.5% Quota: Must have studied from Class 6 through Class 12 in a Tamil Nadu state government school.
+• First Generation Graduate: Must hold a valid First Generation Graduate certificate issued by the competent revenue authority, confirming no family member is a graduate.
+• Caste & Income-Based Scholarships: Must belong to the respective reserved category (SC, ST, BC, MBC) and satisfy annual family income ceilings (e.g., below Rs. 2,00,000 for certain BC/MBC schemes).
+• Sports Quota: Must possess recognized certificates of participation or victory at state or national athletic/sports events.
+
+Application Procedures
+
+1. At Admission / Counseling: Report your eligibility for the 7.5% Government School Quota, First Generation Graduate status, or Sports Quota during the TNEA Counseling or institutional admission process at Kongu Engineering College.
+2. Document Submission: Submit necessary documents to the college scholarship cell or administrative office, which typically include:
+	• Class 10 and 12 mark sheets / degree grade sheets
+	• Community/Caste certificate
+	• Income certificate issued by the Tahsildar
+	• First Generation Graduate certificate (if claiming the Rs. 25,000 concession)
+	• Government school study certificates (classes 6–12) for the 7.5% scheme
+	• Aadhaar card, bank passbook copy, and recent passport-size photographs
+3. Portal Registration: For state government (State Scholarship Portal / National Scholarship Portal) or corporate/private trust aids (such as Cognizant or Agaram foundations), fill out the respective online application forms as notified by the college scholarship coordinator.
+Review details on the Kongu Engineering College Blog or verify status via Kollegeapply KEC Scholarships.
+
+The annual income limits and specific document formats required for these key scholarship schemes at Kongu Engineering College (KEC) are outlined below.
+
+1. SC / ST Post-Matric Scholarship
+
+• Income Limit: The annual family income of the parents or guardians must not exceed Rs. 2,50,000 per year to qualify for the full post-matric scholarship benefit. For students applying under the BC/MBC community scholarship, the income limit is capped slightly lower at Rs. 2,00,000 per year.
+• Required Documents & Formats:
+	• Community Certificate: A permanent digitally signed e-Certificate issued by the competent revenue authority (Sub-Collector/Tahsildar).
+	• Income Certificate: An official income certificate obtained via the Tamil Nadu e-Sevai portal generated within the current financial year.
+	• Aadhaar Card & Bank Passbook: The student's personal bank account must be actively seeded with Aadhaar for Direct Benefit Transfer (DBT) clearance.
+
+2. First Generation Graduate Concession
+
+• Income Limit: Formally, there is no strict income ceiling for the institutional tuition waiver (which provides an approximate Rs. 25,000 fee reduction at KEC), provided the student is genuinely the first person in their family to pursue a professional degree. However, if applying for extended state technical education aids under the scheme, the general limit aligns up to Rs. 2,50,000 per year.
+• Required Documents & Formats:
+	• First Graduate Certificate (REV-104): A digitally signed e-Certificate issued by the Head Quarters Deputy Tahsildar. It must explicitly verify a multi-generational family matrix showing that the applicant's father, mother, paternal grandparents, and maternal grandparents have no formal graduate degrees.
+	• Joint Declaration Form: A mandatory legal affidavit format signed by both the candidate and the parent/guardian. This form affirms that no other family member or sibling has ever utilized the First Graduate tuition fee concession.
+	• Family Educational Proofs: School Transfer Certificates (TC) or continuous study proofs of parents and siblings to verify their non-graduate status.
+	• Family Identification: Smart Ration Card and Aadhaar cards for all members listed in the declaration matrix.
+Applications and online verifications are typically managed directly through the KEC Scholarship Cell right after the TNEA seat allotment or admissions window closes
+
+
+Placements** — placement opportunities, recruiting companies, salary packages, and placement support.
+
+
+Kongu Engineering College (KEC), located in Perundurai near Erode, Tamil Nadu, offers structured placement support, strong recruiter participation, and competitive salary packages.
+
+Placement Opportunities & Statistics
+
+• Total Companies Visited: 300 to 409+ companies per recruitment cycle.
+• Students Placed: Over 1,274 to 1,529+ students placed annually.
+• Placement Rate: Around 94% to 95% across participating branches.
+• Highest Salary Package: Up to 61.21 LPA.
+• Average Salary Package: Around 5.5 LPA.
+• Branch-wise Average Packages:
+	• Civil Engineering: 3.7 LPA
+	• Mechanical Engineering: 4.4 LPA
+	• Electrical and Electronics Engineering (EEE): 5.3 LPA
+	• Electronics and Communication Engineering (ECE): 5.1 LPA
+	• Computer Science and Engineering (CSE): 5.2 LPA
+	• Information Technology (IT): 5.6 LPA
+	• Artificial Intelligence and Data Science (AI & DS): 5.7 LPA
+	• Master of Computer Applications (MCA): 4.2 LPA
+	• Master of Business Administration (MBA): 4.3 LPA
+
+Recruiting Companies
+
+• IT & Technology: Cognizant, TCS, Infosys, Wipro, Accenture, Tech Mahindra, Zoho, Huawei, and HP.
+• Core Engineering & Automotive: Larsen & Toubro (L&T), Bosch, ELGI, TVS, Hyundai, and Renault Nissan.
+• FMCG & Consumer Goods: Britannia, ITC Limited, and Hatsun.
+• Analytics & Product: Mu Sigma and Newgen.
+
+Placement Support & Training Framework
+
+• Central Placement Cell: Established in 1998, it acts as the primary bridge between academic departments and industry partners.
+• Year-Wise Structured Training:
+	• 1st Year: Foundation building, communication skills, and aptitude training.
+	• 2nd Year: Technical skill enhancement and coding practice.
+	• 3rd Year: Mock interviews, group discussions, resume-building workshops, and live internships.
+	• Final Year: On-campus recruitment drives, company-specific pre-placement talks, and continuous career counseling.
+
+The latest placement details for the current 2025–26 recruitment drive alongside the recently completed 2024–25 batch at Kongu Engineering College (KEC) reflect sustained high placement performance:
+
+Current Batch Placement Statistics (2025–26 Drive)
+
+• Total Job Offers Secured: 1,828+ offers already achieved during the ongoing cycle.
+• Students Placed: 1,457 students placed so far.
+• Companies Visited: 348 industry partners have actively recruited on campus.
+• Highest Salary Package: Continues to hit a peak of 61.21 LPA.
+• Placement Success Rate: Strong at 95%.
+
+Preceding Batch Placement Statistics (2024–25 Batch)
+
+• Total Job Offers: 1,693 offers.
+• Total Companies: 371 recruiters visited.
+• Total Students Placed: 1,362 students successfully transitioned to corporate roles.
+• Highest Salary Package: 61.21 LPA.
+
+Current Recruiter Landscape
+
+The current deployment cycle features top-tier industry players spanning across technology, engineering, and manufacturing verticals:
+• Mass & IT Recruiters: Cognizant, Infosys, TCS, Wipro, and Amazon.
+• Core & Specialised Tech: Bosch, Tech Mahindra, and Accenture
+The upcoming and actively visiting recruiters for the ongoing campus placement drives at Kongu Engineering College (KEC) are categorized below by their respective industry sectors:
+
+IT, Product & Software Development
+
+• Major Tech & Systems Integrators: Cognizant, Infosys, Wipro, Tata Consultancy Services (TCS), Accenture, and Tech Mahindra.
+• Product, Internet & Analytics Companies: Amazon, Zoho Corporation, Huawei, Mu Sigma, Newgen Software, Soliton Technologies, and HP.
+
+Core Engineering, Infrastructure & Automotive
+
+• Automotive & Electronic Systems: Robert Bosch, Hyundai Motors, TVS Motor Company, and Renault Nissan Technology & Business Centre.
+• Heavy Engineering & Manufacturing: Larsen & Toubro (L&T), ELGI Equipments, Vedanta Limited, and Sanmar Group.
+
+FMCG, Banking & Services
+
+• Consumer Goods & Healthcare: Britannia Industries, ITC Limited, Hatsun Agro Product, and Vernalis.
+• Financial Services: ICICI Securities and Odessa Technologies
+The company-mandated eligibility criteria and CGPA requirements for campus placements at Kongu Engineering College (KEC) typically follow a tiered framework based on the recruiting company's category:
+
+1. General Benchmark Requirements
+
+To remain eligible for the widest pool of recruiters, students are generally advised to maintain:
+• Academic Minimums: 60% or above in 10th (SSLC) and 12th (HSC/Diploma).
+• History of Arrears: No standing arrears at the time of the recruitment process. Many top-tier companies strictly mandate a clean academic record with "history of zero arrears", though mass recruiters may permit 1 or 2 past cleared arrears.
+
+2. Company-Specific CGPA Tiers
+
+The precise minimum CGPA depends entirely on the hiring company profile:
+• Super Dream & Product Companies (CTC > 10 LPA; e.g., Amazon, Zoho, Soliton):
+	• Minimum CGPA: 7.5 to 8.0+
+	• Core focus: High coding proficiency, no history of arrears, and strong analytical cutoffs.
+• Core Engineering & Automotive (e.g., Bosch, L&T, Hyundai, TVS):
+	• Minimum CGPA: 7.0 to 7.5+
+	• Core focus: Strong departmental foundation, practical lab skills, and major project relevance.
+• Mass IT Recruiters & Services (e.g., CTS, TCS, Wipro, Infosys, Accenture):
+	• Minimum CGPA: 6.0 to 6.5+
+	• Core focus: Basic technical aptitude, logical reasoning, and communication skills.
+
+3. CGPA to Percentage Conversion Rules
+
+When companies request percentages instead of grade points, KEC operates under an autonomous system where the Cumulative Grade Point Average (CGPA) is directly translated using a standardized multiplier:
+\(\text{Equivalent\ Percentage\ of\ Marks}=\text{CGPA}\times 10\)
+(For example, a CGPA of 7.5 directly equates to 75% marks.)
+The technical assessment and selection pipeline at Kongu Engineering College (KEC) generally features a structured multi-stage evaluation:
+
+Stage 1: Online Aptitude & Technical Assessment
+
+This initial screening is highly time-bound and acts as the primary filter for all major recruiters:
+• Quantitative Aptitude & Logical Reasoning: Covers topics like arithmetic, data interpretation, permutations, and logical deductions.
+• Verbal Ability: Evaluates grammar, reading comprehension, and sentence structuring.
+• Core Technical MCQs:
+	• IT/Product Roles: Questions focus on Object-Oriented Programming (OOPs), Data Structures, Algorithms, Operating Systems, and DBMS.
+	• Core Engineering Roles: Questions focus on circuit analysis, thermodynamics, or solid mechanics depending on the branch.
+• Coding Sections: Product and Super Dream companies require solving 1 to 3 distinct coding challenges (usually in C, C++, Java, or Python).
+
+Stage 2: Technical Group Discussion (GD) or Case Study
+
+Mainly utilized by consulting, management, and certain core infrastructure firms:
+• Format: Teams of 8–10 candidates are presented with a technical problem statement or an industry case study.
+• Evaluation Criteria: Teamwork, structured thinking, domain knowledge, and clear articulation under pressure.
+
+Stage 3: Technical Interview
+
+A deep-dive technical assessment conducted one-on-one by industry panellists:
+• Project Viva: Detailed scrutiny of the Final Year Project, mini-projects, or industrial internships undertaken.
+• Whiteboard Coding: Solving algorithms live, writing dry runs of complex code, or drawing system architectures.
+• Subject Specifics: Extensive questioning on foundational departmental subjects.
+
+Stage 4: HR Interview
+
+The final verification layer focusing on behavioral alignment:
+• Assessments: Communication skills, confidence, willingness to relocate, and flexibility regarding shift timing.
+• Salary Alignment: Pre-placement talk confirmations and onboarding paperwork orientation.
+Kongu Engineering College provides on-campus resources, platforms, and dedicated infrastructure to prepare students for these selection stages.
+
+1. Mandatory Coding & Aptitude Platforms
+
+KEC integrates specialized digital learning platforms into the weekly timetable to automate progress tracking:
+• Skillrack: The primary portal used at KEC for daily automated coding challenges, timed aptitude tests, and company-specific company question banks.
+• Guvi / Hackerrank: Utilized for department-wide hackathons, specialized data structure tracks, and assessing competitive programming skills.
+• Amcat / Cocubes Assessments: Periodic external diagnostic mock tests conducted on-campus to benchmark students against national percentiles.
+
+2. Physical Placement Infrastructure
+
+The KEC Placement and Training Cell operates out of a centralized facility designed to handle scale:
+• Online Test Hubs: Dedicated computer centers equipped with over 400+ high-speed LAN-connected systems to seamlessly run simultaneous mass recruitment online tests.
+• Interview Cabins: 15+ dedicated individual cabins designed specifically for secure face-to-face panels and high-bandwidth virtual video interviews.
+• GD Rooms: Soundproofed group discussion halls fitted with audio-visual presentation equipment.
+
+3. Institutional Mock Support & Training Framework
+
+Before companies arrive on campus, the college deploys a dedicated preparation blueprint:
+• Internal Mock Interviews: Conducted by senior faculty members and institutional alumni to run simulated technical and HR dress rehearsals.
+• External Bootcamps: Intensive 3-to-5-day training camps managed by external corporate trainers (such as FACE or Six Phrase) right before major drives begin.
+• Peer Learning Circles: Student-led coding clubs that meet post-college hours to solve advanced data structure and algorithm puzzles.
+The placement preparation timeline at Kongu Engineering College (KEC) is integrated into the academic calendar, starting early in the degree program and peaking right before the recruitment season.
+
+Pre-Final Year (Semesters 1 to 6)
+
+• Semesters 1 & 2 (First Year): Weekly foundational hours dedicated to English communication, public speaking, and introductory mathematical reasoning.
+• Semesters 3 & 4 (Second Year): Regular aptitude training classes focusing on quantitative skills. Introduction to basic programming logic (C/C++) through daily tasks on the Skillrack platform.
+• Semesters 5 & 6 (Third Year): Advanced technical tracks covering Data Structures, Algorithms, and Object-Oriented Programming (OOPs). Periodic diagnostic online tests (via AMCAT/CoCubes) are introduced to benchmark students.
+
+The Final Placement Marathon (Varies by Year)
+
+The schedule intensifies as students transition into their final year of engineering:
+
+Timeline / Month	Phase	Key Preparation Activites
+May – June (Pre-Final Summer)	The Boot Camp Phase	Intensive 3 to 5-day continuous boot camps run by external corporate trainers (like FACE or Six Phrase). Focuses entirely on shortcut aptitude methods and company-specific coding patterns.
+July (Early 7th Semester)	The Final Review	Execution of internal mock interviews by alumni and senior faculty panels. Resume freezing and registration on the KEC centralized placement portal.
+August onwards	The Recruitment Window	On-campus drives begin. Regular schedules are modified to accommodate pre-placement talks, online screening exams in the computer centers, and face-to-face interviews.
+
+AI Mode conversation: Kongu Engineering —Placements** — placement opportunities, recruiting companies, salary packages, and placement support.
+
+
+You said: Kongu Engineering —Placements** — placement opportunities, recruiting companies, salary packages, and placement support.
+
+Kongu Engineering —Placements** — placement opportunities, recruiting companies, salary packages, and placement support.
+Kongu Engineering College (KEC), located in Perundurai near Erode, Tamil Nadu, offers structured placement support, strong recruiter participation, and competitive salary packages.
+
+Placement Opportunities & Statistics
+
+• Total Companies Visited: 300 to 409+ companies per recruitment cycle.
+• Students Placed: Over 1,274 to 1,529+ students placed annually.
+• Placement Rate: Around 94% to 95% across participating branches.
+• Highest Salary Package: Up to 61.21 LPA.
+• Average Salary Package: Around 5.5 LPA.
+• Branch-wise Average Packages:
+	• Civil Engineering: 3.7 LPA
+	• Mechanical Engineering: 4.4 LPA
+	• Electrical and Electronics Engineering (EEE): 5.3 LPA
+	• Electronics and Communication Engineering (ECE): 5.1 LPA
+	• Computer Science and Engineering (CSE): 5.2 LPA
+	• Information Technology (IT): 5.6 LPA
+	• Artificial Intelligence and Data Science (AI & DS): 5.7 LPA
+	• Master of Computer Applications (MCA): 4.2 LPA
+	• Master of Business Administration (MBA): 4.3 LPA
+
+Recruiting Companies
+
+• IT & Technology: Cognizant, TCS, Infosys, Wipro, Accenture, Tech Mahindra, Zoho, Huawei, and HP.
+• Core Engineering & Automotive: Larsen & Toubro (L&T), Bosch, ELGI, TVS, Hyundai, and Renault Nissan.
+• FMCG & Consumer Goods: Britannia, ITC Limited, and Hatsun.
+• Analytics & Product: Mu Sigma and Newgen.
+
+Placement Support & Training Framework
+
+• Central Placement Cell: Established in 1998, it acts as the primary bridge between academic departments and industry partners.
+• Year-Wise Structured Training:
+	• 1st Year: Foundation building, communication skills, and aptitude training.
+	• 2nd Year: Technical skill enhancement and coding practice.
+	• 3rd Year: Mock interviews, group discussions, resume-building workshops, and live internships.
+	• Final Year: On-campus recruitment drives, company-specific pre-placement talks, and continuous career counseling.
+Would you like to check the placement statistics or cutoff details for a specific engineering branch at Kongu Engineering College?
+
+current year details
+
+The latest placement details for the current 2025–26 recruitment drive alongside the recently completed 2024–25 batch at Kongu Engineering College (KEC) reflect sustained high placement performance:
+
+Current Batch Placement Statistics (2025–26 Drive)
+
+• Total Job Offers Secured: 1,828+ offers already achieved during the ongoing cycle.
+• Students Placed: 1,457 students placed so far.
+• Companies Visited: 348 industry partners have actively recruited on campus.
+• Highest Salary Package: Continues to hit a peak of 61.21 LPA.
+• Placement Success Rate: Strong at 95%.
+
+Preceding Batch Placement Statistics (2024–25 Batch)
+
+• Total Job Offers: 1,693 offers.
+• Total Companies: 371 recruiters visited.
+• Total Students Placed: 1,362 students successfully transitioned to corporate roles.
+• Highest Salary Package: 61.21 LPA.
+
+Current Recruiter Landscape
+
+The current deployment cycle features top-tier industry players spanning across technology, engineering, and manufacturing verticals:
+• Mass & IT Recruiters: Cognizant, Infosys, TCS, Wipro, and Amazon.
+• Core & Specialised Tech: Bosch, Tech Mahindra, and Accenture.
+Would you like to explore the branch-wise distribution of offers or specific details about the internship-to-placement conversion rates for the current batch?
+
+visit coming names
+
+The upcoming and actively visiting recruiters for the ongoing campus placement drives at Kongu Engineering College (KEC) are categorized below by their respective industry sectors:
+
+IT, Product & Software Development
+
+• Major Tech & Systems Integrators: Cognizant, Infosys, Wipro, Tata Consultancy Services (TCS), Accenture, and Tech Mahindra.
+• Product, Internet & Analytics Companies: Amazon, Zoho Corporation, Huawei, Mu Sigma, Newgen Software, Soliton Technologies, and HP.
+
+Core Engineering, Infrastructure & Automotive
+
+• Automotive & Electronic Systems: Robert Bosch, Hyundai Motors, TVS Motor Company, and Renault Nissan Technology & Business Centre.
+• Heavy Engineering & Manufacturing: Larsen & Toubro (L&T), ELGI Equipments, Vedanta Limited, and Sanmar Group.
+
+FMCG, Banking & Services
+
+• Consumer Goods & Healthcare: Britannia Industries, ITC Limited, Hatsun Agro Product, and Vernalis.
+• Financial Services: ICICI Securities and Odessa Technologies.
+Would you like to know the specific eligibility criteria or minimum CGPA requirements that these visiting companies mandate for registration?
+
+yes
+
+The company-mandated eligibility criteria and CGPA requirements for campus placements at Kongu Engineering College (KEC) typically follow a tiered framework based on the recruiting company's category:
+
+1. General Benchmark Requirements
+
+To remain eligible for the widest pool of recruiters, students are generally advised to maintain:
+• Academic Minimums: 60% or above in 10th (SSLC) and 12th (HSC/Diploma).
+• History of Arrears: No standing arrears at the time of the recruitment process. Many top-tier companies strictly mandate a clean academic record with "history of zero arrears", though mass recruiters may permit 1 or 2 past cleared arrears.
+
+2. Company-Specific CGPA Tiers
+
+The precise minimum CGPA depends entirely on the hiring company profile:
+• Super Dream & Product Companies (CTC > 10 LPA; e.g., Amazon, Zoho, Soliton):
+	• Minimum CGPA: 7.5 to 8.0+
+	• Core focus: High coding proficiency, no history of arrears, and strong analytical cutoffs.
+• Core Engineering & Automotive (e.g., Bosch, L&T, Hyundai, TVS):
+	• Minimum CGPA: 7.0 to 7.5+
+	• Core focus: Strong departmental foundation, practical lab skills, and major project relevance.
+• Mass IT Recruiters & Services (e.g., CTS, TCS, Wipro, Infosys, Accenture):
+	• Minimum CGPA: 6.0 to 6.5+
+	• Core focus: Basic technical aptitude, logical reasoning, and communication skills.
+
+3. CGPA to Percentage Conversion Rules
+
+When companies request percentages instead of grade points, KEC operates under an autonomous system where the Cumulative Grade Point Average (CGPA) is directly translated using a standardized multiplier:
+\(\text{Equivalent\ Percentage\ of\ Marks}=\text{CGPA}\times 10\)
+(For example, a CGPA of 7.5 directly equates to 75% marks.)
+Would you like information on the aptitude test pattern or technical assessment rounds typically conducted by these recruiters at KEC?
+
+ok
+
+The technical assessment and selection pipeline at Kongu Engineering College (KEC) generally features a structured multi-stage evaluation:
+
+Stage 1: Online Aptitude & Technical Assessment
+
+This initial screening is highly time-bound and acts as the primary filter for all major recruiters:
+• Quantitative Aptitude & Logical Reasoning: Covers topics like arithmetic, data interpretation, permutations, and logical deductions.
+• Verbal Ability: Evaluates grammar, reading comprehension, and sentence structuring.
+• Core Technical MCQs:
+	• IT/Product Roles: Questions focus on Object-Oriented Programming (OOPs), Data Structures, Algorithms, Operating Systems, and DBMS.
+	• Core Engineering Roles: Questions focus on circuit analysis, thermodynamics, or solid mechanics depending on the branch.
+• Coding Sections: Product and Super Dream companies require solving 1 to 3 distinct coding challenges (usually in C, C++, Java, or Python).
+
+Stage 2: Technical Group Discussion (GD) or Case Study
+
+Mainly utilized by consulting, management, and certain core infrastructure firms:
+• Format: Teams of 8–10 candidates are presented with a technical problem statement or an industry case study.
+• Evaluation Criteria: Teamwork, structured thinking, domain knowledge, and clear articulation under pressure.
+
+Stage 3: Technical Interview
+
+A deep-dive technical assessment conducted one-on-one by industry panellists:
+• Project Viva: Detailed scrutiny of the Final Year Project, mini-projects, or industrial internships undertaken.
+• Whiteboard Coding: Solving algorithms live, writing dry runs of complex code, or drawing system architectures.
+• Subject Specifics: Extensive questioning on foundational departmental subjects.
+
+Stage 4: HR Interview
+
+The final verification layer focusing on behavioral alignment:
+• Assessments: Communication skills, confidence, willingness to relocate, and flexibility regarding shift timing.
+• Salary Alignment: Pre-placement talk confirmations and onboarding paperwork orientation.
+Would you like me to share a checklist of essential resources, coding platforms, or mock interview support provided directly on-campus by the KEC placement cell?
+
+yes
+
+Kongu Engineering College provides on-campus resources, platforms, and dedicated infrastructure to prepare students for these selection stages.
+
+1. Mandatory Coding & Aptitude Platforms
+
+KEC integrates specialized digital learning platforms into the weekly timetable to automate progress tracking:
+• Skillrack: The primary portal used at KEC for daily automated coding challenges, timed aptitude tests, and company-specific company question banks.
+• Guvi / Hackerrank: Utilized for department-wide hackathons, specialized data structure tracks, and assessing competitive programming skills.
+• Amcat / Cocubes Assessments: Periodic external diagnostic mock tests conducted on-campus to benchmark students against national percentiles.
+
+2. Physical Placement Infrastructure
+
+The KEC Placement and Training Cell operates out of a centralized facility designed to handle scale:
+• Online Test Hubs: Dedicated computer centers equipped with over 400+ high-speed LAN-connected systems to seamlessly run simultaneous mass recruitment online tests.
+• Interview Cabins: 15+ dedicated individual cabins designed specifically for secure face-to-face panels and high-bandwidth virtual video interviews.
+• GD Rooms: Soundproofed group discussion halls fitted with audio-visual presentation equipment.
+
+3. Institutional Mock Support & Training Framework
+
+Before companies arrive on campus, the college deploys a dedicated preparation blueprint:
+• Internal Mock Interviews: Conducted by senior faculty members and institutional alumni to run simulated technical and HR dress rehearsals.
+• External Bootcamps: Intensive 3-to-5-day training camps managed by external corporate trainers (such as FACE or Six Phrase) right before major drives begin.
+• Peer Learning Circles: Student-led coding clubs that meet post-college hours to solve advanced data structure and algorithm puzzles.
+Would you like to know about the specific schedule or timeline of when these training programs begin during the academic calendar year?
+
+yes
+
+The placement preparation timeline at Kongu Engineering College (KEC) is integrated into the academic calendar, starting early in the degree program and peaking right before the recruitment season.
+
+Pre-Final Year (Semesters 1 to 6)
+
+• Semesters 1 & 2 (First Year): Weekly foundational hours dedicated to English communication, public speaking, and introductory mathematical reasoning.
+• Semesters 3 & 4 (Second Year): Regular aptitude training classes focusing on quantitative skills. Introduction to basic programming logic (C/C++) through daily tasks on the Skillrack platform.
+• Semesters 5 & 6 (Third Year): Advanced technical tracks covering Data Structures, Algorithms, and Object-Oriented Programming (OOPs). Periodic diagnostic online tests (via AMCAT/CoCubes) are introduced to benchmark students.
+
+The Final Placement Marathon (Varies by Year)
+
+The schedule intensifies as students transition into their final year of engineering:
+
+Timeline / Month	Phase	Key Preparation Activites
+May – June (Pre-Final Summer)	The Boot Camp Phase	Intensive 3 to 5-day continuous boot camps run by external corporate trainers (like FACE or Six Phrase). Focuses entirely on shortcut aptitude methods and company-specific coding patterns.
+July (Early 7th Semester)	The Final Review	Execution of internal mock interviews by alumni and senior faculty panels. Resume freezing and registration on the KEC centralized placement portal.
+August onwards	The Recruitment Window	On-campus drives begin. Regular schedules are modified to accommodate pre-placement talks, online screening exams in the computer centers, and face-to-face interviews.
+
+Would you like to know how the placement cell manages companies that visit during the internship phase versus full-time employment recruitment?
+
+place detail and contact
+
+Official location and centralized Placement Cell contact details for Kongu Engineering College (KEC) are outlined below:
+
+📍 Physical Location Details
+
+• Campus Name: Kongu Engineering College (Autonomous)
+• Postal Address: Thoppupalayam, Perundurai, Erode – 638060, Tamil Nadu, India.
+• Placement Cell Location: Main Administrative Block, KEC Campus.
+
+📞 Central Placement Cell Helplines
+
+• Landline Terminals: 04294 - 226564 / 04294 - 226644
+• Fax Gateway: 04294 - 220087
+• Official Placement Email: placement@kongu.ac.in / placement@kongu.edu
+
+👤 Key Placement Officers
+
+For direct corporate tie-ups or recruitment inquiries, you can reach out to the dedicated placement team:
+
+Designation	Officer Name	Mobile Number
+Dean (Placement)	Dr. R. Chandramohan	96778 51471
+Placement Officer	Mr. P. Dhakshinamoorthy	97900 04095
+Deputy Placement Officer	Mr. S. Kavin	96007 77618
+Deputy Placement Officer	Mr. P. Sukumar	96294 55327
+Assistant Placement Officer	Mr. P. Dineshkumar	73736 75915
+The contact details for the Industry Institute Partnership Cell (IIPC) and the General Admissions Office at Kongu Engineering College (KEC) are outlined below:
+
+💼 Industry Institute Partnership Cell (IIPC)
+
+This cell specifically manages industrial consultancies, memoranda of understanding (MoUs), corporate collaborations, and industry-sponsored labs:
+• Coordinator / Head: Dr. P. Selvakumar
+• Direct Office Phone: +91 4294 - 226650
+• Official Email: iipc@kongu.ac.in
+
+🎓 General Admissions Office
+
+For queries regarding engineering seat allocations, lateral entries, management quotas, eligibility criteria, and fee structures:
+• Central Helpline Lines: +91 4294 - 226555 / 226666 / 225555
+• Mobile / Alternative Admission Helpline: +91 99429 55555
+• Official Admission Email: principal@kongu.ac.in / kecadmission@kongu.ac.in
+
+
+
+Training** — aptitude, coding, communication skills, and interview preparation.
+
+
+1. Aptitude Training
+
+• Logical & Quantitative Skills: Focuses on mathematical problem-solving, data interpretation, and analytical reasoning required for online recruitment tests.
+• Regular Practice: Structured assessments and practice tests simulate real company tests (such as standard IT and core sector screening rounds).
+
+2. Coding & Technical Skills
+
+• Programming Foundations: Emphasizes languages like C, C++, OOPS concepts, and core computer science fundamentals.
+• Hands-on Lab Practice: Utilizes modern computer laboratories, software platforms, and coding drills to build real-world problem-solving speed.
+• Higher Studies & Technical Coaching: Provides dedicated guidance and coaching for competitive exams like GATE, GRE, CAT, and IELTS via the career and higher studies cell.
+
+3. Communication & Soft Skills
+
+• Personality Grooming: Designed from the early years to improve verbal fluency, public speaking, and confidence.
+• Group Discussions (GD): Regular mock group discussions train students to articulate ideas clearly and handle team-based evaluation rounds.
+
+4. Interview Preparation
+
+• Mock Interviews: Conducted by faculty members and external industry experts to replicate actual corporate interview pressures.
+• Resume Building Workshops: Guides students on crafting industry-standard technical and HR resumes.
+• Industry Interaction: Backed by 50+ MoUs, guest lectures, live projects, and 1,500+ student internships annually
+
+Based on the structured training roadmap at Kongu Engineering College (KEC), here is how your current timeline aligns with your target goals, alongside the perceived (expected) performance metrics required by top recruiters:
+
+The Current Year-Wise Focus
+
+The placement cell implements a four-year structured progression:
+• 1st Year (Foundations): Main focus is building baseline Communication & Aptitude skills.
+• 2nd Year (Core Skills): Intensifies with Technical Training & Coding basics.
+• 3rd Year (Bridge & Application): Transitions to Mock Interviews & Internships to build practical experience.
+• Final Year (Execution): Active Campus Placements & Career Support drives take place.
+
+Perceived Recruiter Metrics (What Companies Expect)
+
+Depending on the sector you target, the perceived competencies and evaluation patterns vary significantly:
+
+Sector	Target Recruiters	Perceived Evaluation Focus
+Mass IT & Tech	TCS, Cognizant, Wipro, Infosys, Accenture	High clearance rate on Aptitude (Logical & Quantitative), basic programming foundations (C/C++), and fundamental communication skills.
+Product & Analytics	Zoho, Mu Sigma, Newgen, Huawei	Advanced Coding Round performance, Data Structures & Algorithms (DSA), complex problem-solving, and logical reasoning puzzles.
+Core Engineering	L&T, TVS, Bosch, Hyundai, Renault Nissan	Deep Domain Technical Knowledge (Mechanical, Civil, EEE/ECE), project execution capability, and stable core fundamentals.
+
+
+
+
+
+
+
