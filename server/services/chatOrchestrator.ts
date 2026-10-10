@@ -1,4 +1,4 @@
-import { getKnowledge, getCandidatePassages, KnowledgeChunk } from './knowledgeService.js';
+import { getKnowledge, getCandidatePassages, hasStrongKnowledgeCoverage, KnowledgeChunk } from './knowledgeService.js';
 import { analyzeQueryAndSelectEvidence, generateAnswerWithGroq, SemanticAnalysisResult } from './groqService.js';
 import { generateAnswerWithGemini } from './geminiService.js';
 import { searchWeb, WebSearchResult } from './webSearchService.js';
@@ -36,8 +36,8 @@ export async function processChatQuery(
   // 1. Ensure latest knowledge from college-info.txt is loaded
   const knowledge = getKnowledge();
 
-  // 2. Retrieve candidate passages from file
-  const candidatePassages = getCandidatePassages(cleanQuery, 12);
+  // 2. Retrieve candidate passages from file using smart scoring
+  const candidatePassages = getCandidatePassages(cleanQuery, 20);
 
   // 3. Use Groq to understand the question, detect language, and select relevant evidence
   let semanticResult: SemanticAnalysisResult;
@@ -48,10 +48,21 @@ export async function processChatQuery(
     semanticResult = {
       detectedLanguage: 'English',
       intent: cleanQuery,
-      selectedChunks: candidatePassages.slice(0, 3),
+      selectedChunks: candidatePassages.slice(0, 4),
       foundInFile: candidatePassages.length > 0 && !knowledge.isEmpty,
       suggestedWebQuery: `Kongu Engineering College ${cleanQuery}`,
     };
+  }
+
+  // CRITICAL REQUIREMENT: Always check college-info.txt first!
+  // If strong knowledge coverage exists in the file, NEVER divert to live web search
+  if (
+    (!semanticResult.foundInFile || semanticResult.selectedChunks.length === 0) &&
+    hasStrongKnowledgeCoverage(cleanQuery, candidatePassages)
+  ) {
+    console.log('[Orchestrator] Direct college-info.txt match confirmed. Prioritizing college-info.txt over web search.');
+    semanticResult.foundInFile = true;
+    semanticResult.selectedChunks = candidatePassages.slice(0, 4);
   }
 
   let finalAnswer = '';

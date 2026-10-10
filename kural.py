@@ -147,12 +147,19 @@ def clean_markdown_for_sms(text: str) -> str:
                 cleaned_lines.append("• " + " | ".join(cells))
             continue
 
+        # Clean markdown links: [Title](url) -> Title
+        line = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", line)
+
         # Clean headers
         line = re.sub(r"^#{1,6}\s+", "", line)
-        # Clean bold / italics
+        # Clean bold / italics / code blocks
         line = re.sub(r"\*\*([^*]+)\*\*", r"\1", line)
         line = re.sub(r"\*([^*]+)\*", r"\1", line)
         line = re.sub(r"`([^`]+)`", r"\1", line)
+
+        # Omit lines that just instruct the user to visit websites
+        if re.search(r"^(please\s+)?(visit|refer to|check)\s+(the\s+)?(official\s+)?(website|link|portal)", line.strip(), re.IGNORECASE):
+            continue
 
         cleaned_lines.append(line)
 
@@ -347,8 +354,12 @@ def standalone_answer_fallback(question: str) -> str:
     for key in GROQ_KEYS:
         try:
             prompt = (
-                "You are Kongu Kural, the official campus assistant for Kongu Engineering College (KEC).\n"
-                "Answer the student's question accurately in the SAME LANGUAGE they asked (Tamil, English, Tanglish, Hindi).\n"
+                "You are Kongu Kural, the direct campus assistant for Kongu Engineering College (KEC).\n"
+                "RULES:\n"
+                "1. Answer directly what the student asked in the EXACT SAME LANGUAGE they used (Tamil, English, Tanglish, Hindi).\n"
+                "2. EXACT RELEVANCE: If asked for CUTOFF / cut-off marks, provide the CUTOFF MARKS out of 200 (e.g. CSE: 185–193+ out of 200, ECE/EEE: 175–184). NEVER substitute rank when cutoff is asked! If asked for rank, give rank.\n"
+                "3. Provide just the right amount of information (concrete facts, names, contacts, fees). Do NOT dump huge irrelevant rosters or walls of text, and do NOT give lazy one-word replies.\n"
+                "4. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n\n"
                 "Source of truth from college-info.txt:\n" + info_text[:14000] + "\n\n"
                 f"Question: {question}"
             )
@@ -377,8 +388,12 @@ def standalone_answer_fallback(question: str) -> str:
         try:
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={key}"
             prompt = (
-                "You are Kongu Kural, campus assistant for Kongu Engineering College.\n"
-                "Answer in the same language as the user (Tamil, English, Tanglish).\n"
+                "You are Kongu Kural, the direct campus assistant for Kongu Engineering College (KEC).\n"
+                "RULES:\n"
+                "1. Answer directly what the student asked in the EXACT SAME LANGUAGE they used (Tamil, English, Tanglish, Hindi).\n"
+                "2. EXACT RELEVANCE: If asked for CUTOFF / cut-off marks, provide the CUTOFF MARKS out of 200 (e.g. CSE: 185–193+ out of 200, ECE/EEE: 175–184). NEVER substitute rank when cutoff is asked! If asked for rank, give rank.\n"
+                "3. Provide just the right amount of information (concrete facts, names, contacts, fees). Do NOT dump huge irrelevant rosters or walls of text, and do NOT give lazy one-word replies.\n"
+                "4. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n\n"
                 f"Context from college-info.txt:\n{info_text[:12000]}\n\n"
                 f"Question: {question}"
             )
@@ -403,19 +418,8 @@ def generate_kural_answer(question: str) -> str:
     try:
         data = get_answer_from_website_api(question)
         answer = data.get("answer", "")
-        sources = data.get("sources", [])
-        is_web = data.get("isWebFallback", False)
-
-        if sources:
-            first_src = sources[0]
-            title = first_src.get("title", "")
-            if is_web:
-                url = first_src.get("url", "web search")
-                answer += f"\n\n[Source: Live Web Search - {url}]"
-            else:
-                answer += f"\n\n[Source: {title}]"
-
-        return answer
+        # Return only the direct answer text without injecting website links or source tags into the SMS
+        return answer.strip()
     except Exception:
         return standalone_answer_fallback(question)
 

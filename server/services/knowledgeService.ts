@@ -200,45 +200,180 @@ export function getKnowledge(): KnowledgeState {
   return cachedKnowledge;
 }
 
+const STOP_WORDS = new Set([
+  'what', 'is', 'the', 'for', 'in', 'on', 'at', 'of', 'to', 'a', 'an', 'and', 'or', 'by',
+  'how', 'can', 'tell', 'me', 'give', 'details', 'detail', 'about', 'info', 'information',
+  'please', 'any', 'do', 'does', 'kec', 'kongu', 'college', 'engineering', 'irukku',
+  'enna', 'yaaru', 'sollu', 'sollunga', 'paththi', 'available', 'show', 'need', 'want',
+  'which', 'who', 'whom', 'where', 'when', 'why', 'are', 'was', 'were', 'will', 'would',
+  'with', 'from', 'this', 'that', 'last', 'year', 'years',
+  'tamil', 'nadu', 'current', 'state', 'government'
+]);
+
+const SYNONYM_MAP: Record<string, string[]> = {
+  cutoff: ['cut-off', 'cutoff', 'cut off', 'cut-offs', 'marks', 'cut off marks'],
+  cutoffs: ['cut-off', 'cutoff', 'cut off', 'cut-offs', 'marks'],
+  'cut-off': ['cut-off', 'cutoff', 'cut off', 'cut-offs', 'marks'],
+  'cut-offs': ['cut-off', 'cutoff', 'cut off', 'cut-offs', 'marks'],
+  rank: ['rank', 'ranks', 'ranking', 'closing rank', 'merit rank'],
+  ranks: ['rank', 'ranks', 'ranking', 'closing rank'],
+  fee: ['fee', 'fees', 'cost', 'hostel fee', 'tuition fee'],
+  fees: ['fee', 'fees', 'cost', 'hostel fee', 'tuition fee'],
+  hostel: ['hostel', 'hostels', 'mess', 'dheeran', 'valluvar', 'kaveri', 'amaravathi', 'bhavani'],
+  hostels: ['hostel', 'hostels', 'mess'],
+  warden: ['warden', 'wardens', 'chief warden', 'deputy warden', 'associate warden'],
+  wardens: ['warden', 'wardens'],
+  admission: ['admission', 'admissions', 'counselling', 'counseling', 'tnea', 'quota'],
+  admissions: ['admission', 'admissions', 'counselling', 'counseling', 'tnea', 'quota'],
+  counselling: ['counselling', 'counseling', 'tnea', 'single window'],
+  counseling: ['counselling', 'counseling', 'tnea', 'single window'],
+  sports: ['sports', 'sport', 'gym', 'ground', 'stadium', 'physical education', 'playfield'],
+  placement: ['placement', 'placements', 'salary', 'lpa', 'package', 'recruiter', 'highest package'],
+  placements: ['placement', 'placements', 'salary', 'lpa', 'package', 'recruiter'],
+  cse: ['cse', 'computer science'],
+  it: ['information technology'],
+  aids: ['ai-ds', 'ai & ds', 'artificial intelligence', 'data science'],
+  ece: ['ece', 'electronics and communication'],
+  eee: ['eee', 'electrical and electronics'],
+  mech: ['mechanical', 'mech'],
+  civil: ['civil']
+};
+
 /**
- * Basic candidate retrieval scoring using token overlap and section matching.
- * This filters down 100s of chunks into top candidate passages before passing to Groq for deep semantic selection.
+ * Advanced candidate retrieval:
+ * 1. Filters stop words so common words don't dilute scoring
+ * 2. Expands domain keywords (e.g. cutoff <-> cut-off <-> marks)
+ * 3. Multi-concept boosting (e.g. "cutoff" + "cse" gets heavy bonus)
+ * 4. Ensures chunks with direct core keyword matches are always included
  */
-export function getCandidatePassages(query: string, maxCandidates = 15): KnowledgeChunk[] {
+export function getCandidatePassages(query: string, maxCandidates = 20): KnowledgeChunk[] {
   const knowledge = getKnowledge();
   if (knowledge.isEmpty) return [];
 
-  const rawTokens = query
-    .toLowerCase()
-    .replace(/[^\w\s\u0B80-\u0BFF]/g, ' ')
-    .split(/\s+/)
-    .filter((t) => t.length > 1);
+  const cleanQuery = query.toLowerCase();
 
-  if (rawTokens.length === 0) {
+  // Extract individual words and normalized forms
+  const tokens = cleanQuery
+    .replace(/[^\w\s\u0B80-\u0BFF-]/g, ' ')
+    .split(/\s+/)
+    .map((t) => t.trim())
+    .filter((t) => t.length > 1 && !STOP_WORDS.has(t));
+
+  if (tokens.length === 0) {
     return knowledge.chunks.slice(0, maxCandidates);
   }
 
+  // Build concept terms list including synonyms
+  const searchTerms = new Set<string>();
+  const coreConcepts = new Set<string>();
+
+  for (const token of tokens) {
+    searchTerms.add(token);
+    coreConcepts.add(token);
+
+    // If token has hyphen, also add unhyphenated and spaced versions
+    if (token.includes('-')) {
+      searchTerms.add(token.replace(/-/g, ''));
+      searchTerms.add(token.replace(/-/g, ' '));
+    }
+
+    // Check synonym map
+    const mapped = SYNONYM_MAP[token] || SYNONYM_MAP[token.replace(/-/g, '')];
+    if (mapped) {
+      for (const m of mapped) {
+        searchTerms.add(m);
+      }
+    }
+  }
+
+  // Score each chunk
   const scored = knowledge.chunks.map((chunk) => {
     let score = 0;
     const lowerContent = chunk.content.toLowerCase();
     const lowerSection = chunk.sectionTitle.toLowerCase();
+    const matchedConcepts = new Set<string>();
 
-    for (const token of rawTokens) {
-      if (lowerSection.includes(token)) score += 5; // Heavy weight for section match
-      if (lowerContent.includes(token)) score += 1;
+    for (const term of searchTerms) {
+      let termMatched = false;
+      if (lowerSection.includes(term)) {
+        score += 20; // Big bonus for section header match
+        termMatched = true;
+      }
+      if (lowerContent.includes(term)) {
+        score += term.length > 4 ? 6 : 3; // Informative terms score higher
+        termMatched = true;
+      }
+
+      if (termMatched) {
+        matchedConcepts.add(term);
+      }
     }
 
-    return { chunk, score };
+    // Multi-concept multiplier: If chunk matches multiple different terms (e.g., both "cutoff" and "cse"), boost it!
+    if (matchedConcepts.size > 1) {
+      score *= (1 + matchedConcepts.size * 1.5);
+    }
+
+    return { chunk, score, matchedCount: matchedConcepts.size };
   });
 
   // Sort descending by score
   scored.sort((a, b) => b.score - a.score);
 
-  // Return top candidates; if none matched, return top initial chunks as fallback
   const topMatches = scored.filter((s) => s.score > 0).map((s) => s.chunk);
   if (topMatches.length > 0) {
     return topMatches.slice(0, maxCandidates);
   }
 
   return knowledge.chunks.slice(0, maxCandidates);
+}
+
+const SPECIFIC_DOMAIN_KEYWORDS = new Set([
+  'cutoff', 'cutoffs', 'cut-off', 'cut-offs',
+  'hostel', 'hostels', 'warden', 'wardens',
+  'fees', 'fee', 'mess', 'counselling', 'counseling',
+  'admission', 'admissions', 'lateral', 'scholarship',
+  'principal', 'placement', 'placements', 'highest package',
+  'autonomous', 'ranking', 'sports', 'gym', 'ground', 'stadium',
+  'dheeran', 'valluvar', 'kaveri', 'amaravathi', 'bhavani', 'kamban', 'ilango', 'ponnar', 'sankar'
+]);
+
+/**
+ * Checks if the knowledge base has direct factual coverage for the query
+ * based on strong keyword and multi-term matches in candidate passages.
+ */
+export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeChunk[]): boolean {
+  if (!candidates || candidates.length === 0) return false;
+
+  const clean = query.toLowerCase();
+  const tokens = clean
+    .replace(/[^\w\s\u0B80-\u0BFF-]/g, ' ')
+    .split(/\s+/)
+    .map((t) => t.trim())
+    .filter((t) => t.length > 1 && !STOP_WORDS.has(t));
+
+  if (tokens.length === 0) return false;
+
+  for (const chunk of candidates.slice(0, 8)) {
+    const text = (chunk.sectionTitle + ' ' + chunk.content).toLowerCase();
+
+    // 1. Direct high-specificity campus keyword match (e.g. cutoff, warden, hostel, fee)
+    for (const token of tokens) {
+      if (SPECIFIC_DOMAIN_KEYWORDS.has(token) && text.includes(token)) {
+        return true;
+      }
+      const syns = SYNONYM_MAP[token] || [];
+      if (syns.some((s) => SPECIFIC_DOMAIN_KEYWORDS.has(s) && text.includes(s))) {
+        return true;
+      }
+    }
+
+    // 2. Multi-token match: at least 2 distinct query tokens match the same chunk
+    const matchedCount = tokens.filter((t) => text.includes(t)).length;
+    if (matchedCount >= 2) {
+      return true;
+    }
+  }
+
+  return false;
 }
