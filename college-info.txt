@@ -1,4 +1,4 @@
-Hostel :
+Hostel : --- done
 KEC Hostel Staff Details
 Hostel	Staff Name	Designation	Contact Info	Email ID
 KEC HOSTELS	Dr. R. PARAMESHWARAN (PRINCIPAL)	CHIEF WARDEN	9942820583	principal@kongu.ac.in
@@ -63,6 +63,2000 @@ Utilities	Power and water supply
 Recreation	Gyms and sports grounds
 
 
-it department:
 
-hod name: varathaganapathy
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+https://aistudio.google.com/api-keys
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Engineering & Technology Departments
+
+
+Department	Head of Department (HOD)	Primary Contact Channels
+Computer Science & Engineering (CSE)	Dr. S. Malliga	hod_cse@kongu.ac.in / CSE Faculty Directory
+Information Technology (IT)	Dr. S. Varadhaganapathy	hod_it@kongu.ac.in / IT Faculty Directory
+Artificial Intelligence & Data Science (AI & DS)	Dr. P. Natesan	hod_aids@kongu.ac.in / AI & DS Faculty
+Artificial Intelligence & Machine Learning (AI & ML)	Dr. R.R. Rajalaxmi	rrr@kongu.ac.in / AI & ML Faculty
+Electronics & Communication Engineering (ECE)	Dr. T. Meeradevi / Dr. N. Kasthuri	hod_ece@kongu.ac.in / ECE Faculty Directory
+Mechanical Engineering	Dr. P. Selvakumar	hod_mech@kongu.ac.in / Mechanical Faculty
+Electronics & Instrumentation Engineering (EIE)	Dr. S. Suji Prasad	hod_eie@kongu.ac.in / EIE Faculty Directory
+Automobile Engineering	Dr. P.C. Murugan	hod_auto@kongu.ac.in / Automobile Faculty
+Chemical Engineering	Dr. V. Sangeetha	hod_chemical@kongu.ac.in / Chemical Faculty
+
+
+Computer Applications & Technology (UG / PG)
+
+
+Department	Head of Department (HOD)	Contact Link
+Computer Applications (MCA)	Dr. A. Tamilarasi	MCA Faculty Portal
+Computer Technology - UG	Dr. S. Kalaiselvi	CT UG Portal
+Computer Technology - PG	Dr. R.C. Suganthe	CT PG Portal
+
+
+Science & Humanities Departments
+
+
+Department	Head of Department (HOD)	Primary Contact Channels
+Mathematics	Dr. M. Dhavamani	hod_maths@kongu.ac.in
+Physics	Dr. C. Rangasami	hod_physics@kongu.ac.in
+Chemistry	Dr. A. Geetha	hod_chemistry@kongu.ac.in
+English	Dr. J. Rajini	hod_english@kongu.ac.in
+
+
+Central Campus Administration Contacts
+
+If you are unable to reach a specific department head directly, campus-wide communications can be facilitated through central offices: Registrar: [Dr. P. Balasubramanie](https://www.google.com/search?kgmid=%2Fg%2F11h415xj0g&q=Dr.+P.+Balasubramanie) | Email: [registrar@kongu.ac.in](mailto:registrar@kongu.ac.in)
+- Placement and Training Cell Head: Dr. Parameshwaran | Email: placement@kongu.ac.in
+- General Campus Enquiries: 04294-226555, 04294-226666 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+All faculty name :
+1. Computer Science and Engineering (CSE)
+#	Faculty Name	Designation	Qualification
+1	Dr. S. Malliga	Senior Professor & Head	M.E., Ph.D.
+2	Dr. C. S. Kanimozhi Selvi	Senior Professor	M.E., Ph.D.
+3	Dr. R. Thamilselvan	Senior Professor & COE	M.E., Ph.D.
+4	Dr. N. Shanthi	Senior Professor & Dean	M.E., Ph.D.
+5	Dr. K. Sangeetha	Professor	M.E., Ph.D.
+6	Dr. S. Shanthi	Professor	M.E., Ph.D.
+7	Dr. PCD. Kalaivaani	Associate Professor	M.E., Ph.D.
+8	Dr. M. Geetha	Associate Professor	M.E., Ph.D.
+9	Dr. T. Maragatham	Associate Professor	M.E., Ph.D.
+10	Dr. N. Sasipriyaa	Associate Professor	M.E., Ph.D.
+11	Dr. K. Dinesh	Associate Professor	M.E., Ph.D.
+12	Dr. P. S. Nandhini	Associate Professor	M.E., Ph.D.
+13	N. P. Saravanan	Assistant Professor [SLG]	M.E. (Pursuing Ph.D.)
+14	K. Devendran	Assistant Professor [SLG]	M.E. (Pursuing Ph.D.)
+15	B. Bizu	Assistant Professor [SLG]	M.E.
+16	S. K. Logesh	Assistant Professor [SLG]	M.E.
+17	S. Mohana Saranya	Assistant Professor [SLG]	M.E. (Pursuing Ph.D.)
+18	Dr. K. Venu	Assistant Professor [SLG]	M.E., Ph.D.
+19	S. Ramya	Assistant Professor [SRG]	M.E.
+20	C. Sagana	Assistant Professor [SRG]	M.E.
+21	S. Mohanapriya	Assistant Professor [SRG]	M.E.
+22	D. Nanthiya	Assistant Professor [SRG]	M.E.
+23	J. Gowthami	Assistant Professor [SRG]	M.E.
+24	S. Kavitha	Assistant Professor [SRG]	M.E.
+25	P. Santhiya	Assistant Professor [SRG]	M.E.
+26	K. Sureshkumar	Assistant Professor [SRG]	M.E.
+27	T. E. Ramya	Assistant Professor	M.E.
+28	S. Gayathri	Assistant Professor	M.E.
+29	R. S. Shudapriyaa	Assistant Professor	M.E.
+30	V. Manimaran	Assistant Professor	M.E.
+31	C. Roopa	Assistant Professor	M.E.
+32	K. Suvalakshmi	Assistant Professor	M.E.
+33	T. Arunkumar	Assistant Professor	M.E.
+34	M. Kannukkiniyal	Assistant Professor	M.E.
+35	K. T. Mohanapriya	Assistant Professor	M.E.
+36	S. Ramana	Assistant Professor	M.E.
+37	S. Kalpana	Assistant Professor	M.E.
+38	P. Jeevitha	Assistant Professor	M.E.
+39	Dr. P. Yuvarani	Assistant Professor	M.E., Ph.D.
+40	T. Sathya	Assistant Professor	M.E.
+41	K. Sudhakar	Assistant Professor	M.E.
+42	A. Kiruthika	Assistant Professor	M.E.
+43	B. Kalaivani	Assistant Professor	M.E.
+44	S. Madhumitha	Assistant Professor	M.E.
+45	M. Kowsalya	Assistant Professor	M.E.
+46	S. Karthika	Assistant Professor	M.E.
+47	N. Keerthini	Assistant Professor	M.E.
+48	S. Madhumathi	Assistant Professor	M.E.
+49	R. Ravichandran	Assistant Professor	M.E.
+50	S. Krithika	Assistant Professor	M.E.
+51	V. Nandhini	Assistant Professor	M.E.
+52	R. Subapriya	Assistant Professor	M.E.
+53	S. Sudha	Assistant Professor of Practice	M.E. / Industry Specialist
+54	T. Vignesh Prabhu	Adjunct Faculty	M.E. / Industry Expert
+2. Civil Engineering
+#	Faculty Name	Designation	Qualification
+1	Dr. S. Balaji	Professor & Head	M.E., Ph.D.
+2	Dr. G. S. Rampradheep	Senior Associate Professor	M.E., Ph.D.
+3	Dr. T. Pradeep	Associate Professor	M.E., Ph.D.
+4	Dr. S. Karthikeyan	Associate Professor	M.E., Ph.D.
+5	Dr. V. Sampathkumar	Associate Professor	M.E., Ph.D.
+6	Dr. K. Vishnuvardhan	Assistant Professor (SLG)	M.E., Ph.D.
+7	Dr. K. S. Navaneethan	Assistant Professor (SLG)	M.E., Ph.D.
+8	Dr. S. Manoj	Assistant Professor (SLG)	M.E., Ph.D.
+9	S. Venkatachalam	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+10	Dr. T. Ravi Prakash	Assistant Professor (SLG)	M.E., Ph.D.
+11	K. Sampath Kumar	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+12	S. B. Prasath	Adjunct Professor	M.E. / Industry Specialist
+3. Mechanical Engineering
+#	Faculty Name	Designation	Qualification
+1	Dr. R. Rajasekar	Senior Professor & Dean & Director	M.E., Ph.D.
+2	Dr. P. Selvakumar	Professor & Head	M.E., Ph.D.
+3	Dr. M. Thirugnanasambandam	Professor of Practice	M.E., Ph.D.
+4	Dr. T. P. Sathishkumar	Senior Associate Professor	M.E., Ph.D.
+5	Dr. A. Mohankumar	Senior Associate Professor	M.E., Ph.D.
+6	Dr. R. Naveen Kumar	Senior Associate Professor	M.E., Ph.D.
+7	Dr. A. Tamilvanan	Associate Professor	M.E., Ph.D.
+8	Dr. M. Bhuvaneshkumar	Associate Professor	M.E., Ph.D.
+9	Dr. R. Gukendran	Assistant Professor (SLG)	M.E., Ph.D.
+10	Dr. M. Sambathkumar	Assistant Professor (SLG)	M.E., Ph.D.
+11	Dr. B. S. Hari	Assistant Professor (SLG)	M.E., Ph.D.
+12	Dr. M. Mahesh	Assistant Professor (SLG)	M.E., Ph.D.
+13	K. V. Satheeshkumar	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+14	R. Karthikeyan	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+15	M. Dharmaraj	Assistant Professor (SRG)	M.E.
+16	R. Kamalakannan	Assistant Professor (SRG)	M.E.
+17	A. Ganesh	Assistant Professor (SRG)	M.E.
+4. Electronics and Communication Engineering (ECE)
+#	Faculty Name	Designation	Qualification
+1	Dr. G. Murugesan	Senior Professor & Dean	M.E., Ph.D.
+2	Dr. N. Kasthuri	Senior Professor	M.E., Ph.D.
+3	Dr. T. Meeradevi	Senior Professor & Head	M.E., Ph.D.
+4	Dr. P. Nirmaladevi	Professor	M.E., Ph.D.
+5	Dr. D. Malathi	Professor	M.E., Ph.D.
+6	Dr. P. Sivaranjani	Professor	M.E., Ph.D.
+7	Dr. S. Maheswaran	Professor	M.E., Ph.D.
+8	Dr. S. Sasikala	Professor	M.E., Ph.D.
+9	Dr. A. Senthil Kumar	Professor of Practice	M.E., Ph.D.
+10	Dr. J. Vijayalakshmi	Associate Professor	M.E., Ph.D.
+11	Dr. A. Arulmurugan	Associate Professor	M.E., Ph.D.
+12	Dr. K. Manoj Senthil	Associate Professor	M.E., Ph.D.
+13	Dr. K. Kavin Kumar	Associate Professor	M.E., Ph.D.
+14	Dr. A. Chandrasekaran	Assistant Professor (SLG)	M.E., Ph.D.
+15	Vibin Mammen Vinod	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+16	V. Mekala	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+17	V. Anbumani	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+18	S. Sathesh	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+19	Dr. R. Ramyea	Assistant Professor (SLG)	M.E., Ph.D.
+20	R. P. Karthik	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+21	Dr. M. Pavithra	Assistant Professor (SLG)	M.E., Ph.D.
+22	G. Deepa	Assistant Professor (SRG)	M.E.
+23	N. S. Kavitha	Assistant Professor (SRG)	M.E.
+24	B. Vivek	Assistant Professor (SRG)	M.E.
+25	S. Preethi	Assistant Professor (SRG)	M.E.
+26	A. Vennila	Assistant Professor (SRG)	M.E.
+27	S. Suthagar	Assistant Professor (SRG)	M.E.
+28	G. Thirunavukkarasu	Assistant Professor (SRG)	M.E.
+29	Dr. G. Sivapriya	Assistant Professor (SRG)	M.E., Ph.D.
+30	N. Indhumathi	Assistant Professor (SRG)	M.E.
+31	P. Pavithara	Assistant Professor	M.E.
+32	P. Gowri	Assistant Professor	M.E.
+33	B. Banumithra	Assistant Professor	M.E.
+34	M. Ramesh	Assistant Professor	M.E.
+35	M. Ponkarthika	Assistant Professor	M.E.
+36	B. Abinaya	Assistant Professor	M.E.
+37	M. Saranya	Assistant Professor	M.E.
+38	B. T. Annapoorani	Assistant Professor	M.E.
+39	Dr. S. Arulmurugan	Assistant Professor	M.E., Ph.D.
+40	T. Abirami	Assistant Professor	M.E.
+41	M. Vignesh	Assistant Professor	M.E.
+42	Dr. S. Sudha	Assistant Professor	M.E., Ph.D.
+43	T. Prabhu	Assistant Professor	M.E.
+44	K. Kodeeswari	Assistant Professor	M.E.
+45	M. Shivaranjani	Assistant Professor	M.E.
+46	D. Gowthami	Assistant Professor	M.E.
+47	S. Vidhya	Assistant Professor	M.E.
+5. Chemical Engineering
+#	Faculty Name	Designation	Qualification
+1	Dr. K. Kannan	Senior Professor & Dean	B.Tech., M.Tech., Ph.D.
+2	Dr. V. Sangeetha	Professor & Head	B.Tech., M.Tech., Ph.D.
+3	J. Sridhar	Professor of Practice	B.Tech., M.Tech. / Industry Expert
+4	Dr. C. Gomadurai	Senior Associate Professor	B.Tech., M.Tech., Ph.D.
+5	Dr. A. S. Periasamy Manikandan	Associate Professor	B.Tech., M.Tech., Ph.D.
+6	Dr. G. Mugaishudeen	Associate Professor	B.Tech., M.Tech., Ph.D.
+7	Dr. S. Mothil	Associate Professor	B.Tech., M.Tech., Ph.D.
+8	Dr. D. Nesakumar	Assistant Professor (SLG)	B.Tech., M.Tech., Ph.D.
+9	R. Sathish Raam	Assistant Professor (SLG)	B.Tech., M.Tech. (Pursuing Ph.D.)
+10	K. Kalaivani	Assistant Professor (SRG)	B.Tech., M.Tech.
+11	S. Yuvaraj	Assistant Professor	B.Tech., M.Tech.
+12	M. Ismail Shahib	Assistant Professor	B.Tech., M.Tech.
+13	A. Tamilarasi	Assistant Professor	B.Tech., M.Tech.
+14	Dr. M. Chidambaram	Visiting Professor	M.Tech., Ph.D. (Emeritus/Visiting Scholar)
+15	R. Ravi	Adjunct Faculty	B.Tech., M.Tech. / Industry Specialist
+6. Electrical and Electronics Engineering (EEE)
+#	Faculty Name	Designation	Qualification
+1	Dr. N. Senthilnathan	Senior Professor & Dean	M.E., Ph.D.
+2	Dr. M. Sivachitra	Professor	M.E., Ph.D.
+3	Dr. M. Karthik	Professor & Head	M.E., Ph.D.
+4	Dr. T. Guna Sekar	Professor	M.E., Ph.D.
+5	Dr. S. Usha	Senior Associate Professor	M.E., Ph.D.
+6	Dr. S. Maheswari	Senior Associate Professor	M.E., Ph.D.
+7	Dr. T. Logeswaran	Senior Associate Professor	M.E., Ph.D.
+8	Dr. V. Surendar	Associate Professor	M.E., Ph.D.
+9	Dr. M. Suresh	Associate Professor	M.E., Ph.D.
+10	Dr. M. Sabarimuthu	Associate Professor	M.E., Ph.D.
+11	Dr. M. Srinivasan	Associate Professor	M.E., Ph.D.
+12	Dr. N. Priyadharshini	Assistant Professor (SLG)	M.E., Ph.D.
+13	Dr. S. Gomathy	Assistant Professor (SLG)	M.E., Ph.D.
+14	Dr. P. Tamilarasu	Assistant Professor (SLG)	M.E., Ph.D.
+15	Dr. M. Suresh	Assistant Professor (SLG)	M.E., Ph.D.
+16	Dr. D. Sarathkumar	Assistant Professor (SLG)	M.E., Ph.D.
+17	P. Karthikeyan	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+18	S. Chandrasekar	Assistant Professor (SRG)	M.E.
+19	Dr. R. Ranjith Kumar	Assistant Professor (SRG)	M.E., Ph.D.
+20	B. Ravishankar	Assistant Professor (SRG)	M.E.
+21	V. Pavithra	Assistant Professor	M.E.
+22	R. Aravindh	Assistant Professor	M.E.
+23	Dr. M. Venkatachalam	Assistant Professor	M.E., Ph.D.
+24	M. Mythili	Assistant Professor	M.E.
+25	D. Thangaraj	Assistant Professor	M.E.
+26	V. L. Yawana Sundar	Adjunct Faculty	M.E. / Industry Specialist
+7. Electronics and Instrumentation Engineering (EIE)
+#	Faculty Name	Designation	Qualification
+1	Dr. S. Vijayachitra	Senior Professor	B.E., M.Tech., Ph.D.
+2	Dr. S. J. Suji Prasad	Professor & Head	M.E., Ph.D.
+3	Dr. T. Kalavathi Devi	Professor	M.E., Ph.D.
+4	Dr. K. Prabhu	Associate Professor	M.E., Ph.D.
+5	Dr. M. Madhan Mohan	Associate Professor	M.E., Ph.D.
+6	Dr. K. N. Baluprithviraj	Associate Professor	M.E., Ph.D.
+7	Dr. N. Mahesh	Associate Professor	M.E., Ph.D.
+8	Dr. R. Rajkumar	Associate Professor	M.E., Ph.D.
+9	Dr. B. Venkatesan	Associate Professor	M.E., Ph.D.
+10	Dr. M. Sasireka	Assistant Professor (SLG)	M.E., Ph.D.
+11	Dr. P. Vidhyalakshmi	Assistant Professor (SLG)	M.E., Ph.D.
+12	S. Janarthanan	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+13	Dr. M. Raja	Assistant Professor (SLG)	M.E., Ph.D.
+14	Dr. R. Mouleeshuwarapprabu	Assistant Professor (SLG)	M.E., Ph.D.
+15	R. Sureshkumar	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+16	M. Thangatamilan	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+17	M. Lizzy Nesa Bagyam	Assistant Professor (SRG)	M.E.
+18	S. Jegan	Assistant Professor (SRG)	M.E.
+19	D. Selvakarthi	Assistant Professor (SRG)	M.E.
+20	S. Anitha	Assistant Professor	M.E.
+21	T. Keerthanashree	Assistant Professor	M.E.
+22	N. Indhu	Assistant Professor	M.E.
+23	S. K. Manoj	Adjunct Professor	M.E. / Industry Specialist
+8. Information Technology (IT)
+#	Faculty Name	Designation	Qualification
+1	Dr. S. Varadhaganapathy	Senior Professor & Head	M.E., Ph.D.
+2	Dr. J. Premalatha	Senior Professor	M.E., Ph.D.
+3	Dr. S. Anandamurugan	Professor	M.E., Ph.D.
+4	Dr. G. K. Kamalam	Senior Associate Professor	M.E., Ph.D.
+5	Dr. R. Shanthakumari	Associate Professor	M.E., Ph.D.
+6	Dr. E. M. Roopa Devi	Associate Professor	M.E., Ph.D.
+7	D. Vijay Anand	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+8	A. P. Ponselvakumar	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+9	A. Jeevanantham	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+10	Dr. V. Devisurya	Assistant Professor (SLG)	M.E., Ph.D.
+11	S. Vinothkumar	Assistant Professor (SRG)	M.E.
+12	R. Aarthi	Assistant Professor (SRG)	M.E.
+13	K. Sruthi	Assistant Professor	M.E.
+14	S. Kavithra	Assistant Professor	M.E.
+15	R. Sandhiya	Assistant Professor	M.E.
+16	V. P. Gayathri	Assistant Professor	M.E.
+17	P. Vanitha	Assistant Professor	M.E.
+18	A. Deenu Mol	Assistant Professor	M.E.
+19	T. Vaishnavi	Assistant Professor	M.E.
+20	S. Krishnaveni	Assistant Professor	M.E.
+21	M. E. Prathika	Assistant Professor	M.E.
+22	T. S. Vishnu Priya	Assistant Professor	M.E.
+23	Monica Murugesan	Assistant Professor	M.E.
+24	S. Suganya	Assistant Professor	M.E.
+25	G. Sasikala	Assistant Professor	M.E.
+26	E. Sowmiya	Assistant Professor	M.E.
+27	S. Sripriya	Assistant Professor	M.E.
+28	M. Nithyakumar	Assistant Professor	M.E.
+29	S. Govindaraj	Assistant Professor	M.E.
+30	Vivek Amruth Chinnasamy	Adjunct Faculty	M.E. / Industry Specialist
+9. Mechatronics Engineering
+#	Faculty Name	Designation	Qualification
+1	Dr. B. Meenakshipriya	Senior Professor & Dean	M.E., Ph.D.
+2	Dr. C. Jegadheesan	Professor & Head	M.E., Ph.D.
+3	Dr. N. Nithyavathy	Professor	M.E., Ph.D.
+4	Dr. P. Ravichandran	Associate Professor	M.E., Ph.D.
+5	Dr. S. K. Thangarasu	Associate Professor	M.E., Ph.D.
+6	Dr. S. Praveen Kumar	Associate Professor	M.E., Ph.D.
+7	Dr. N. Muralidharan	Associate Professor	M.E., Ph.D.
+8	Dr. T. Tamilarasi	Associate Professor	M.E., Ph.D.
+9	Dr. R. Nithyaprakash	Associate Professor	M.E., Ph.D.
+10	Dr. K. Udayakumar	Associate Professor	M.E., Ph.D.
+11	Dr. A. Shanmugam	Assistant Professor (SLG)	M.E., Ph.D.
+12	Dr. S. Arun kumar	Assistant Professor (SLG)	M.E., Ph.D.
+13	Dr. S. Thangavel	Assistant Professor (SLG)	M.E., Ph.D.
+14	Dr. E. B. Priyanka	Assistant Professor (SLG)	M.E., Ph.D.
+15	C. Anbu	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+16	Dr. P. M. Arunkumar	Assistant Professor (SLG)	M.E., Ph.D.
+17	Dr. S. Raghavendra Prabhu	Assistant Professor (SLG)	M.E., Ph.D.
+18	T. Karthik	Assistant Professor (SRG)	M.E.
+19	Dr. K. V. Mahesh Kumar	Assistant Professor (SRG)	M.E., Ph.D.
+20	T. Surendran	Assistant Professor	M.E.
+21	S. Santhosh Kumar	Assistant Professor	M.E.
+22	G. Raja	Assistant Professor	M.E.
+23	K. K. Megavarthini	Assistant Professor	M.E.
+24	K. Ezhilarasi	Assistant Professor	M.E.
+25	Dr. V. Suresh Babu	Professor of Practice	M.E., Ph.D. / Industry Specialist
+26	S. Karthikeyan	Adjunct Professor	M.E. / Industry Specialist
+10. Food Technology
+#	Faculty Name	Designation	Qualification
+1	Dr. R. Baskar	Senior Professor & Vice Principal	M.Tech., Ph.D.
+2	Dr. V. Chitra Devi	Senior Professor & Head	M.Tech., Ph.D.
+3	Dr. K. Senthilkumar	Senior Associate Professor	M.Tech., Ph.D.
+4	M. S. Shivaswamy	Assistant Professor (SRG)	M.Tech. (Pursuing Ph.D.)
+5	J. Jony Blessing Manoj	Assistant Professor (SRG)	M.Tech.
+6	A. Sangeetha	Assistant Professor (SRG)	M.Tech.
+7	V. Arun Joshy	Assistant Professor (SRG)	M.Tech.
+8	N. Dhivya Bharathi	Assistant Professor (SRG)	M.Tech.
+9	K. K. Sri Mohana Priya	Assistant Professor	M.Tech.
+10	R. M. Deepika	Assistant Professor	M.Tech.
+11	S. Kavinya	Assistant Professor	M.Tech.
+12	M. Mohana Priya	Assistant Professor	M.Tech.
+13	M. Ramya	Assistant Professor	M.Tech.
+14	G. Preethi	Assistant Professor	M.Tech.
+15	M. Poorvitha	Assistant Professor	M.Tech.
+16	G. Kiruthika	Assistant Professor	M.Tech.
+17	Dr. P. Kavitha	Adjunct Faculty	M.Tech., Ph.D.
+11. Automobile Engineering
+#	Faculty Name	Designation	Qualification
+1	Dr. R. Parameshwaran	Professor & Principal	M.E., Ph.D.
+2	Dr. P. C. Murugan	Professor & Head	M.E., Ph.D.
+3	Elayaraja Nagarajan	Professor of Practice	M.E. / Industry Specialist
+4	Dr. K. Suganeswaran	Associate Professor	M.E., Ph.D.
+5	Dr. K. S. Karthi Vinith	Assistant Professor (SLG)	M.E., Ph.D.
+6	A. Saravanan	Assistant Professor (SRG)	M.E. (Pursuing Ph.D.)
+7	P. Senthil Kumar	Assistant Professor (SRG)	M.E. (Pursuing Ph.D.)
+8	K. Nithyanandhan	Assistant Professor (SRG)	M.E. (Pursuing Ph.D.)
+9	G. Manikandan	Assistant Professor (SRG)	M.E. (Pursuing Ph.D.)
+10	T. Karthi	Assistant Professor	M.E.
+11	V. Sudhir Kumar	Assistant Professor	M.E.
+12	T. Mahendran	Assistant Professor	M.E.
+13	R. Gowtham	Assistant Professor	M.E.
+14	N. Boopalan	Adjunct Professor	M.E. / Industry Specialist
+12. Computer Science and Design (CSD)
+#	Faculty Name	Designation	Qualification
+1	Dr. R. Thangarajan	Senior Professor	M.E., Ph.D.
+2	Dr. E. Gothai	Professor & Head	M.E., Ph.D.
+3	Dr. P. Jayanthi	Professor	M.E., Ph.D.
+4	Dr. P. A. Selvaraj	Associate Professor	M.E., Ph.D.
+5	Dr. K. R. Prasanna Kumar	Associate Professor	M.E., Ph.D.
+6	Dr. S. Anitha	Associate Professor	M.E., Ph.D.
+7	Dr. S. B. Gopal	Associate Professor	M.E., Ph.D.
+8	S. Selvaraj	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+9	K. Jothimani	Assistant Professor	M.E.
+10	S. Hemalatha	Assistant Professor	M.E.
+11	Dr. M. Meenalochini	Assistant Professor	M.E., Ph.D.
+12	A. Deepa	Assistant Professor	M.E.
+13	P. Ananthi	Assistant Professor	M.E.
+14	K. Vijaya	Assistant Professor	M.E.
+15	D. Yuvaraj	Assistant Professor	M.E.
+16	K. Swathi	Assistant Professor	M.E.
+17	N. Dharshini	Assistant Professor	M.E.
+18	T. Velmurugan	Assistant Professor	M.E.
+19	R. Yazhini	Assistant Professor	M.E.
+20	P. Loganathan	Assistant Professor	M.E.
+21	R. Dharani	Assistant Professor	M.E.
+22	D. Kabila	Assistant Professor	M.E.
+23	M. N. Shrigowtham	Adjunct Professor	M.E. / Industry Specialist
+13. Artificial Intelligence and Machine Learning (AIML)
+#	Faculty Name	Designation	Qualification
+1	Dr. R. R. Rajalaxmi	Senior Professor	M.E., Ph.D.
+2	Dr. C. Nalini	Professor	M.E., Ph.D.
+3	Dr. T. Abirami	Professor & Head	M.E., Ph.D.
+4	Dr. K. Sathya	Associate Professor	M.E., Ph.D.
+5	S. Hamsanandhini	Assistant Professor (SRG)	M.E. (Pursuing Ph.D.)
+6	Dr. M. Mohanasundari	Assistant Professor (SRG)	M.E., Ph.D.
+7	N. Kanimozhi	Assistant Professor	M.E.
+8	S. Santhiya	Assistant Professor	M.E.
+9	M. Yoga	Assistant Professor	M.E.
+10	M. Neelamegan	Assistant Professor	M.E.
+11	S. Gopinath	Assistant Professor	M.E.
+12	N. Renuka	Assistant Professor	M.E.
+13	V. Arun Antony	Assistant Professor	M.E.
+14	A. Vanmathi	Assistant Professor	M.E.
+15	S. Santhoshkumar	Adjunct Professor	M.E. / Industry Specialist
+14. Artificial Intelligence and Data Science (AIDS)
+#	Faculty Name	Designation	Qualification
+1	Dr. P. Natesan	Senior Professor & Head	M.E., Ph.D.
+2	Dr. R. S. Latha	Professor	M.E., Ph.D.
+3	Dr. S. Kayalvili	Associate Professor	M.E., Ph.D.
+4	Dr. K. S. Kalaivani	Associate Professor	M.E., Ph.D.
+5	Dr. M. Vimaladevi	Associate Professor	M.E., Ph.D.
+6	Dr. S. Priyanka	Assistant Professor (SLG)	M.E., Ph.D.
+7	AR. Guru Gokul	Assistant Professor (SLG)	M.E. (Pursuing Ph.D.)
+8	P. Yuvarani	Assistant Professor (SRG)	M.E. (Pursuing Ph.D.)
+9	A. S. Renugadevi	Assistant Professor (SRG)	M.E.
+10	P. Jayadharshini	Assistant Professor	M.E.
+11	P. Ramya	Assistant Professor	M.E.
+12	J. Charanya	Assistant Professor	M.E.
+13	S. Keerthika	Assistant Professor	M.E.
+14	D. Sathya	Assistant Professor	M.E.
+15	K. Senthilvadivu	Assistant Professor	M.E.
+16	E. Pragatheeswari	Assistant Professor	M.E.
+17	R. Thangamani	Assistant Professor	M.E.
+18	M. Sri Kruthika	Assistant Professor	M.E.
+19	N. Kannan	Assistant Professor	M.E.
+20	M. Harini	Assistant Professor	M.E.
+21	Dr. T. A. Karthikeyan	Assistant Professor	M.E., Ph.D.
+22	M. Mohana Arasi	Assistant Professor	M.E.
+23	N. Vigneshwaran	Assistant Professor	M.E.
+24	S. Gayathri	Assistant Professor	M.E.
+25	R. Arunkumar	Assistant Professor	M.E.
+26	G. Balashanthi	Assistant Professor	M.E.
+27	S. Shangavi	Assistant Professor	M.E.
+28	V. Lokeshwaran	Assistant Professor	M.E.
+29	P. Subhashree	Assistant Professor	M.E.
+30	D. Preethishri	Assistant Professor	M.E.
+31	D. Gowsikhaa	Adjunct Faculty	M.E. / Industry Specialist
+
+Department summary
+Based on the faculty lists you supplied. These figures count listed entries, not independently verified current employees.
+Department	Faculty entries
+Computer Science and Engineering	54
+Civil Engineering	12
+Mechanical Engineering	17
+Electronics and Communication Engineering	47
+Chemical Engineering	15
+Electrical and Electronics Engineering	26
+Electronics and Instrumentation Engineering	23
+Information Technology	30
+Mechatronics Engineering	26
+Food Technology	17
+Automobile Engineering	14
+Computer Science and Design	23
+Artificial Intelligence and Machine Learning	15
+Artificial Intelligence and Data Science	31
+Total	350
+
+physical department: --done
+
+KEC DEPARTMENT OF PHYSICAL EDUCATION — CHATBOT KNOWLEDGE BASE
+Institution: Kongu Engineering College (KEC), Perundurai, Erode, Tamil Nadu, India
+Purpose: Source-grounded knowledge for a student-facing chatbot
+Last reviewed: 10 October 2026
+
+HOW TO USE THIS DATA
+- Answer only from facts in this file unless the user explicitly asks for broader research.
+- Treat statements marked VERIFIED as supported by the cited KEC institutional source.
+- Treat statements marked HISTORICAL as true only for the stated report/year; do not imply they are current.
+- Treat statements marked NEEDS CONFIRMATION as leads from the original notes, not established policy. Do not present them as facts.
+- For current admissions, schedules, contact details, and rules, direct users to the official page because these can change.
+- If this file does not answer a question, say that the available information does not specify it. Do not guess.
+- Similar facts have been consolidated so each subject is described once.
+
+============================================================
+CHUNK 1 — DEPARTMENT PURPOSE AND OVERVIEW
+============================================================
+
+STATUS: VERIFIED
+The Department of Physical Education encourages students to participate in indoor and outdoor sports and games and promotes sportsmanship, discipline, leadership, teamwork, and a healthy lifestyle. The department provides facilities for sports practice and participation, organizes coaching camps, and conducts the annual Kongu Trophy state-level inter-collegiate tournament.
+
+KEC’s campus-life page reports more than 25 sports teams. This is a general campus-life statement; it should not be interpreted as a list of 25 specific sports.
+
+Official sources:
+- Department page: https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+- Campus life: https://kongu.ac.in/campus-life
+
+============================================================
+CHUNK 2 — DEPARTMENT CONTACTS
+============================================================
+
+STATUS: VERIFIED on the official Department of Physical Education page when reviewed.
+- Professor-in-Charge: Dr. K. Kannan, M.Tech., Ph.D.
+- Director of Physical Education: Dr. R. Jeyaraman, M.P.Ed., M.Phil., Ph.D.
+- Assistant Physical Director: Mr. V. Kannan, M.P.Ed., M.Phil.
+- Assistant Physical Director: Ms. D. Pavithra, M.P.Ed.
+- Department phone: 04294-226640
+- Department email: pd@kongu.ac.in
+- Sports quota enquiry mobile: 9842411828. The sports quota portal identifies this number with Dr. R. Jeyaraman, Director of Physical Education.
+
+Sources:
+- https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+- https://kms.kongu.edu/sportsquota/index.php
+
+If asked whether a contact is still current, recommend confirming on the official department page.
+
+============================================================
+CHUNK 3 — INDOOR SPORTS FACILITIES
+============================================================
+
+STATUS: VERIFIED in KEC institutional documentation.
+The multipurpose indoor stadium includes:
+- 3 badminton courts.
+- 1 indoor volleyball court.
+- 6 table-tennis boards.
+- Indoor spectator gallery with seating for 250 people.
+- Reported indoor stadium area: 1,002 square metres.
+
+KEC’s institutional self-study report also mentions:
+- Separate gymnasium facilities for boys and girls.
+- Yoga and meditation centres.
+
+Sources:
+- https://www.kongu.ac.in/static/media/SSR_DVV_31_01_2022.ad2614d954e9b1f621f4.pdf
+- https://kongu.ac.in/facilities/physicaldept
+
+Note: These counts come from institutional documents and may change. Confirm with the department if the user needs current availability.
+
+============================================================
+CHUNK 4 — OUTDOOR SPORTS FACILITIES
+============================================================
+
+STATUS: VERIFIED in KEC institutional documentation. Counts below are those listed in the cited report, not a guarantee that every facility is currently available.
+- Main outdoor playfield: 8 acres.
+- Athletics track: 1, 400 metres.
+- Ball-badminton facility with floodlights: 1.
+- Basketball courts with floodlights: 3.
+- Cricket field: 1.
+- Concrete cricket practice nets: 2.
+- Football field: 1.
+- Hockey field: 1.
+- Handball court: 1.
+- Kho-Kho court: 1.
+- Kabaddi court with floodlights: 1.
+- Tennikoit courts: 3.
+- Clay tennis courts with floodlights: 2.
+- Tennis-wall practice facility: 1.
+- Obstacle-race facility: 1.
+
+Sources:
+- KEC Annual Quality Assurance Report 2022–2023: https://kongu.ac.in/files/iqac/naac/AQAR/2022-2023.pdf
+- KEC Self Study Report: https://www.kongu.ac.in/static/media/SSR_DVV_31_01_2022.ad2614d954e9b1f621f4.pdf
+
+Additional context: An older 2019–2020 KEC report listed 2 basketball courts and 2 volleyball courts, while later institutional material lists 3 basketball courts and includes a dedicated outdoor facility table. Use the newer available facility inventory when giving counts, and note that published reports may reflect different years.
+Source: https://kongu.ac.in/files/iqac/Annual%20Reports/2019-2020.pdf
+
+============================================================
+CHUNK 5 — GYM, FITNESS, AND OTHER FACILITIES
+============================================================
+
+STATUS: PARTLY VERIFIED.
+- KEC has a fitness centre/gymnasium.
+- Separate gymnasium facilities for boys and girls are mentioned in the KEC Self Study Report.
+- Yoga and meditation centres are mentioned in institutional documentation.
+
+The original notes also listed multi-station machines, free weights, dumbbells, barbells, bench presses, squat racks, treadmills, exercise cycles, changing rooms, showers, equipment storage, first-aid supplies, RO water stations, spectator seating, and court floodlights. Some of these details may be accurate, but the current exact inventory, location, access arrangements, and operating hours were not all independently confirmed in the official sources reviewed. Do not present the detailed equipment list or timings as guaranteed current information.
+
+Sources:
+- https://www.kongu.ac.in/static/media/SSR_DVV_31_01_2022.ad2614d954e9b1f621f4.pdf
+- https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+
+============================================================
+CHUNK 6 — SPORTS QUOTA: ANNUAL PLACES AND BENEFITS
+============================================================
+
+STATUS: VERIFIED as a general KEC policy statement.
+KEC states that it supports 15 students every year through sports-quota admission, providing full free education and free boarding and lodging.
+
+Important interpretation:
+- This means 15 sports-quota students are supported according to the institutional statement.
+- Do not describe this as 15 separate cash scholarships unless an official source specifically says that.
+- Applicants are not automatically selected. The portal says applicants are shortlisted based on the achievements entered in the online application, and trial dates are communicated to shortlisted candidates.
+- The number of places and general benefits are stated by KEC, but the applicable admission-year rules and deadlines must be checked on the current portal.
+
+Sources:
+- https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+- https://kms.kongu.edu/sportsquota/index.php
+
+============================================================
+CHUNK 7 — SPORTS QUOTA: DOCUMENTS AND ELIGIBILITY
+============================================================
+
+STATUS: VERIFIED on the Sports Quota Admission portal page titled “Sports Quota Admission 2025–26”. These are the requirements shown on that page; confirm the current admission-year notice before applying.
+- Participation in state-level and national-level competitions.
+- Any five major sports achievements from the previous four years, supported by certificates.
+- Achievement certificates: JPG format; maximum file size 100 KB according to the portal.
+- Passport-size photograph: JPG format; maximum file size 50 KB according to the portal.
+- Applicants are shortlisted based on the achievements supplied during online registration.
+- Trial dates are communicated later to shortlisted applicants.
+- University details are not required for diploma students, according to the portal instructions.
+- The portal lists application categories:
+  1. BE/BTech/BSc/MSc first year — 12th-standard eligibility.
+  2. BE/BTech lateral entry — diploma eligibility.
+  3. ME/MBA/MCA — relevant undergraduate degree eligibility.
+
+The portal page reviewed is labelled 2025–26. Do not assume that its application window is still open or that every detail is unchanged for 2026–27.
+
+Official portal:
+https://kms.kongu.edu/sportsquota/index.php
+
+============================================================
+CHUNK 8 — SPORTS QUOTA DISCIPLINES
+============================================================
+
+STATUS: VERIFIED on the Sports Quota Admission portal page titled “Sports Quota Admission 2025–26”.
+
+Men’s sports quota disciplines:
+- Athletics
+- Badminton
+- Ball Badminton
+- Basketball
+- Handball
+- Hockey
+- Kho-Kho
+- Table Tennis
+- Tennis
+- Volleyball
+
+Women’s sports quota disciplines:
+- Athletics
+- Badminton
+- Ball Badminton
+- Basketball
+- Volleyball
+- Kabaddi
+- Table Tennis
+
+Important: This is the portal’s sports-quota roster, not necessarily a complete list of every recreational or competitive activity available at KEC.
+
+Source:
+https://kms.kongu.edu/sportsquota/index.php
+
+============================================================
+CHUNK 9 — COACHING CAMPS AND SPORTS PARTICIPATION
+============================================================
+
+STATUS: VERIFIED as a general programme.
+KEC says it organizes coaching camps every year for:
+- Badminton
+- Basketball
+- Tennis
+- Table Tennis
+- Volleyball
+- Football
+- Hockey
+- Kabaddi
+- Athletics
+
+KEC annual reports also mention Handball coaching in some years. The exact sports covered by a camp can vary by year.
+
+KEC’s department supports practice and participation in indoor and outdoor games. The current trial process, dates, fitness tests, eligibility conditions, attendance requirements, and registration process were not established by the general department page. Students should contact the department or check current notices.
+
+Sources:
+- https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+- https://kongu.ac.in/iqac/insdist/annual_report_2022_23.pdf
+
+============================================================
+CHUNK 10 — KONGU TROPHY AND OTHER TOURNAMENTS
+============================================================
+
+STATUS: VERIFIED as a general programme.
+- KEC conducts the Kongu Trophy annually.
+- KEC describes it as a state-level inter-collegiate tournament.
+- The tournament covers ten sporting disciplines for men and women.
+
+KEC’s website displayed a “25th Kongu Trophy” event for 10–12 September 2026. Treat these as the dates advertised on the website, not as a claim about any future edition.
+
+Sources:
+- https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+- https://kongu.ac.in/
+- Kongu Trophy information: https://kongu.ac.in/kongutrophy/kectrophy.pdf
+
+KEC also participates in Anna University competitions and has documented student representation in South Zone, University, and All India Inter-University events. The particular events, participants, and results depend on the year.
+
+============================================================
+CHUNK 11 — HISTORICAL ACHIEVEMENTS (KEEP THE YEAR ATTACHED)
+============================================================
+
+STATUS: HISTORICAL.
+The KEC Annual Report 2023–2024 states that the college won the Anna University Zone Overall Championship consecutively for 15 years since 2008. It also records that KEC conducted Anna University Zone 12 Basketball and Volleyball tournaments for men, Athletics for men and women, and an Anna University Inter-Zone Volleyball tournament for men. The same report lists CENTIES tournaments in Table Tennis (men and women), Volleyball (men), and Basketball (men).
+
+This is a statement from the 2023–2024 report. Do not claim that the same streak, ranking, or zone applies in 2026 unless a current source confirms it.
+
+KEC’s earlier annual reports give different year-specific streak lengths:
+- 2021–2022 report: 12 consecutive years since 2008.
+- 2022–2023 report: 13 consecutive years since 2008.
+- 2023–2024 report: 15 consecutive years since 2008, as stated in that report.
+
+The supplied notes mentioned Zone 8 in one place and Zone 12 in another. The 2023–2024 report identifies Zone 12 for the events listed above. For a specific tournament, use that tournament’s official notice/report rather than assigning one zone number to every event.
+
+Sources:
+- https://www.kongu.ac.in/files/iqac/Annual%20Reports/2023-2024.pdf
+- https://kongu.ac.in/iqac/insdist/annual_report_2022_23.pdf
+- https://kongu.ac.in/files/iqac/Annual%20Reports/2021-2022.pdf
+
+============================================================
+CHUNK 12 — STUDENT SUPPORT AND COMPETITION LOGISTICS
+============================================================
+
+STATUS: NEEDS CONFIRMATION BEFORE PROMISING A BENEFIT.
+The original notes say that KEC may provide or arrange:
+- Official sports uniforms/team kits.
+- Standard practice equipment.
+- On-Duty (OD) permission for approved tournaments.
+- Travel, tournament registration fees, food allowances, and away accommodation.
+- Academic flexibility when sanctioned sports activities conflict with academic work.
+- Cash prizes or certificates for achievements.
+- Support with strength and conditioning and nutrition.
+- Medical/first-aid support for injuries.
+
+These specific benefits and their conditions were not all verified in the official pages reviewed. The chatbot must not promise reimbursement, free kits, academic grace marks, re-tests, travel, food, accommodation, or cash awards as automatic entitlements. Direct students to the Physical Education Department for the current written policy.
+
+============================================================
+CHUNK 13 — SAFETY, ACCESS, AND DAILY OPERATIONS
+============================================================
+
+STATUS: NEEDS CONFIRMATION for exact current rules.
+The original notes mention:
+- Ground access hours and gym shifts.
+- Team practice schedules and compulsory attendance.
+- Restrictions on access to grounds after 7:30 PM.
+- Protective equipment requirements for sports such as hockey, cricket, and football.
+- Dress code and footwear rules for indoor courts.
+- Mobile-phone restrictions during practice.
+- Changing rooms and showers.
+- First-aid supplies and referral for serious injuries.
+- Equipment-damage charges.
+- Rules for alumni and external visitors.
+
+The original notes gave different schedules:
+- Grounds: 6:00–8:00 AM and 4:30–7:00 PM.
+- Team practice: 6:00–7:30 AM and 4:45–6:30 PM.
+- Gym: 6:00–8:30 AM and 4:30–7:30 PM.
+
+Because these are different types of schedules and were not confirmed by a current official timetable, do not combine them or answer a timing question with them as fact. Ask users to check with the department for current timings and rules.
+
+For injury or emergency questions, direct users to official campus medical/emergency services rather than giving an unverified sports-office procedure.
+
+============================================================
+CHUNK 14 — NCC, NSS, YOGA, AND FITNESS ACTIVITIES
+============================================================
+
+STATUS: PARTLY VERIFIED.
+KEC institutional sources mention yoga and meditation centres and campus organizations such as NCC and NSS. The original notes describe NCC drill training, camps, blood-donation activities, NSS sports/health-awareness activities, International Yoga Day programmes, and student trekking/cycling/fitness activities.
+
+The original notes also claim that KEC’s NCC received the Deputy Director General Shield in Tamil Nadu and mention the 5 TN Air Sqn (Tech) NCC. These specific claims and current programme schedules were not independently confirmed in the official sources reviewed. Do not present them as verified without checking the relevant official record.
+
+Sources:
+- KEC Self Study Report: https://www.kongu.ac.in/static/media/SSR_DVV_31_01_2022.ad2614d954e9b1f621f4.pdf
+- KEC Campus Life: https://kongu.ac.in/campus-life
+
+============================================================
+CHUNK 15 — OTHER ORIGINAL DETAILS TO KEEP BUT NOT STATE AS FACT
+============================================================
+
+The original notes also mentioned the following details. They are retained here so they are not silently discarded, but they need current primary-source confirmation:
+- No official swimming pool on the immediate engineering campus.
+- Chess and carrom rooms.
+- Formal teams or regular competitions for cricket, swimming, yoga, and e-sports.
+- Average team roster sizes (for example, 12–16 for basketball/volleyball and 16–18 for cricket/football).
+- Trials usually held in July or August; first-year students and day scholars eligible; selection based on agility, technical skill, endurance, and past results.
+- Student Sports Secretary and joint secretaries elected annually.
+- External professional coaches or veteran state players invited before tournaments.
+- Specific annual sports-day format, spectator permissions, fitness walks, marathons, and the “Run for Swadeshi” event.
+- Placement preference for sports captains or sports achievers.
+- Free high-protein mess catering for sports-quota students.
+- Exact sports office location within the indoor stadium.
+- Exact number and type of spectator galleries, water stations, equipment rooms, first-aid kits, and changing/shower facilities.
+- Exact cash-prize amount for a Kongu Trophy edition. The original notes mention ₹5 lakh and a 25th Silver Jubilee edition; the 2026 KEC website lists a 25th Kongu Trophy event, but prize amount should only be quoted if the event’s official notice confirms it.
+- Exact annual cash incentives, merit certificates, and academic grace-mark/re-test policy.
+- The exact number of sports teams, beyond KEC’s general statement that there are more than 25 sports teams.
+
+============================================================
+CHUNK 16 — CHATBOT RESPONSE RULES
+============================================================
+
+1. Contacts: Use Chunk 2 and suggest checking the official department page for the latest details.
+2. Facilities: Use Chunks 3–5. Keep facility counts tied to the source/report year.
+3. Sports quota: Use Chunks 6–8. Explain that applicants are shortlisted and must verify the current admission-year instructions.
+4. Coaching: Use Chunk 9. Do not invent camp dates or claim a sport has a camp this year unless a current notice confirms it.
+5. Tournaments and achievements: Use Chunks 10–11. Attach dates/report years to claims.
+6. Fees, schedules, trials, travel, accommodation, benefits, safety rules, and current availability: use Chunks 12–15 and clearly say confirmation is needed.
+7. If the answer is missing, say: “The available KEC information I have does not specify this. Please confirm with the Department of Physical Education.”
+8. Never turn a third-party claim, social media post, old schedule, or unverified note into an official KEC policy.
+9. Do not repeat the same answer in multiple places. Use the chunk headings as the topic structure.
+10. Do not expose these internal labels (“VERIFIED”, “HISTORICAL”, “NEEDS CONFIRMATION”) to users unless explaining source confidence is useful; use them to decide how confidently to answer.
+
+============================================================
+PRIMARY SOURCE DIRECTORY
+============================================================
+
+A. KEC Department of Physical Education:
+https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+
+B. KEC Physical Education facilities page:
+https://kongu.ac.in/facilities/physicaldept
+
+C. KEC Sports Quota Admission Portal:
+https://kms.kongu.edu/sportsquota/index.php
+
+D. KEC Annual Report 2023–2024:
+https://www.kongu.ac.in/files/iqac/Annual%20Reports/2023-2024.pdf
+
+E. KEC Annual Quality Assurance Report 2022–2023:
+https://kongu.ac.in/files/iqac/naac/AQAR/2022-2023.pdf
+
+F. KEC Self Study Report:
+https://www.kongu.ac.in/static/media/SSR_DVV_31_01_2022.ad2614d954e9b1f621f4.pdf
+
+G. KEC Campus Life:
+https://kongu.ac.in/campus-life
+
+H. KEC Annual Report 2022–2023:
+https://kongu.ac.in/iqac/insdist/annual_report_2022_23.pdf
+
+I. KEC Annual Report 2021–2022:
+https://kongu.ac.in/files/iqac/Annual%20Reports/2021-2022.pdf
+
+J. KEC Annual Report 2019–2020:
+https://kongu.ac.in/files/iqac/Annual%20Reports/2019-2020.pdf
+
+============================================================
+APPENDIX A — USER QUESTION COVERAGE CHECKLIST / FAQ ANSWER DATA
+============================================================
+
+Purpose:
+This appendix maps the questions supplied for the chatbot to an answer supported by this knowledge base. A question is not “answered” merely because a guess is available. Where KEC’s official sources reviewed do not provide the answer, the response explicitly says that the detail is not confirmed and gives the recommended next step.
+
+A1. FACILITIES AND INFRASTRUCTURE
+
+Q: What sports facilities are available at KEC?
+A: KEC documents indoor badminton courts, an indoor volleyball court, table-tennis boards, an indoor spectator gallery, an 8-acre outdoor playfield, a 400-metre athletics track, and outdoor facilities for ball badminton, basketball, cricket, football, hockey, handball, Kho-Kho, Kabaddi, Tennikoit, tennis, and obstacle-race training. A fitness centre/gymnasium and yoga/meditation centres are also mentioned in institutional reports. See Chunks 3–5 for counts and source dates.
+
+Q: How large is the sports ground?
+A: KEC institutional documentation lists the outdoor playfield as 8 acres.
+
+Q: Is there a cricket ground? Is it turf or practice nets?
+A: An outdoor cricket field and two concrete cricket practice nets are listed in institutional documentation. The available sources reviewed do not establish whether the playing surface is natural turf, artificial turf, or another surface. Do not call it a turf ground without confirmation.
+
+Q: Is there a football ground?
+A: Yes. One football field is listed in KEC institutional facility documentation. The surface type is not confirmed in the sources reviewed.
+
+Q: Is there a hockey ground?
+A: Yes. One hockey field is listed in KEC institutional facility documentation.
+
+Q: Is there an athletics track? What is its length?
+A: Yes. KEC documents one 400-metre athletics track. The 2022 Self Study Report also describes an 8-lane, 400-metre standard track.
+
+Q: How many volleyball courts are there?
+A: The 2022–2023 institutional facility inventory lists three outdoor volleyball courts with floodlights, and the indoor stadium has one indoor volleyball court. This gives four listed volleyball court spaces across indoor and outdoor facilities in those documents. Confirm current availability with the department.
+
+Q: How many basketball courts are there?
+A: The 2022–2023 institutional facility inventory lists three outdoor basketball courts with floodlights. Older reports may show different counts, so use the report year when answering.
+
+Q: Is there a Kabaddi court?
+A: Yes. One Kabaddi court with floodlights is listed in the institutional facility inventory.
+
+Q: Is there a Kho-Kho court?
+A: Yes. One Kho-Kho court is listed in the institutional facility inventory.
+
+Q: Is there a ball badminton court?
+A: Yes. One ball-badminton facility with floodlights is listed.
+
+Q: Are there badminton indoor courts?
+A: Yes. The multipurpose indoor stadium is documented as having three badminton courts.
+
+Q: Is there a tennis court?
+A: Yes. Two clay tennis courts with floodlights and one tennis-wall practice facility are listed in institutional documentation.
+
+Q: Is there a throwball court?
+A: The official sources reviewed for this knowledge base do not confirm a dedicated throwball court. Ask the Department of Physical Education before answering yes or no.
+
+Q: Is there a handball court?
+A: Yes. One handball court is listed in the institutional facility inventory.
+
+Q: Is there a table-tennis facility?
+A: Yes. The indoor stadium is documented as having six table-tennis boards.
+
+Q: Is there a chess and carrom room?
+A: The original notes mention chess and carrom rooms, but the official sources reviewed did not confirm their current availability or location. Tell users to check with the department.
+
+Q: Is there an indoor stadium? What is its capacity?
+A: Yes. KEC documents a multipurpose indoor stadium of approximately 1,002 square metres and an indoor gallery with 250 seats. This is the documented gallery seating capacity, not necessarily the total safe occupancy of the entire stadium.
+
+Q: Is there a swimming pool?
+A: The original notes say there is no official regulation swimming pool on the immediate engineering campus, but this was not confirmed by the official sources reviewed. The chatbot should say that the available verified facility list does not establish whether a pool currently exists and advise confirmation with KEC.
+
+Q: Is there a gym? What are its timings?
+A: KEC has a fitness centre/gymnasium. Current operating hours were not verified. Do not use the old schedules in the original notes as confirmed hours; direct users to the Physical Education Department.
+
+Q: Is there a separate gym for girls?
+A: KEC’s Self Study Report mentions separate gymnasium facilities for boys and girls. Current access arrangements and timings need confirmation.
+
+Q: What equipment is in the gym?
+A: The original notes list multi-station machines, free weights, dumbbells, barbells, bench presses, squat racks, treadmills, and exercise cycles. The exact current inventory was not confirmed. Explain that these are items mentioned in the notes, not a verified live inventory.
+
+Q: Is there a yoga or meditation hall?
+A: KEC institutional documentation mentions yoga and meditation centres. The exact room/location and current schedule were not confirmed.
+
+Q: Is there a pavilion or spectator gallery?
+A: An indoor gallery with 250 seats is documented. A separate outdoor pavilion or outdoor spectator seating arrangement was mentioned in the original notes but was not confirmed in the official sources reviewed.
+
+Q: Are floodlights available for evening matches?
+A: Institutional facility documentation lists floodlights for the ball-badminton facility, three basketball courts, the Kabaddi court, two clay tennis courts, and three outdoor volleyball courts. This does not prove that every ground or court has floodlights.
+
+Q: Is there a changing room and shower facility?
+A: The original notes mention changing rooms and showers, but the current provision and location were not confirmed in the official sources reviewed.
+
+Q: Is there a sports store room for equipment?
+A: The original notes mention a central equipment store room, but the official sources reviewed did not confirm its location or issue/return process.
+
+Q: Is there a first-aid or physiotherapy room at the ground?
+A: KEC has campus medical facilities mentioned in institutional material, but the sources reviewed do not confirm a dedicated sports-ground first-aid/physiotherapy room or an on-site physiotherapist. The college’s broader campus information lists a dispensary and ambulance service. For an injury, contact official campus medical/emergency services.
+
+Q: Is drinking water available at the ground?
+A: KEC institutional material says drinking water is supplied across campus through an RO mineral-water plant. The exact number and location of water stations beside sports grounds were not verified.
+
+Q: What are the ground timings for morning and evening?
+A: Current ground timings were not verified. The original notes contain schedules that may be outdated or apply to different activities. Ask the Physical Education Department for the current timetable.
+
+A2. STAFF AND CONTACTS
+
+Q: Who is the Physical Director?
+A: The official department page lists Dr. R. Jeyaraman, M.P.Ed., M.Phil., Ph.D., as Director of Physical Education.
+
+Q: Who are the Physical Education teachers?
+A: The official page lists Dr. K. Kannan as Professor-in-Charge, Mr. V. Kannan as Assistant Physical Director, and Ms. D. Pavithra as Assistant Physical Director. The page also lists Dr. R. Jeyaraman as Director of Physical Education.
+
+Q: What is the Physical Director’s phone number and email?
+A: The department contact details are phone 04294-226640 and email pd@kongu.ac.in. The sports quota portal lists 9842411828 for sports quota enquiries and identifies it with Dr. R. Jeyaraman. Confirm the latest details on the official pages.
+
+Q: Who are the coaches for each sport?
+A: The general department page identifies the sports for which coaching camps are organized but does not provide a current sport-by-sport coach directory. Ask the department for the current coaches and contact details.
+
+Q: Are there professional or external coaches?
+A: The original notes say external coaches and veteran players may be invited, but this was not confirmed by the official pages reviewed. Do not state this as a standing policy without confirmation.
+
+Q: Where is the Physical Education office located?
+A: The original notes place it in the indoor stadium complex, but the exact current office location was not confirmed in the official source text reviewed. Ask the department or consult campus directions.
+
+Q: Who is the sports committee in charge?
+A: The official department page lists Dr. K. Kannan as Professor-in-Charge. It does not provide a complete current sports committee directory.
+
+Q: Is there a sports secretary among students?
+A: The original notes mention a student Sports Secretary and joint secretaries, but their current existence, election process, and names were not confirmed. Check with the department or Student Affairs.
+
+Q: Who is the Sports Council convenor?
+A: The available official sources reviewed do not identify a current Sports Council convenor. Do not guess; contact the department.
+
+Q: What is the contact for sports enquiries?
+A: Department phone: 04294-226640; email: pd@kongu.ac.in. Sports quota enquiry mobile listed on the portal: 9842411828.
+
+A3. SPORTS OFFERINGS, TEAMS, AND SELECTION
+
+Q: Which sports are offered at KEC?
+A: KEC’s facility and coaching information documents athletics, badminton, ball badminton, basketball, cricket, football, handball, hockey, Kabaddi, Kho-Kho, table tennis, tennis, volleyball, Tennikoit, and other fitness activities. The sports quota portal has a separate gender-specific list; see Chunk 8. Do not assume every facility sport has a formal varsity team.
+
+Q: Which men’s teams are there?
+A: The sports quota portal lists men’s sports quota disciplines: Athletics, Badminton, Ball Badminton, Basketball, Handball, Hockey, Kho-Kho, Table Tennis, Tennis, and Volleyball. This is the sports-quota list, not a complete confirmed current team roster.
+
+Q: Which women’s teams are there?
+A: The sports quota portal lists women’s sports quota disciplines: Athletics, Badminton, Ball Badminton, Basketball, Volleyball, Kabaddi, and Table Tennis. This is the sports-quota list, not a complete confirmed current team roster.
+
+Q: How many students are in each team?
+A: Current team sizes were not confirmed in official sources reviewed. Team sizes vary by sport and competition rules. Do not use the sample ranges in the original notes as KEC’s official team sizes.
+
+Q: Is there a cricket team for boys and girls?
+A: The facility inventory confirms a cricket field and practice nets, but the sources reviewed do not confirm current men’s and women’s cricket team status. Ask the department.
+
+Q: Is there a football team?
+A: A football field is documented, but the current varsity team roster was not verified by the sources reviewed. Confirm with the department.
+
+Q: Is there a hockey team?
+A: Hockey facilities and hockey coaching camps are documented. Confirm the current team roster and selection details with the department.
+
+Q: Is there a volleyball team?
+A: Volleyball facilities and annual coaching camps are documented. Confirm the current men’s and women’s team rosters with the department.
+
+Q: Is there a basketball team?
+A: Basketball facilities and annual coaching camps are documented. Confirm current team rosters with the department.
+
+Q: Is there a Kabaddi team?
+A: Kabaddi facilities and annual coaching camps are documented. Confirm current team rosters with the department.
+
+Q: Is there an athletics team?
+A: An athletics track and annual athletics coaching camps are documented. Confirm the current team and selection details with the department.
+
+Q: Is there a badminton team?
+A: Badminton courts and annual badminton coaching camps are documented. Confirm current team rosters with the department.
+
+Q: Is there a chess team?
+A: Chess participation was mentioned in the original notes, but the current team status was not confirmed in the official sources reviewed.
+
+Q: Is there a table-tennis team?
+A: Table-tennis facilities and coaching camps are documented. Confirm the current men’s and women’s team rosters with the department.
+
+Q: Are there swimming or yoga teams?
+A: Current formal swimming or yoga team status was not confirmed in the sources reviewed. Yoga and meditation centres are mentioned in institutional documentation, but that does not establish a formal competition team.
+
+Q: Are there any e-sports teams?
+A: The current formal e-sports team status was not confirmed in official sources reviewed.
+
+Q: How do I join a college sports team?
+A: The original notes describe selection trials through the Department of Physical Education, but the current application procedure and dates were not confirmed. Contact the department for the latest trial announcement and registration instructions.
+
+Q: When are team selections or trials held?
+A: Current trial dates are not confirmed in this knowledge base. Do not present July/August as guaranteed dates. Check current KEC announcements or contact the department.
+
+Q: What is the selection procedure?
+A: A general current procedure was not confirmed in the sources reviewed. The original notes mention open trials and evaluation of sport-specific skills and fitness, but the department must confirm the current criteria for each sport.
+
+Q: Is there a minimum fitness requirement?
+A: No universal minimum fitness score was confirmed in the sources reviewed. Ask the coach or department for sport-specific requirements.
+
+Q: Do first-year students get a chance in trials?
+A: The original notes say first-year students can attend trials, but a current official policy was not found in the sources reviewed. Confirm with the department.
+
+Q: Can day scholars join the teams?
+A: The original notes say day scholars can participate, but an explicit current official rule was not confirmed. Ask the department.
+
+Q: Are hostel students given priority?
+A: The original notes say selection is merit-based and hostellers do not receive priority, but the current selection policy was not verified. Ask the department for the written policy.
+
+Q: How do I register for sports at the beginning of the year?
+A: The original notes mention forms through the Physical Education Office or student portal. The current registration process was not verified. Ask the department or check current student-portal notices.
+
+Q: Is there a sports registration form?
+A: A current general sports-team registration form was not located in the sources reviewed. The sports quota portal is specifically for sports quota admission, not necessarily regular team registration. Contact the department.
+
+Q: Is there a sports fee?
+A: The sources reviewed do not confirm a general sports registration fee or a universal fee-free policy. Ask the department about the current sport and activity.
+
+A4. TRAINING, TIMINGS, EQUIPMENT, AND SPORTS DAY
+
+Q: What are the daily practice timings?
+A: Current team practice timings were not verified. Ask the department or coach for the current timetable.
+
+Q: Is practice compulsory for team members?
+A: The original notes claim compulsory attendance, but the current rule was not verified. Ask the coach or department.
+
+Q: Is there a sports period in the timetable?
+A: The sources reviewed do not confirm a current scheduled sports period for all students. Check the academic timetable for the relevant programme/semester.
+
+Q: Are there summer coaching camps?
+A: KEC confirms that it organizes coaching camps every year, but the sources reviewed do not establish a fixed current summer-camp schedule. Check the annual notice.
+
+Q: Are there special coaching camps before tournaments?
+A: Annual coaching camps are confirmed in general. Exact pre-tournament camp dates, duration, and residential arrangements were not confirmed.
+
+Q: Is there fitness or strength training for players?
+A: KEC has a fitness centre/gymnasium, but a current sport-specific strength-and-conditioning programme was not detailed in the sources reviewed. Ask the coach or department.
+
+Q: Is a sports nutrition or diet plan provided?
+A: A current general nutrition plan was not confirmed. Do not promise individualized diet plans or free high-protein meals without written confirmation.
+
+Q: Is sports equipment provided free of cost?
+A: KEC states that facilities and equipment are available to support practice, but the sources reviewed do not establish that every item is free for every student. Ask about the specific sport and equipment.
+
+Q: Do students need their own kit or shoes?
+A: The current kit policy was not confirmed. Ask the coach which personal equipment, footwear, or protective gear is required.
+
+Q: Is a sports uniform provided to players?
+A: The original notes claim uniforms are provided for official representation, but this was not verified as a current universal policy. Confirm with the department for the relevant team/event.
+
+Q: When is the annual Sports Day?
+A: The exact annual Sports Day date was not confirmed. Check the current academic/event calendar or KEC announcements.
+
+Q: What events are conducted on Sports Day?
+A: The exact programme for the current year was not confirmed. It may be published in the event notice; do not assume a fixed programme.
+
+Q: Are there inter-department tournaments?
+A: The original notes mention inter-department and inter-year tournaments, but a current schedule was not confirmed. Check department announcements.
+
+Q: Are there inter-year competitions?
+A: The original notes mention these competitions, but current availability and dates were not verified. Confirm with the department.
+
+A5. TOURNAMENTS, RESULTS, AND SPORTS ACHIEVEMENTS
+
+Q: Which inter-college tournaments does KEC host?
+A: KEC officially reports hosting the annual Kongu Trophy, a state-level inter-collegiate tournament covering ten disciplines for men and women. Other current hosted tournaments should be checked in official event notices.
+
+Q: Does KEC conduct state- or national-level tournaments?
+A: The Kongu Trophy is described by KEC as a state-level inter-collegiate tournament. KEC annual reports also document hosting specified Anna University zone and inter-zone tournaments in particular years. A current national-level hosted tournament was not confirmed.
+
+Q: Which university or zonal tournaments does KEC participate in?
+A: KEC annual reports document participation in Anna University competitions and student representation in South Zone, University, and All India Inter-University events. The particular tournaments vary by year and sport. The 2023–2024 report mentions Zone 12 for specified events.
+
+Q: Is KEC part of Anna University inter-zonal tournaments?
+A: The 2023–2024 annual report records that KEC conducted an Anna University Inter-Zone Volleyball Tournament for men. This is historical evidence of that event, not a guarantee of participation in every inter-zonal tournament each year.
+
+Q: Does KEC participate in AICTE or AIU tournaments?
+A: The sources reviewed document All India Inter-University (AIU) representation, but do not establish current participation in AICTE sports tournaments. Check current event notices for the specific year.
+
+Q: What is the tournament schedule for this year?
+A: A complete current-year schedule was not confirmed in this knowledge base. Use current KEC announcements or contact the Physical Education Department.
+
+Q: How can I register for an event?
+A: A general current event-registration process was not confirmed. Follow the event’s official notice or ask the department/organizer.
+
+Q: Are spectators or parents allowed during matches?
+A: The original notes say spectators may attend, but a current general spectator policy was not verified. Check the event notice and campus entry rules.
+
+Q: Is there a sports fest or sports carnival?
+A: The annual Kongu Trophy is confirmed. Other sports fests/carnivals in a particular year need confirmation from current event announcements.
+
+Q: Are there fun games or marathon events?
+A: The original notes mention fitness walks, marathons, and fun fixtures, but current event availability and dates were not confirmed. Check KEC announcements.
+
+Q: Is there a run or marathon conducted by the college?
+A: The original notes mention a “Run for Swadeshi” event associated with KEC NCC, but its recurrence and current schedule were not confirmed. Do not claim a current annual marathon without a current notice.
+
+Q: What are the major sports achievements of KEC?
+A: The 2023–2024 annual report states that KEC won the Anna University Zone Overall Championship consecutively for 15 years since 2008 and records several zone/inter-zone tournaments hosted by KEC. Always attach the report year to this claim.
+
+Q: How many medals did KEC students win last year?
+A: A consolidated total for the previous year was not verified in the sources reviewed. The department website provides year-labelled achievement links; consult the relevant report before giving a medal count.
+
+Q: Which students have represented the state?
+A: A complete current list of students representing the state was not found in the sources reviewed. Check year-specific achievement reports or contact the department.
+
+Q: Which students have represented the country?
+A: A complete current list of national representatives was not found in the sources reviewed. Check year-specific official achievement records; do not infer names.
+
+Q: Are there any national-level players from KEC?
+A: The sources reviewed describe participation in higher-level university competitions, but do not provide a complete current list of national-level players. Check official achievement reports.
+
+Q: What university-level championships has KEC won?
+A: The 2023–2024 annual report states that KEC won the Anna University Zone Overall Championship consecutively for 15 years since 2008. This is the report’s historical statement; verify newer results before claiming current status.
+
+Q: Where can I see the list of sports awards?
+A: The official Department of Physical Education page has year-labelled achievement links for several years: https://kongu.ac.in/kongu.ac.in/facilities/sports.php. KEC annual reports are another source.
+
+Q: Is there a Hall of Fame for sports achievers?
+A: The original notes mention trophies and photographs in the department office, but a formal Hall of Fame was not confirmed in the official sources reviewed.
+
+Q: What is the sports achievement record by year?
+A: Use the year-labelled achievement links on the official department page and the relevant annual report. Do not combine results from different years as if they were from one season.
+
+Q: Which team has performed best in recent years?
+A: The sources reviewed do not provide a sufficiently current, sport-by-sport ranking to identify one best-performing team. Compare the most recent official achievement records for the requested period and sport.
+
+A6. SPORTS QUOTA, SCHOLARSHIPS, AND ACADEMIC BENEFITS
+
+Q: Is there a sports quota for admission?
+A: Yes. KEC states that it supports 15 students each year through sports-quota admission, with full free education and free boarding and lodging. Check the current admission notice for the applicable year.
+
+Q: How do I apply under the sports quota?
+A: Use the official KEC Sports Quota Admission Portal: https://kms.kongu.edu/sportsquota/index.php. The portal page reviewed is labelled 2025–26, so verify the current admission-year dates and instructions before applying.
+
+Q: What certificates are required for the sports quota?
+A: The 2025–26 portal asks for participation in state- and national-level competitions and any five major sports achievements from the previous four years, supported by certificates. It specifies JPG achievement certificates up to 100 KB and a JPG passport-size photograph up to 50 KB. Confirm current rules for the admission year.
+
+Q: Is there a scholarship for sports achievers?
+A: KEC states that 15 sports-quota students receive full free education and free boarding and lodging each year. Do not describe it as a separate cash scholarship unless a current official notice says so.
+
+Q: Is there a fee concession for state or national players?
+A: The official general statement describes full free education and free boarding/lodging for selected sports-quota students. It does not establish an automatic concession for every state or national player. Selection and current eligibility rules apply.
+
+Q: Are there cash prizes for medal winners?
+A: The original notes mention cash incentives, but a general current cash-prize policy was not verified. A particular event may have its own prize notice; check that notice.
+
+Q: Is attendance relaxation given for tournaments?
+A: The original notes mention OD permission and academic flexibility, but a current general attendance-relaxation policy was not verified. Ask the department and academic office for the written rules.
+
+Q: Is on-duty (OD) permission provided for tournaments?
+A: The original notes say OD permission may be given for approved tournaments, but the current policy and approval process were not verified. Confirm with the department and relevant academic office.
+
+Q: Is there any grace marks or extra credit for sports?
+A: A general grace-mark or extra-credit policy was not confirmed. Do not promise marks or credits; check the current academic regulations.
+
+Q: Do sports achievements help in placements?
+A: The original notes suggest sports leadership may be valued by employers, but the sources reviewed do not confirm any formal KEC placement preference for sports achievers. Do not promise placement advantages.
+
+Q: Are there sports certificates or merit certificates?
+A: The original notes mention achievement certificates, but the current award/certificate policy was not verified. Ask the department or check the event rules.
+
+A7. TRAVEL, MEDICAL CARE, AND SAFETY
+
+Q: How is travel arranged for tournaments?
+A: The original notes say the college may arrange buses or reimburse transport, but the current travel policy was not verified. Ask the department for the specific event.
+
+Q: Who pays travel and food expenses for tournaments?
+A: The sources reviewed do not confirm a universal reimbursement policy. Ask the department for the event-specific funding and reimbursement rules before travelling.
+
+Q: Is accommodation provided during away tournaments?
+A: The original notes say accommodation may be arranged, but this was not verified as a universal policy. Confirm with the department for the specific tournament.
+
+Q: Is insurance provided for players?
+A: The sources reviewed do not establish sports-specific insurance coverage. Ask KEC for the current insurance/medical coverage policy.
+
+Q: What happens if a player is injured?
+A: KEC institutional material mentions campus medical facilities and ambulance support. For an injury or emergency, contact official campus medical/emergency services immediately. The precise sports-injury referral protocol was not verified in the sources reviewed.
+
+Q: Is there a tie-up with a nearby hospital for sports injuries?
+A: The original notes mention nearby hospitals, but a current formal tie-up was not verified. Contact the campus dispensary or administration for current referral arrangements.
+
+Q: Is a physiotherapist available?
+A: A dedicated current physiotherapist service was not confirmed in the sources reviewed. Ask the department or campus medical centre.
+
+Q: Are medical checkups conducted before selection?
+A: A universal pre-selection medical-checkup requirement was not confirmed. Ask the department about the requirements for the particular sport or competition.
+
+Q: What are the safety rules at the ground and gym?
+A: A complete current sports-specific safety rulebook was not found in the sources reviewed. Use appropriate sport-specific protective equipment, follow coach/instructor directions, and ask the department for official facility rules. For injuries, use campus medical/emergency services.
+
+Q: What is the rule for using the ground after hours?
+A: The original notes mention restrictions after 7:30 PM, but this exact rule was not verified. Ask the department for current access hours and permission requirements.
+
+Q: Can students use the ground outside practice hours?
+A: The current access policy was not confirmed. Ask the department whether the facility is open for individual practice and whether booking or permission is required.
+
+Q: Can day scholars use the ground and gym?
+A: The original notes say day scholars can participate, but a current facility-access policy was not verified. Confirm with the department.
+
+Q: Can outsiders or alumni use the facilities?
+A: The original notes say access may be allowed during specified alumni meets with permission, but a current visitor/alumni policy was not verified. Ask the department or campus administration.
+
+Q: Is the ground available for rent or events?
+A: The sources reviewed do not confirm public rental or external-event booking. Contact KEC administration; do not promise availability.
+
+Q: What is the process to book a court?
+A: A current court-booking procedure was not found in the sources reviewed. Contact the Physical Education Department to ask whether booking is required and how to request a slot.
+
+Q: What are the sports equipment issue and return rules?
+A: The original notes mention a sports store room, but current issue/return procedures were not verified. Ask the department or equipment-store staff.
+
+Q: Is there a fine for damaging sports equipment?
+A: The original notes mention replacement charges for negligent damage or loss, but a current official fine policy was not verified. Ask for the written equipment policy.
+
+Q: What is the dress code at the ground and gym?
+A: The original notes mention athletic clothing and suitable footwear, but the exact current dress code was not verified. Ask the department and follow sport-specific safety requirements.
+
+Q: Are mobile phones allowed during practice?
+A: The original notes claim phone use is prohibited during active practice, but this was not verified as a current general rule. Ask the coach or department.
+
+Q: What is the code of conduct for sports teams?
+A: A current sports-team code of conduct was not found in the sources reviewed. Ask the department or team coach for official rules.
+
+A8. NCC, NSS, YOGA, CLUBS, COURSES, AND GALLERIES
+
+Q: Is there an NCC unit? Which wing (Army/Navy/Air)?
+A: KEC institutional material confirms NCC activities/organization, and the original notes mention Army and Air wings and 5 TN Air Sqn (Tech) NCC. The current unit structure and active wings were not fully confirmed by the sources reviewed. Check the current KEC NCC page/notice.
+
+Q: What activities does NCC conduct?
+A: The original notes mention drill training, camps, blood donation, and related activities, but the current activity calendar was not verified. Check current NCC announcements.
+
+Q: Is there an NSS unit and sports events under it?
+A: KEC institutional material mentions NSS. The current NSS sports-event calendar was not confirmed. Check current NSS announcements.
+
+Q: Are there Yoga Day or fitness-day events?
+A: The institution documents yoga/meditation facilities, but the current International Yoga Day or fitness-day programme was not verified. Check current event notices.
+
+Q: Is there a Cycling or Trekking club?
+A: The original notes mention trekking and cycling activities, but a current formal club was not verified. Check the student-club directory or Student Affairs.
+
+Q: Is there a Fitness or Adventure club?
+A: A current formally named fitness/adventure club was not confirmed in the sources reviewed. Check the current student-club directory.
+
+Q: Does KEC have any tie-up with a sports academy?
+A: No current sports-academy tie-up was confirmed in the sources reviewed. Do not infer a partnership from a coaching camp; ask the department.
+
+Q: Are there sports-related certificate courses?
+A: The sources reviewed do not identify a current sports-related certificate course. Check KEC’s current course and student-development listings.
+
+Q: Are there sports science or physical education programmes?
+A: The sources reviewed describe a Department of Physical Education and sports facilities, but do not establish a degree programme in Sports Science or Physical Education. Check the current academic programme list.
+
+Q: Where can I see the sports photo gallery?
+A: KEC has an official Web Album page that includes a “Sports” category: https://kongu.ac.in/kongu.ac.in/webalbum.php. The Department of Physical Education page also contains sports imagery and achievement links: https://kongu.ac.in/kongu.ac.in/facilities/sports.php.
+
+============================================================
+APPENDIX B — FINAL COVERAGE AUDIT
+============================================================
+
+All questions in the user-supplied checklist are now explicitly addressed in Appendix A. However, “addressed” does not mean that KEC officially publishes an answer to every question. The answers are deliberately divided into:
+1. Confirmed facts supported by KEC institutional sources.
+2. Historical statements tied to a specific report/year.
+3. Items for which the original notes contain a claim but the official sources reviewed do not confirm the current answer.
+
+High-priority items to verify directly with KEC before the chatbot gives definite answers:
+- Current gym and ground timings.
+- Throwball court and swimming pool status.
+- Current coaches, Sports Council convenor, student Sports Secretary, and office location.
+- Current men’s/women’s team lists, team sizes, trial dates, eligibility, and selection process.
+- Sports Day dates, current tournament calendar, current-year medals/results, and named student achievements.
+- Current travel, food, accommodation, insurance, physiotherapy, OD, attendance, grace-mark, uniform, and equipment policies.
+- Court booking, ground rental, external/alumni access, equipment issue/return, damage fines, dress code, and mobile-phone rules.
+- Current NCC wings, NSS programmes, clubs, academy partnerships, certificate courses, and sports-related academic programmes.
+
+PRIMARY OFFICIAL LINKS
+- Department of Physical Education: https://kongu.ac.in/kongu.ac.in/facilities/sports.php
+- Sports quota portal: https://kms.kongu.edu/sportsquota/index.php
+- KEC campus life: https://kongu.ac.in/campus-life
+- KEC Web Album / Sports gallery: https://kongu.ac.in/kongu.ac.in/webalbum.php
+- KEC Annual Report 2023–2024: https://kongu.ac.in/files/iqac/Annual%20Reports/2023-2024.pdf
+- KEC Annual Quality Assurance Report 2022–2023: https://kongu.ac.in/kongu.ac.in/iqac/aqar/AQAR_2022_23.pdf
+- KEC Self Study Report: https://kongu.ac.in/kongu.ac.in/docs/naac/SSR_DVV_31_01_2022.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KONGU ENGINEERING COLLEGE (KEC) — KNOWLEDGE BASE
+==========================================================
+
+Dataset: Kongu Engineering College (KEC) Knowledge Base
+Version: 1.0
+Language: en
+Purpose: Structured information for a student-facing chatbot
+
+SOURCE NOTE
+-----------
+Built from the user-provided material and reorganized for clarity. Claims marked VERIFY or with conflicting figures are not independently confirmed.
+
+DOCUMENT OVERVIEW
+-----------------
+# Kongu Engineering College (KEC) — Structured Knowledge Base
+
+**Purpose:** A clean, deduplicated knowledge base for a student-facing chatbot.  
+**Source basis:** The user-provided text file.  
+**Important:** This document reorganizes the supplied information; it does **not** independently verify every claim. Items marked **[VERIFY]** should be checked against the current official KEC website or the relevant government/admissions portal before the chatbot presents them as confirmed facts.
+
+---
+
+1. INSTITUTION OVERVIEW
+-----------------------
+Q1. What is the full name of the institution?
+A: A: Kongu Engineering College (KEC).
+
+Q2. When was KEC established?
+A: A: 1984.
+
+Q3. Who founded KEC?
+A: A: The supplied material says it was founded by a group of 41 visionaries and philanthropists from the Kongu region, associated with the regional farming and industrial community.
+
+Q4. Which trust manages KEC?
+A: A: Kongu Vellalar Institute of Technology Trust (KVITT).
+
+Q5. What is the vision of KEC?
+A: A: “To be a centre of excellence for development and dissemination of knowledge in Applied Sciences, Technology, Engineering, and Management for the Nation and beyond.”
+
+Q6. What is the mission of KEC?
+A: A: The supplied material describes the mission as providing value-based education, research, and consultancy in Engineering and Management to develop technically competent, ethically strong, and quality professionals.
+
+Q7. What are KEC’s core values?
+A: A: Discipline, Academic Excellence, Integrity, Accountability, Social Responsibility, and Continuous Improvement.
+
+Q8. What is the brief history of KEC?
+A: A: KEC began in 1984 in the Perundurai region to expand access to technical education for rural youth. The supplied material says it has grown into a multidisciplinary autonomous institution with undergraduate, postgraduate, and research programmes.
+
+Q9. What is the official website?
+A: A: https://kongu.ac.in/ ---
+
+2. LOCATION AND CAMPUS
+----------------------
+Q1. Where is KEC located?
+A: A: Perundurai, Erode District, Tamil Nadu, India.
+
+Q2. What is the postal address?
+A: A: Kongu Engineering College, Thoppupalayam, Perundurai, Erode District – 638060, Tamil Nadu, India. **[VERIFY exact postal formatting]**
+
+Q3. How large is the campus?
+A: A: The supplied material describes the campus as approximately 167 acres. **[VERIFY]**
+
+Q4. Which highway is near the campus?
+A: A: The supplied material says the campus is alongside National Highway 544 (NH 544).
+
+Q5. What is the nearest railway station?
+A: A: Erode Junction, approximately 30 km away according to the supplied material. **[VERIFY current route distance]**
+
+Q6. What is the nearest bus stand?
+A: A: Perundurai Bus Stand, approximately 5 km away according to the supplied material. **[VERIFY current route distance]**
+
+Q7. What is the nearest airport?
+A: A: Coimbatore International Airport (CJB), approximately 75 km away according to the supplied material. **[VERIFY current route distance]**
+
+Q8. How can visitors reach KEC from Erode, Coimbatore, Salem, or Tiruppur?
+A: A: The supplied material says the campus is accessible from the NH 544 corridor by regional buses and KEC institutional buses serving nearby cities. Check current bus routes, stops, and transport availability before travelling. **[VERIFY schedules and fleet details]**
+
+Q9. What is a nearby landmark?
+A: A: The supplied material mentions the Perundurai SIPCOT Industrial Complex area and the NH 544 corridor. **[VERIFY exact directions before publishing]**
+
+Q10. How far is KEC from Perundurai town?
+A: A: The supplied material estimates around 3 km. **[VERIFY]** ---
+
+3. AFFILIATION, AUTONOMY, APPROVALS, AND ACCREDITATION
+------------------------------------------------------
+Q1. Which university is KEC affiliated with?
+A: A: Anna University, Chennai.
+
+Q2. Is KEC autonomous?
+A: A: The supplied material states that KEC is an autonomous institution. It says autonomy was granted in 2007 and extended through 2033. **[VERIFY the current autonomy order and validity date]**
+
+Q3. Is KEC approved by AICTE?
+A: A: The supplied material states that the relevant engineering and management programmes have AICTE approval. Check the current approval status for the specific programme and academic year. **[VERIFY programme-specific status]**
+
+Q4. What is KEC’s NAAC grade?
+A: A: The supplied material states that KEC holds an NAAC A++ grade. **[VERIFY the current accreditation certificate and validity period]**
+
+Q5. When does the current NAAC accreditation expire?
+A: A: The supplied material gives a validity window extending to late 2028, but this needs confirmation from the current NAAC certificate. **[VERIFY]**
+
+Q6. Which programmes have NBA accreditation?
+A: A: The supplied material says 11 undergraduate programmes and the MBA programme have NBA Tier-I accreditation. It mentions areas including CSE, ECE, EEE, IT, Mechanical, Civil, Chemical, and Mechatronics. **[VERIFY the current programme list and accreditation period]**
+
+Q7. What is KEC’s NIRF ranking?
+A: A: The supplied material reports a place in the 101–150 band in the Engineering category. NIRF rankings change by year; always specify the ranking year and verify it on the official NIRF website. **[VERIFY year and band]**
+
+Q8. What other rankings or recognitions are mentioned?
+A: A: The supplied material mentions rankings or recognition associated with DataQuest, The Week, IIRF (including a reported 53rd position), ARIIA, ISO 9001, the Tamil Nadu Government Green Champion Award, and a Best Engineering College Award from SEED. **[VERIFY award title, awarding body, category, and year before presenting as current]**
+
+Q9. Is KEC recognised under UGC Sections 2(f) and 12(B)?
+A: A: The supplied material says yes. **[VERIFY against current official documentation]** ---
+
+4. ADMINISTRATION AND LEADERSHIP
+--------------------------------
+Q1. Who serves on the Governing Council?
+A: A: The supplied material describes it as including KVITT office bearers, UGC nominees, State Government educational nominees, Anna University representatives, industry representatives, and senior faculty. Check the current official Governing Council list for names and terms. **[VERIFY]**
+
+Q2. Who are the trustees?
+A: A: The supplied material describes KVITT as being formed by the founding group and associated trustees. Use the current official KVITT trustee list for individual names. **[VERIFY]**
+
+Q3. Who are the Vice-Principals or Deans?
+A: A: The supplied material refers to academic deans and Dr. P. Balasubramanie, but it does not provide a clear, complete, current list. Refer users to the official KEC website. **[INFORMATION IN SOURCE IS INCOMPLETE; VERIFY]** ---
+
+5. STUDENT STRENGTH, FACULTY, ALUMNI, AND CAMPUS LIFE
+-----------------------------------------------------
+Q1. How many students study at KEC?
+A: A: The supplied material gives different estimates: over 7,500 and over 8,000 students. These figures may refer to different years or sources. Do not use a single number without checking the latest official annual report. **[CONFLICTING FIGURES — VERIFY]**
+
+Q2. How many faculty members work at KEC?
+A: A: The supplied material reports 515+ faculty members. **[VERIFY current figure]**
+
+Q3. What is the student-to-faculty ratio?
+A: A: The supplied material reports approximately 15:1. **[VERIFY current official figure]**
+
+Q4. How many faculty members hold Ph.D. degrees?
+A: A: The supplied material reports more than 200. **[VERIFY current figure]**
+
+Q5. How many alumni does KEC have?
+A: A: The supplied material gives estimates of 30,000+ and 35,000+. These are inconsistent; verify the latest official alumni figure before using it. **[CONFLICTING FIGURES — VERIFY]**
+
+Q6. Who are KEC’s notable alumni?
+A: A: The supplied material broadly mentions civil servants, professionals at major technology companies, and industrialists. It does not provide a verified, named alumni list. **[VERIFY names and roles before publishing]**
+
+Q7. What hostels are mentioned?
+A: A: The supplied material mentions 7 boys’ hostels and 4 girls’ hostels. **[VERIFY current hostel count, capacity, facilities, and rules]**
+
+Q8. What innovation facility is mentioned?
+A: A: The Technology Business Incubator (TBI@KEC), described in the supplied material as supported by the Department of Science and Technology (DST). **[VERIFY current programme details and statistics]**
+
+Q9. What does the college motto mean?
+A: A: The supplied material gives the motto as “Thiyagame Uyarvu,” translated there as “Sacrifice brings elevation.” **[VERIFY official spelling and translation]**
+
+Q10. What is the meaning of the college logo?
+A: A: The supplied material describes a stylised industrial gear, a flaming torch representing knowledge, and traditional symbols associated with prosperity and learning. **[VERIFY with official institutional explanation]**
+
+Q11. Does KEC have a college anthem?
+A: A: The supplied material describes a Tamil institutional song used at formal functions. **[VERIFY official title and usage]** ---
+
+ADDITIONAL SECTION DETAILS
+.........................
+**Q: How many students study at KEC?**  
+A: The supplied material gives different estimates: over 7,500 and over 8,000 students. These figures may refer to different years or sources. Do not use a single number without checking the latest official annual report. **[CONFLICTING FIGURES — VERIFY]**
+
+**Q: How many faculty members work at KEC?**  
+A: The supplied material reports 515+ faculty members. **[VERIFY current figure]**
+
+**Q: What is the student-to-faculty ratio?**  
+A: The supplied material reports approximately 15:1. **[VERIFY current official figure]**
+
+**Q: How many faculty members hold Ph.D. degrees?**  
+A: The supplied material reports more than 200. **[VERIFY current figure]**
+
+**Q: How many alumni does KEC have?**  
+A: The supplied material gives estimates of 30,000+ and 35,000+. These are inconsistent; verify the latest official alumni figure before using it. **[CONFLICTING FIGURES — VERIFY]**
+
+**Q: Who are KEC’s notable alumni?**  
+A: The supplied material broadly mentions civil servants, professionals at major technology companies, and industrialists. It does not provide a verified, named alumni list. **[VERIFY names and roles before publishing]**
+
+**Q: What hostels are mentioned?**  
+A: The supplied material mentions 7 boys’ hostels and 4 girls’ hostels. **[VERIFY current hostel count, capacity, facilities, and rules]**
+
+**Q: What innovation facility is mentioned?**  
+A: The Technology Business Incubator (TBI@KEC), described in the supplied material as supported by the Department of Science and Technology (DST). **[VERIFY current programme details and statistics]**
+
+**Q: What does the college motto mean?**  
+A: The supplied material gives the motto as “Thiyagame Uyarvu,” translated there as “Sacrifice brings elevation.” **[VERIFY official spelling and translation]**
+
+**Q: What is the meaning of the college logo?**  
+A: The supplied material describes a stylised industrial gear, a flaming torch representing knowledge, and traditional symbols associated with prosperity and learning. **[VERIFY with official institutional explanation]**
+
+**Q: Does KEC have a college anthem?**  
+A: The supplied material describes a Tamil institutional song used at formal functions. **[VERIFY official title and usage]**
+
+---
+
+6. ACADEMIC PROGRAMMES
+----------------------
+Q1. Which undergraduate programmes are listed in the supplied material?
+A: **B.E. programmes listed** - Civil Engineering - Mechanical Engineering - Electronics and Communication Engineering (ECE) - Computer Science and Engineering (CSE) - Electrical and Electronics Engineering (EEE) - Electronics and Instrumentation Engineering (EIE) - Mechatronics Engineering - Automobile Engineering - Computer Science and Design **B.Tech programmes listed** - Information Technology (IT) - Chemical Engineering - Food Technology - Artificial Intelligence and Data Science (AI&DS) - Artificial Intelligence and Machine Learning (AI&ML) **Other programmes listed** - Bachelor of Architecture (B.Arch.) - Master of Business Administration (MBA) - Master of Computer Applications (MCA) - M.E./M.Tech programmes **Important:** Programme availability, titles, approvals, and intake can change by academic year. Confirm each programme in the latest official KEC admissions material. **[VERIFY CURRENT PROGRAMME LIST]**
+
+Q2. How many undergraduate seats are available?
+A: A: The supplied material gives different totals, including approximately 1,710+, 1,800+, and a department-wise table. The figures do not fully agree. Use the latest official sanctioned-intake document rather than combining these estimates. **[CONFLICTING FIGURES — VERIFY]** ### Department-wise intake figures quoted in the supplied material These numbers are copied from the provided source and are **not verified**. | Programme | Annual intake stated in source | |---|---:| | B.E. Computer Science and Engineering | 240 | | B.E. Electronics and Communication Engineering | 240 | | B.E. Mechanical Engineering | 120 | | B.E. Electrical and Electronics Engineering | 120 | | B.E. Mechatronics Engineering | 120 | | B.E. Civil Engineering | 60 | | B.E. Electronics and Instrumentation Engineering | 60 | | B.E. Automobile Engineering | 60 | | B.E. Computer Science and Design | 60 | | B.Tech Information Technology | 180 | | B.Tech Artificial Intelligence and Data Science | 120 | | B.Tech Artificial Intelligence and Machine Learning | 60 | | B.Tech Chemical Engineering | 60 | | B.Tech Food Technology | 60 | | B.Arch. | 40 | **Do not calculate or advertise the total intake from this table until the current sanctioned intake is verified.** ---
+
+ADDITIONAL SECTION DETAILS
+.........................
+**Q: Which undergraduate programmes are listed in the supplied material?**
+
+**B.E. programmes listed**
+- Civil Engineering
+- Mechanical Engineering
+- Electronics and Communication Engineering (ECE)
+- Computer Science and Engineering (CSE)
+- Electrical and Electronics Engineering (EEE)
+- Electronics and Instrumentation Engineering (EIE)
+- Mechatronics Engineering
+- Automobile Engineering
+- Computer Science and Design
+
+**B.Tech programmes listed**
+- Information Technology (IT)
+- Chemical Engineering
+- Food Technology
+- Artificial Intelligence and Data Science (AI&DS)
+- Artificial Intelligence and Machine Learning (AI&ML)
+
+**Other programmes listed**
+- Bachelor of Architecture (B.Arch.)
+- Master of Business Administration (MBA)
+- Master of Computer Applications (MCA)
+- M.E./M.Tech programmes
+
+**Important:** Programme availability, titles, approvals, and intake can change by academic year. Confirm each programme in the latest official KEC admissions material. **[VERIFY CURRENT PROGRAMME LIST]**
+
+**Q: How many undergraduate seats are available?**  
+A: The supplied material gives different totals, including approximately 1,710+, 1,800+, and a department-wise table. The figures do not fully agree. Use the latest official sanctioned-intake document rather than combining these estimates. **[CONFLICTING FIGURES — VERIFY]**
+
+### Department-wise intake figures quoted in the supplied material
+
+These numbers are copied from the provided source and are **not verified**.
+
+| Programme | Annual intake stated in source |
+|---|---:|
+| B.E. Computer Science and Engineering | 240 |
+| B.E. Electronics and Communication Engineering | 240 |
+| B.E. Mechanical Engineering | 120 |
+| B.E. Electrical and Electronics Engineering | 120 |
+| B.E. Mechatronics Engineering | 120 |
+| B.E. Civil Engineering | 60 |
+| B.E. Electronics and Instrumentation Engineering | 60 |
+| B.E. Automobile Engineering | 60 |
+| B.E. Computer Science and Design | 60 |
+| B.Tech Information Technology | 180 |
+| B.Tech Artificial Intelligence and Data Science | 120 |
+| B.Tech Artificial Intelligence and Machine Learning | 60 |
+| B.Tech Chemical Engineering | 60 |
+| B.Tech Food Technology | 60 |
+| B.Arch. | 40 |
+
+**Do not calculate or advertise the total intake from this table until the current sanctioned intake is verified.**
+
+---
+
+7. ADMISSIONS AND COUNSELLING
+-----------------------------
+Q1. What is the TNEA college code listed for KEC?
+A: A: 2711. **[VERIFY on the current TNEA portal]**
+
+Q2. How are B.E./B.Tech admissions handled?
+A: A: The supplied material describes Tamil Nadu Engineering Admissions (TNEA) single-window counselling for government-quota seats and a separate management-admission route. The current rules, eligibility, and availability must be checked for the relevant admission year.
+
+Q3. Does KEC participate in TNEA counselling?
+A: A: The supplied material says yes. **[VERIFY current-year listing]**
+
+Q4. What is the management-quota percentage?
+A: A: The supplied material states 35%, with the remaining 65% described as government-quota seats. This should be verified against the applicable regulations and current admission notification. **[VERIFY]**
+
+Q5. How do I apply through management quota?
+A: A: The supplied material says applicants should apply directly through KEC’s official admission channels. Do not rely on unofficial agents or unverified links. Check https://kongu.ac.in/ for the current procedure. **[VERIFY current application route]**
+
+Q6. What is the application fee?
+A: A: The supplied material gives an approximate range of ₹500–₹1,000, but this is not verified and may vary by application type or year. **[VERIFY current fee]**
+
+Q7. What is the last date to apply?
+A: A: No fixed date should be inferred from the supplied material. Dates change each year; check the official KEC admissions page and TNEA portal.
+
+Q8. What is the usual TNEA counselling period?
+A: A: The supplied material says July–August, but the actual schedule changes annually. Check the current official TNEA notification.
+
+Q9. What is the general admission procedure described in the source?
+A: A: 1. Register through the applicable official admissions portal. 2. Enter academic marks and personal details. 3. Upload the required documents. 4. Pay the applicable processing fee. 5. Follow the merit/rank verification and counselling or selection process. 6. Complete document verification and admission formalities if selected. **Note:** Exact steps differ between TNEA, management admissions, lateral entry, and postgraduate admissions. **[VERIFY current procedure]**
+
+Q10. What documents may be required?
+A: A: The supplied material lists: - TNEA allotment order, where applicable - Class 10 and Class 12 mark sheets - Transfer Certificate (TC) - Community Certificate, where applicable - Nativity Certificate, where applicable - Medical Fitness Certificate, if required - First Graduate Certificate, if claiming the relevant concession - Income Certificate, where applicable - Recent passport-size photographs - Other documents specified in the current admission notification **Important:** The official checklist for the applicable admission category takes precedence over this general list.
+
+Q11. Are original certificates required?
+A: A: The supplied material says original certificates may be required for verification. Confirm the current process and which originals must be submitted or shown.
+
+Q12. Is a Transfer Certificate required?
+A: A: The supplied material says yes. Confirm the requirements for the specific admission category.
+
+Q13. Is a Community Certificate required?
+A: A: It may be required when claiming a community-based reservation or benefit. Follow the current official admission instructions.
+
+Q14. Is a First Graduate Certificate required?
+A: A: It may be required when claiming an eligible first-graduate fee concession. Check the current government rules.
+
+Q15. Is a medical fitness certificate required?
+A: A: The supplied material says it may be required and describes a certificate signed by a registered medical practitioner. Confirm the exact format and issuing-authority requirements in the current checklist. **[VERIFY]**
+
+Q16. How many passport-size photos are needed?
+A: A: The supplied material says at least six, but this should be checked against the current admission checklist. **[VERIFY]**
+
+Q17. Is spot admission possible?
+A: A: The supplied material says it may be possible if seats remain after regular counselling, subject to official rules. **[VERIFY current-year policy]**
+
+Q18. Are admissions open for the next academic year?
+A: A: This depends on the current admissions calendar. Check the official KEC website and the relevant state admissions portal.
+
+Q19. Can parents accompany students?
+A: A: The supplied material says parents may accompany students during admission-related activities. Check any current campus entry or visitor rules.
+
+Q20. Is online counselling available for students living outside the area?
+A: A: The supplied material says TNEA counselling is online. Confirm the current counselling process on the official TNEA portal.
+
+Q21. What is the admission helpline?
+A: A: The supplied material lists 04294-226515 / 04294-226517 and mobile numbers 99652 77765 / 94430 20583. **[VERIFY these numbers on the official KEC website before use]**
+
+Q22. What is the admission email?
+A: A: The supplied material lists principal@kongu.ac.in and ku.kec@kongu.ac.in. **[VERIFY the correct current admissions contact email]**
+
+Q23. Where is the admission office?
+A: A: The supplied material says it is in the Main Administrative Block on the Perundurai campus. **[VERIFY]**
+
+Q24. What are the admission office working hours?
+A: A: The supplied material states 9:00 AM–5:00 PM on institutional working days. **[VERIFY current hours before visiting]** ---
+
+ADDITIONAL SECTION DETAILS
+.........................
+**Q: What is the TNEA college code listed for KEC?**  
+A: 2711. **[VERIFY on the current TNEA portal]**
+
+**Q: How are B.E./B.Tech admissions handled?**  
+A: The supplied material describes Tamil Nadu Engineering Admissions (TNEA) single-window counselling for government-quota seats and a separate management-admission route. The current rules, eligibility, and availability must be checked for the relevant admission year.
+
+**Q: Does KEC participate in TNEA counselling?**  
+A: The supplied material says yes. **[VERIFY current-year listing]**
+
+**Q: What is the management-quota percentage?**  
+A: The supplied material states 35%, with the remaining 65% described as government-quota seats. This should be verified against the applicable regulations and current admission notification. **[VERIFY]**
+
+**Q: How do I apply through management quota?**  
+A: The supplied material says applicants should apply directly through KEC’s official admission channels. Do not rely on unofficial agents or unverified links. Check https://kongu.ac.in/ for the current procedure. **[VERIFY current application route]**
+
+**Q: What is the application fee?**  
+A: The supplied material gives an approximate range of ₹500–₹1,000, but this is not verified and may vary by application type or year. **[VERIFY current fee]**
+
+**Q: What is the last date to apply?**  
+A: No fixed date should be inferred from the supplied material. Dates change each year; check the official KEC admissions page and TNEA portal.
+
+**Q: What is the usual TNEA counselling period?**  
+A: The supplied material says July–August, but the actual schedule changes annually. Check the current official TNEA notification.
+
+**Q: What is the general admission procedure described in the source?**  
+A:
+1. Register through the applicable official admissions portal.
+2. Enter academic marks and personal details.
+3. Upload the required documents.
+4. Pay the applicable processing fee.
+5. Follow the merit/rank verification and counselling or selection process.
+6. Complete document verification and admission formalities if selected.
+
+**Note:** Exact steps differ between TNEA, management admissions, lateral entry, and postgraduate admissions. **[VERIFY current procedure]**
+
+**Q: What documents may be required?**  
+A: The supplied material lists:
+- TNEA allotment order, where applicable
+- Class 10 and Class 12 mark sheets
+- Transfer Certificate (TC)
+- Community Certificate, where applicable
+- Nativity Certificate, where applicable
+- Medical Fitness Certificate, if required
+- First Graduate Certificate, if claiming the relevant concession
+- Income Certificate, where applicable
+- Recent passport-size photographs
+- Other documents specified in the current admission notification
+
+**Important:** The official checklist for the applicable admission category takes precedence over this general list.
+
+**Q: Are original certificates required?**  
+A: The supplied material says original certificates may be required for verification. Confirm the current process and which originals must be submitted or shown.
+
+**Q: Is a Transfer Certificate required?**  
+A: The supplied material says yes. Confirm the requirements for the specific admission category.
+
+**Q: Is a Community Certificate required?**  
+A: It may be required when claiming a community-based reservation or benefit. Follow the current official admission instructions.
+
+**Q: Is a First Graduate Certificate required?**  
+A: It may be required when claiming an eligible first-graduate fee concession. Check the current government rules.
+
+**Q: Is a medical fitness certificate required?**  
+A: The supplied material says it may be required and describes a certificate signed by a registered medical practitioner. Confirm the exact format and issuing-authority requirements in the current checklist. **[VERIFY]**
+
+**Q: How many passport-size photos are needed?**  
+A: The supplied material says at least six, but this should be checked against the current admission checklist. **[VERIFY]**
+
+**Q: Is spot admission possible?**  
+A: The supplied material says it may be possible if seats remain after regular counselling, subject to official rules. **[VERIFY current-year policy]**
+
+**Q: Are admissions open for the next academic year?**  
+A: This depends on the current admissions calendar. Check the official KEC website and the relevant state admissions portal.
+
+**Q: Can parents accompany students?**  
+A: The supplied material says parents may accompany students during admission-related activities. Check any current campus entry or visitor rules.
+
+**Q: Is online counselling available for students living outside the area?**  
+A: The supplied material says TNEA counselling is online. Confirm the current counselling process on the official TNEA portal.
+
+**Q: What is the admission helpline?**  
+A: The supplied material lists 04294-226515 / 04294-226517 and mobile numbers 99652 77765 / 94430 20583. **[VERIFY these numbers on the official KEC website before use]**
+
+**Q: What is the admission email?**  
+A: The supplied material lists principal@kongu.ac.in and ku.kec@kongu.ac.in. **[VERIFY the correct current admissions contact email]**
+
+**Q: Where is the admission office?**  
+A: The supplied material says it is in the Main Administrative Block on the Perundurai campus. **[VERIFY]**
+
+**Q: What are the admission office working hours?**  
+A: The supplied material states 9:00 AM–5:00 PM on institutional working days. **[VERIFY current hours before visiting]**
+
+---
+
+8. LATERAL ENTRY, NRI, AND OTHER ADMISSION CATEGORIES
+-----------------------------------------------------
+Q1. Who is eligible for lateral-entry admission?
+A: A: The supplied material says applicants may qualify with a recognised Diploma in Engineering/Technology or a B.Sc. degree with Mathematics, subject to the required marks and current regulations. **[VERIFY current eligibility rules]**
+
+Q2. How does lateral-entry admission work?
+A: A: The supplied material refers to Tamil Nadu Lateral Entry Admissions (TNLEA) and entry into the second year. Check the current official TNLEA notification.
+
+Q3. How many lateral-entry seats are available?
+A: A: The supplied material states that lateral entry is typically around 10% of sanctioned intake per department. This is regulation-dependent and must be verified for the current year. **[VERIFY]**
+
+Q4. Are NRI or foreign-student admissions available?
+A: A: The supplied material says special admission routes may be available. Confirm current programme availability, eligibility, fees, and documentation directly with KEC.
+
+Q5. What documents or conditions may apply to NRI applicants?
+A: A: The supplied material mentions academic eligibility, sponsorship documentation, NRI financial documents, and visa-related documentation. The exact requirements must be obtained from the current official notification. **[VERIFY]**
+
+Q6. Can CBSE/ICSE students apply?
+A: A: The supplied material says students from CBSE and ICSE boards can apply, subject to the applicable admission rules and mark-conversion or normalisation process. **[VERIFY current rules]**
+
+Q7. Can students from other states apply?
+A: A: The supplied material says out-of-state applicants may be eligible through the applicable counselling or management route. Eligibility and seat rules depend on current regulations. **[VERIFY]**
+
+Q8. Is there a sports quota?
+A: A: The supplied material says sports-quota admission may be available through the applicable state counselling process. The exact process, eligibility, certificates, and seat availability must be checked in the current official notification. **[VERIFY]**
+
+Q9. Is there a reservation for differently-abled applicants?
+A: A: The supplied material mentions a 5% horizontal reservation. Do not present this as current without checking the applicable government notification. **[VERIFY]**
+
+Q10. Is there a defence or ex-servicemen category?
+A: A: The supplied material says special categories may be available under government admission rules. Check the current notification. **[VERIFY]**
+
+Q11. Is there a 7.5% reservation for government-school students?
+A: A: The supplied material says the state’s 7.5% preferential reservation may apply to eligible government-school students. Confirm the current law, eligibility, and admission-year rules. **[VERIFY]**
+
+Q12. What are the reservation percentages for BC, BCM, MBC/DNC, SC, SCA, and ST?
+A: A: The supplied material quotes BC 26.5%, BCM 3.5%, MBC/DNC 20%, SC 15%, SCA 3%, and ST 1%. These figures and their application must be checked against the current Tamil Nadu government rules before use. **[VERIFY]** ---
+
+9. CUT-OFFS, RANKS, BRANCH CHANGES, AND WITHDRAWAL
+--------------------------------------------------
+Q1. What were last year’s department cut-off marks?
+A: A: The supplied material gives only broad estimates: - CSE / IT / AI-DS: 185–193+ out of 200 - ECE / EEE: 175–184 - Some core branches: 150–170 These are not official confirmed cut-offs. Cut-offs vary by year, category, counselling round, and programme. Use official TNEA data for the exact year and category. **[VERIFY; DO NOT PRESENT ESTIMATES AS OFFICIAL]**
+
+Q2. What was the last rank admitted to each department?
+A: A: The supplied material gives approximate examples of around 20,000 for CSE and up to 55,000+ for some other branches, while another part cites different branch-specific ranks. These figures conflict and lack a clearly specified year/category/round. Use official TNEA closing-rank data. **[CONFLICTING / INCOMPLETE DATA — VERIFY]**
+
+Q3. Can a student change branches after the first year?
+A: A: The supplied material says branch changes may be possible, subject to academic performance and available vacancies. **[VERIFY current academic regulations]**
+
+Q4. When can a branch change happen?
+A: A: The supplied material says at the beginning of the third semester based on first-year CGPA and vacancies. **[VERIFY current KEC regulations]**
+
+Q5. Can a student withdraw admission?
+A: A: The supplied material says a formal written request may be required and that refunds are subject to applicable rules and deadlines. Contact the official admissions office for the current procedure and refund policy. **[VERIFY]** ---
+
+ADDITIONAL SECTION DETAILS
+.........................
+**Q: What were last year’s department cut-off marks?**  
+A: The supplied material gives only broad estimates:
+- CSE / IT / AI-DS: 185–193+ out of 200
+- ECE / EEE: 175–184
+- Some core branches: 150–170
+
+These are not official confirmed cut-offs. Cut-offs vary by year, category, counselling round, and programme. Use official TNEA data for the exact year and category. **[VERIFY; DO NOT PRESENT ESTIMATES AS OFFICIAL]**
+
+**Q: What was the last rank admitted to each department?**  
+A: The supplied material gives approximate examples of around 20,000 for CSE and up to 55,000+ for some other branches, while another part cites different branch-specific ranks. These figures conflict and lack a clearly specified year/category/round. Use official TNEA closing-rank data. **[CONFLICTING / INCOMPLETE DATA — VERIFY]**
+
+**Q: Can a student change branches after the first year?**  
+A: The supplied material says branch changes may be possible, subject to academic performance and available vacancies. **[VERIFY current academic regulations]**
+
+**Q: When can a branch change happen?**  
+A: The supplied material says at the beginning of the third semester based on first-year CGPA and vacancies. **[VERIFY current KEC regulations]**
+
+**Q: Can a student withdraw admission?**  
+A: The supplied material says a formal written request may be required and that refunds are subject to applicable rules and deadlines. Contact the official admissions office for the current procedure and refund policy. **[VERIFY]**
+
+---
+
+10. FEES AND SCHOLARSHIPS
+-------------------------
+Q1. What are the tuition fees?
+A: A: The supplied material gives broad estimates of ₹55,000–₹1,25,000 for some government-quota seats and ₹1,00,000–₹2,00,000 for some management-quota seats, depending on the branch. These amounts are not verified and may be outdated or incomplete. **[VERIFY current official fee structure]**
+
+Q2. What scholarships or concessions may be relevant?
+A: A: The supplied material mentions first-graduate and government-school-related concessions, along with income/community-related documents. Eligibility and benefits depend on current government and institutional rules. **[VERIFY]**
+
+Q3. Where can students check current fees and scholarships?
+A: A: Start with the official website: https://kongu.ac.in/ and confirm details with the admissions or accounts office. ---
+
+11. PLACEMENTS AND INDUSTRY CONNECTIONS
+---------------------------------------
+Q1. What placement rate does KEC have?
+A: A: The supplied material claims a 94%–95% annual placement rate. This figure needs a specified graduating batch, reporting year, and official placement report. **[VERIFY]**
+
+Q2. What is the highest salary package mentioned?
+A: A: The supplied material mentions ₹61.21 LPA. Confirm the year, student count, offer status, and official placement report before using this figure. **[VERIFY]**
+
+Q3. What average package is mentioned?
+A: A: The supplied material gives an approximate average of ₹5.6 LPA overall and branch/sector estimates from ₹3.7 LPA to ₹5.7 LPA. These figures are not independently verified and should not be treated as guaranteed outcomes. **[VERIFY]**
+
+Q4. How many recruiters visit KEC?
+A: A: The supplied material claims 300+ recruiters. **[VERIFY current placement report]**
+
+Q5. Which companies are mentioned as recruiters or industry partners?
+A: A: The supplied material names TCS, Cognizant, Wipro, Infosys, Accenture, Amazon, Zoho, Tech Mahindra, HP, Huawei, Newgen, Payoda, Hyundai, Bosch, Renault Nissan, TVS Motor, ELGI Equipments, Larsen & Toubro (L&T), Soliton, Sanmar Group, Britannia Industries, ITC, Hatsun Agro, Vedanta, and Vernalis Therapeutics. **Important:** This is a list of companies mentioned in the supplied material, not a guarantee that each company recruits every year or from every department. **[VERIFY against the latest placement records]**
+
+Q6. Does KEC have MoUs with companies?
+A: A: The supplied material mentions partnerships or MoUs with TCS, Cognizant, Infosys, Wipro, Cisco Systems, Bosch, NI, and research organisations. **[VERIFY current MoU list and whether each is active]**
+
+Q7. Does KEC have international collaborations?
+A: A: The supplied material refers to academic exchanges, credit transfers, and research collaborations with institutions in Malaysia, Europe, and the USA. It does not provide a complete verified partner list. **[VERIFY current official list]**
+
+Q8. What is TBI@KEC?
+A: A: The Technology Business Incubator (TBI@KEC) is mentioned as an innovation and entrepreneurship facility associated with KEC and DST support. The supplied material also makes startup and patent-related claims that need confirmation. **[VERIFY current statistics and support details]** ---
+
+ADDITIONAL SECTION DETAILS
+.........................
+**Q: What placement rate does KEC have?**  
+A: The supplied material claims a 94%–95% annual placement rate. This figure needs a specified graduating batch, reporting year, and official placement report. **[VERIFY]**
+
+**Q: What is the highest salary package mentioned?**  
+A: The supplied material mentions ₹61.21 LPA. Confirm the year, student count, offer status, and official placement report before using this figure. **[VERIFY]**
+
+**Q: What average package is mentioned?**  
+A: The supplied material gives an approximate average of ₹5.6 LPA overall and branch/sector estimates from ₹3.7 LPA to ₹5.7 LPA. These figures are not independently verified and should not be treated as guaranteed outcomes. **[VERIFY]**
+
+**Q: How many recruiters visit KEC?**  
+A: The supplied material claims 300+ recruiters. **[VERIFY current placement report]**
+
+**Q: Which companies are mentioned as recruiters or industry partners?**  
+A: The supplied material names TCS, Cognizant, Wipro, Infosys, Accenture, Amazon, Zoho, Tech Mahindra, HP, Huawei, Newgen, Payoda, Hyundai, Bosch, Renault Nissan, TVS Motor, ELGI Equipments, Larsen & Toubro (L&T), Soliton, Sanmar Group, Britannia Industries, ITC, Hatsun Agro, Vedanta, and Vernalis Therapeutics.
+
+**Important:** This is a list of companies mentioned in the supplied material, not a guarantee that each company recruits every year or from every department. **[VERIFY against the latest placement records]**
+
+**Q: Does KEC have MoUs with companies?**  
+A: The supplied material mentions partnerships or MoUs with TCS, Cognizant, Infosys, Wipro, Cisco Systems, Bosch, NI, and research organisations. **[VERIFY current MoU list and whether each is active]**
+
+**Q: Does KEC have international collaborations?**  
+A: The supplied material refers to academic exchanges, credit transfers, and research collaborations with institutions in Malaysia, Europe, and the USA. It does not provide a complete verified partner list. **[VERIFY current official list]**
+
+**Q: What is TBI@KEC?**  
+A: The Technology Business Incubator (TBI@KEC) is mentioned as an innovation and entrepreneurship facility associated with KEC and DST support. The supplied material also makes startup and patent-related claims that need confirmation. **[VERIFY current statistics and support details]**
+
+---
+
+12. MILESTONES, AWARDS, REPORTS, AND DIGITAL CHANNELS
+-----------------------------------------------------
+Q1. What milestones are mentioned for the last five years?
+A: A: The supplied material mentions NAAC A++ accreditation, patent commercialisation, research projects associated with ISRO, DRDO, and DST, and automated digital examinations. Each claim should be checked against dated institutional reports. **[VERIFY dates and details]**
+
+Q2. Are annual reports available?
+A: A: The supplied material says institutional annual reports are published online. Start at https://kongu.ac.in/ and look for the relevant annual report, mandatory disclosure, or IQAC section. **[VERIFY current link]**
+
+Q3. What are KEC’s official social media pages?
+A: A: The supplied material mentions Instagram (@kec_erode), Facebook, LinkedIn, and YouTube. Use links published on the official KEC website to avoid unofficial or impersonation accounts. **[VERIFY handles and URLs]**
+
+Q4. Is there a virtual campus tour?
+A: A: The supplied material says campus overview and departmental videos may be available through KEC’s YouTube channel. **[VERIFY current links]** ---
+
+13. COLLEGE WORKING HOURS AND VISITOR INFORMATION
+-------------------------------------------------
+Q1. What are the college working days and hours?
+A: A: The supplied material states Monday to Saturday, 8:45 AM–4:45 PM. This may not apply to every office, department, or holiday schedule. **[VERIFY current calendar and office hours]**
+
+Q2. What are visitor hours?
+A: A: The supplied material suggests 2:00 PM–4:30 PM on working days, but this is not confirmed as an official policy. Contact the college before visiting. **[VERIFY]**
+
+Q3. Where can visitors confirm campus entry rules?
+A: A: Check the official KEC website or contact the relevant administrative office before travelling. ---
+
+14. NEARBY FOOD, ACCOMMODATION, AND SHOPPING
+--------------------------------------------
+The supplied material mentions the following types of facilities. These are not an official directory and may change.
+
+**On or near campus**
+- Central cafeteria and small shops/cooperative stores are mentioned.
+- Roadside tea stalls, bakeries, juice shops, and casual food outlets are described near the NH 544 bypass. **[VERIFY current availability]**
+
+**In Perundurai town**
+- Restaurants and South Indian dining options are mentioned.
+- The source names Hotel Boundary and Saravana Bhavan-type outlets, but exact business locations and current operating status should be checked.
+- Lodging examples mentioned include Sree Sakthi Residency and Hotel Golden Tower. **[VERIFY names, locations, and current availability]**
+- The source mentions supermarkets, pharmacies, clothing shops, footwear shops, and mobile/electronics service outlets around the Perundurai bus-stand area. **[VERIFY current businesses]**
+
+**Chatbot response rule:** For current restaurants, hotels, pharmacies, or shops, use a fresh local search rather than presenting this list as guaranteed up to date.
+
+---
+
+15. OTHER INSTITUTIONS ASSOCIATED WITH KVITT
+--------------------------------------------
+The supplied material lists these institutions as associated with the same trust or group:
+1. Kongu Arts and Science College (KASC), Erode
+2. Kongu Polytechnic College (KPC), Perundurai
+3. Kongu National Matriculation Higher Secondary School, Perundurai
+4. Kongu School of Architecture (KSA), Perundurai
+
+**[VERIFY current institutional names and management relationships on official websites]**
+
+---
+
+16. CHATBOT SAFETY AND ANSWERING RULES
+--------------------------------------
+1. **Prefer official sources:** Use KEC’s official website and current government portals for admissions, fees, rankings, accreditation, contacts, and policies.
+2. **Include the year:** Rankings, cut-offs, intake, fees, placement data, office holders, and admission deadlines should include the applicable year or academic session.
+3. **Do not guess:** If the current official source does not provide the answer, say: “I could not confirm this from the current official information. Please contact KEC directly.”
+4. **Handle conflicting numbers carefully:** Do not choose between conflicting student counts, alumni counts, intake totals, cut-offs, or closing ranks without a reliable source.
+5. **Separate estimates from official figures:** Clearly label estimates and third-party claims; do not present them as official facts.
+6. **Verify contact information:** Recheck telephone numbers, email addresses, social handles, and URLs before deployment.
+7. **Do not promise outcomes:** Placement packages, admissions, scholarships, reservations, and seat availability depend on eligibility and current rules.
+8. **Use exact official terminology:** Preserve official programme names, role titles, and policy wording wherever available.
+9. **Direct users to the right office:** For decisions involving admission, fees, refunds, hostel rules, or certificates, direct users to the official office responsible.
+10. **Refresh the knowledge base every academic year** and whenever KEC publishes updated notices.
+
+---
+
+17. OFFICIAL STARTING POINTS
+----------------------------
+- KEC official website: https://kongu.ac.in/
+- Tamil Nadu Engineering Admissions (TNEA): https://www.tneaonline.org/
+- National Institutional Ranking Framework (NIRF): https://www.nirfindia.org/
+- National Board of Accreditation (NBA): https://www.nbaind.org/
+- National Assessment and Accreditation Council (NAAC): https://www.naac.gov.in/
+- All India Council for Technical Education (AICTE): https://www.aicte-india.org/
+
+**Note:** These are starting points. Confirm the exact current page for each claim before using it as a chatbot answer.
+
+OFFICIAL STARTING POINTS
+------------------------
+- KEC official website: https://kongu.ac.in/
+- Tamil Nadu Engineering Admissions (TNEA): https://www.tneaonline.org/
+- NIRF: https://www.nirfindia.org/
+- NBA: https://www.nbaind.org/
+- NAAC: https://www.naac.gov.in/
+- AICTE: https://www.aicte-india.org/
+
+CHATBOT ANSWERING RULES
+-----------------------
+1. Prefer official sources for current admissions, fees, rankings, accreditation, contacts, and policies.
+2. Include the applicable year for rankings, cut-offs, intake, fees, placements, office holders, and deadlines.
+3. Do not guess. If a current official source does not confirm a detail, say so.
+4. Do not silently resolve conflicting figures; mark them for verification.
+5. Clearly distinguish estimates and third-party claims from official figures.
+6. Verify phone numbers, email addresses, social media handles, and URLs before deployment.
+7. Do not promise admissions, scholarships, placement outcomes, or seat availability.
+8. Refresh the knowledge base every academic year and when official notices change.

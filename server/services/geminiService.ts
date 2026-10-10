@@ -111,8 +111,13 @@ Please generate the complete, accurate answer for the student now.`;
           systemInstruction,
         });
 
+        const validHistory = history.filter((h) => h && h.content).slice(-6);
+        while (validHistory.length > 0 && validHistory[0].role !== 'user') {
+          validHistory.shift();
+        }
+
         const chat = model.startChat({
-          history: history.slice(-6).map((h) => ({
+          history: validHistory.map((h) => ({
             role: h.role === 'assistant' ? 'model' : 'user',
             parts: [{ text: h.content }],
           })),
