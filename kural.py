@@ -350,18 +350,46 @@ def standalone_answer_fallback(question: str) -> str:
         except Exception:
             pass
 
+    # Extract most relevant sections across the whole 140KB file rather than just the top
+    selected_context = ""
+    if info_text:
+        tokens = [t.lower() for t in re.findall(r"\w+", question) if len(t) > 2]
+        sections = re.split(r"\n(?=[#A-Z0-9\s]{2,60}:?\n)", info_text)
+        scored_sections = []
+        for sec in sections:
+            sec_lower = sec.lower()
+            score = sum(3 for t in tokens if t in sec_lower)
+            if any(dept in question.lower() for dept in ["mech", "auto", "mechatronics", "civil", "eee", "ece", "cse", "it", "chemical", "food", "mba", "mca", "aiml", "aids"]):
+                if any(dept in sec_lower for dept in ["mech", "auto", "mechatronics", "civil", "eee", "ece", "cse", "it", "chemical", "food", "mba", "mca", "aiml", "aids"]) and ("placed" in sec_lower or "salary" in sec_lower or "lpa" in sec_lower):
+                    score += 50
+            if score > 0:
+                scored_sections.append((score, sec))
+        scored_sections.sort(key=lambda x: x[0], reverse=True)
+        top_chunks = [s[1] for s in scored_sections[:6]]
+        selected_context = "\n\n---\n\n".join(top_chunks) if top_chunks else info_text[:14000]
+
+    common_rules = (
+        "RULES:\n"
+        "1. If the user question is CLEARLY UNRELATED to KEC or college life (e.g. general trivia, politics, recipes, entertainment, personal tasks), reply with EXACTLY: 'Ask anything related to KEC.' (Do NOT add apologies, explanations, or extra sentences).\n"
+        "2. For KEC-related questions (including indirect questions about hostels, fees, admissions, placements, departments, wardens, bus, sports): Answer directly in the EXACT SAME LANGUAGE they used (Tamil, English, Tanglish, Hindi).\n"
+        "3. EXACT RELEVANCE: If asked for CUTOFF / cut-off marks, provide the CUTOFF MARKS out of 200 (e.g. CSE: 185–193+ out of 200, ECE/EEE: 175–184). NEVER substitute rank when cutoff is asked! If asked for rank, give rank.\n"
+        "4. DEPARTMENT-SPECIFIC PLACEMENT ACCURACY: When asked about placement, salary package, or placement statistics for a specific department (e.g. Mechanical, Mechatronics, Automobile, Civil, EEE, EIE, ECE, CSE, IT, Chemical, Food Tech, MBA, MCA, AI&DS, AI&ML, CSD), give that department's exact figures from the records (students placed, minimum, maximum, average salary). NEVER use the general college-wide ₹5.6 LPA default for specific departments.\n"
+        "5. STRICT DEPARTMENT FACULTY MATCHING: When asked about staff or faculty members in a specific department (e.g. Information Technology / IT), return ONLY verified faculty members of THAT department. NEVER return or mix staff members from other departments (such as EIE, EEE, ECE, CSE, Mech).\n"
+        "6. If a KEC detail is absent from the file, state that the information could not be verified in official college records. Do NOT invent facts or apologize.\n"
+        "7. Provide just the right amount of information (concrete facts, names, contacts, fees). Do NOT dump huge irrelevant rosters or walls of text, and do NOT give lazy one-word replies.\n"
+        "8. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n\n"
+    )
+
     # Try Groq with failover
     for key in GROQ_KEYS:
         try:
             prompt = (
                 "You are Kongu Kural, the direct campus assistant for Kongu Engineering College (KEC).\n"
-                "RULES:\n"
-                "1. Answer directly what the student asked in the EXACT SAME LANGUAGE they used (Tamil, English, Tanglish, Hindi).\n"
-                "2. EXACT RELEVANCE: If asked for CUTOFF / cut-off marks, provide the CUTOFF MARKS out of 200 (e.g. CSE: 185–193+ out of 200, ECE/EEE: 175–184). NEVER substitute rank when cutoff is asked! If asked for rank, give rank.\n"
-                "3. Provide just the right amount of information (concrete facts, names, contacts, fees). Do NOT dump huge irrelevant rosters or walls of text, and do NOT give lazy one-word replies.\n"
-                "4. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n\n"
-                "Source of truth from college-info.txt:\n" + info_text[:14000] + "\n\n"
-                f"Question: {question}"
+                + common_rules
+                + "Source of truth from college-info.txt:\n"
+                + selected_context[:16000]
+                + "\n\n"
+                + f"Question: {question}"
             )
             body = {
                 "model": GROQ_MODEL,
@@ -389,13 +417,9 @@ def standalone_answer_fallback(question: str) -> str:
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={key}"
             prompt = (
                 "You are Kongu Kural, the direct campus assistant for Kongu Engineering College (KEC).\n"
-                "RULES:\n"
-                "1. Answer directly what the student asked in the EXACT SAME LANGUAGE they used (Tamil, English, Tanglish, Hindi).\n"
-                "2. EXACT RELEVANCE: If asked for CUTOFF / cut-off marks, provide the CUTOFF MARKS out of 200 (e.g. CSE: 185–193+ out of 200, ECE/EEE: 175–184). NEVER substitute rank when cutoff is asked! If asked for rank, give rank.\n"
-                "3. Provide just the right amount of information (concrete facts, names, contacts, fees). Do NOT dump huge irrelevant rosters or walls of text, and do NOT give lazy one-word replies.\n"
-                "4. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n\n"
-                f"Context from college-info.txt:\n{info_text[:12000]}\n\n"
-                f"Question: {question}"
+                + common_rules
+                + f"Context from college-info.txt:\n{selected_context[:16000]}\n\n"
+                + f"Question: {question}"
             )
             body = {"contents": [{"parts": [{"text": prompt}]}]}
             req = urllib.request.Request(

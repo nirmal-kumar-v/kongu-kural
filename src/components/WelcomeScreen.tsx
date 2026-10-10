@@ -60,6 +60,15 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 md:py-12 flex flex-col items-center text-center animate-fade-in">
+      {/* Official KEC Logo */}
+      <div className="w-16 h-16 md:w-20 md:h-20 mb-4 p-2.5 rounded-2xl bg-white dark:bg-stone-800 border border-stone-200/80 dark:border-stone-700 shadow-md flex items-center justify-center shrink-0">
+        <img
+          src="/kec-logo.png"
+          alt="Kongu Engineering College Official Logo"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
       {/* Icon Badge */}
       <div
         style={{

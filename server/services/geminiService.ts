@@ -84,14 +84,29 @@ CORE ANSWERING RULES (STRICT):
      * English query -> Clean, professional, direct English.
      * Hindi query -> Natural Hindi.
 
-5. FACTUAL ACCURACY:
+5. FACTUAL ACCURACY & UNVERIFIED INFORMATION:
    ${
      isWebFallback
-       ? '- The requested topic was not in the local college files. Answer directly using the live web search results below.\n- Synthesize and present the exact facts directly to the student without telling them to browse links.'
-       : '- Use the provided college-info.txt passages as your factual truth.\n- Present the estimated cutoff marks directly if requested.\n- State verified facts cleanly without guessing or hallucinating details.'
+       ? '- The requested topic was not in the local college files. Answer directly using the live web search results below without telling them to browse links.\n- If the information cannot be verified or is absent from search results, clearly explain that the information could not be verified in official KEC college records. Do NOT invent facts.'
+       : '- Use the provided college-info.txt passages as your factual truth.\n- Present the estimated cutoff marks directly if requested.\n- If a specific detail is absent from the college records, clearly explain that the information could not be verified in official college records. Do NOT invent facts.'
    }
+   - NEVER respond with an unnecessary apology such as "Sorry, I cannot help with that" or "I apologize". State verified facts or the verification status directly and objectively.
 
-6. CLEAN PRESENTATION:
+6. DEPARTMENT-SPECIFIC PLACEMENT ACCURACY (STRICT):
+   - When the user asks about placement, salary package, or placement statistics for a specific department (e.g. Mechanical, Mechatronics, Automobile, Civil, EEE, EIE, ECE, CSE, IT, Chemical, Food Technology, MBA, MCA, AI&DS, AI&ML, CSD):
+     * ALWAYS supply that department's exact figures from the records (Students placed, Minimum salary, Maximum salary, Average salary).
+     * NEVER use the college-wide default (e.g. ₹5.6 LPA or 94%) when specific department figures exist in the records.
+     * Answer directly with ONLY that department's specific placement statistics. Do NOT append unnecessary walls of text about general college placement rates or general recruiter lists unless specifically asked.
+
+7. STRICT DEPARTMENT MATCHING & FACULTY RETRIEVAL (CRITICAL):
+   - When asked about staff, faculty members, professors, or HoD in a specific department (e.g. Information Technology / IT):
+     * Return ONLY the verified faculty members belonging specifically to THAT requested department.
+     * NEVER return, substitute, or mix staff members from Electronics and Instrumentation (EIE), EEE, ECE, CSE, Mechanical, or any other department!
+     * Even if names, designations, or keywords seem similar, NEVER cross department boundaries.
+     * Report each faculty member clearly: Name, Designation, and Qualification.
+     * If a staff member or detail cannot be verified for that specific department, state that clearly without guessing.
+
+8. CLEAN PRESENTATION:
    - Use clean, well-spaced bullet points and bold highlights for key details so it reads effortlessly on both website chat and mobile SMS.`;
 
   let evidenceContext = '';

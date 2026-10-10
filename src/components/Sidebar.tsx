@@ -63,25 +63,44 @@ export const Sidebar: React.FC<SidebarProps> = ({
           isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
-        {/* Sidebar Header */}
-        <div className="p-4 border-b flex items-center justify-between" style={{ borderColor: 'var(--border-subtle)' }}>
+        {/* Sidebar Header Brand */}
+        <div className="p-3.5 border-b flex items-center gap-2.5" style={{ borderColor: 'var(--border-subtle)' }}>
+          <div className="w-8 h-8 rounded-lg bg-white dark:bg-stone-800 p-1 border border-stone-200/80 dark:border-stone-700 shadow-2xs shrink-0 flex items-center justify-center">
+            <img
+              src="/kec-logo.png"
+              alt="KEC Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h2 className="text-xs font-bold text-stone-900 dark:text-stone-100 truncate leading-tight">
+              Kongu Engineering College
+            </h2>
+            <p className="text-[10px] text-stone-500 dark:text-stone-400 font-medium truncate">
+              Autonomous • Perundurai
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-1.5 rounded-lg text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 md:hidden"
+            aria-label="Close sidebar"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Action Button */}
+        <div className="p-3 border-b" style={{ borderColor: 'var(--border-subtle)' }}>
           <button
             onClick={onNewChat}
             style={{
               backgroundColor: 'var(--bg-card)',
               borderColor: 'var(--border-subtle)',
             }}
-            className="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-xl border text-sm font-semibold text-stone-900 dark:text-stone-100 hover:border-blue-500 shadow-xs transition-all"
+            className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl border text-sm font-semibold text-stone-900 dark:text-stone-100 hover:border-blue-500 shadow-xs transition-all"
           >
             <Plus className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span>New Conversation</span>
-          </button>
-          <button
-            onClick={onClose}
-            className="p-2 ml-2 rounded-lg text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 md:hidden"
-            aria-label="Close sidebar"
-          >
-            <X className="w-5 h-5" />
           </button>
         </div>
 

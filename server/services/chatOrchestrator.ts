@@ -1,5 +1,5 @@
-import { getKnowledge, getCandidatePassages, hasStrongKnowledgeCoverage, KnowledgeChunk } from './knowledgeService.js';
-import { analyzeQueryAndSelectEvidence, generateAnswerWithGroq, SemanticAnalysisResult } from './groqService.js';
+import { getKnowledge, getCandidatePassages, hasStrongKnowledgeCoverage, resolveDepartmentFromQuery, KnowledgeChunk } from './knowledgeService.js';
+import { analyzeQueryAndSelectEvidence, generateAnswerWithGroq, isExplicitlyUnrelatedQuery, SemanticAnalysisResult } from './groqService.js';
 import { generateAnswerWithGemini } from './geminiService.js';
 import { searchWeb, WebSearchResult } from './webSearchService.js';
 
@@ -46,6 +46,7 @@ export async function processChatQuery(
   } catch (err: any) {
     console.warn('[Orchestrator] Groq semantic analysis failed, using heuristic fallback:', err?.message || err);
     semanticResult = {
+      isKecRelated: !isExplicitlyUnrelatedQuery(cleanQuery, history),
       detectedLanguage: 'English',
       intent: cleanQuery,
       selectedChunks: candidatePassages.slice(0, 4),
@@ -54,7 +55,26 @@ export async function processChatQuery(
     };
   }
 
-  // CRITICAL REQUIREMENT: Always check college-info.txt first!
+  // 4. INTELLIGENT KEC-RELATED QUESTION GUARD:
+  // For clearly unrelated questions, reply with EXACTLY: "Ask anything related to KEC."
+  // Do not add apologies, explanations, alternative answers, or extra sentences.
+  if (!semanticResult.isKecRelated) {
+    console.log(`[Orchestrator] Question is unrelated to KEC: "${cleanQuery}". Returning mandatory guard response.`);
+    return {
+      answer: 'Ask anything related to KEC.',
+      provider: 'Kongu Kural Guard',
+      sources: [],
+      detectedLanguage: semanticResult.detectedLanguage,
+      isWebFallback: false,
+      metadata: {
+        knowledgeFileTimestamp: knowledge.lastModified,
+        evidenceChunksCount: 0,
+        intent: 'unrelated',
+      },
+    };
+  }
+
+  // 5. CRITICAL REQUIREMENT: Always check college-info.txt first!
   // If strong knowledge coverage exists in the file, NEVER divert to live web search
   if (
     (!semanticResult.foundInFile || semanticResult.selectedChunks.length === 0) &&
@@ -63,6 +83,23 @@ export async function processChatQuery(
     console.log('[Orchestrator] Direct college-info.txt match confirmed. Prioritizing college-info.txt over web search.');
     semanticResult.foundInFile = true;
     semanticResult.selectedChunks = candidatePassages.slice(0, 4);
+  }
+
+  // STRICT DEPARTMENT VALIDATION:
+  // If the query targets a specific department, ensure NO chunks from other departments sneak into selected evidence
+  const queryDept = resolveDepartmentFromQuery(cleanQuery);
+  if (queryDept) {
+    const validDeptChunks = semanticResult.selectedChunks.filter(
+      (c) => c.departmentId === queryDept.id || c.departmentId === 'general'
+    );
+    if (validDeptChunks.length > 0) {
+      semanticResult.selectedChunks = validDeptChunks;
+    } else {
+      // Fallback to candidatePassages which are already strictly filtered for queryDept
+      semanticResult.selectedChunks = candidatePassages.filter(
+        (c) => c.departmentId === queryDept.id || c.departmentId === 'general'
+      ).slice(0, 4);
+    }
   }
 
   let finalAnswer = '';

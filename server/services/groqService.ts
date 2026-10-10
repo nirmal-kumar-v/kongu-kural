@@ -8,6 +8,55 @@ export interface SemanticAnalysisResult {
   selectedChunks: KnowledgeChunk[];
   foundInFile: boolean;
   suggestedWebQuery?: string;
+  isKecRelated: boolean;
+}
+
+/**
+ * Rapid heuristic check for queries that are unequivocally unrelated
+ * (e.g. recipes, movie suggestions, general politics, general trivia)
+ * without any campus, hostel, or KEC context.
+ */
+export function isExplicitlyUnrelatedQuery(
+  query: string,
+  history: Array<{ role: 'user' | 'assistant'; content: string }> = []
+): boolean {
+  const lower = query.toLowerCase().trim();
+
+  // If question explicitly mentions KEC or campus keywords, never mark unrelated
+  const campusExceptions = /(kec|kongu|hostel|mess|canteen|warden|chief warden|admission|cutoff|cut-off|tnea|placement|bus|transport|library|syllabus|department|dept|hod|principal|campus|faculty|club|tamil mandram|sports quota)/i;
+  if (campusExceptions.test(lower)) {
+    return false;
+  }
+
+  // 1. Recipes / Baking / Cooking (with no campus context)
+  if (
+    /(how to (bake|cook|make|prepare)|recipe (for|of)|ingredients (for|of)|baking (instructions|a cake))/i.test(lower)
+  ) {
+    return true;
+  }
+
+  // 2. Movie, song, entertainment recommendations
+  if (
+    /(recommend|suggest).*(movie|film|song|series|anime|show|comedy)|(movie|film) for (tonight|today)|(best|good) (movies|songs|films) of/i.test(lower)
+  ) {
+    return true;
+  }
+
+  // 3. General politics / world trivia / external government leaders
+  if (
+    /(chief minister|prime minister|president of|capital of|who invented|who discovered|who won the (ipl|world cup|match|fifa|election)|weather in)/i.test(lower)
+  ) {
+    return true;
+  }
+
+  // 4. General personal tasks / creative writing / generic programming exercises
+  if (
+    /^(write|generate) (a )?(python|java|c\+\+|javascript)? ?(code|script|essay|story|poem) (for|about|to) (invert|reverse|binary|sort|lions|dogs|cats)/i.test(lower)
+  ) {
+    return true;
+  }
+
+  return false;
 }
 
 /**
@@ -42,7 +91,8 @@ export async function executeGroqWithFailover<T>(
 }
 
 /**
- * Uses Groq to understand the user's intent across languages (English, Tamil, Tanglish, Hindi)
+ * Uses Groq to understand the user's intent across languages (English, Tamil, Tanglish, Hindi),
+ * determines if the question is related to Kongu Engineering College (KEC),
  * and semantically selects relevant chunks from the college knowledge file.
  */
 export async function analyzeQueryAndSelectEvidence(
@@ -50,14 +100,15 @@ export async function analyzeQueryAndSelectEvidence(
   history: Array<{ role: 'user' | 'assistant'; content: string }>,
   candidateChunks: KnowledgeChunk[]
 ): Promise<SemanticAnalysisResult> {
-  // If candidate chunks are empty, the file is empty
-  if (candidateChunks.length === 0) {
+  // Fast-path guard for unequivocally unrelated non-college requests (recipes, movie recommendations, etc.)
+  if (isExplicitlyUnrelatedQuery(query, history)) {
     return {
+      isKecRelated: false,
       detectedLanguage: 'English',
-      intent: query,
+      intent: 'unrelated',
       selectedChunks: [],
       foundInFile: false,
-      suggestedWebQuery: `Kongu Engineering College ${query}`,
+      suggestedWebQuery: '',
     };
   }
 
@@ -67,22 +118,44 @@ export async function analyzeQueryAndSelectEvidence(
     textSnippet: c.content,
   }));
 
-  const systemPrompt = `You are the Semantic Understanding Engine for Kongu Kural (Kongu Engineering College assistant).
-Your task is to analyze user queries across English, Tamil, Tanglish (Tamil in Roman script), and other Indian languages.
+  const systemPrompt = `You are the Semantic Understanding & Intent Classification Engine for Kongu Kural, the official campus AI assistant for Kongu Engineering College (KEC), Perundurai, Erode.
 
-STRICT INSTRUCTIONS:
-1. ALWAYS PRIORITIZE college-info.txt FIRST:
-   - If candidate passages contain ANY direct, approximate, or related information (such as cut-offs, ranks, admissions, hostel, wardens, sports, courses, fees, placements), you MUST set "foundInFile": true and select the relevant chunk IDs.
-   - Do NOT set "foundInFile": false if the passages discuss the topic, even if they mention estimates or [VERIFY].
-   - ONLY set "foundInFile": false if the topic is completely absent from all candidate passages.
+PRIMARY TASK 1: CLASSIFY IF THE QUESTION IS KEC-RELATED (isKecRelated)
+Analyze the full meaning, intent, context, and conversation history. Do NOT use simple keyword matching.
 
-2. UNDERSTAND THE USER'S EXACT INTENT:
-   - "Cut-off" / "cutoff marks" refers to normalized marks out of 200.
-   - "Rank" refers to TNEA merit rank numbers.
-   - Recognize questions in Tamil (தமிழ்), Tanglish, English, and Hindi.
+Consider a question KEC-RELATED ("isKecRelated": true) if it concerns:
+- College information, history, departments, courses, curriculum, academics, admissions, cutoff marks, ranks.
+- Hostels, warden details, mess/food, buses/transport, fees, facilities, rules, student services.
+- Placements, companies, internships, careers, training, campus recruitment.
+- Clubs, Tamil Mandram, events, symposiums, cultural activities, sports, gym, tournaments, competitions.
+- Faculty, HODs, Principal, administrative offices, contacts, campus life, college procedures.
+- Friendly campus interactions and greetings ("Hi", "Hello", "Vanakkam", "Who are you?", "Help", "What can you do?").
+- INDIRECT AND AMBIGUOUS QUESTIONS:
+  * Do NOT reject a question merely because it does not explicitly mention "KEC" or "Kongu Engineering College".
+  * Examples: "What are the hostel timings?", "When is the application deadline?", "What facilities are available there?", "Who is the warden?", "Hostel fees evalo?", "Bus routes irukka?".
+  * Questions about placements, transport, fees, or sports remain KEC-related even when the user does not name the college.
+  * Understand spelling mistakes, abbreviations, English, Tamil (தமிழ்), Tanglish, Hindi, mixed language, and informal expressions.
+  * Use the previous conversation history to understand follow-up questions.
+  * If a question has ANY reasonable connection to KEC, college life, or studies, treat it as RELATED ("isKecRelated": true).
+
+Consider a question CLEARLY UNRELATED ("isKecRelated": false) if:
+- The question is general trivia, politics, recipes/cooking, entertainment/movie recommendations, or personal tasks that are NOT about KEC campus, admissions, academics, hostels, or student life.
+- IMPORTANT: Accidental keyword overlap in candidate passages does NOT make an unrelated question related!
+  * Asking for recipes or cooking instructions (e.g. "How to bake a chocolate cake at home?", "How to make biryani?") is UNRELATED ("isKecRelated": false), even if college passages mention nearby food or canteens!
+  * Asking for movie, music, or entertainment recommendations (e.g. "Recommend a comedy movie for tonight", "Best songs of 2024") is UNRELATED ("isKecRelated": false)!
+  * Asking general knowledge / politics (e.g. "Who is the Chief Minister of Tamil Nadu?", "Capital of France", "Who won the cricket match?") is UNRELATED ("isKecRelated": false)!
+  * Asking personal or general programming tasks (e.g. "Write python code to reverse a list", "Write an essay about dogs") with no KEC academic context is UNRELATED ("isKecRelated": false)!
+
+Always ask: Is the user genuinely inquiring about Kongu Engineering College (KEC), its campus, courses, admissions, hostels, wardens, fees, placements, student activities, or context from prior conversation? If NOT, set "isKecRelated": false.
+
+PRIMARY TASK 2: EVIDENCE SELECTION (if isKecRelated is true)
+- If candidate passages contain direct, approximate, or estimated facts, set "foundInFile": true and select the chunk IDs.
+- Set "foundInFile": false ONLY if the topic is completely absent from all candidate passages.
+- Distinguish Cut-off marks (out of 200) vs Rank (TNEA merit rank number).
 
 Respond ONLY in valid JSON matching this schema:
 {
+  "isKecRelated": true | false,
   "detectedLanguage": "English" | "Tamil" | "Tanglish" | "Hindi" | "Other",
   "intent": "Brief summary of what the user wants to know",
   "foundInFile": true | false,
@@ -91,7 +164,7 @@ Respond ONLY in valid JSON matching this schema:
 }`;
 
   const userPrompt = `Conversation History:
-${history.slice(-4).map((h) => `${h.role}: ${h.content}`).join('\n') || 'None'}
+${history.slice(-6).map((h) => `${h.role}: ${h.content}`).join('\n') || 'None'}
 
 Current User Question:
 "${query}"
@@ -99,7 +172,7 @@ Current User Question:
 Candidate Passages:
 ${JSON.stringify(chunksPayload, null, 2)}
 
-Analyze query intent, match passages semantically, and output JSON.`;
+Analyze query intent, classify isKecRelated, match passages semantically, and output JSON.`;
 
   try {
     const { result } = await executeGroqWithFailover(async (client) => {
@@ -119,10 +192,11 @@ Analyze query intent, match passages semantically, and output JSON.`;
     const selectedIds = new Set(parsed.selectedChunkIds || []);
     const selected = candidateChunks.filter((c) => selectedIds.has(c.id));
 
-    // If Groq found chunks
+    const isKecRelated = parsed.isKecRelated !== undefined ? Boolean(parsed.isKecRelated) : true;
     const foundInFile = Boolean(parsed.foundInFile && selected.length > 0);
 
     return {
+      isKecRelated,
       detectedLanguage: parsed.detectedLanguage || 'English',
       intent: parsed.intent || query,
       selectedChunks: foundInFile ? selected : [],
@@ -131,11 +205,24 @@ Analyze query intent, match passages semantically, and output JSON.`;
     };
   } catch (err: any) {
     console.error('[GroqService] Semantic analysis failed:', err?.message || err);
-    // Safe heuristic fallback:
+
+    // Robust heuristic fallback:
+    const lower = query.toLowerCase();
+    const collegeKeywords = [
+      'kec', 'kongu', 'college', 'hostel', 'warden', 'fee', 'fees', 'cutoff', 'cut-off',
+      'rank', 'admission', 'counselling', 'dept', 'department', 'bus', 'transport', 'mess',
+      'placement', 'placements', 'principal', 'hod', 'faculty', 'sports', 'gym', 'course',
+      'b.e', 'b.tech', 'm.e', 'mba', 'mca', 'tnea', 'tamil mandram', 'club', 'scholarship',
+      'hi', 'hello', 'vanakkam', 'who are you', 'help'
+    ];
+    const isExplicitCollege = collegeKeywords.some((k) => lower.includes(k));
+    const hasHistory = history.length > 0;
+
     return {
+      isKecRelated: isExplicitCollege || hasHistory || candidateChunks.length > 0,
       detectedLanguage: 'English',
       intent: query,
-      selectedChunks: candidateChunks.slice(0, 3),
+      selectedChunks: candidateChunks.slice(0, 4),
       foundInFile: candidateChunks.length > 0,
       suggestedWebQuery: `Kongu Engineering College ${query}`,
     };
@@ -186,14 +273,29 @@ CORE ANSWERING RULES (STRICT):
      * English query -> Clean, professional, direct English.
      * Hindi query -> Natural Hindi.
 
-5. FACTUAL ACCURACY:
+5. FACTUAL ACCURACY & UNVERIFIED INFORMATION:
    ${
      isWebFallback
-       ? 'The requested topic was not in local files. Synthesize and provide the actual facts directly from web search results without telling the student to browse links.'
-       : 'Use the provided college knowledge passages as your factual truth. Present the estimated cutoff figures directly if requested.'
+       ? 'The requested topic was not in local files. Synthesize and provide verified facts directly from web search results without telling the student to browse links. If the information cannot be verified, clearly explain that it could not be verified in official KEC college records. Do NOT invent facts.'
+       : 'Use the provided college knowledge passages as your factual truth. Present the estimated cutoff figures directly if requested. If a specific detail is absent from the college records, clearly explain that it could not be verified in official college records. Do NOT invent facts.'
    }
+   - NEVER respond with an unnecessary apology such as "Sorry, I cannot help with that" or "I apologize". State verified facts or unverified status directly and objectively.
 
-6. CLEAN PRESENTATION:
+6. DEPARTMENT-SPECIFIC PLACEMENT ACCURACY (STRICT):
+   - When the user asks about placement, salary package, or placement statistics for a specific department (e.g. Mechanical, Mechatronics, Automobile, Civil, EEE, EIE, ECE, CSE, IT, Chemical, Food Technology, MBA, MCA, AI&DS, AI&ML, CSD):
+     * ALWAYS supply that department's exact figures from the records (Students placed, Minimum salary, Maximum salary, Average salary).
+     * NEVER use the college-wide default (e.g. ₹5.6 LPA or 94%) when specific department figures exist in the records.
+     * Answer directly with ONLY that department's specific placement statistics. Do NOT append unnecessary walls of text about general college placement rates or general recruiter lists unless specifically asked.
+
+7. STRICT DEPARTMENT MATCHING & FACULTY RETRIEVAL (CRITICAL):
+   - When asked about staff, faculty members, professors, or HoD in a specific department (e.g. Information Technology / IT):
+     * Return ONLY the verified faculty members belonging specifically to THAT requested department.
+     * NEVER return, substitute, or mix staff members from Electronics and Instrumentation (EIE), EEE, ECE, CSE, Mechanical, or any other department!
+     * Even if names, designations, or keywords seem similar, NEVER cross department boundaries.
+     * Report each faculty member clearly: Name, Designation, and Qualification.
+     * If a staff member or detail cannot be verified for that specific department, state that clearly without guessing.
+
+8. CLEAN PRESENTATION:
    - Use clean, well-spaced bullet points and bold highlights for key details so it reads effortlessly on both website chat and mobile SMS.`;
 
   const contextContent = isWebFallback

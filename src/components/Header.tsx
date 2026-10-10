@@ -41,11 +41,12 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         <div className="flex items-center gap-2.5">
-          <div
-            style={{ backgroundColor: 'var(--accent-primary)' }}
-            className="w-9 h-9 rounded-xl flex items-center justify-center text-white shadow-sm"
-          >
-            <Sparkles className="w-5 h-5 text-amber-300" />
+          <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-white dark:bg-stone-800 p-1 border border-stone-200/80 dark:border-stone-700 shadow-xs shrink-0 overflow-hidden">
+            <img
+              src="/kec-logo.png"
+              alt="Kongu Engineering College Official Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">

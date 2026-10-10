@@ -37,8 +37,12 @@ export const KnowledgeModal: React.FC<KnowledgeModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: 'var(--border-subtle)' }}>
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center">
-              <FileText className="w-4 h-4" />
+            <div className="w-8 h-8 rounded-lg bg-white dark:bg-stone-800 p-0.5 border border-stone-200/80 dark:border-stone-700 shadow-2xs flex items-center justify-center shrink-0">
+              <img
+                src="/kec-logo.png"
+                alt="KEC Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 className="font-bold text-base text-stone-900 dark:text-stone-100">

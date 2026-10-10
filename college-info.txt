@@ -2060,3 +2060,251 @@ CHATBOT ANSWERING RULES
 6. Verify phone numbers, email addresses, social media handles, and URLs before deployment.
 7. Do not promise admissions, scholarships, placement outcomes, or seat availability.
 8. Refresh the knowledge base every academic year and when official notices change.
+
+
+
+
+
+
+
+
+Placement Information :
+
+## 1. Placement Overview
+
+Kongu Engineering College (KEC), located at Perundurai, Erode, Tamil Nadu, publishes placement information through its official website, annual reports, mandatory disclosures, and placement-related updates. These sources contain information about students placed, salary packages, recruiting organizations, and department-wise placement performance.
+
+Official website: https://kongu.ac.in/
+
+## 2. Latest Placement Statistics Displayed on the Official Website
+
+The KEC homepage displays the following placement figures for the 2025–2026 placement period:
+
+- Placement offers: 1,784
+- Average salary: ₹5.6 lakh per annum (LPA)
+- Highest salary: ₹61.21 LPA
+- Offers above ₹8 LPA: 172
+- Companies visited: 355
+- Placement status: 94.1%
+
+These figures are the statistics displayed on the official homepage. The placement status should not automatically be interpreted as the percentage of all graduating students placed without checking the college's definition and calculation method.
+
+Source: https://kongu.ac.in/
+
+## 3. Placement Statistics for 2024–2025
+
+According to the KEC Mandatory Disclosure published in July 2025, the college reported the following overall placement figures:
+
+- Students placed: 1,360
+- Students graduated: 1,453
+
+The same disclosure lists department-wise placement counts and salary information for 2024–2025, 2023–2024, and 2022–2023. These figures belong to their respective academic years and should not be combined with the 2025–2026 homepage figures.
+
+Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 4. Placement Information for 2023–2024
+
+The KEC Annual Report for 2024–2025 states that 1,108 students secured 1,320 placement offers during the placement activity described in the report. It also states that more than 734 students were permitted to take part in internship-cum-job opportunities.
+
+The report identifies this as information for the relevant reporting year. These figures should not be presented as the latest placement results or as the number of students placed in 2025–2026.
+
+Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+
+## 5. Companies Recruiting at KEC
+
+The KEC Annual Report for 2024–2025 identifies the following organizations among those offering internship-cum-recruitment opportunities:
+
+- Rubrik
+- Zoho
+- Mr. Cooper
+- Zopsmart
+- FourKites
+- Presidio
+- Azentio
+- Infosys
+- Cognizant
+- Honeywell
+- Soliton Technologies
+- JGC
+- India Cements
+- SPIC
+- Tata Group
+- JSW
+- Adani Group
+- Applied Materials
+- Ford Motors
+- TVS Group
+
+This is a list of organizations identified in that annual report, not a guarantee that every organization recruits during every academic year.
+
+Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+
+## 6. Placement Salary Information by Department
+
+The KEC Mandatory Disclosure for 2024–2025 provides department-wise placement counts and minimum, maximum, and average salaries. The following are examples from the published table.
+
+**B.E. Civil Engineering**
+- Students placed in 2024–2025: 50
+- Minimum salary: ₹2.4 LPA
+- Maximum salary: ₹7.5 LPA
+- Average salary: ₹3.7 LPA
+
+**B.E. Mechanical Engineering**
+- Students placed in 2024–2025: 80
+- Minimum salary: ₹2.8 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹4.4 LPA
+
+**B.E. Mechatronics Engineering**
+- Students placed in 2024–2025: 104
+- Minimum salary: ₹2.6 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹4.4 LPA
+
+**B.E. Automobile Engineering**
+- Students placed in 2024–2025: 48
+- Minimum salary: ₹1.8 LPA
+- Maximum salary: ₹7.5 LPA
+- Average salary: ₹3.6 LPA
+
+**B.E. Electrical and Electronics Engineering**
+- Students placed in 2024–2025: 80
+- Minimum salary: ₹2.4 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹5.3 LPA
+
+**B.E. Electronics and Instrumentation Engineering**
+- Students placed in 2024–2025: 94
+- Minimum salary: ₹2.8 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹5.2 LPA
+
+**B.E. Electronics and Communication Engineering**
+- Students placed in 2024–2025: 166
+- Minimum salary: ₹2.2 LPA
+- Maximum salary: ₹24.5 LPA
+- Average salary: ₹5.1 LPA
+
+**B.E. Computer Science and Engineering**
+- Students placed in 2024–2025: 174
+- Minimum salary: ₹3 LPA
+- Maximum salary: ₹24.5 LPA
+- Average salary: ₹5.2 LPA
+
+**B.Tech. Information Technology**
+- Students placed in 2024–2025: 86
+- Minimum salary: ₹2.5 LPA
+- Maximum salary: ₹21 LPA
+- Average salary: ₹5.6 LPA
+
+**B.Tech. Chemical Engineering**
+- Students placed in 2024–2025: 67
+- Minimum salary: ₹1.8 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹4.4 LPA
+
+**B.Tech. Food Technology**
+- Students placed in 2024–2025: 19
+- Minimum salary: ₹1.9 LPA
+- Maximum salary: ₹7 LPA
+- Average salary: ₹3.6 LPA
+
+**Master of Business Administration (MBA)**
+- Students placed in 2024–2025: 92
+- Minimum salary: ₹2.4 LPA
+- Maximum salary: ₹7 LPA
+- Average salary: ₹4.3 LPA
+
+**Master of Computer Applications (MCA)**
+- Students placed in 2024–2025: 74
+- Minimum salary: ₹2 LPA
+- Maximum salary: ₹10 LPA
+- Average salary: ₹4.2 LPA
+
+Source for all department figures above: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 7. Computer Science and Information Technology Placements
+
+The mandatory disclosure reports the following 2024–2025 figures:
+
+- Computer Science and Engineering: 174 students placed; average salary ₹5.2 LPA; maximum salary ₹24.5 LPA.
+- Information Technology: 86 students placed; average salary ₹5.6 LPA; maximum salary ₹21 LPA.
+
+These figures apply specifically to the programmes and academic year named above. They should not be used as current salary guarantees for individual students or future graduating batches.
+
+Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 8. Computer Science and Design, Artificial Intelligence and Machine Learning, and Artificial Intelligence and Data Science
+
+The same mandatory disclosure reports 2024–2025 placement results for these programmes:
+
+**B.E. Computer Science and Design**
+- Students placed: 39
+- Minimum salary: ₹2.7 LPA
+- Maximum salary: ₹10 LPA
+- Average salary: ₹5.4 LPA
+
+**B.Tech. Artificial Intelligence and Machine Learning**
+- Students placed: 38
+- Minimum salary: ₹3 LPA
+- Maximum salary: ₹8 LPA
+- Average salary: ₹5.3 LPA
+
+**B.Tech. Artificial Intelligence and Data Science**
+- Students placed: 37
+- Minimum salary: ₹3 LPA
+- Maximum salary: ₹12.3 LPA
+- Average salary: ₹5.7 LPA
+
+Source: https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 9. Internship-Cum-Job Opportunities
+
+The KEC Annual Report for 2024–2025 states that more than 734 students were permitted to take part in internship-cum-job opportunities during the reporting period. It names organizations including Rubrik, Zoho, Mr. Cooper, Zopsmart, FourKites, Presidio, Azentio, Infosys, Cognizant, Honeywell, Soliton Technologies, JGC, India Cements, SPIC, Tata Group, JSW, Adani Group, Applied Materials, Ford Motors, and TVS Group.
+
+Participation in an internship-cum-job opportunity does not necessarily mean that every participating student received a permanent job offer. The outcome depends on the specific opportunity and employer.
+
+Source: https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+
+## 10. Placement Offers and Students Placed
+
+A placement offer and a student placed are different measures. One student may receive more than one offer. Therefore, the total number of offers can exceed the number of students placed.
+
+KEC's annual report for 2024–2025 records 1,108 students securing 1,320 placement offers for the placement activity described in that report. Its mandatory disclosure separately records 1,360 students placed out of 1,453 graduates for 2024–2025. These numbers are from different published reporting statements and should be quoted with their source and context rather than treated as interchangeable.
+
+Sources:
+- https://www.kongu.ac.in/files/iqac/Annual%20Reports/2024-2025.pdf
+- https://kongu.ac.in/static/media/Mandatory%20Disclosure%2029.7.2025.670f248e55fda578abff.pdf
+
+## 11. Highest, Average, and Department-Wise Salary Figures
+
+The official homepage displays a highest salary of ₹61.21 LPA and an average salary of ₹5.6 LPA for its 2025–2026 placement summary. The mandatory disclosure contains separate salary statistics for individual programmes and earlier academic years.
+
+The highest salary is not the salary received by every student. The average salary represents a group-level statistic, and individual offers may be lower or higher. Department-wise salaries should be quoted with the relevant academic year.
+
+Source: https://kongu.ac.in/
+
+## 12. Placement Contact and Official Information
+
+Kongu Engineering College publishes institutional contact information on its official website. Placement-specific contact details, current recruitment schedules, company eligibility requirements, and placement policies should be taken from the college's latest official placement information.
+
+Official website: https://kongu.ac.in/
+
+## 13. Accuracy of Placement Information
+
+Placement statistics change by academic year. The college's homepage, annual reports, and mandatory disclosures may present different figures because they refer to different batches, reporting dates, or statistical measures.
+
+For accurate answers, placement information should always identify the academic year and the original official source. If a specific figure, recruiter, eligibility condition, or policy cannot be confirmed in an official KEC source, it should not be presented as an established fact.
+
+
+
+
+
+
+
+
+
+
+
+
+transport:
