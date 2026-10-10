@@ -23,7 +23,7 @@ export function isExplicitlyUnrelatedQuery(
   const lower = query.toLowerCase().trim();
 
   // If question explicitly mentions KEC or campus keywords, never mark unrelated
-  const campusExceptions = /(kec|kongu|hostel|mess|canteen|warden|chief warden|admission|cutoff|cut-off|tnea|placement|bus|transport|library|syllabus|department|dept|hod|principal|campus|faculty|club|tamil mandram|sports quota)/i;
+  const campusExceptions = /(kec|kongu|hostel|mess|canteen|warden|chief warden|admission|cutoff|cut-off|tnea|placement|bus|transport|library|syllabus|department|dept|hod|principal|campus|faculty|club|tamil mandram|sports quota|timing|timings|working hours|class hours|office hours|library hours|route|routes|shuttle|scholarship|scholarships|concession|first graduate)/i;
   if (campusExceptions.test(lower)) {
     return false;
   }

@@ -172,6 +172,27 @@ export function resolveDepartmentFromQuery(query: string): DepartmentDef | null 
 export function resolveCategoryFromQuery(query: string): string | null {
   const q = query.toLowerCase();
   if (
+    /\b(bus|buses|transport|transportation|route|routes|shuttle|shuttles|vehicle|two-wheelers?|helmets?|parking|bus fee|van|sakthivel)\b/i.test(
+      q
+    )
+  ) {
+    return 'transport';
+  }
+  if (
+    /\b(working hours|college timing|college timings|class timing|class timings|class hours|office hours|library hours|college time|schedule|operating hours)\b/i.test(
+      q
+    )
+  ) {
+    return 'working_hours';
+  }
+  if (
+    /\b(scholarship|scholarships|concession|concessions|fee waiver|waiver|financial aid|7\.5%|first graduate|first generation)\b/i.test(
+      q
+    )
+  ) {
+    return 'scholarship';
+  }
+  if (
     /\b(staff|faculty|teacher|teachers|professor|professors|assistant professor|associate professor|hod|head of department|who teaches|members|directory)\b/i.test(
       q
     )
@@ -194,17 +215,20 @@ export function resolveCategoryFromQuery(query: string): string | null {
   if (/\b(intake|seats|seat|how many seats|capacity)\b/i.test(q)) {
     return 'intake';
   }
-  if (/\b(hostel|hostels|mess|food|room|rooms|warden|wardens)\b/i.test(q)) {
+  if (/\b(hostel|hostels|hostal|mess|food|room|rooms|warden|wardens)\b/i.test(q)) {
     return 'hostel';
   }
   if (/\b(fee|fees|cost|tuition fee|hostel fee)\b/i.test(q)) {
     return 'fees';
   }
-  if (/\b(admission|admissions|counselling|counseling|tnea|eligibility|lateral)\b/i.test(q)) {
+  if (/\b(admission|admissions|counselling|counseling|tnea|eligibility|lateral|quota)\b/i.test(q)) {
     return 'admission';
   }
   if (/\b(sport|sports|gym|ground|stadium|physical education|badminton|football|cricket)\b/i.test(q)) {
     return 'sports';
+  }
+  if (/\b(course|courses|programme|programmes|degree|curriculum|syllabus|autonomous|regulation)\b/i.test(q)) {
+    return 'academics';
   }
   return null;
 }
@@ -242,109 +266,134 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
   while (i < lines.length) {
     const line = lines[i].trim();
 
-    // 1. HOSTEL STAFF DETAILS (Table)
-    if (line === 'Hostel : --- done' || line === 'KEC Hostel Staff Details') {
-      const startLine = i + 1;
-      const hostelLines: string[] = ['Hostel Accommodation & Staff Directory', '--------------------------------------'];
-      i++;
-      while (i < lines.length && !lines[i].trim().startsWith('Hostel Accommodation Details') && !lines[i].trim().startsWith('----------------')) {
-        if (lines[i].trim()) hostelLines.push(lines[i].trim());
-        i++;
-      }
-      const content = hostelLines.join('\n');
-      addChunk({
-        documentTitle: docTitle,
-        mainHeading: 'Hostel Information',
-        subHeading: 'KEC Hostel Staff Details',
-        headingPath: ['Hostels', 'Hostel Staff Details'],
-        departmentId: 'general',
-        category: 'hostel_staff',
-        sectionTitle: 'Hostel Information — KEC Hostel Staff Details',
-        content,
-        urls: extractUrls(content),
-        lineNumber: startLine,
-      });
-      continue;
-    }
-
-    // 2. HOSTEL ACCOMMODATION & KEY DETAILS
-    if (line === 'Hostel Accommodation Details') {
-      const startLine = i + 1;
-      const accLines: string[] = ['Hostel Accommodation Details (Blocks & Facilities)', '-----------------------------------------------'];
-      i++;
-      while (i < lines.length && !lines[i].trim().startsWith('Engineering & Technology Departments') && !lines[i].trim().startsWith('All faculty name')) {
-        if (lines[i].trim() && !lines[i].trim().startsWith('---') && !lines[i].trim().startsWith('http')) {
-          accLines.push(lines[i].trim());
-        }
-        i++;
-      }
-      const content = accLines.join('\n');
-      addChunk({
-        documentTitle: docTitle,
-        mainHeading: 'Hostel Information',
-        subHeading: 'Accommodation & Key Details',
-        headingPath: ['Hostels', 'Hostel Accommodation Details'],
-        departmentId: 'general',
-        category: 'hostel',
-        sectionTitle: 'Hostel Information — Accommodation Details & Fees',
-        content,
-        urls: extractUrls(content),
-        lineNumber: startLine,
-      });
-      continue;
-    }
-
-    // 3. DEPARTMENT HEADS (HODs) AND CENTRAL CONTACTS
+    // 1. HOSTEL ACCOMMODATION, WARDENS, RULES & FEES
     if (
+      line.startsWith('SECTION 1:') ||
+      line === 'Hostel : --- done' ||
+      line === 'KEC Hostel Staff Details'
+    ) {
+      const startLine = i + 1;
+      const hostelLines: string[] = [];
+      i++;
+      while (
+        i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 2:') &&
+        !lines[i].trim().startsWith('Engineering & Technology Departments')
+      ) {
+        const cur = lines[i].trim();
+        if (cur.startsWith('## 1.1') || cur.startsWith('## 1.2') || cur.startsWith('## 1.3')) {
+          if (hostelLines.length > 0) {
+            const content = hostelLines.join('\n').trim();
+            const subTitle = hostelLines[0].replace(/^##\s*\d+\.\d+\s*/, '').trim();
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Hostel Information',
+              subHeading: subTitle,
+              headingPath: ['Hostels', subTitle],
+              departmentId: 'general',
+              category: subTitle.includes('Staff') || subTitle.includes('Warden') ? 'hostel_staff' : 'hostel',
+              sectionTitle: `Hostel Information — ${subTitle}`,
+              content,
+              urls: extractUrls(content),
+              lineNumber: startLine,
+            });
+            hostelLines.length = 0;
+          }
+        }
+        if (cur && !cur.startsWith('=')) hostelLines.push(cur);
+        i++;
+      }
+      if (hostelLines.length > 0) {
+        const content = hostelLines.join('\n').trim();
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Hostel Information',
+          subHeading: 'Accommodation & Regulations',
+          headingPath: ['Hostels', 'Accommodation & Regulations'],
+          departmentId: 'general',
+          category: 'hostel',
+          sectionTitle: 'Hostel Information — Accommodation Details & Fees',
+          content,
+          urls: extractUrls(content),
+          lineNumber: startLine,
+        });
+      }
+      continue;
+    }
+
+    // 2. CAMPUS LEADERSHIP & DEPARTMENT HEADS (HODs)
+    if (
+      line.startsWith('SECTION 2:') ||
       line === 'Engineering & Technology Departments' ||
       line === 'Computer Applications & Technology (UG / PG)' ||
       line === 'Science & Humanities Departments' ||
       line === 'Central Campus Administration Contacts'
     ) {
       const startLine = i + 1;
-      const hodLines: string[] = [`Department Heads & Leadership (${line})`, '------------------------------------------------'];
-      const sectionName = line;
+      const hodLines: string[] = [];
+      const secName = line.startsWith('SECTION 2:') ? 'Campus Leadership & HOD Directory' : line;
       i++;
       while (
         i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 3:') &&
         !lines[i].trim().startsWith('All faculty name') &&
         !lines[i].trim().startsWith('////')
       ) {
         const cur = lines[i].trim();
-        if (
-          cur === 'Engineering & Technology Departments' ||
-          cur === 'Computer Applications & Technology (UG / PG)' ||
-          cur === 'Science & Humanities Departments' ||
-          cur === 'Central Campus Administration Contacts'
-        ) {
-          break;
+        if (cur.startsWith('## 2.2')) {
+          if (hodLines.length > 0) {
+            const content = hodLines.join('\n').trim();
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Campus Leadership & Department Heads',
+              subHeading: 'HOD & Administration Directory',
+              headingPath: ['Administration', 'Department Heads (HODs)'],
+              departmentId: 'general',
+              category: 'hod',
+              sectionTitle: 'Leadership & HOD Directory',
+              content,
+              urls: extractUrls(content),
+              lineNumber: startLine,
+            });
+            hodLines.length = 0;
+          }
         }
-        if (cur && !cur.startsWith('---')) {
-          hodLines.push(cur);
-        }
+        if (cur && !cur.startsWith('=') && !cur.startsWith('---')) hodLines.push(cur);
         i++;
       }
-      const content = hodLines.join('\n');
-      addChunk({
-        documentTitle: docTitle,
-        mainHeading: 'Campus Leadership & Department Heads',
-        subHeading: sectionName,
-        headingPath: ['Administration', 'Department Heads (HODs)', sectionName],
-        departmentId: 'general',
-        category: 'hod',
-        sectionTitle: `Leadership & HOD Directory — ${sectionName}`,
-        content,
-        urls: extractUrls(content),
-        lineNumber: startLine,
-      });
+      if (hodLines.length > 0) {
+        const content = hodLines.join('\n').trim();
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Campus Leadership & Department Heads',
+          subHeading: secName,
+          headingPath: ['Administration', 'Department Heads (HODs)', secName],
+          departmentId: 'general',
+          category: 'hod',
+          sectionTitle: `Leadership & HOD Directory — ${secName}`,
+          content,
+          urls: extractUrls(content),
+          lineNumber: startLine,
+        });
+      }
       continue;
     }
 
-    // 4. FACULTY DIRECTORY FOR ALL DEPARTMENTS (Lines 120–499)
-    if (line.includes('All faculty name :') || line.startsWith('1. Computer Science and Engineering (CSE)')) {
-      if (line.includes('All faculty name :')) i++;
+    // 3. FACULTY DIRECTORY (TEACHING STAFF BY DEPARTMENT)
+    if (
+      line.startsWith('SECTION 3:') ||
+      line.includes('All faculty name :') ||
+      line.startsWith('1. Computer Science and Engineering (CSE)')
+    ) {
+      if (line.startsWith('SECTION 3:') || line.includes('All faculty name :')) i++;
 
-      while (i < lines.length && !lines[i].trim().startsWith('Department summary') && !lines[i].trim().startsWith('physical department')) {
+      while (
+        i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 4:') &&
+        !lines[i].trim().startsWith('Department summary') &&
+        !lines[i].trim().startsWith('physical department') &&
+        !lines[i].trim().startsWith('## 3.1')
+      ) {
         const deptLine = lines[i].trim();
         const deptMatch = deptLine.match(/^(\d+)\.\s+(.+)$/);
 
@@ -359,14 +408,15 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
           };
 
           const facultyRows: string[] = [];
-          i++; // move past department heading
+          i++;
 
-          // Collect table header and rows
           while (
             i < lines.length &&
             !lines[i].trim().match(/^(\d+)\.\s+[A-Za-z]/) &&
+            !lines[i].trim().startsWith('SECTION 4:') &&
             !lines[i].trim().startsWith('Department summary') &&
-            !lines[i].trim().startsWith('physical department')
+            !lines[i].trim().startsWith('physical department') &&
+            !lines[i].trim().startsWith('## 3.1')
           ) {
             const row = lines[i].trim();
             if (row && !row.startsWith('#\tFaculty Name')) {
@@ -375,7 +425,6 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
             i++;
           }
 
-          // Build chunk with exact document hierarchy & table headers
           const chunkContent = [
             `Document: Faculty Directory`,
             `Main Heading: Faculty Details`,
@@ -405,170 +454,93 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
         }
         i++;
       }
-      continue;
-    }
 
-    // 5. DEPARTMENT SUMMARY (Lines 500–518)
-    if (line.startsWith('Department summary')) {
-      const startLine = i + 1;
-      const sumLines: string[] = ['Department Summary — Listed Faculty Counts', '------------------------------------------'];
-      i++;
-      while (i < lines.length && !lines[i].trim().startsWith('physical department') && !lines[i].trim().startsWith('# Kongu')) {
-        if (lines[i].trim()) sumLines.push(lines[i].trim());
+      if (i < lines.length && lines[i].trim().startsWith('Department summary')) {
+        const sumLines: string[] = ['Department Summary — Listed Faculty Counts', '------------------------------------------'];
+        const startLine = i + 1;
         i++;
-      }
-      const content = sumLines.join('\n');
-      addChunk({
-        documentTitle: docTitle,
-        mainHeading: 'Faculty Directory',
-        subHeading: 'Department Faculty Summary',
-        headingPath: ['Faculty Directory', 'Summary Counts'],
-        departmentId: 'general',
-        category: 'faculty_summary',
-        sectionTitle: 'Faculty Directory — Department-wise Faculty Summary',
-        content,
-        urls: extractUrls(content),
-        lineNumber: startLine,
-      });
-      continue;
-    }
-
-    // 6. PHYSICAL EDUCATION & SPORTS (Lines 519–1398)
-    if (line.startsWith('physical department:') || line.startsWith('A1. DEPARTMENT OVERVIEW') || line.startsWith('A2. STAFF AND CONTACTS')) {
-      const startLine = i + 1;
-      let sportsSec = line;
-      const sportsLines: string[] = [line];
-      i++;
-      while (i < lines.length && !lines[i].trim().startsWith('# Kongu Engineering College') && !lines[i].trim().startsWith('Placement Information :')) {
-        const cur = lines[i].trim();
-        if (cur.match(/^[A-Z0-9]{1,3}\.\s+[A-Z\s/&()-]{3,50}/)) {
-          // Flush current sports section
-          if (sportsLines.length > 0) {
-            const content = sportsLines.join('\n').trim();
-            if (content.length > 50) {
-              addChunk({
-                documentTitle: docTitle,
-                mainHeading: 'Physical Education & Sports',
-                subHeading: sportsSec,
-                headingPath: ['Physical Education', sportsSec],
-                departmentId: 'general',
-                category: 'sports',
-                sectionTitle: `Physical Education — ${sportsSec}`,
-                content,
-                urls: extractUrls(content),
-                lineNumber: startLine,
-              });
-            }
-          }
-          sportsSec = cur;
-          sportsLines.length = 0;
-          sportsLines.push(cur);
+        while (
+          i < lines.length &&
+          !lines[i].trim().startsWith('SECTION 4:') &&
+          !lines[i].trim().startsWith('## 3.1') &&
+          !lines[i].trim().startsWith('physical department')
+        ) {
+          if (lines[i].trim()) sumLines.push(lines[i].trim());
           i++;
-          continue;
         }
-        if (cur) sportsLines.push(cur);
+        const content = sumLines.join('\n');
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Faculty Directory',
+          subHeading: 'Department Faculty Summary',
+          headingPath: ['Faculty Directory', 'Summary Counts'],
+          departmentId: 'general',
+          category: 'faculty_summary',
+          sectionTitle: 'Faculty Directory — Department-wise Faculty Summary',
+          content,
+          urls: extractUrls(content),
+          lineNumber: startLine,
+        });
+      }
+
+      if (i < lines.length && lines[i].trim().startsWith('## 3.1')) {
+        const faqLines: string[] = [];
+        const startLine = i + 1;
         i++;
-      }
-      if (sportsLines.length > 0) {
-        const content = sportsLines.join('\n').trim();
-        if (content.length > 50) {
-          addChunk({
-            documentTitle: docTitle,
-            mainHeading: 'Physical Education & Sports',
-            subHeading: sportsSec,
-            headingPath: ['Physical Education', sportsSec],
-            departmentId: 'general',
-            category: 'sports',
-            sectionTitle: `Physical Education — ${sportsSec}`,
-            content,
-            urls: extractUrls(content),
-            lineNumber: startLine,
-          });
-        }
-      }
-      continue;
-    }
-
-    // 7. STRUCTURED KNOWLEDGE BASE (17 SECTIONS) (Lines 1399–2070)
-    if (line.startsWith('# Kongu Engineering College (KEC) — Structured Knowledge Base') || line.match(/^[0-9]{1,2}\.\s+[A-Z\s,/&()-]{3,60}$/)) {
-      const startLine = i + 1;
-      let secTitle = line.replace(/^#\s*/, '').trim();
-      const secLines: string[] = [secTitle];
-      i++;
-      while (i < lines.length && !lines[i].trim().startsWith('Placement Information :') && !lines[i].trim().startsWith('## 1.')) {
-        const cur = lines[i].trim();
-        if (cur.match(/^[0-9]{1,2}\.\s+[A-Z\s,/&()-]{3,60}$/)) {
-          // Flush section
-          const content = secLines.join('\n').trim();
-          if (content.length > 50) {
-            let cat = 'overview';
-            if (secTitle.includes('PROGRAMMES') || secTitle.includes('intake')) cat = 'intake';
-            else if (secTitle.includes('ADMISSION') || secTitle.includes('COUNSELLING')) cat = 'admission';
-            else if (secTitle.includes('CUT-OFF') || secTitle.includes('RANKS')) cat = 'cutoff';
-            else if (secTitle.includes('FEES') || secTitle.includes('SCHOLARSHIPS')) cat = 'fees';
-            else if (secTitle.includes('PLACEMENTS')) cat = 'placement_general';
-            else if (secTitle.includes('WORKING HOURS')) cat = 'working_hours';
-
-            addChunk({
-              documentTitle: docTitle,
-              mainHeading: 'Institutional Knowledge Base',
-              subHeading: secTitle,
-              headingPath: ['Structured Knowledge Base', secTitle],
-              departmentId: 'general',
-              category: cat,
-              sectionTitle: `KEC Knowledge — ${secTitle}`,
-              content,
-              urls: extractUrls(content),
-              lineNumber: startLine,
-            });
-          }
-          secTitle = cur;
-          secLines.length = 0;
-          secLines.push(cur);
+        while (
+          i < lines.length &&
+          !lines[i].trim().startsWith('SECTION 4:') &&
+          !lines[i].trim().startsWith('physical department')
+        ) {
+          if (lines[i].trim() && !lines[i].trim().startsWith('=')) faqLines.push(lines[i].trim());
           i++;
-          continue;
         }
-        if (cur) secLines.push(cur);
-        i++;
-      }
-      if (secLines.length > 0) {
-        const content = secLines.join('\n').trim();
-        if (content.length > 50) {
-          addChunk({
-            documentTitle: docTitle,
-            mainHeading: 'Institutional Knowledge Base',
-            subHeading: secTitle,
-            headingPath: ['Structured Knowledge Base', secTitle],
-            departmentId: 'general',
-            category: 'overview',
-            sectionTitle: `KEC Knowledge — ${secTitle}`,
-            content,
-            urls: extractUrls(content),
-            lineNumber: startLine,
-          });
-        }
+        const content = faqLines.join('\n');
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Faculty Directory',
+          subHeading: 'Faculty Directory FAQs',
+          headingPath: ['Faculty Directory', 'FAQs'],
+          departmentId: 'general',
+          category: 'faculty',
+          sectionTitle: 'Faculty Directory — Frequently Asked Questions',
+          content,
+          urls: extractUrls(content),
+          lineNumber: startLine,
+        });
       }
       continue;
     }
 
-    // 8. PLACEMENT INFORMATION (SECTIONS 1 TO 13) (Lines 2071–2311)
-    if (line.startsWith('Placement Information :') || line.startsWith('## ')) {
-      if (line.startsWith('Placement Information :')) i++;
-
-      while (i < lines.length) {
+    // 4. PLACEMENT INFORMATION (STATISTICS, SALARIES, TRAINING & RECRUITERS)
+    if (
+      line.startsWith('SECTION 4:') ||
+      line.startsWith('Placement Information :') ||
+      (line.startsWith('## ') && line.includes('Placement'))
+    ) {
+      const startLine = i + 1;
+      i++;
+      while (
+        i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 5:') &&
+        !lines[i].trim().startsWith('physical department:')
+      ) {
         const curLine = lines[i].trim();
         if (curLine.startsWith('## ')) {
           const subHeading = curLine.replace(/^##\s+/, '').trim();
           const startSubLine = i + 1;
           const pLines: string[] = [subHeading];
           i++;
-
-          while (i < lines.length && !lines[i].trim().startsWith('## ')) {
+          while (
+            i < lines.length &&
+            !lines[i].trim().startsWith('## ') &&
+            !lines[i].trim().startsWith('SECTION 5:') &&
+            !lines[i].trim().startsWith('physical department:')
+          ) {
             const row = lines[i].trim();
-            if (row) pLines.push(row);
+            if (row && !row.startsWith('=')) pLines.push(row);
             i++;
           }
-
           const fullSectionText = pLines.join('\n');
 
           // If this is Section 6 (Department Salary Information), break it down per department!
@@ -596,7 +568,6 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
               });
             }
           } else {
-            // General placement section or CSE/IT specific
             let deptId = 'general';
             if (subHeading.includes('Computer Science and Information Technology')) {
               deptId = 'cse';
@@ -621,7 +592,275 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
         }
         i++;
       }
-      break;
+      continue;
+    }
+
+    // 5. PHYSICAL EDUCATION & SPORTS
+    if (
+      line.startsWith('SECTION 5:') ||
+      line.startsWith('physical department:') ||
+      line.startsWith('A1. DEPARTMENT OVERVIEW')
+    ) {
+      const startLine = i + 1;
+      let sportsSec = line.startsWith('SECTION 5:') ? 'Physical Education Overview' : line;
+      const sportsLines: string[] = [sportsSec];
+      i++;
+      while (
+        i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 6:') &&
+        !lines[i].trim().startsWith('# Kongu Engineering College (KEC) — Structured Knowledge Base')
+      ) {
+        const cur = lines[i].trim();
+        if (cur.match(/^[A-Z0-9]{1,3}\.\s+[A-Z\s/&()-]{3,50}/) || cur.startsWith('## 5.')) {
+          if (sportsLines.length > 0) {
+            const content = sportsLines.join('\n').trim();
+            if (content.length > 50) {
+              addChunk({
+                documentTitle: docTitle,
+                mainHeading: 'Physical Education & Sports',
+                subHeading: sportsSec,
+                headingPath: ['Physical Education', sportsSec],
+                departmentId: 'general',
+                category: 'sports',
+                sectionTitle: `Physical Education — ${sportsSec}`,
+                content,
+                urls: extractUrls(content),
+                lineNumber: startLine,
+              });
+            }
+          }
+          sportsSec = cur;
+          sportsLines.length = 0;
+          sportsLines.push(cur);
+          i++;
+          continue;
+        }
+        if (cur && !cur.startsWith('=')) sportsLines.push(cur);
+        i++;
+      }
+      if (sportsLines.length > 0) {
+        const content = sportsLines.join('\n').trim();
+        if (content.length > 50) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Physical Education & Sports',
+            subHeading: sportsSec,
+            headingPath: ['Physical Education', sportsSec],
+            departmentId: 'general',
+            category: 'sports',
+            sectionTitle: `Physical Education — ${sportsSec}`,
+            content,
+            urls: extractUrls(content),
+            lineNumber: startLine,
+          });
+        }
+      }
+      continue;
+    }
+
+    // 6. INSTITUTIONAL KNOWLEDGE BASE (17 STRUCTURED TOPICS)
+    if (
+      line.startsWith('SECTION 6:') ||
+      line.startsWith('# Kongu Engineering College (KEC) — Structured Knowledge Base')
+    ) {
+      const startLine = i + 1;
+      let secTitle = line.startsWith('SECTION 6:') ? 'Institutional Overview' : line.replace(/^#\s*/, '').trim();
+      const secLines: string[] = [secTitle];
+      i++;
+      while (
+        i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 7:') &&
+        !lines[i].trim().startsWith('transport:')
+      ) {
+        const cur = lines[i].trim();
+        if (cur.match(/^[0-9]{1,2}\.\s+[A-Z\s,/&()-]{3,60}$/)) {
+          const content = secLines.join('\n').trim();
+          if (content.length > 50) {
+            let cat = 'overview';
+            if (secTitle.includes('PROGRAMMES') || secTitle.includes('INTAKE')) cat = 'intake';
+            else if (secTitle.includes('ADMISSION') || secTitle.includes('COUNSELLING')) cat = 'admission';
+            else if (secTitle.includes('CUT-OFF') || secTitle.includes('RANKS')) cat = 'cutoff';
+            else if (secTitle.includes('FEES') || secTitle.includes('SCHOLARSHIPS')) cat = 'fees';
+            else if (secTitle.includes('PLACEMENTS')) cat = 'placement_general';
+            else if (secTitle.includes('WORKING HOURS')) cat = 'working_hours';
+
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Institutional Knowledge Base',
+              subHeading: secTitle,
+              headingPath: ['Structured Knowledge Base', secTitle],
+              departmentId: 'general',
+              category: cat,
+              sectionTitle: `KEC Knowledge — ${secTitle}`,
+              content,
+              urls: extractUrls(content),
+              lineNumber: startLine,
+            });
+          }
+          secTitle = cur;
+          secLines.length = 0;
+          secLines.push(cur);
+          i++;
+          continue;
+        }
+        if (cur && !cur.startsWith('=')) secLines.push(cur);
+        i++;
+      }
+      if (secLines.length > 0) {
+        const content = secLines.join('\n').trim();
+        if (content.length > 50) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Institutional Knowledge Base',
+            subHeading: secTitle,
+            headingPath: ['Structured Knowledge Base', secTitle],
+            departmentId: 'general',
+            category: 'overview',
+            sectionTitle: `KEC Knowledge — ${secTitle}`,
+            content,
+            urls: extractUrls(content),
+            lineNumber: startLine,
+          });
+        }
+      }
+      continue;
+    }
+
+    // 7. TRANSPORT NETWORK, BUS ROUTES & TIMINGS
+    if (line.startsWith('SECTION 7:') || line.startsWith('transport:')) {
+      const startLine = i + 1;
+      const transLines: string[] = [];
+      i++;
+      while (
+        i < lines.length &&
+        !lines[i].trim().startsWith('SECTION 8:') &&
+        !lines[i].trim().startsWith('Kongu Engineering College (KEC) is a leading autonomous')
+      ) {
+        const cur = lines[i].trim();
+        if (cur.startsWith('## 7.1')) {
+          if (transLines.length > 0) {
+            const content = transLines.join('\n').trim();
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Transport Network & Bus Services',
+              subHeading: 'Transport Fleet, Routes & Bus Timings',
+              headingPath: ['Transport', 'Bus Fleet & Timings'],
+              departmentId: 'general',
+              category: 'transport',
+              sectionTitle: 'Transport — Fleet, Bus Timings, Routes & Fares',
+              content,
+              urls: extractUrls(content),
+              lineNumber: startLine,
+            });
+            transLines.length = 0;
+          }
+        }
+        if (cur && !cur.startsWith('=')) transLines.push(cur);
+        i++;
+      }
+      if (transLines.length > 0) {
+        const content = transLines.join('\n').trim();
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Transport Network & Bus Services',
+          subHeading: 'Transport FAQs & Regulations',
+          headingPath: ['Transport', 'Transport FAQs'],
+          departmentId: 'general',
+          category: 'transport',
+          sectionTitle: 'Transport — Frequently Asked Questions & Vehicle Regulations',
+          content,
+          urls: extractUrls(content),
+          lineNumber: startLine,
+        });
+      }
+      continue;
+    }
+
+    // 8. ACADEMIC PROGRAMMES, AUTONOMOUS REGULATIONS, ADMISSIONS, SCHOLARSHIPS & COLLEGE WORKING HOURS
+    if (
+      line.startsWith('SECTION 8:') ||
+      line.startsWith('Kongu Engineering College (KEC) is a leading autonomous')
+    ) {
+      const startLine = i + 1;
+      const acadLines: string[] = [];
+      i++;
+      while (i < lines.length) {
+        const cur = lines[i].trim();
+        if (cur.startsWith('## 8.1 Frequently Asked Questions')) {
+          if (acadLines.length > 0) {
+            const fullText = acadLines.join('\n').trim();
+
+            // Extract working hours & timings into dedicated high-priority chunk
+            const timingsMatch = fullText.match(/⏰ College Timings[\s\S]*?(?=📞 General Enquiries|$)/);
+            if (timingsMatch) {
+              addChunk({
+                documentTitle: docTitle,
+                mainHeading: 'Campus Operations & Working Hours',
+                subHeading: 'College Working Hours, Class & Library Timings',
+                headingPath: ['Campus Life', 'Working Hours'],
+                departmentId: 'general',
+                category: 'working_hours',
+                sectionTitle: 'College Timings — Class Hours, Office Hours & Library Timings',
+                content: timingsMatch[0],
+                urls: extractUrls(timingsMatch[0]),
+                lineNumber: startLine,
+              });
+            }
+
+            // Extract scholarships into dedicated chunk
+            const schMatch = fullText.match(/🎓 Financial Aid & Fee Concessions[\s\S]*?(?=\*Courses and Departments|$)/);
+            if (schMatch) {
+              addChunk({
+                documentTitle: docTitle,
+                mainHeading: 'Financial Aid & Fee Concessions',
+                subHeading: '7.5% Govt School Waiver, First Graduate & Merit Scholarships',
+                headingPath: ['Admissions', 'Scholarships'],
+                departmentId: 'general',
+                category: 'scholarship',
+                sectionTitle: 'Scholarships & Fee Concessions — 7.5% Govt Quota & First Graduate',
+                content: schMatch[0],
+                urls: extractUrls(schMatch[0]),
+                lineNumber: startLine,
+              });
+            }
+
+            // Academic Programmes & Regulations
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Academic Programmes & Regulations',
+              subHeading: 'Academic Tracks, Autonomous Curriculum & Admissions',
+              headingPath: ['Academics', 'Programmes & Regulations'],
+              departmentId: 'general',
+              category: 'academics',
+              sectionTitle: 'Academics — Programmes, Autonomous Curriculum & Syllabus',
+              content: fullText,
+              urls: extractUrls(fullText),
+              lineNumber: startLine,
+            });
+
+            acadLines.length = 0;
+          }
+        }
+        if (cur && !cur.startsWith('=')) acadLines.push(cur);
+        i++;
+      }
+
+      if (acadLines.length > 0) {
+        const content = acadLines.join('\n').trim();
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Academic Programmes & Regulations',
+          subHeading: 'Academics, Timings & Scholarships FAQs',
+          headingPath: ['Academics', 'FAQs'],
+          departmentId: 'general',
+          category: 'academics',
+          sectionTitle: 'Academics — Frequently Asked Questions & Answers',
+          content,
+          urls: extractUrls(content),
+          lineNumber: startLine,
+        });
+      }
+      continue;
     }
 
     i++;
@@ -738,6 +977,35 @@ const SYNONYM_MAP: Record<string, string[]> = {
   food: ['food technology', 'food tech', 'food'],
   mba: ['mba', 'master of business administration', 'management'],
   mca: ['mca', 'master of computer applications'],
+  bus: ['bus', 'buses', 'transport', 'transportation', 'route', 'routes', 'shuttle', 'departure', 'timings', 'van', 'sakthivel'],
+  buses: ['bus', 'buses', 'transport', 'transportation', 'route', 'routes', 'shuttle', 'departure', 'timings', 'van'],
+  transport: ['transport', 'bus', 'buses', 'routes', 'shuttle', 'transportation', 'sakthivel', 'timings', 'fares'],
+  route: ['route', 'routes', 'bus', 'buses', 'destination', 'transport', 'stops'],
+  routes: ['route', 'routes', 'bus', 'buses', 'destination', 'transport', 'stops'],
+  shuttle: ['shuttle', 'shuttles', 'bus', 'perundurai bus stand', 'mini bus'],
+  timing: ['timing', 'timings', 'hours', 'working hours', 'schedule', 'college hours', 'class timing', 'office hours', 'time'],
+  timings: ['timing', 'timings', 'hours', 'working hours', 'schedule', 'college hours', 'class timing', 'office hours', 'time'],
+  time: ['timing', 'timings', 'hours', 'working hours', 'schedule', 'college time', 'class timing'],
+  hours: ['hours', 'working hours', 'timing', 'timings', 'schedule', 'office hours', 'library hours'],
+  scholarship: ['scholarship', 'scholarships', 'concession', 'waiver', 'fee waiver', '7.5%', 'first graduate', 'first-generation', 'merit', 'financial aid'],
+  scholarships: ['scholarship', 'scholarships', 'concession', 'waiver', 'fee waiver', '7.5%', 'first graduate', 'first-generation', 'merit', 'financial aid'],
+  concession: ['concession', 'scholarship', 'fee waiver', 'waiver', 'first graduate', 'concessions'],
+  concessions: ['concession', 'scholarship', 'fee waiver', 'waiver', 'first graduate', 'concessions'],
+  waiver: ['waiver', 'fee waiver', 'scholarship', '7.5%', 'concession'],
+  // Common conversational spelling mistakes & typos
+  hostal: ['hostel', 'hostels', 'mess'],
+  hosetl: ['hostel', 'hostels', 'mess'],
+  placment: ['placement', 'placements', 'salary', 'package'],
+  placemnt: ['placement', 'placements', 'salary', 'package'],
+  counceling: ['counselling', 'counseling', 'tnea', 'admission'],
+  counselor: ['counselling', 'counseling', 'admission'],
+  addmission: ['admission', 'admissions', 'counselling'],
+  admissoin: ['admission', 'admissions', 'counselling'],
+  faculti: ['faculty', 'staff', 'professor'],
+  faculties: ['faculty', 'staff', 'professors'],
+  profesor: ['professor', 'faculty', 'staff'],
+  colg: ['college', 'kec', 'campus'],
+  clg: ['college', 'kec', 'campus'],
 };
 
 /**
@@ -833,7 +1101,7 @@ export function getCandidatePassages(query: string, maxCandidates = 20): Knowled
       score += 200; // Strong boost for target department
     }
     if (targetCategory && chunk.category === targetCategory) {
-      score += 100; // Strong boost for target category
+      score += 150; // Strong boost for target category
     }
 
     return { chunk, score, matchedCount: matchedConcepts.size };
@@ -853,13 +1121,15 @@ const SPECIFIC_DOMAIN_KEYWORDS = new Set([
   'cutoff', 'cutoffs', 'cut-off', 'cut-offs',
   'hostel', 'hostels', 'warden', 'wardens',
   'fees', 'fee', 'mess', 'counselling', 'counseling',
-  'admission', 'admissions', 'lateral', 'scholarship',
+  'admission', 'admissions', 'lateral', 'scholarship', 'scholarships', 'concession', 'waiver',
   'principal', 'placement', 'placements', 'highest package',
   'autonomous', 'ranking', 'sports', 'gym', 'ground', 'stadium',
   'dheeran', 'valluvar', 'kaveri', 'amaravathi', 'bhavani', 'kamban', 'ilango', 'ponnar', 'sankar',
   'salary', 'salaries', 'package', 'packages', 'lpa', 'placed',
   'faculty', 'staff', 'professor', 'hod',
-  'mechanical', 'mechatronics', 'automobile', 'civil', 'chemical', 'cse', 'it', 'eee', 'ece', 'eie', 'mba', 'mca', 'food', 'aiml', 'aids', 'csd'
+  'mechanical', 'mechatronics', 'automobile', 'civil', 'chemical', 'cse', 'it', 'eee', 'ece', 'eie', 'mba', 'mca', 'food', 'aiml', 'aids', 'csd',
+  'bus', 'buses', 'transport', 'route', 'routes', 'shuttle', 'sakthivel',
+  'timing', 'timings', 'hours', 'working', 'office', 'library', 'tnea', 'tancet'
 ]);
 
 export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeChunk[]): boolean {

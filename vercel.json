@@ -15,7 +15,7 @@
   ],
   "functions": {
     "api/index.ts": {
-      "includeFiles": "college-info.txt",
+      "includeFiles": "college-info*.txt",
       "maxDuration": 30
     }
   }

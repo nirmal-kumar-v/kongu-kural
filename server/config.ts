@@ -72,22 +72,27 @@ export function resolveCollegeInfoPath(): string {
   }
 
   // 2. Candidate paths across local dev & Vercel serverless lambda containers
-  const candidates = [
-    path.resolve(process.cwd(), 'college-info.txt'),
-    path.resolve(process.cwd(), '..', 'college-info.txt'),
-    path.resolve(__dirname, 'college-info.txt'),
-    path.resolve(__dirname, '..', 'college-info.txt'),
-    path.resolve(__dirname, '..', '..', 'college-info.txt'),
+  // Check for college-info-2.txt first, then fallback to college-info.txt
+  const fileNames = ['college-info-2.txt', 'college-info.txt'];
+  const baseDirs = [
+    process.cwd(),
+    path.resolve(process.cwd(), '..'),
+    __dirname,
+    path.resolve(__dirname, '..'),
+    path.resolve(__dirname, '..', '..'),
   ];
 
-  for (const candidate of candidates) {
-    if (fs.existsSync(candidate)) {
-      return candidate;
+  for (const fileName of fileNames) {
+    for (const baseDir of baseDirs) {
+      const candidate = path.resolve(baseDir, fileName);
+      if (fs.existsSync(candidate)) {
+        return candidate;
+      }
     }
   }
 
   // Fallback to project root
-  return path.resolve(process.cwd(), 'college-info.txt');
+  return path.resolve(process.cwd(), 'college-info-2.txt');
 }
 
 export const config = {
