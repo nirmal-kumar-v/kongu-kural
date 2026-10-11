@@ -196,6 +196,7 @@ export const App: React.FC = () => {
         sources: data.sources || [],
         detectedLanguage: data.detectedLanguage,
         isWebFallback: data.isWebFallback,
+        attachment: data.attachment,
       };
 
       setConversations((prev) =>

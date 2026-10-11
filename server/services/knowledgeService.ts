@@ -267,6 +267,13 @@ export function resolveCategoryFromQuery(query: string): string | null {
   ) {
     return 'academics';
   }
+  if (
+    /\b(wifi|wi-fi|wireless|kongu_wifi|netid|firewall|mac address|internet|lan|hotspot|வைபை|இணையம்)\b/i.test(
+      q
+    )
+  ) {
+    return 'wifi';
+  }
   return null;
 }
 
@@ -981,6 +988,19 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
             urls: extractUrls(content),
             lineNumber: startL,
           });
+        } else if (heading.includes('8.5')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Campus Wi-Fi Network & Registration',
+            subHeading: 'Kongu_Wifi Registration Form, Technical Specs & Connection Procedure',
+            headingPath: ['Campus Facilities', 'Computing & IT', 'Campus Wi-Fi', 'Kongu_Wifi'],
+            departmentId: 'general',
+            category: 'wifi',
+            sectionTitle: 'Campus Wi-Fi Registration — Form, Kongu_Wifi SSID & Connection Guide',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
         }
       };
 
@@ -1098,6 +1118,11 @@ const SYNONYM_MAP: Record<string, string[]> = {
   salaries: ['salary', 'salaries', 'package', 'packages', 'lpa', 'ctc', 'placement', 'placements'],
   package: ['package', 'packages', 'salary', 'salaries', 'lpa', 'ctc', 'placement', 'placements'],
   packages: ['package', 'packages', 'salary', 'salaries', 'lpa', 'ctc', 'placement', 'placements'],
+  wifi: ['wifi', 'wi-fi', 'wireless', 'kongu_wifi', 'netid', 'firewall', 'mac address', 'internet', 'registration form'],
+  'wi-fi': ['wifi', 'wi-fi', 'wireless', 'kongu_wifi', 'netid', 'firewall', 'mac address', 'internet', 'registration form'],
+  wireless: ['wifi', 'wi-fi', 'wireless', 'kongu_wifi'],
+  kongu_wifi: ['wifi', 'wi-fi', 'wireless', 'kongu_wifi', 'netid', 'firewall'],
+  netid: ['netid', 'firewall', 'wifi', 'wi-fi', 'kongu_wifi'],
   lpa: ['lpa', 'salary', 'package', 'placement'],
   faculty: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'assistant professor', 'associate professor', 'hod'],
   staff: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'teaching faculty'],
@@ -1307,7 +1332,8 @@ export const KEY_CAMPUS_TERMS = [
   'concession', 'autonomous', 'curriculum', 'syllabus',
   'semester', 'semesters', 'course', 'courses', 'subject',
   'ragging', 'dresscode', 'helmet', 'mobile', 'discipline',
-  'governance', 'trust', 'trustee', 'council', 'academic'
+  'governance', 'trust', 'trustee', 'council', 'academic',
+  'wifi', 'wireless', 'kongu_wifi', 'netid', 'firewall'
 ];
 
 export function levenshteinDistance(a: string, b: string): number {
@@ -1393,7 +1419,12 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     'dr. g. murugesan',
     'murugesan',
     'dr. s. varadhaganapathy',
-    'varadhaganapathy'
+    'varadhaganapathy',
+    'kongu_wifi',
+    'wi-fi',
+    'wifi registration',
+    'registration form',
+    'mac address'
   ];
 
   for (const cp of COMMON_PHRASES) {
@@ -1495,6 +1526,13 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     expanded.add('council');
     if (!category) category = 'governance';
   }
+  if (lower.includes('வைபை') || lower.includes('வை-பை') || lower.includes('வை ஃபை')) {
+    detectedPhrases.push('wifi');
+    expanded.add('wifi');
+    expanded.add('wireless');
+    expanded.add('kongu_wifi');
+    if (!category) category = 'wifi';
+  }
 
   // Conversational Tanglish bridge
   if (lower.includes('padippanga') || lower.includes('padika') || lower.includes('padikkanum') || lower.includes('padippaanga')) {
@@ -1571,6 +1609,15 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     } else if (category === 'placement') {
       expanded.add('placement');
       expanded.add('salary');
+    } else if (category === 'wifi') {
+      expanded.add('wifi');
+      expanded.add('wi-fi');
+      expanded.add('wireless');
+      expanded.add('kongu_wifi');
+      expanded.add('registration');
+      expanded.add('form');
+      expanded.add('netid');
+      expanded.add('firewall');
     }
   }
 
@@ -1727,7 +1774,8 @@ const SPECIFIC_DOMAIN_KEYWORDS = new Set([
   'curriculum', 'syllabus', 'course', 'courses', 'subject', 'subjects', 'semester', 'sem', 'regulation', 'r2024',
   'cloud', 'computing', 'deep', 'learning', 'programming', 'devops', 'cryptography',
   'ragging', 'dress', 'dresscode', 'helmet', 'mobile', 'attendance', 'discipline', 'penalty', 'fine',
-  'governing', 'council', 'academic', 'trust', 'patron', 'devarajan', 'sathiyamurthi', 'parameshwaran'
+  'governing', 'council', 'academic', 'trust', 'patron', 'devarajan', 'sathiyamurthi', 'parameshwaran',
+  'wifi', 'wi-fi', 'kongu_wifi', 'wireless', 'netid', 'firewall'
 ]);
 
 export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeChunk[]): boolean {
@@ -1739,7 +1787,8 @@ export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeC
   for (const phrase of [
     'cloud computing', 'deep learning', 'data structures', 'dress code', 'act no.7', 'act no 7',
     'governing council', 'academic council', 'working hours', 'library hours', 'computer centre',
-    'kongu fm', 'first graduate', '7.5%', 'parameshwaran', 'devarajan', 'sathiyamurthi', 'murugan'
+    'kongu fm', 'first graduate', '7.5%', 'parameshwaran', 'devarajan', 'sathiyamurthi', 'murugan',
+    'kongu_wifi', 'wi-fi', 'wifi'
   ]) {
     if (clean.includes(phrase)) {
       for (const chunk of candidates.slice(0, 8)) {

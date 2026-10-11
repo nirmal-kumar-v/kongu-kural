@@ -27,12 +27,108 @@ export interface SourceCitation {
   snippet?: string;
 }
 
+export interface DownloadableAttachment {
+  type: 'form' | 'document' | 'pdf';
+  title: string;
+  fileName: string;
+  downloadUrl: string;
+  fileSize?: string;
+  description?: string;
+  buttonLabel?: string;
+}
+
+export const WIFI_REGISTRATION_ATTACHMENT: DownloadableAttachment = {
+  type: 'form',
+  title: 'KEC Wi-Fi Registration Form',
+  fileName: 'KEC_WiFi_Registration_Form.pdf',
+  downloadUrl: '/kec-wifi-registration-form.pdf',
+  fileSize: '142 KB',
+  description: 'Official registration form for connecting laptops and desktops to Kongu_Wifi.',
+  buttonLabel: 'Download Wi-Fi Registration Form',
+};
+
+export function shouldAttachWifiForm(
+  query: string,
+  history: Array<{ role: 'user' | 'assistant'; content: string }> = [],
+  answer: string = ''
+): boolean {
+  const q = query.toLowerCase().trim();
+  const a = answer.toLowerCase().trim();
+
+  // Guard: if answer is unrelated guard message, never attach
+  if (a.includes('ask anything related to kec') || a.includes('unrelated')) {
+    return false;
+  }
+
+  // 1. Direct Wi-Fi queries & conversational variations / typos
+  // Handles "wifi", "wi-fi", "wfi", "wifii", "vai fai", "wai fai", "kongu_wifi", "wireless", "netid", "firewall"
+  const wifiEnglishRegex =
+    /\b(wifi|wi-fi|wfi|wifii|вайфай|kongu_wifi|wireless|netid|firewall)\b|vai\s*fai|wai\s*fai/i;
+  const isTamilWifi =
+    q.includes('வைபை') ||
+    q.includes('வை-பை') ||
+    q.includes('வை ஃபை') ||
+    q.includes('வை பை') ||
+    q.includes('இணைய வசதி') ||
+    q.includes('வைஃபை');
+
+  if (wifiEnglishRegex.test(q) || isTamilWifi) {
+    return true;
+  }
+
+  // 2. First-year / Fresher onboarding questions:
+  // "what to do after joining kec", "what should i do after joining", "first year joining formalities",
+  // "what forms do i need to submit", "forms needed after joining", "how to get campus wifi after joining"
+  const isFresherTamil =
+    q.includes('சேர்ந்தவுடன்') ||
+    q.includes('முதலாம் ஆண்டு') ||
+    q.includes('சேர்ந்த பிறகு');
+
+  const isFresherQuery =
+    isFresherTamil ||
+    /\b(first\s*year|1st\s*year|fresher|freshers|new\s*student|new\s*students|joining|joined|join\s*pann)\b/i.test(
+      q
+    );
+
+  if (isFresherQuery) {
+    const isFormOrWifiWord =
+      q.includes('படிவம்') ||
+      q.includes('பார்ம்') ||
+      q.includes('என்ன செய்ய வேண்டும்') ||
+      /\b(form|forms|wifi|laptop|internet|procedure|formalities|documents?|do|steps?)\b/i.test(
+        q
+      ) ||
+      a.includes('wifi') ||
+      a.includes('wi-fi') ||
+      a.includes('kongu_wifi');
+
+    if (isFormOrWifiWord) {
+      return true;
+    }
+  }
+
+  // 3. If answer directly discusses the Wi-Fi registration form or Kongu_Wifi registration
+  if (
+    (a.includes('wi-fi registration form') ||
+      a.includes('wifi registration form') ||
+      a.includes('kongu_wifi registration') ||
+      a.includes('wi-fi registration') ||
+      a.includes('wifi registration')) &&
+    !a.includes('could not be verified')
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
 export interface ChatResponse {
   answer: string;
   provider: string;
   sources: SourceCitation[];
   detectedLanguage: string;
   isWebFallback: boolean;
+  attachment?: DownloadableAttachment;
   metadata: {
     knowledgeFileTimestamp: number;
     evidenceChunksCount: number;
@@ -296,12 +392,17 @@ export async function processChatQuery(
     }
   }
 
+  const attachment = shouldAttachWifiForm(cleanQuery, history, finalAnswer)
+    ? WIFI_REGISTRATION_ATTACHMENT
+    : undefined;
+
   return {
     answer: finalAnswer,
     provider: providerUsed,
     sources: citations,
     detectedLanguage: langRes.detectedLanguage,
     isWebFallback,
+    attachment,
     metadata: {
       knowledgeFileTimestamp: knowledge.lastModified,
       evidenceChunksCount: semanticResult.selectedChunks.length,

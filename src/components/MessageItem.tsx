@@ -16,6 +16,8 @@ import {
   ThumbsUp,
   ThumbsDown,
   AlertCircle,
+  Download,
+  FileDown,
 } from 'lucide-react';
 import { ChatMessage } from '../types';
 
@@ -154,6 +156,59 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, onRetry }) =>
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {message.content}
                 </ReactMarkdown>
+              </div>
+            )}
+
+            {/* Downloadable Attachment Card (e.g. Official Wi-Fi Registration Form) */}
+            {message.attachment && (
+              <div
+                className="mt-4 p-4 rounded-xl border transition-all duration-200"
+                style={{
+                  backgroundColor: 'var(--bg-subtle)',
+                  borderColor: 'var(--border-subtle)',
+                }}
+              >
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5 border border-blue-500/20">
+                      <FileDown className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-semibold text-sm text-stone-900 dark:text-stone-100">
+                          {message.attachment.title}
+                        </span>
+                        <span className="text-[10px] font-medium uppercase px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
+                          Official Form
+                        </span>
+                      </div>
+                      <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">
+                        {message.attachment.description || 'Download the official registration document.'}
+                      </p>
+                      <div className="flex items-center gap-2 mt-1.5 text-[11px] text-stone-400 dark:text-stone-500">
+                        <span>PDF Document</span>
+                        {message.attachment.fileSize && (
+                          <>
+                            <span>•</span>
+                            <span>{message.attachment.fileSize}</span>
+                          </>
+                        )}
+                        <span>•</span>
+                        <span>SSID: Kongu_Wifi</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    href={message.attachment.downloadUrl}
+                    download={message.attachment.fileName}
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-xs transition-colors shrink-0 w-full sm:w-auto text-center"
+                    title={`Download ${message.attachment.fileName}`}
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>{message.attachment.buttonLabel || 'Download Wi-Fi Registration Form'}</span>
+                  </a>
+                </div>
               </div>
             )}
 

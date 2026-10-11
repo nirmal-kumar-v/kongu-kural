@@ -4053,3 +4053,66 @@ Note: Course codes and precise titles may vary slightly depending on minor updat
 
 8. Mobile Phone Ban Policy
 • Mobile phones are banned inside campus and buses.
+
+## 8.5 Campus Wi-Fi Network Registration (SSID: Kongu_Wifi) & Computing Facilities
+
+Title: Official Wi-Fi Registration Form & Campus Wireless Access Procedures
+Institution: Kongu Engineering College (Autonomous), Perundurai - 638 060
+Department: Department of Computer Science and Engineering / Campus-Wide Computing Facilities
+Network SSID: Kongu_Wifi
+Firewall Authentication: Netid
+
+1. Overview and Purpose:
+Kongu Engineering College provides secure campus-wide wireless internet access under the SSID "Kongu_Wifi". Wireless access is provided strictly for academic work, research, and learning purposes. Students (including first-year / fresher students joining KEC and senior students) and faculty members who wish to connect their personal laptops or desktops to the campus network must register their devices using the official Wi-Fi Registration Form.
+
+2. Official Wi-Fi Registration Form Structure:
+The official KEC Wi-Fi Registration Form is divided into two primary parts:
+Part I. General Information:
+• Faculty / Roll Number
+• Student Name
+• Sex: Male / Female
+• Course & Branch (e.g., B.E. CSE, B.Tech IT, Mech, etc.)
+• Course Duration: From (Year) To (Year)
+• Hostel / Room No. (for hostellers)
+• Official e-mail ID
+
+Part II. Technical Information:
+• Type of Device: Desktop / Laptop
+• Device Make, Model & Serial Number
+• Wireless Device MAC Address: 6-octet physical hexadecimal hardware address (Example: 01 23 89 AB CD EF)
+• Operating System installed and Version (Example: Windows, Mac, and Linux)
+• Antivirus Product: Specify the active antivirus product installed on the device
+
+3. Student Declaration & Terms of Access:
+Students must sign the declaration stating:
+"I hereby declare that the above information given by me is true and correct. I understand that the Wireless access is provided to me for my academic work only. I also agree that I will not share this account with any person and will take due care in protecting it."
+
+4. Required Signatures and Verification:
+To complete registration, the form must be signed by:
+• Student Signature with Date
+• Deputy Warden (for Hostellers) OR Class Advisor (for Day Scholars only)
+• Head of the Department (HOD)
+
+5. Network Login Credentials & Firewall Authentication:
+• Username and Password are the same as used for Firewall Authentication (Netid) and Kongu_Wifi.
+• Step-by-step connection tutorials and configuration guides are available at: https://kongu.edu/wifi/index.html
+
+6. First-Year Students (Freshers) Onboarding & Campus Wi-Fi Guidance:
+• When joining KEC, first-year students need to complete basic campus onboarding and registration procedures.
+• To access internet on laptops/desktops for academic and lab coursework, first-year students must download and submit the official KEC Wi-Fi Registration Form.
+• Students fill in their Roll Number, hostel room (if hosteller), laptop model, MAC address, OS, and antivirus details.
+• Day scholars obtain approval from their Class Advisor, while hostellers obtain signature from their Deputy Warden, followed by the HOD's approval.
+• After submission to the computing centre / network administration office, the student's device MAC address and Netid are registered for Kongu_Wifi access.
+
+Frequently Asked Questions:
+Q: How do I get campus Wi-Fi at KEC?
+A: Download the official KEC Wi-Fi Registration Form, fill in your roll number, device type (laptop/desktop), MAC address, OS, and antivirus details, get signature from your Class Advisor (for day scholars) or Deputy Warden (for hostellers) along with your HOD, and submit it. Your Netid and firewall credentials will grant access to SSID "Kongu_Wifi".
+
+Q: Where can I download the KEC Wi-Fi registration form?
+A: The official KEC Wi-Fi Registration Form PDF is available for direct download via the "Download Wi-Fi Registration Form" button in Kongu Kural or from the campus computing portal.
+
+Q: What is the campus Wi-Fi network SSID?
+A: The campus wireless network SSID is "Kongu_Wifi".
+
+Q: What are the credentials for logging into Kongu_Wifi?
+A: The username and password are the same as your Firewall Authentication (Netid). Tutorials are accessible at https://kongu.edu/wifi/index.html.

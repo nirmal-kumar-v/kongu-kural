@@ -6,6 +6,16 @@ export interface SourceCitation {
   snippet?: string;
 }
 
+export interface DownloadableAttachment {
+  type: 'form' | 'document' | 'pdf';
+  title: string;
+  fileName: string;
+  downloadUrl: string;
+  fileSize?: string;
+  description?: string;
+  buttonLabel?: string;
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'assistant';
@@ -16,6 +26,7 @@ export interface ChatMessage {
   detectedLanguage?: string;
   isWebFallback?: boolean;
   error?: boolean;
+  attachment?: DownloadableAttachment;
 }
 
 export interface Conversation {
