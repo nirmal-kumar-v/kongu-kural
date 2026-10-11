@@ -4,6 +4,7 @@ import { KnowledgeChunk } from './knowledgeService.js';
 
 export interface SemanticAnalysisResult {
   detectedLanguage: string;
+  targetLanguage?: string;
   intent: string;
   selectedChunks: KnowledgeChunk[];
   foundInFile: boolean;
@@ -267,12 +268,14 @@ CORE ANSWERING RULES (STRICT):
        : '- When answering from the official college records, provide the data directly. NEVER tell the user to visit the official website or check links. Only provide a URL if explicitly requested.'
    }
 
-4. MULTILINGUAL FIDELITY:
-   - Answer in the EXACT SAME LANGUAGE as the user's query (${detectedLanguage}):
-     * Tamil query -> Fluent, accurate Tamil (தமிழ்).
-     * Tanglish query -> Natural, easy-to-read Tanglish.
-     * English query -> Clean, professional, direct English.
-     * Hindi query -> Natural Hindi.
+4. MULTILINGUAL FIDELITY & LANGUAGE RULES (STRICT):
+   - Target Response Language: ${detectedLanguage}
+   - STRICT LANGUAGE INSTRUCTIONS:
+     * English question -> understand and answer in English.
+     * Tamil question (in Tamil script) -> understand it, retrieve the most relevant information from the English knowledge files, and answer in fluent, accurate Tamil (தமிழ்).
+     * Tanglish question (Tamil written using English letters, e.g., "hostel fees evalo", "bus timings enna", "it hod yaaru") -> understand the Tamil meaning correctly and ANSWER IN ENGLISH.
+     * If the user explicitly requests an answer in Tamil or English (e.g., "answer in tamil", "தமிழ்ல சொல்லு", "in english"), that language preference MUST override the detected question language.
+     * Preserve the original meaning, factual accuracy, numbers, timings, contacts, and useful details when formulating or translating answers.
 
 5. FACTUAL ACCURACY & UNVERIFIED INFORMATION:
    ${

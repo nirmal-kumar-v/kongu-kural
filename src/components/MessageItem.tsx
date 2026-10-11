@@ -27,7 +27,7 @@ interface MessageItemProps {
 export const MessageItem: React.FC<MessageItemProps> = ({ message, onRetry }) => {
   const [copied, setCopied] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [sourcesOpen, setSourcesOpen] = useState(true);
+  const [sourcesOpen, setSourcesOpen] = useState(false);
   const [liked, setLiked] = useState<boolean | null>(null);
 
   const isUser = message.role === 'user';

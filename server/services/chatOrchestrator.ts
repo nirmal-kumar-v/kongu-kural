@@ -1,9 +1,12 @@
+import path from 'path';
+import { config } from '../config.js';
 import {
   getKnowledge,
   getCandidatePassages,
   hasStrongKnowledgeCoverage,
   isMissingFromKnowledgeBase,
   resolveDepartmentFromQuery,
+  understandAndNormalizeQuery,
   KnowledgeChunk,
 } from './knowledgeService.js';
 import {
@@ -14,6 +17,7 @@ import {
 } from './groqService.js';
 import { generateAnswerWithGemini } from './geminiService.js';
 import { searchWeb, WebSearchResult } from './webSearchService.js';
+import { resolveQueryLanguage } from './languageService.js';
 
 export interface SourceCitation {
   type: 'file' | 'web';
@@ -45,13 +49,20 @@ export async function processChatQuery(
     throw new Error('Question cannot be empty');
   }
 
-  // 1. Ensure latest knowledge from college-info.txt is loaded
+  // 1. Resolve language early (Tamil / English / Tanglish / Explicit preference)
+  const initialLangRes = resolveQueryLanguage(cleanQuery);
+
+  // 2. Understand and normalize the intended question before searching the knowledge base
+  // (maps typos, phonetic Tamil, Tanglish terms, and identifies target department & category)
+  const normalizedContext = understandAndNormalizeQuery(cleanQuery);
+
+  // 3. Ensure latest knowledge from college-info-2.txt / college-info.txt is loaded
   const knowledge = getKnowledge();
 
-  // 2. Retrieve candidate passages from file using smart scoring
-  const candidatePassages = getCandidatePassages(cleanQuery, 20);
+  // 4. Retrieve candidate passages from file using smart scoring with normalized context
+  const candidatePassages = getCandidatePassages(cleanQuery, 20, normalizedContext);
 
-  // 3. Use Groq to understand the question, detect language, and select relevant evidence
+  // 5. Use Groq to understand the question, detect language, and select relevant evidence
   let semanticResult: SemanticAnalysisResult;
   try {
     semanticResult = await analyzeQueryAndSelectEvidence(cleanQuery, history, candidatePassages);
@@ -60,7 +71,7 @@ export async function processChatQuery(
     const hasCoverage = candidatePassages.length > 0 && hasStrongKnowledgeCoverage(cleanQuery, candidatePassages);
     semanticResult = {
       isKecRelated: !isExplicitlyUnrelatedQuery(cleanQuery, history),
-      detectedLanguage: 'English',
+      detectedLanguage: initialLangRes.detectedLanguage === 'Tamil' ? 'Tamil' : 'English',
       intent: cleanQuery,
       selectedChunks: hasCoverage ? candidatePassages.slice(0, 4) : [],
       foundInFile: hasCoverage,
@@ -68,7 +79,15 @@ export async function processChatQuery(
     };
   }
 
-  // 4. INTELLIGENT KEC-RELATED QUESTION GUARD:
+  // Resolve final effective language and target response language:
+  // - English question -> understand and answer in English.
+  // - Tamil question -> understand and answer in Tamil.
+  // - Tanglish question -> understand correctly and answer in English.
+  // - Explicit user language request overrides detected language.
+  const langRes = resolveQueryLanguage(cleanQuery, semanticResult.detectedLanguage);
+  const targetResponseLanguage = langRes.targetLanguage;
+
+  // 6. INTELLIGENT KEC-RELATED QUESTION GUARD:
   // For clearly unrelated questions, reply with EXACTLY: "Ask anything related to KEC."
   // Do not add apologies, explanations, alternative answers, or extra sentences.
   if (!semanticResult.isKecRelated) {
@@ -77,7 +96,7 @@ export async function processChatQuery(
       answer: 'Ask anything related to KEC.',
       provider: 'Kongu Kural Guard',
       sources: [],
-      detectedLanguage: semanticResult.detectedLanguage,
+      detectedLanguage: langRes.detectedLanguage,
       isWebFallback: false,
       metadata: {
         knowledgeFileTimestamp: knowledge.lastModified,
@@ -87,13 +106,13 @@ export async function processChatQuery(
     };
   }
 
-  // 5. STAGE 1 PREPARATION: Check college-info.txt first!
-  // If strong knowledge coverage exists in the file, prioritize college-info.txt
+  // 7. STAGE 1 PREPARATION: Check college knowledge base first!
+  // If strong knowledge coverage exists in the file, prioritize college-info over web search
   if (
     (!semanticResult.foundInFile || semanticResult.selectedChunks.length === 0) &&
     hasStrongKnowledgeCoverage(cleanQuery, candidatePassages)
   ) {
-    console.log('[Orchestrator] Direct college-info.txt match confirmed. Prioritizing college-info.txt over web search.');
+    console.log('[Orchestrator] Direct college knowledge match confirmed. Prioritizing file over web search.');
     semanticResult.foundInFile = true;
     semanticResult.selectedChunks = candidatePassages.slice(0, 4);
   }
@@ -132,13 +151,14 @@ export async function processChatQuery(
   const shouldAttemptStage1 = semanticResult.foundInFile && semanticResult.selectedChunks.length > 0;
 
   if (shouldAttemptStage1) {
-    console.log(`[Orchestrator] Stage 1: Searching college-info.txt (${semanticResult.selectedChunks.length} chunks)...`);
+    const sourceFileName = path.basename(config.collegeInfoPath);
+    console.log(`[Orchestrator] Stage 1: Searching ${sourceFileName} (${semanticResult.selectedChunks.length} chunks)...`);
     try {
       const geminiRes = await generateAnswerWithGemini(
         cleanQuery,
         semanticResult.selectedChunks,
         null,
-        semanticResult.detectedLanguage,
+        targetResponseLanguage,
         history
       );
       finalAnswer = geminiRes.text;
@@ -150,7 +170,7 @@ export async function processChatQuery(
           cleanQuery,
           semanticResult.selectedChunks,
           null,
-          semanticResult.detectedLanguage,
+          targetResponseLanguage,
           history
         );
         finalAnswer = groqRes.text;
@@ -169,7 +189,7 @@ export async function processChatQuery(
       );
       finalAnswer = ''; // Reset so Stage 2 executes
     } else if (finalAnswer) {
-      // Stage 1 successfully answered using reliable evidence from college-info.txt!
+      // Stage 1 successfully answered using reliable evidence from knowledge base!
       isWebFallback = false;
       const seenSections = new Set<string>();
       for (const chunk of semanticResult.selectedChunks) {
@@ -177,7 +197,7 @@ export async function processChatQuery(
           seenSections.add(chunk.sectionTitle);
           citations.push({
             type: 'file',
-            title: `college-info.txt → ${chunk.sectionTitle}`,
+            title: `${sourceFileName} → ${chunk.sectionTitle}`,
             section: chunk.sectionTitle,
             snippet: chunk.content.slice(0, 160) + (chunk.content.length > 160 ? '...' : ''),
           });
@@ -219,7 +239,7 @@ export async function processChatQuery(
         cleanQuery,
         [],
         webResults,
-        semanticResult.detectedLanguage,
+        targetResponseLanguage,
         history
       );
       finalAnswer = geminiRes.text;
@@ -231,7 +251,7 @@ export async function processChatQuery(
           cleanQuery,
           [],
           webText,
-          semanticResult.detectedLanguage,
+          targetResponseLanguage,
           history
         );
         finalAnswer = groqRes.text;
@@ -280,7 +300,7 @@ export async function processChatQuery(
     answer: finalAnswer,
     provider: providerUsed,
     sources: citations,
-    detectedLanguage: semanticResult.detectedLanguage,
+    detectedLanguage: langRes.detectedLanguage,
     isWebFallback,
     metadata: {
       knowledgeFileTimestamp: knowledge.lastModified,

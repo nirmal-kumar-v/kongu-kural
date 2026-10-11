@@ -15,13 +15,13 @@ export const VERIFIED_DEPARTMENTS: DepartmentDef[] = [
     id: 'it',
     name: 'Information Technology',
     shortName: 'IT',
-    regex: /\b(information\s+technology|\bit\b)\b/i,
+    regex: /\b(information\s+technology|\bit\b|infomation\s+technology)\b/i,
   },
   {
     id: 'eie',
     name: 'Electronics and Instrumentation Engineering',
     shortName: 'EIE',
-    regex: /\b(electronics\s+(and|&)\s+instrumentation|\beie\b|instrumentation\s+engineering)\b/i,
+    regex: /\b(electronics\s+(and|&)\s+instrumentation|\beie\b|instrumentation\s+engineering|instrumentaion|instumentation)\b/i,
   },
   {
     id: 'ece',
@@ -69,13 +69,13 @@ export const VERIFIED_DEPARTMENTS: DepartmentDef[] = [
     id: 'mech',
     name: 'Mechanical Engineering',
     shortName: 'Mechanical',
-    regex: /\b(mechanical\s+engineering|mechanical|\bmech\b)\b/i,
+    regex: /\b(mechanical\s+engineering|mechanical|\bmech\b|machanical|mechanocal|mecanical)\b/i,
   },
   {
     id: 'auto',
     name: 'Automobile Engineering',
     shortName: 'Automobile',
-    regex: /\b(automobile\s+engineering|automobile|\bauto\b)\b/i,
+    regex: /\b(automobile\s+engineering|automobile|\bauto\b|automoblie|autombile|automoble)\b/i,
   },
   {
     id: 'civil',
@@ -87,7 +87,7 @@ export const VERIFIED_DEPARTMENTS: DepartmentDef[] = [
     id: 'chemical',
     name: 'Chemical Engineering',
     shortName: 'Chemical',
-    regex: /\b(chemical\s+engineering|chemical|\bchem\b)\b/i,
+    regex: /\b(chemical\s+engineering|chemical|\bchem\b|chemcial)\b/i,
   },
   {
     id: 'food',
@@ -172,62 +172,71 @@ export function resolveDepartmentFromQuery(query: string): DepartmentDef | null 
 export function resolveCategoryFromQuery(query: string): string | null {
   const q = query.toLowerCase();
   if (
-    /\b(bus|buses|transport|transportation|route|routes|shuttle|shuttles|vehicle|two-wheelers?|helmets?|parking|bus fee|van|sakthivel)\b/i.test(
+    /\b(bus|buses|transport|transportation|route|routes|shuttle|shuttles|vehicle|two-wheelers?|helmets?|parking|bus fee|van|sakthivel|பேருந்து|பஸ்|வழித்தடம்|perunthu|tranport|transpot)\b/i.test(
       q
     )
   ) {
     return 'transport';
   }
   if (
-    /\b(working hours|college timing|college timings|class timing|class timings|class hours|office hours|library hours|college time|schedule|operating hours)\b/i.test(
+    /\b(working hours|college timing|college timings|class timing|class timings|class hours|office hours|library hours|college time|schedule|operating hours|வேலை நேரம்|கல்லூரி நேரம்|neram|timimg|timimgs)\b/i.test(
       q
     )
   ) {
     return 'working_hours';
   }
   if (
-    /\b(scholarship|scholarships|concession|concessions|fee waiver|waiver|financial aid|7\.5%|first graduate|first generation)\b/i.test(
+    /\b(scholarship|scholarships|concession|concessions|fee waiver|waiver|financial aid|7\.5%|first graduate|first generation|உதவித்தொகை|முதல் பட்டதாரி|அரசு பள்ளி|uthavithogai|mudhal pattadhari|scolarship|scholorship)\b/i.test(
       q
     )
   ) {
     return 'scholarship';
   }
   if (
-    /\b(staff|faculty|teacher|teachers|professor|professors|assistant professor|associate professor|hod|head of department|who teaches|members|directory)\b/i.test(
+    /\b(staff|faculty|faculties|faculity|faculti|teacher|teachers|professor|professors|profesor|assistant professor|associate professor|hod|head of department|who teaches|members|directory|ஆசிரியர்கள்|பேராசிரியர்|துறைத்தலைவர்|துறை தலைவர்|yaaru|yaru)\b/i.test(
       q
     )
   ) {
     return 'faculty';
   }
   if (
-    /\b(placement|placements|salary|salaries|package|packages|lpa|ctc|placed|recruit|recruiter|highest offer|highest salary|average salary)\b/i.test(
+    /\b(placement|placements|salary|salaries|package|packages|lpa|ctc|placed|recruit|recruiter|highest offer|highest salary|average salary|வேலைவாய்ப்பு|சம்பளம்|sambalam|velai|placment|placemnt)\b/i.test(
       q
     )
   ) {
     return 'placement';
   }
-  if (/\b(cutoff|cut-off|cutoffs|cut-offs|marks)\b/i.test(q)) {
+  if (/\b(cutoff|cut-off|cutoffs|cut-offs|marks|கட் ஆஃப்|மதிப்பெண்)\b/i.test(q)) {
     return 'cutoff';
   }
-  if (/\b(rank|ranks|ranking|closing rank)\b/i.test(q)) {
+  if (/\b(rank|ranks|ranking|closing rank|தரவரிசை)\b/i.test(q)) {
     return 'rank';
   }
-  if (/\b(intake|seats|seat|how many seats|capacity)\b/i.test(q)) {
+  if (/\b(intake|seats|seat|how many seats|capacity|இடங்கள்)\b/i.test(q)) {
     return 'intake';
   }
-  if (/\b(hostel|hostels|hostal|mess|food|room|rooms|warden|wardens)\b/i.test(q)) {
+  if (/\b(hostel|hostels|hostal|hosetl|mess|food|room|rooms|warden|wardens|விடுதி|காப்பாளர்|viduthi|thangum)\b/i.test(q)) {
     return 'hostel';
   }
-  if (/\b(fee|fees|cost|tuition fee|hostel fee)\b/i.test(q)) {
+  if (/\b(fee|fees|cost|tuition fee|hostel fee|கட்டணம்|kattanam|evalo|evvalo|evvalavu)\b/i.test(q)) {
     return 'fees';
   }
-  if (/\b(admission|admissions|counselling|counseling|tnea|eligibility|lateral|quota)\b/i.test(q)) {
+  if (/\b(admission|admissions|counselling|counseling|counceling|tnea|eligibility|lateral|quota|சேர்க்கை|serkkai|admision|addmission)\b/i.test(
+    q
+  )
+  ) {
     return 'admission';
   }
-  if (/\b(sport|sports|gym|ground|stadium|physical education|badminton|football|cricket)\b/i.test(q)) {
+  if (/\b(sport|sports|gym|ground|stadium|physical education|badminton|football|cricket|விளையாட்டு|திடல்|vilayattu)\b/i.test(
+    q
+  )
+  ) {
     return 'sports';
   }
-  if (/\b(course|courses|programme|programmes|degree|curriculum|syllabus|autonomous|regulation)\b/i.test(q)) {
+  if (/\b(course|courses|programme|programmes|degree|curriculum|syllabus|autonomous|regulation|பாடம்|பாடத்திட்டம்)\b/i.test(
+    q
+  )
+  ) {
     return 'academics';
   }
   return null;
@@ -992,21 +1001,235 @@ const SYNONYM_MAP: Record<string, string[]> = {
   concession: ['concession', 'scholarship', 'fee waiver', 'waiver', 'first graduate', 'concessions'],
   concessions: ['concession', 'scholarship', 'fee waiver', 'waiver', 'first graduate', 'concessions'],
   waiver: ['waiver', 'fee waiver', 'scholarship', '7.5%', 'concession'],
+  // Tamil Script Mappings to English knowledge concepts
+  'விடுதி': ['hostel', 'hostels', 'mess', 'accommodation'],
+  'கட்டணம்': ['fee', 'fees', 'cost'],
+  'பேருந்து': ['bus', 'buses', 'transport', 'timings'],
+  'பஸ்': ['bus', 'buses', 'transport', 'timings'],
+  'நேரம்': ['timing', 'timings', 'hours', 'working hours'],
+  'உதவித்தொகை': ['scholarship', 'scholarships', 'concession', 'waiver', '7.5%'],
+  'முதல் பட்டதாரி': ['first graduate', 'first-generation', 'concession', '25000'],
+  'அரசு பள்ளி': ['7.5%', 'government school', 'waiver'],
+  'துறைத்தலைவர்': ['hod', 'head of department', 'faculty'],
+  'பேராசிரியர்': ['professor', 'faculty', 'staff'],
+  'வேலைவாய்ப்பு': ['placement', 'placements', 'salary', 'package', 'recruiter'],
+  'சம்பளம்': ['salary', 'salaries', 'lpa', 'package', 'placement'],
+  'சேர்க்கை': ['admission', 'admissions', 'counselling', 'tnea'],
+  'மதிப்பெண்': ['cutoff', 'cut-off', 'marks'],
+  'தரவரிசை': ['rank', 'ranks', 'closing rank'],
+  'நூலகம்': ['library', 'library hours'],
+  'விளையாட்டு': ['sports', 'gym', 'ground', 'stadium'],
+  // Tanglish Mappings (Tamil written in English letters)
+  viduthi: ['hostel', 'hostels', 'mess', 'accommodation'],
+  kattanam: ['fee', 'fees', 'cost'],
+  perunthu: ['bus', 'buses', 'transport', 'timings'],
+  neram: ['timing', 'timings', 'hours', 'working hours'],
+  uthavithogai: ['scholarship', 'scholarships', 'concession', 'waiver'],
+  evalo: ['fees', 'fee', 'cost'],
+  evvalo: ['fees', 'fee', 'cost'],
+  evvalavu: ['fees', 'fee', 'cost'],
+  yevalo: ['fees', 'fee', 'cost'],
+  yaaru: ['hod', 'faculty', 'professor', 'principal', 'warden'],
+  yaru: ['hod', 'faculty', 'professor', 'principal', 'warden'],
+  sambalam: ['salary', 'salaries', 'lpa', 'package', 'placement'],
+  velai: ['placement', 'placements', 'career'],
+  noolagam: ['library', 'library hours'],
+  vilayattu: ['sports', 'gym', 'ground'],
+  mudhal: ['first graduate', 'first-generation'],
+  thangum: ['hostel', 'accommodation'],
+  saapadu: ['mess', 'food'],
   // Common conversational spelling mistakes & typos
   hostal: ['hostel', 'hostels', 'mess'],
   hosetl: ['hostel', 'hostels', 'mess'],
+  hostle: ['hostel', 'hostels', 'mess'],
   placment: ['placement', 'placements', 'salary', 'package'],
   placemnt: ['placement', 'placements', 'salary', 'package'],
+  plassment: ['placement', 'placements', 'salary', 'package'],
   counceling: ['counselling', 'counseling', 'tnea', 'admission'],
+  councelling: ['counselling', 'counseling', 'tnea', 'admission'],
   counselor: ['counselling', 'counseling', 'admission'],
   addmission: ['admission', 'admissions', 'counselling'],
   admissoin: ['admission', 'admissions', 'counselling'],
+  admision: ['admission', 'admissions', 'counselling'],
   faculti: ['faculty', 'staff', 'professor'],
+  faculity: ['faculty', 'staff', 'professor'],
   faculties: ['faculty', 'staff', 'professors'],
   profesor: ['professor', 'faculty', 'staff'],
+  principle: ['principal'],
+  princpal: ['principal'],
+  prinicipal: ['principal'],
+  wardon: ['warden', 'wardens'],
+  wareden: ['warden', 'wardens'],
+  scolarship: ['scholarship', 'scholarships'],
+  scholorship: ['scholarship', 'scholarships'],
+  sholarship: ['scholarship', 'scholarships'],
+  tranport: ['transport', 'bus', 'buses'],
+  transpot: ['transport', 'bus', 'buses'],
+  trasport: ['transport', 'bus', 'buses'],
+  timimg: ['timing', 'timings', 'hours'],
+  timimgs: ['timing', 'timings', 'hours'],
+  timeing: ['timing', 'timings', 'hours'],
+  libary: ['library', 'library hours'],
+  libarary: ['library', 'library hours'],
+  automoblie: ['automobile', 'auto'],
+  autombile: ['automobile', 'auto'],
+  automoble: ['automobile', 'auto'],
+  machanical: ['mechanical', 'mech'],
+  mechanocal: ['mechanical', 'mech'],
+  mecanical: ['mechanical', 'mech'],
+  instrumentaion: ['instrumentation', 'eie'],
+  instumentation: ['instrumentation', 'eie'],
   colg: ['college', 'kec', 'campus'],
   clg: ['college', 'kec', 'campus'],
 };
+
+export const KEY_CAMPUS_TERMS = [
+  'automobile', 'mechanical', 'mechatronics', 'instrumentation',
+  'electronics', 'communication', 'electrical', 'computer',
+  'faculty', 'faculties', 'professor', 'professors',
+  'principal', 'admission', 'counselling', 'scholarship',
+  'placement', 'placements', 'hostel', 'hostels', 'warden',
+  'library', 'timing', 'timings', 'transport', 'shuttle',
+  'cutoff', 'cutoffs', 'salary', 'salaries', 'package',
+  'concession', 'autonomous', 'curriculum', 'syllabus'
+];
+
+export function levenshteinDistance(a: string, b: string): number {
+  const m = a.length;
+  const n = b.length;
+  const dp: number[][] = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (a[i - 1] === b[j - 1]) {
+        dp[i][j] = dp[i - 1][j - 1];
+      } else {
+        dp[i][j] = 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+      }
+    }
+  }
+  return dp[m][n];
+}
+
+export interface NormalizedQueryContext {
+  cleanQuery: string;
+  department: DepartmentDef | null;
+  category: string | null;
+  expandedTerms: string[];
+  intendedSummary: string;
+}
+
+/**
+ * Understands the user's intended question before searching the knowledge base:
+ * - Detects department even with severe typos or colloquial names.
+ * - Detects category (transport, timings, scholarship, faculty, placement, etc.).
+ * - Maps Tamil, Tanglish, and misspelled tokens to core English search concepts.
+ * - Applies Levenshtein fuzzy correction against key campus terms.
+ */
+export function understandAndNormalizeQuery(query: string): NormalizedQueryContext {
+  const clean = query.trim();
+  const lower = clean.toLowerCase();
+
+  let dept = resolveDepartmentFromQuery(query);
+  let category = resolveCategoryFromQuery(query);
+
+  const tokens = lower
+    .replace(/[^\w\s\u0B80-\u0BFF-]/g, ' ')
+    .split(/\s+/)
+    .map((t) => t.trim())
+    .filter((t) => t.length > 1 && !STOP_WORDS.has(t));
+
+  const expanded = new Set<string>();
+
+  for (const token of tokens) {
+    expanded.add(token);
+    if (token.includes('-')) {
+      expanded.add(token.replace(/-/g, ''));
+      expanded.add(token.replace(/-/g, ' '));
+    }
+
+    const syns = SYNONYM_MAP[token] || SYNONYM_MAP[token.replace(/-/g, '')];
+    if (syns) {
+      for (const s of syns) expanded.add(s);
+    }
+
+    // Fuzzy matching against key campus terms for tokens with length >= 5
+    if (token.length >= 5) {
+      for (const term of KEY_CAMPUS_TERMS) {
+        if (levenshteinDistance(token, term) <= 2) {
+          expanded.add(term);
+          const termSyns = SYNONYM_MAP[term];
+          if (termSyns) {
+            for (const s of termSyns) expanded.add(s);
+          }
+        }
+      }
+    }
+  }
+
+  // If department or category wasn't resolved directly, try from expanded terms
+  if (!dept) {
+    for (const exp of expanded) {
+      dept = resolveDepartmentFromQuery(exp);
+      if (dept) break;
+    }
+  }
+  if (!category) {
+    for (const exp of expanded) {
+      category = resolveCategoryFromQuery(exp);
+      if (category) break;
+    }
+  }
+
+  if (dept) {
+    expanded.add(dept.name.toLowerCase());
+    expanded.add(dept.shortName.toLowerCase());
+    expanded.add(dept.id);
+  }
+
+  if (category) {
+    expanded.add(category);
+    if (category === 'transport') {
+      expanded.add('bus');
+      expanded.add('timing');
+      expanded.add('timings');
+      expanded.add('route');
+    } else if (category === 'working_hours') {
+      expanded.add('hours');
+      expanded.add('working');
+      expanded.add('timings');
+      expanded.add('timing');
+    } else if (category === 'scholarship') {
+      expanded.add('scholarship');
+      expanded.add('concession');
+      expanded.add('waiver');
+    } else if (category === 'hostel') {
+      expanded.add('hostel');
+      expanded.add('mess');
+    } else if (category === 'placement') {
+      expanded.add('placement');
+      expanded.add('salary');
+    }
+  }
+
+  const intendedSummary = [
+    dept ? `Dept: ${dept.name}` : null,
+    category ? `Category: ${category}` : null,
+    `Terms: ${Array.from(expanded).slice(0, 8).join(', ')}`,
+  ]
+    .filter(Boolean)
+    .join(' | ');
+
+  return {
+    cleanQuery: clean,
+    department: dept,
+    category,
+    expandedTerms: Array.from(expanded),
+    intendedSummary,
+  };
+}
 
 /**
  * Strict Department-First Retrieval:
@@ -1014,12 +1237,18 @@ const SYNONYM_MAP: Record<string, string[]> = {
  * 2. Never retrieves or mixes other departments' faculty or records
  * 3. Preserves table structure and heading hierarchy in returned evidence
  */
-export function getCandidatePassages(query: string, maxCandidates = 20): KnowledgeChunk[] {
+export function getCandidatePassages(
+  query: string,
+  maxCandidates = 20,
+  preNormalizedContext?: NormalizedQueryContext
+): KnowledgeChunk[] {
   const knowledge = getKnowledge();
   if (knowledge.isEmpty) return [];
 
-  const targetDept = resolveDepartmentFromQuery(query);
-  const targetCategory = resolveCategoryFromQuery(query);
+  // Understand and normalize the intended question before searching
+  const norm = preNormalizedContext || understandAndNormalizeQuery(query);
+  const targetDept = norm.department;
+  const targetCategory = norm.category;
 
   // CASE 1: DEPARTMENT-SCOPED QUERY (e.g. IT faculty, EIE staff, Mechanical placement)
   if (targetDept && (targetCategory === 'faculty' || targetCategory === 'placement' || targetCategory === 'intake' || targetCategory === 'hod')) {
@@ -1046,25 +1275,7 @@ export function getCandidatePassages(query: string, maxCandidates = 20): Knowled
   }
 
   // CASE 2: GENERAL OR OPEN-ENDED QUERY
-  const cleanQuery = query.toLowerCase();
-  const tokens = cleanQuery
-    .replace(/[^\w\s\u0B80-\u0BFF-]/g, ' ')
-    .split(/\s+/)
-    .map((t) => t.trim())
-    .filter((t) => t.length > 1 && !STOP_WORDS.has(t));
-
-  const searchTerms = new Set<string>();
-  for (const token of tokens) {
-    searchTerms.add(token);
-    if (token.includes('-')) {
-      searchTerms.add(token.replace(/-/g, ''));
-      searchTerms.add(token.replace(/-/g, ' '));
-    }
-    const mapped = SYNONYM_MAP[token] || SYNONYM_MAP[token.replace(/-/g, '')];
-    if (mapped) {
-      for (const m of mapped) searchTerms.add(m);
-    }
-  }
+  const searchTerms = new Set<string>(norm.expandedTerms);
 
   // Score candidate pool
   const candidatePool = targetDept
