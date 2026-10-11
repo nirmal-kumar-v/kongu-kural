@@ -228,7 +228,7 @@ export function resolveCategoryFromQuery(query: string): string | null {
     return 'faculty';
   }
   if (
-    /\b(placement|placements|salary|salaries|package|packages|lpa|ctc|placed|recruit|recruiter|highest offer|highest salary|average salary|வேலைவாய்ப்பு|சம்பளம்|sambalam|velai|placment|placemnt)\b/i.test(
+    /\b(placement|placements|salary|salaries|package|packages|lpa|ctc|placed|recruit|recruiter|highest offer|highest salary|average salary|வேலைவாய்ப்பு|சம்பளம்|sambalam|velai|placment|placemnt|1828|1529|409|soliton|rubrik|jpmorgan|deloitte|mr cooper|trimble|zoho|virtusa|genworx|jgc|rently|wabag|tosibha|spic|brakes india|delta electronics|cognizant|nbase2|valeo|schneider|bhawan|rane|workhall|ignitarium|codemagen|presidio|iam neo|yuvi|cdw|bi3|rapiddata|zenthink|pearson|winfomi|griffyn|dataspark|crescent moon|leumasware|openmynz|tessolve|likan|pentafox|securin|josh|cube ai|thiran360ai|twincord|survey sparrow|jman|appsentinels|infinox|thirvusoft|logbase|digital yugam|nutz|cartrabbit|adwik|mistral|calibraint|dextris|whiterapps|icanio|eg innovations|logicgo|adrasti|brahmarsive|endava|src projects|mavenly|ciel|mallow|coreel|platform science|kurium|conserve|careyu|robovision|hffc|system-controls|muthoot|addis|caliber|xoriant|veritas|yellowmatics|punchbiz|kasadara|bright beam|smartdv|dcw|itc food|rabbitqr|avasoft|tap academy|gecatech|crp robots|bigboon|netgear|infomin|synapse|imagitive|vintorix|mithilai|growwpark|atelier|acmegrade|data pattern|motherson|pothigai|ramalingan|promantus|slb|real tech|accenture|workline|nimir|srinsoft)\b/i.test(
       q
     )
   ) {
@@ -273,6 +273,29 @@ export function resolveCategoryFromQuery(query: string): string | null {
     )
   ) {
     return 'wifi';
+  }
+  if (
+    /\b(special event|special events|event|events|fest|fests|cultural fest|techno cultural|founders day|kongu trophy|enthusia|swaram|sports day|annual day|farewell day|krishna jayanthi|vinayakar chathurthi|milad-un-nabi|dheeran chinnamalai|gandhi jayanthi|ayutha pooja|vijaya dasami|muharram|deepavali|pongal|thiruvalluvar day|uzhavar thirunal|thaipoosam|republic day|telugu new year|ramzan|tamil new year|ambedkar|mahavir jayanthi|good friday|may day|inauguration|நிகழ்ச்சி|சிறப்பு நிகழ்ச்சி|விடுமுறை|விழா|ஹாலிடே|எப்போது நடைபெறும்|என்ன நிகழ்ச்சி)\b/i.test(
+      q
+    ) ||
+    (/\b(what event|which event|what is on|what happens on|any special event|any event|events on)\b/i.test(q) &&
+      /\b(january|february|march|april|may|june|july|august|september|october|november|december)\b/i.test(q))
+  ) {
+    return 'events';
+  }
+  if (
+    /\b(exam rule|exam rules|examination rule|examination rules|exam instruction|exam instructions|examination instructions|hall superintendent|admitted to write exam|permitted items|prohibited items|rough work|calculator|non-programmable calculator|borrowing|blue or black ink|sketch pen|data book|mathematical table|statistical table|entering examination hall|late entry|30 minutes|leaving hall|45 minutes|re-enter|identity card|id card|hall ticket|scribe|temporary illness|blind candidate|impersonation|handover to police|malpractice warning|தேர்வு விதிகள்|விதிமுறைகள்|தேர்வு அறை)\b/i.test(
+      q
+    )
+  ) {
+    return 'exam_rules';
+  }
+  if (
+    /\b(malpractice|penalty matrix|punishment|debarment|debarred|fine of rs|rs\.?\s*1000|invalidating|cancellation of exam|incriminating materials|copying|substituting answer booklet|rough work on question paper|writing name|special marking|canvassing|medical leave form|break of study|exam withdrawal|cgpa conversion|duplicate grade sheet|zero tolerance policy|controller of examination|controller of examinations|coe)\b/i.test(
+      q
+    )
+  ) {
+    return 'malpractice';
   }
   if (
     /\b(academic schedule|academic calendar|calendar|schedule|cat 1|cat 2|cat 3|cat-1|cat-2|cat-3|ca test|ca test-1|ca test-2|ca test-3|retest|re test|improvement test|last working day|project review|viva voce|project report submission|practical exam|practical exams|theory exam|theory exams|commencement of classes|reopening|even semester reopening|odd semester reopening|தேர்வு|கால அட்டவணை|நாட்காட்டி)\b/i.test(
@@ -1073,6 +1096,77 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
             urls: extractUrls(content),
             lineNumber: startL,
           });
+        } else if (heading.includes('8.11')) {
+          // Special Events, Cultural Fests & Institutional Holidays 2026-27
+          // 1. Overall Special Events & Holidays chunk
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Special Events, Cultural Fests & Institutional Holidays 2026-27',
+            subHeading: 'Chronological Calendar & Institutional Holidays (Odd & Even Semesters)',
+            headingPath: ['Campus Life', 'Events', 'Calendar 2026-27', 'Special Events'],
+            departmentId: 'general',
+            category: 'events',
+            sectionTitle: 'Special Events, Cultural Fests & Institutional Holidays 2026–27 — Master Calendar',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+
+          // 2. Dedicated Bidirectional Lookup chunk (Event Name <-> Date)
+          const bidiMatch = content.match(/### Bidirectional Lookup Directory[\s\S]*?(?=(?:## 8\.12|$))/);
+          if (bidiMatch) {
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Special Events & Holidays 2026–27',
+              subHeading: 'Bidirectional Lookup Index (When is Event / What Event is on Date)',
+              headingPath: ['Campus Life', 'Events', 'Bidirectional Lookup'],
+              departmentId: 'general',
+              category: 'events',
+              sectionTitle: 'Special Events — Bidirectional Lookup Directory (Event Name <-> Date)',
+              content: bidiMatch[0],
+              urls: extractUrls(bidiMatch[0]),
+              lineNumber: startL,
+            });
+          }
+        } else if (heading.includes('8.12')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Placement Statistics & Recruiter Offers (2025–2026 Batch)',
+            subHeading: '1828 Offers, 1529 Placed, 409 Companies & Full Company Breakdown',
+            headingPath: ['Placements', 'Batch 2025-2026', 'Recruiter Offers'],
+            departmentId: 'general',
+            category: 'placement',
+            sectionTitle: 'Placement Statistics 2025–2026 — Total Offers, Placed Students & Recruiter Offers',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.13')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'General Examination Instructions & Hall Conduct Rules',
+            subHeading: 'The 19 Mandatory Examination Instructions, Scribes & Hall Superintendent Rules',
+            headingPath: ['Academics', 'Examinations', 'Instructions', 'Rules & Conduct'],
+            departmentId: 'general',
+            category: 'exam_rules',
+            sectionTitle: 'General Examination Instructions — 19 Hall Conduct Rules, Calculators & Guidelines',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.14')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Controller of Examinations (COE) Office & Malpractice Penalties Matrix',
+            subHeading: 'COE Contacts, Portal Services & 30-Clause Malpractice Penalty Table',
+            headingPath: ['Academics', 'Examinations', 'COE Office', 'Malpractice Penalties Matrix'],
+            departmentId: 'general',
+            category: 'malpractice',
+            sectionTitle: 'Controller of Examinations — COE Office, Portal & 30-Clause Malpractice Matrix',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
         }
       };
 
@@ -1395,6 +1489,40 @@ const SYNONYM_MAP: Record<string, string[]> = {
   instumentation: ['instrumentation', 'eie'],
   colg: ['college', 'kec', 'campus'],
   clg: ['college', 'kec', 'campus'],
+  // Special Events & Cultural Fests
+  enthusia: ['enthusia', 'cultural fest', 'events', '05 march 2027', 'march 5'],
+  enthusiya: ['enthusia', 'cultural fest', 'events', '05 march 2027', 'march 5'],
+  entusia: ['enthusia', 'cultural fest', 'events', '05 march 2027', 'march 5'],
+  enthusa: ['enthusia', 'cultural fest', 'events', '05 march 2027', 'march 5'],
+  swaram: ['swaram', 'musical fest', 'events', '12 march 2027', 'march 12'],
+  swaramu: ['swaram', 'musical fest', 'events', '12 march 2027', 'march 12'],
+  swaramfest: ['swaram', 'musical fest', 'events', '12 march 2027', 'march 12'],
+  trophy: ['kongu trophy', 'sports', 'events', '19 september 2026', 'september 19'],
+  trofy: ['kongu trophy', 'sports', 'events', '19 september 2026', 'september 19'],
+  technocultural: ['techno cultural fest', 'founders day', '18 september 2026'],
+  cultural: ['cultural fest', 'enthusia', 'techno cultural', 'events'],
+  culturals: ['cultural fest', 'enthusia', 'techno cultural', 'events'],
+  farewell: ['farewell day', '19 march 2027', 'events'],
+  // Examination Rules & Conduct
+  scribe: ['scribe', 'temporary illness', 'blind candidate', 'special fee'],
+  scribes: ['scribe', 'temporary illness', 'blind candidate', 'special fee'],
+  impersonation: ['impersonation', 'police', 'handover to police', 'debarment'],
+  calculator: ['calculator', 'non-programmable calculator'],
+  calculators: ['calculator', 'non-programmable calculator'],
+  roughwork: ['rough work', 'answer book itself'],
+  superintendent: ['hall superintendent', 'chief superintendent', 'exam instructions'],
+  superintendant: ['hall superintendent', 'chief superintendent', 'exam instructions'],
+  malpractice: ['malpractice', 'penalty', 'punishment', 'debarment', 'fine'],
+  malpractices: ['malpractice', 'penalty', 'punishment', 'debarment', 'fine'],
+  debar: ['debarment', 'debarred', 'malpractice', 'punishment'],
+  debarred: ['debarment', 'debarred', 'malpractice', 'punishment'],
+  coe: ['controller of examinations', 'coe', 'coe@kongu.ac.in', '04294-226645'],
+  soliton: ['soliton technologies', 'placement', 'offers'],
+  rubrik: ['rubrik', 'placement', 'offers'],
+  jpmorgan: ['jpmorgan chase', 'placement', 'offers'],
+  deloitte: ['deloitte india', 'placement', 'offers'],
+  accenture: ['accenture', 'aase', 'ase', 'placement', 'offers'],
+  cognizant: ['cognizant', 'placement', 'offers'],
 };
 
 export const KEY_CAMPUS_TERMS = [
@@ -1409,7 +1537,9 @@ export const KEY_CAMPUS_TERMS = [
   'semester', 'semesters', 'course', 'courses', 'subject',
   'ragging', 'dresscode', 'helmet', 'mobile', 'discipline',
   'governance', 'trust', 'trustee', 'council', 'academic',
-  'wifi', 'wireless', 'kongu_wifi', 'netid', 'firewall'
+  'wifi', 'wireless', 'kongu_wifi', 'netid', 'firewall',
+  'enthusia', 'swaram', 'trophy', 'superintendent', 'malpractice',
+  'scribe', 'impersonation', 'calculator', 'penalties'
 ];
 
 export function levenshteinDistance(a: string, b: string): number {
@@ -1513,12 +1643,141 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     'academic schedule',
     'academic calendar',
     'reopening',
-    'improvement test'
+    'improvement test',
+    'enthusia',
+    'swaram',
+    'kongu trophy',
+    'techno cultural fest',
+    'founders day',
+    'sports day',
+    'annual day',
+    'farewell day',
+    'krishna jayanthi',
+    'vinayakar chathurthi',
+    'dheeran chinnamalai',
+    'milad-un-nabi',
+    'ayutha pooja',
+    'vijaya dasami',
+    'muharram',
+    'deepavali',
+    'thiruvalluvar day',
+    'uzhavar thirunal',
+    'thaipoosam',
+    'telugu new year',
+    'tamil new year',
+    'mahavir jayanthi',
+    'good friday',
+    'may day',
+    'examination instructions',
+    'examination rules',
+    'hall superintendent',
+    'non-programmable calculator',
+    'blue or black ink',
+    'rough work',
+    'impersonation',
+    'controller of examinations',
+    'malpractice offences',
+    'examination disciplinary committee',
+    'medical leave form',
+    'break of study',
+    'exam withdrawal',
+    'cgpa conversion',
+    'duplicate grade sheet',
+    'soliton technologies',
+    'deloitte india',
+    'jpmorgan chase',
+    'rubrik'
   ];
 
   for (const cp of COMMON_PHRASES) {
     if (lower.includes(cp)) {
       detectedPhrases.push(cp);
+    }
+  }
+
+  // Bidirectional Event & Date Normalization
+  // If user asks about a specific date (e.g. "what is on 19 march", "events on march 5", "sep 18", etc.)
+  const dateEventMap: Record<string, { dateFull: string; altDate: string; events: string[] }> = {
+    '18 sep': { dateFull: '18 september 2026', altDate: 'september 18', events: ['techno cultural fest', 'founders day'] },
+    '18 september': { dateFull: '18 september 2026', altDate: 'september 18', events: ['techno cultural fest', 'founders day'] },
+    'september 18': { dateFull: '18 september 2026', altDate: 'september 18', events: ['techno cultural fest', 'founders day'] },
+    '19 sep': { dateFull: '19 september 2026', altDate: 'september 19', events: ['kongu trophy'] },
+    '19 september': { dateFull: '19 september 2026', altDate: 'september 19', events: ['kongu trophy'] },
+    'september 19': { dateFull: '19 september 2026', altDate: 'september 19', events: ['kongu trophy'] },
+    '5 mar': { dateFull: '05 march 2027', altDate: 'march 5', events: ['enthusia'] },
+    '05 mar': { dateFull: '05 march 2027', altDate: 'march 5', events: ['enthusia'] },
+    '5 march': { dateFull: '05 march 2027', altDate: 'march 5', events: ['enthusia'] },
+    '05 march': { dateFull: '05 march 2027', altDate: 'march 5', events: ['enthusia'] },
+    'march 5': { dateFull: '05 march 2027', altDate: 'march 5', events: ['enthusia'] },
+    '12 mar': { dateFull: '12 march 2027', altDate: 'march 12', events: ['swaram'] },
+    '12 march': { dateFull: '12 march 2027', altDate: 'march 12', events: ['swaram'] },
+    'march 12': { dateFull: '12 march 2027', altDate: 'march 12', events: ['swaram'] },
+    '19 mar': { dateFull: '19 march 2027', altDate: 'march 19', events: ['sports day', 'annual day', 'farewell day'] },
+    '19 march': { dateFull: '19 march 2027', altDate: 'march 19', events: ['sports day', 'annual day', 'farewell day'] },
+    'march 19': { dateFull: '19 march 2027', altDate: 'march 19', events: ['sports day', 'annual day', 'farewell day'] },
+    '3 aug': { dateFull: '03 august 2026', altDate: 'august 3', events: ['krishna jayanthi'] },
+    '3 august': { dateFull: '03 august 2026', altDate: 'august 3', events: ['krishna jayanthi'] },
+    'august 3': { dateFull: '03 august 2026', altDate: 'august 3', events: ['krishna jayanthi'] },
+    '15 aug': { dateFull: '15 august 2026', altDate: 'august 15', events: ['independence day'] },
+    '15 august': { dateFull: '15 august 2026', altDate: 'august 15', events: ['independence day'] },
+    'august 15': { dateFull: '15 august 2026', altDate: 'august 15', events: ['independence day'] },
+    '26 aug': { dateFull: '26 august 2026', altDate: 'august 26', events: ['vinayakar chathurthi'] },
+    '26 august': { dateFull: '26 august 2026', altDate: 'august 26', events: ['vinayakar chathurthi'] },
+    'august 26': { dateFull: '26 august 2026', altDate: 'august 26', events: ['vinayakar chathurthi'] },
+    '4 sep': { dateFull: '04 september 2026', altDate: 'september 4', events: ['dheeran chinnamalai'] },
+    '4 september': { dateFull: '04 september 2026', altDate: 'september 4', events: ['dheeran chinnamalai'] },
+    'september 4': { dateFull: '04 september 2026', altDate: 'september 4', events: ['dheeran chinnamalai'] },
+    '14 sep': { dateFull: '14 september 2026', altDate: 'september 14', events: ['inauguration'] },
+    '14 september': { dateFull: '14 september 2026', altDate: 'september 14', events: ['inauguration'] },
+    'september 14': { dateFull: '14 september 2026', altDate: 'september 14', events: ['inauguration'] },
+    '16 sep': { dateFull: '16 september 2026', altDate: 'september 16', events: ['milad-un-nabi'] },
+    '16 september': { dateFull: '16 september 2026', altDate: 'september 16', events: ['milad-un-nabi'] },
+    'september 16': { dateFull: '16 september 2026', altDate: 'september 16', events: ['milad-un-nabi'] },
+    '19 oct': { dateFull: '19 october 2026', altDate: 'october 19', events: ['ayutha pooja'] },
+    '19 october': { dateFull: '19 october 2026', altDate: 'october 19', events: ['ayutha pooja'] },
+    'october 19': { dateFull: '19 october 2026', altDate: 'october 19', events: ['ayutha pooja'] },
+    '20 oct': { dateFull: '20 october 2026', altDate: 'october 20', events: ['vijaya dasami'] },
+    '20 october': { dateFull: '20 october 2026', altDate: 'october 20', events: ['vijaya dasami'] },
+    'october 20': { dateFull: '20 october 2026', altDate: 'october 20', events: ['vijaya dasami'] },
+    '21 oct': { dateFull: '21 october 2026', altDate: 'october 21', events: ['muharram'] },
+    '21 october': { dateFull: '21 october 2026', altDate: 'october 21', events: ['muharram'] },
+    'october 21': { dateFull: '21 october 2026', altDate: 'october 21', events: ['muharram'] },
+    '8 nov': { dateFull: '08 november 2026', altDate: 'deepavali', events: ['deepavali'] },
+    '9 nov': { dateFull: '09 november 2026', altDate: 'deepavali', events: ['deepavali'] },
+    '25 dec': { dateFull: '25 december 2026', altDate: 'december 25', events: ['christmas'] },
+    '25 december': { dateFull: '25 december 2026', altDate: 'december 25', events: ['christmas'] },
+    '1 jan': { dateFull: '01 january 2027', altDate: 'january 1', events: ['new year'] },
+    '1 january': { dateFull: '01 january 2027', altDate: 'january 1', events: ['new year'] },
+    '16 jan': { dateFull: '16 january 2027', altDate: 'january 16', events: ['thiruvalluvar day'] },
+    '16 january': { dateFull: '16 january 2027', altDate: 'january 16', events: ['thiruvalluvar day'] },
+    '17 jan': { dateFull: '17 january 2027', altDate: 'january 17', events: ['uzhavar thirunal'] },
+    '17 january': { dateFull: '17 january 2027', altDate: 'january 17', events: ['uzhavar thirunal'] },
+    '22 jan': { dateFull: '22 january 2027', altDate: 'january 22', events: ['thaipoosam'] },
+    '22 january': { dateFull: '22 january 2027', altDate: 'january 22', events: ['thaipoosam'] },
+    '26 jan': { dateFull: '26 january 2027', altDate: 'january 26', events: ['republic day'] },
+    '26 january': { dateFull: '26 january 2027', altDate: 'january 26', events: ['republic day'] },
+    '31 mar': { dateFull: '31 march 2027', altDate: 'march 31', events: ['telugu new year'] },
+    '31 march': { dateFull: '31 march 2027', altDate: 'march 31', events: ['telugu new year'] },
+    '5 apr': { dateFull: '05 april 2027', altDate: 'april 5', events: ['ramzan'] },
+    '5 april': { dateFull: '05 april 2027', altDate: 'april 5', events: ['ramzan'] },
+    '14 apr': { dateFull: '14 april 2027', altDate: 'april 14', events: ['tamil new year', 'ambedkar'] },
+    '14 april': { dateFull: '14 april 2027', altDate: 'april 14', events: ['tamil new year', 'ambedkar'] },
+    '21 apr': { dateFull: '21 april 2027', altDate: 'april 21', events: ['mahavir jayanthi'] },
+    '21 april': { dateFull: '21 april 2027', altDate: 'april 21', events: ['mahavir jayanthi'] },
+    '30 apr': { dateFull: '30 april 2027', altDate: 'april 30', events: ['good friday'] },
+    '30 april': { dateFull: '30 april 2027', altDate: 'april 30', events: ['good friday'] },
+    '1 may': { dateFull: '01 may 2027', altDate: 'may 1', events: ['may day'] },
+  };
+
+  for (const [key, val] of Object.entries(dateEventMap)) {
+    if (lower.includes(key)) {
+      detectedPhrases.push(val.dateFull);
+      detectedPhrases.push(val.altDate);
+      for (const ev of val.events) {
+        detectedPhrases.push(ev);
+      }
+      if (!category) category = 'events';
+      break;
     }
   }
 
@@ -1622,6 +1881,61 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     expanded.add('kongu_wifi');
     if (!category) category = 'wifi';
   }
+  if (lower.includes('நிகழ்ச்சி') || lower.includes('விழா') || lower.includes('நிகழ்வு')) {
+    expanded.add('event');
+    expanded.add('events');
+    expanded.add('special');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('என்சியூசியா') || lower.includes('என்ஸூசியா') || lower.includes('என்சியுசியா')) {
+    detectedPhrases.push('enthusia');
+    expanded.add('enthusia');
+    expanded.add('05 march 2027');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('சுவரம்')) {
+    detectedPhrases.push('swaram');
+    expanded.add('swaram');
+    expanded.add('12 march 2027');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('கொங்கு டிராபி')) {
+    detectedPhrases.push('kongu trophy');
+    expanded.add('kongu trophy');
+    expanded.add('19 september 2026');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('விளையாட்டு தினம்')) {
+    detectedPhrases.push('sports day');
+    expanded.add('sports day');
+    expanded.add('19 march 2027');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('ஆண்டு விழா')) {
+    detectedPhrases.push('annual day');
+    expanded.add('annual day');
+    expanded.add('19 march 2027');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('பிரியாவிடை')) {
+    detectedPhrases.push('farewell day');
+    expanded.add('farewell day');
+    expanded.add('19 march 2027');
+    if (!category) category = 'events';
+  }
+  if (lower.includes('தேர்வு விதிகள்') || lower.includes('தேர்வு விதிமுறைகள்')) {
+    detectedPhrases.push('examination instructions');
+    expanded.add('examination');
+    expanded.add('rules');
+    expanded.add('instructions');
+    if (!category) category = 'exam_rules';
+  }
+  if (lower.includes('ஆள்மாறாட்டம்')) {
+    detectedPhrases.push('impersonation');
+    expanded.add('impersonation');
+    expanded.add('police');
+    if (!category) category = 'malpractice';
+  }
 
   // Conversational Tanglish bridge
   if (lower.includes('padippanga') || lower.includes('padika') || lower.includes('padikkanum') || lower.includes('padippaanga')) {
@@ -1638,6 +1952,10 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     expanded.add('semester');
     expanded.add('curriculum');
     if (!category) category = 'curriculum';
+  }
+  if (lower.includes('eppodhu') || lower.includes('eppo')) {
+    expanded.add('when');
+    expanded.add('date');
   }
 
   // If department or category wasn't resolved directly, try from expanded terms
@@ -1698,6 +2016,8 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     } else if (category === 'placement') {
       expanded.add('placement');
       expanded.add('salary');
+      expanded.add('offers');
+      expanded.add('companies');
     } else if (category === 'wifi') {
       expanded.add('wifi');
       expanded.add('wi-fi');
@@ -1707,6 +2027,29 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
       expanded.add('form');
       expanded.add('netid');
       expanded.add('firewall');
+    } else if (category === 'events') {
+      expanded.add('event');
+      expanded.add('events');
+      expanded.add('special');
+      expanded.add('fest');
+      expanded.add('cultural');
+      expanded.add('date');
+      expanded.add('holiday');
+    } else if (category === 'exam_rules') {
+      expanded.add('examination');
+      expanded.add('exam');
+      expanded.add('rules');
+      expanded.add('instructions');
+      expanded.add('hall');
+      expanded.add('superintendent');
+      expanded.add('calculator');
+    } else if (category === 'malpractice') {
+      expanded.add('malpractice');
+      expanded.add('penalty');
+      expanded.add('punishment');
+      expanded.add('debarred');
+      expanded.add('controller');
+      expanded.add('coe');
     } else if (category === 'academic_calendar') {
       expanded.add('academic');
       expanded.add('calendar');
@@ -1873,11 +2216,56 @@ const SPECIFIC_DOMAIN_KEYWORDS = new Set([
   'ragging', 'dress', 'dresscode', 'helmet', 'mobile', 'attendance', 'discipline', 'penalty', 'fine',
   'governing', 'council', 'academic', 'trust', 'patron', 'devarajan', 'sathiyamurthi', 'parameshwaran',
   'wifi', 'wi-fi', 'kongu_wifi', 'wireless', 'netid', 'firewall',
-  'calendar', 'schedule', 'cat', 'viva', 'reopening'
+  'calendar', 'schedule', 'cat', 'viva', 'reopening',
+  'enthusia', 'swaram', 'trophy', 'founders', 'sports day', 'annual day', 'farewell',
+  'exam', 'examination', 'superintendent', 'calculator', 'scribe', 'rough', 'malpractice',
+  'soliton', 'rubrik', 'jpmorgan', 'deloitte', 'cognizant', 'accenture', 'offers', '1828', '1529', '409'
 ]);
 
-export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeChunk[]): boolean {
+export function hasStrongKnowledgeCoverage(
+  query: string,
+  candidates: KnowledgeChunk[],
+  normContext?: NormalizedQueryContext
+): boolean {
   if (!candidates || candidates.length === 0) return false;
+
+  // 0. Use Normalized Context if supplied (highest reliability across Tamil, Tanglish, & typos)
+  if (normContext) {
+    if (normContext.phrases && normContext.phrases.length > 0) {
+      for (const phrase of normContext.phrases) {
+        for (const chunk of candidates.slice(0, 8)) {
+          if (
+            chunk.content.toLowerCase().includes(phrase) ||
+            chunk.sectionTitle.toLowerCase().includes(phrase) ||
+            chunk.headingPath.join(' ').toLowerCase().includes(phrase)
+          ) {
+            return true;
+          }
+        }
+      }
+    }
+    if (
+      normContext.category === 'events' ||
+      normContext.category === 'exam_rules' ||
+      normContext.category === 'malpractice' ||
+      normContext.category === 'curriculum' ||
+      normContext.category === 'placement' ||
+      normContext.category === 'wifi' ||
+      normContext.category === 'academic_calendar'
+    ) {
+      return true;
+    }
+    if (normContext.expandedTerms && normContext.expandedTerms.length > 0) {
+      for (const chunk of candidates.slice(0, 8)) {
+        const text = (chunk.sectionTitle + ' ' + chunk.headingPath.join(' ') + ' ' + chunk.content).toLowerCase();
+        for (const term of normContext.expandedTerms) {
+          if (SPECIFIC_DOMAIN_KEYWORDS.has(term) && text.includes(term)) {
+            return true;
+          }
+        }
+      }
+    }
+  }
 
   const clean = query.toLowerCase();
 
@@ -1887,7 +2275,10 @@ export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeC
     'governing council', 'academic council', 'working hours', 'library hours', 'computer centre',
     'kongu fm', 'first graduate', '7.5%', 'parameshwaran', 'devarajan', 'sathiyamurthi', 'murugan',
     'kongu_wifi', 'wi-fi', 'wifi',
-    'academic schedule', 'academic calendar', 'cat 1', 'cat 2', 'cat 3', 'ca test', 'project review', 'last working day'
+    'academic schedule', 'academic calendar', 'cat 1', 'cat 2', 'cat 3', 'ca test', 'project review', 'last working day',
+    'enthusia', 'swaram', 'kongu trophy', 'techno cultural fest', 'founders day', 'sports day', 'annual day', 'farewell day',
+    'examination instructions', 'examination rules', 'hall superintendent', 'non-programmable calculator',
+    'controller of examinations', 'malpractice offences', 'zero tolerance policy', 'soliton technologies', '1828'
   ]) {
     if (clean.includes(phrase)) {
       for (const chunk of candidates.slice(0, 8)) {

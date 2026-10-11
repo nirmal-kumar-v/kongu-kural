@@ -164,7 +164,7 @@ export async function processChatQuery(
     semanticResult = await analyzeQueryAndSelectEvidence(cleanQuery, history, candidatePassages);
   } catch (err: any) {
     console.warn('[Orchestrator] Groq semantic analysis failed, using heuristic fallback:', err?.message || err);
-    const hasCoverage = candidatePassages.length > 0 && hasStrongKnowledgeCoverage(cleanQuery, candidatePassages);
+    const hasCoverage = candidatePassages.length > 0 && hasStrongKnowledgeCoverage(cleanQuery, candidatePassages, normalizedContext);
     semanticResult = {
       isKecRelated: !isExplicitlyUnrelatedQuery(cleanQuery, history),
       detectedLanguage: initialLangRes.detectedLanguage === 'Tamil' ? 'Tamil' : 'English',
@@ -206,7 +206,7 @@ export async function processChatQuery(
   // If strong knowledge coverage exists in the file, prioritize college-info over web search
   if (
     (!semanticResult.foundInFile || semanticResult.selectedChunks.length === 0) &&
-    hasStrongKnowledgeCoverage(cleanQuery, candidatePassages)
+    hasStrongKnowledgeCoverage(cleanQuery, candidatePassages, normalizedContext)
   ) {
     console.log('[Orchestrator] Direct college knowledge match confirmed. Prioritizing file over web search.');
     semanticResult.foundInFile = true;
@@ -216,7 +216,7 @@ export async function processChatQuery(
   // If candidatePassages is completely empty or has no strong coverage and no department match,
   // do not claim foundInFile (prevents sending unrelated faculty chunks for missing questions)
   const queryDept = resolveDepartmentFromQuery(cleanQuery);
-  if (!queryDept && !hasStrongKnowledgeCoverage(cleanQuery, candidatePassages)) {
+  if (!queryDept && !hasStrongKnowledgeCoverage(cleanQuery, candidatePassages, normalizedContext)) {
     semanticResult.foundInFile = false;
     semanticResult.selectedChunks = [];
   }

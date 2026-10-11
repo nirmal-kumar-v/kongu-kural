@@ -41,7 +41,7 @@ if hasattr(sys.stderr, "reconfigure"):
 
 BASE_DIR = Path(__file__).resolve().parent
 ENV_FILE = BASE_DIR / ".env"
-COLLEGE_INFO_FILE = BASE_DIR / "college-info.txt"
+COLLEGE_INFO_FILE = BASE_DIR / "college-info-2.txt" if (BASE_DIR / "college-info-2.txt").exists() else BASE_DIR / "college-info.txt"
 STATE_FILE = BASE_DIR / "kural_sms_state.json"
 
 def load_env():
@@ -362,6 +362,18 @@ def standalone_answer_fallback(question: str) -> str:
             if any(dept in question.lower() for dept in ["mech", "auto", "mechatronics", "civil", "eee", "ece", "cse", "it", "chemical", "food", "mba", "mca", "aiml", "aids"]):
                 if any(dept in sec_lower for dept in ["mech", "auto", "mechatronics", "civil", "eee", "ece", "cse", "it", "chemical", "food", "mba", "mca", "aiml", "aids"]) and ("placed" in sec_lower or "salary" in sec_lower or "lpa" in sec_lower):
                     score += 50
+            if any(w in question.lower() for w in ["enthusia", "swaram", "kongu trophy", "event", "events", "when is", "date of", "march 5", "05 march", "march 12", "12 march", "march 19", "19 march", "september 18", "18 september", "september 19", "19 september"]):
+                if "8.11" in sec_lower or "special event" in sec_lower or "enthusia" in sec_lower or "swaram" in sec_lower:
+                    score += 80
+            if any(w in question.lower() for w in ["exam rule", "examination rule", "instruction", "instructions", "rough work", "calculator", "hall superintendent", "scribe", "mobile", "ink", "pen"]):
+                if "8.13" in sec_lower or "examination instruction" in sec_lower:
+                    score += 80
+            if any(w in question.lower() for w in ["malpractice", "penalty", "punishment", "debar", "debarred", "fine of rs", "1000", "coe@kongu.ac.in", "impersonation"]):
+                if "8.14" in sec_lower or "malpractice" in sec_lower:
+                    score += 80
+            if any(w in question.lower() for w in ["1828", "1529", "409", "soliton", "rubrik", "jpmorgan", "deloitte", "accenture", "cognizant"]):
+                if "8.12" in sec_lower or "1828" in sec_lower or "soliton" in sec_lower:
+                    score += 80
             if score > 0:
                 scored_sections.append((score, sec))
         scored_sections.sort(key=lambda x: x[0], reverse=True)
@@ -377,7 +389,8 @@ def standalone_answer_fallback(question: str) -> str:
         "5. STRICT DEPARTMENT FACULTY MATCHING: When asked about staff or faculty members in a specific department (e.g. Information Technology / IT), return ONLY verified faculty members of THAT department. NEVER return or mix staff members from other departments (such as EIE, EEE, ECE, CSE, Mech).\n"
         "6. If a KEC detail is absent from the file, state that the information could not be verified in official college records. Do NOT invent facts or apologize.\n"
         "7. Provide just the right amount of information (concrete facts, names, contacts, fees). Do NOT dump huge irrelevant rosters or walls of text, and do NOT give lazy one-word replies.\n"
-        "8. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n\n"
+        "8. NEVER tell the user to visit the website, check links, or find information themselves. Give the actual data directly.\n"
+        "9. SPECIAL EVENTS, EXAM RULES & PLACEMENTS: Answer 'When is [Event]?' with the exact date and 'What is on [Date]?' with all matching events (e.g. 19 March 2027: Sports Day, Annual Day, Farewell Day; 18 September 2026: Techno Cultural Fest / Founders' Day; 5 March 2027: Enthusia; 12 March 2027: Swaram). For exam rules/malpractice, state the exact rule/penalty (e.g. Fine Rs. 1000, cancellation, debarment, police referral for impersonation).\n\n"
     )
 
     # Try Groq with failover

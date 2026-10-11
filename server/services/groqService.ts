@@ -128,7 +128,10 @@ Consider a question KEC-RELATED ("isKecRelated": true) if it concerns:
 - College information, history, departments, courses, curriculum, academics, admissions, cutoff marks, ranks.
 - Hostels, warden details, mess/food, buses/transport, fees, facilities, rules, student services.
 - Placements, companies, internships, careers, training, campus recruitment.
-- Clubs, Tamil Mandram, events, symposiums, cultural activities, sports, gym, tournaments, competitions.
+- Clubs, Tamil Mandram, events, symposiums, cultural activities (Enthusia, Swaram, Founders Day), sports (Kongu Trophy), gym, tournaments, competitions.
+- Academic schedule, calendar 2026-27, CAT test dates, end semester exams, practicals, project reviews, reopening dates.
+- General examination rules, 19 hall conduct instructions, permitted calculators, scribes, rough work rules.
+- Controller of Examinations (COE) office, 30-clause malpractice matrix, fines (Rs. 1000), debarment, police referral for impersonation.
 - Faculty, HODs, Principal, administrative offices, contacts, campus life, college procedures.
 - Friendly campus interactions and greetings ("Hi", "Hello", "Vanakkam", "Who are you?", "Help", "What can you do?").
 - INDIRECT AND AMBIGUOUS QUESTIONS:
@@ -300,7 +303,14 @@ CORE ANSWERING RULES (STRICT):
      * If a staff member or detail cannot be verified for that specific department, state that clearly without guessing.
 
 8. CLEAN PRESENTATION:
-   - Use clean, well-spaced bullet points and bold highlights for key details so it reads effortlessly on both website chat and mobile SMS.`;
+   - Use clean, well-spaced bullet points and bold highlights for key details so it reads effortlessly on both website chat and mobile SMS.
+
+9. PRECISE RETRIEVAL FOR EVENTS, EXAMINATIONS & DATES:
+   - When asked "When is [Event]?" (e.g. Enthusia, Swaram, Kongu Trophy, Techno Cultural Fest) -> Return the event's exact verified date and a brief description.
+   - When asked "What event is on [Date]?" (e.g. 19 March 2027, 18 September 2026) -> Return all verified events/holidays scheduled on that exact date (e.g. 19 March 2027 has Sports Day, Annual Day, and Farewell Day).
+   - When asked about general examination rules -> Provide the verified rules concisely.
+   - When asked about specific exam rules (e.g. mobile phones, calculators, rough work, late entry, scribes, impersonation) -> Return that specific rule and consequence directly.
+   - When asked about malpractice penalties -> Return the specific penalty from the 30-clause matrix (e.g. Fine Rs. 1000, invalidation, debarment, police handover).`;
 
   const contextContent = isWebFallback
     ? `LIVE WEB SEARCH RESULTS:\n${webResultsText || 'No web results available.'}`

@@ -121,7 +121,14 @@ CORE ANSWERING RULES (STRICT):
      * If a staff member or detail cannot be verified for that specific department, state that clearly without guessing.
 
 8. CLEAN PRESENTATION:
-   - Use clean, well-spaced bullet points and bold highlights for key details so it reads effortlessly on both website chat and mobile SMS.`;
+   - Use clean, well-spaced bullet points and bold highlights for key details so it reads effortlessly on both website chat and mobile SMS.
+
+9. PRECISE RETRIEVAL FOR EVENTS, EXAMINATIONS & DATES:
+   - When asked "When is [Event]?" (e.g. Enthusia, Swaram, Kongu Trophy, Techno Cultural Fest) -> Return the event's exact verified date and a brief description.
+   - When asked "What event is on [Date]?" (e.g. 19 March 2027, 18 September 2026) -> Return all verified events/holidays scheduled on that exact date (e.g. 19 March 2027 has Sports Day, Annual Day, and Farewell Day).
+   - When asked about general examination rules -> Provide the verified rules concisely.
+   - When asked about specific exam rules (e.g. mobile phones, calculators, rough work, late entry, scribes, impersonation) -> Return that specific rule and consequence directly.
+   - When asked about malpractice penalties -> Return the specific penalty from the 30-clause matrix (e.g. Fine Rs. 1000, invalidation, debarment, police handover).`;
 
   let evidenceContext = '';
   if (isWebFallback) {
