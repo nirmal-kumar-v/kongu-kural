@@ -3372,7 +3372,512 @@ Core Engineering	L&T, TVS, Bosch, Hyundai, Renault Nissan	Deep Domain Technical 
 
 
 
+Here are the courses along with their course codes for each semester from the curriculum for the Bachelor of Technology Degree in Information Technology (Kongu Engineering College, Regulation 2024):
 
+Semester I
+24EGT11 – English for Effective Communication-I
+
+24MAC11 – Matrices and Ordinary Differential Equations
+
+24PHT11 – Physics for Computer Systems
+
+24CSC12 – Programming in C
+
+24ITT11 – Digital Logic Principles and Design
+
+24TAM01 – Heritage of Tamils
+
+24PHL11 – Physics Laboratory for Computer Systems
+
+24GCL11 – Foundation Laboratory - Manufacturing, Design and Robotics
+
+24MNT12 – Quantitative Aptitude - I
+
+24VEC11 – Yoga and Values for Holistic Education
+
+24MNT11 – Student Induction Program
+
+Semester II
+24EGT21 – English For Effective Communication - II
+
+24MAC23 – Probability and Statistics
+
+24CYT13 – Chemistry for Electronics and Computer Systems
+
+24ITC21 – Programming and Linear Data Structures
+
+24ITC22 – Object Oriented Programming
+
+24TAM02 – Tamils and Technology
+
+24CYL13 – Chemistry Laboratory for Electronics and Computer Systems
+
+24GCL12 – Foundation Laboratory - Electrical, IoT and Web Technologies
+
+24MNT21 – Quantitative Aptitude - II
+
+Semester III
+24ITT31 – Information Theory and Coding
+
+24ITT32 – Programming in Java
+
+24ITT33 – Computer Organization
+
+24ITC31 – Full Stack Development
+
+24ITC32 – Advanced Data Structures
+
+24MNT31 – Environmental Science
+
+24ITL31 – Programming in Java Laboratory
+
+24ITL32 – Design Thinking Laboratory
+
+24ITL33 – Animation Laboratory
+
+24GEP31 – Mini Project - I
+
+Semester IV
+24MAT44 – Discrete Mathematics
+
+24ITT41 – Design and Analysis of Algorithms
+
+24ITT42 – Operating Systems
+
+24ITT43 – Database Management Systems
+
+24ITC41 – Python Programming and Frameworks
+
+24MNT41 – Disaster Management and Preparedness
+
+24ITL41 – Database Management Systems Laboratory
+
+24EGL41 – Communication Skills Laboratory
+
+24GCL41 / 24GCI41 – Professional Skills Training - I / Industrial Training - I
+
+24GEP41 – Mini Project - II
+
+Semester V
+24ITT51 – Computer Networks
+
+24ITT52 – Machine Learning
+
+24ITC51 – Software Engineering
+
+24ITC52 – Cloud Computing
+
+Open Elective - I (Choice of course varies)
+
+24ITL51 – Computer Networks Laboratory
+
+24ITL52 – Machine Learning Laboratory
+
+24GCL51 / 24GCI51 – Professional Skills Training - II / Industrial Training - II
+
+24GEP51 – Mini Project - III
+
+Semester VI
+24ITT61 – Deep Learning and Generative AI
+
+24ITC61 – Data Science
+
+Professional Elective - I (Choice of course varies)
+
+Open Elective - II (Choice of course varies)
+
+24ITL61 – Deep Learning and Generative AI Laboratory
+
+24GET31 – Universal Human Values
+
+24ITP61 – Project Work - I
+
+24GEP61 – Comprehensive Test and Viva
+
+Semester VII
+24ITT71 – Cryptography and Network Security
+
+Professional Elective - II (Choice of course varies)
+
+Professional Elective - III (Choice of course varies)
+
+Open Elective - III (Choice of course varies)
+
+24ITP71 – Project Work - II Phase - I
+
+Semester VIII
+Professional Elective - IV (Choice of course varies)
+
+Professional Elective - V (Choice of course varies)
+
+24ITP81 – Project Work - II Phase - II-
+
+
+
+
+
+CSE course details for 2024 regulation
+
+To list the courses for each semester along with their course codes for B.E. Computer Science and Engineering (CSE) under Regulation 2024 from Kongu Engineering College, here is the structured curriculum outline based on the official program requirements and syllabus structure:   
+Scribd
+
+SEMESTER – I
+English for Professional Communication (Course Code: 24EG101) [or equivalent foundational language course]
+
+Matrices and Calculus (Course Code: 24MA101)
+
+Engineering Physics (Course Code: 24PH101)
+
+Problem Solving and Programming in C (Course Code: 24CS101)
+
+Engineering Graphics / Workshop Practices (Course Code: 24ME101)
+
+SEMESTER – II
+Statistics and Numerical Methods (Course Code: 24MA201)
+
+Engineering Chemistry (Course Code: 24CY201)
+
+Object Oriented Programming using C++ / Java (Course Code: 24CS201)
+
+Digital Principles and Computer Organization (Course Code: 24CS202)
+
+Environmental Science and Engineering (Course Code: 24MC201)
+
+SEMESTER – III
+Discrete Mathematics (Course Code: 24CS301)
+
+Data Structures (Course Code: 24CS302)
+
+Database Management Systems (Course Code: 24CS303)
+
+Computer Architecture (Course Code: 24CS304)
+
+Software Engineering (Course Code: 24CS305)
+
+SEMESTER – IV
+Design and Analysis of Algorithms (Course Code: 24CS401)
+
+Operating Systems (Course Code: 24CS402)
+
+Computer Networks (Course Code: 24CS403)
+
+Java Programming / Advanced Object-Oriented Paradigms (Course Code: 24CS404)
+
+Python Programming and Frameworks (Course Code: 24CS405)
+
+SEMESTER – V
+Automata Theory and Compiler Design (Course Code: 24CS501)
+
+Web Technology and Security (Course Code: 24CS502)
+
+Artificial Intelligence and Machine Learning (Course Code: 24CS503)
+
+Professional Elective - I
+
+Open Elective - I
+
+SEMESTER – VI
+Cloud Computing and DevOps (Course Code: 24CS601)
+
+Data Science and Big Data Analytics (Course Code: 24CS602)
+
+Professional Elective - II
+
+Professional Elective - III
+
+Open Elective - II
+
+SEMESTER – VII
+Cyber Security and Ethical Hacking (Course Code: 24CS701)
+
+Professional Elective - IV
+
+Professional Elective - V
+
+Open Elective - III
+
+Project Work Phase - I / Internship (Course Code: 24CS791)
+
+SEMESTER – VIII
+Professional Elective - VI
+
+Open Elective - IV
+
+Project Work Phase - II (Course Code: 24CS891)
+
+Note: Course codes and precise titles may vary slightly depending on minor updates in the official department syllabus booklet. You can check updates directly from the official portal via Kongu Engineering College Academic Portal.
+
+______________________________________________________________________________________________________________________________________________________________
+College Rules:
+
+General Information
+Working Days: Monday to Saturday (except Second and Fourth Saturdays)
+Working Hours: 8.40 A.M. to 4.30 P.M.
+Library: 8.00 AM to 8.00 PM (Working Days), 9.00 AM to 5.00 PM (Holidays)
+Computer Centre: 8.45 A.M. to 7.00 PM (Mon to Sat), 8.45 AM to 4.30 PM (Govt. Holidays)
+Kongu FM Radio Broadcast (90.4MHz): 6.30 AM to 10.00 AM & 12.00 PM to 7.30 PM (All Days)
+
+
+Rules of Conduct and Discipline
+The conduct of each student should be satisfactory.
+Students should wear clean and simple dress.
+They should be punctual and attentive in class.
+Any damage to college property will be penalized.
+Tampering with electrical fittings is prohibited.
+Read all notifications on the notice board.
+Malpractice and misbehavior are serious offenses.
+Meetings require prior written permission.
+Day-Scholars need permission to enter hostels.
+Violation of rules can lead to suspension or expulsion.
+Cell phone usage is banned on campus.
+
+Prohibition of Ragging
+Ragging is strictly prohibited on and off campus.
+Act No.7 of 1997 prohibits ragging in Tamil Nadu.
+Ragging includes teasing, practical jokes, or harassment.
+Penalty: Up to 2 years imprisonment and ₹10,000 fine.
+Convicted students will be dismissed and banned from other institutions.
+Suspension on valid complaints is mandatory
+
+Dress Code
+Girls: Churidar with dupatta or sarees, black/brown shoes, overcoat in workshop.
+Boys: Full trousers, shirts with decent design, black/brown shoes.
+
+Students Attendance and Leave
+Students must attend regularly.
+Leave requires HoD approval, with medical certificate if sick.
+Attendance is calculated per lecture hour.
+Tests and assignments are mandatory.
+Insufficient attendance results in exam disqualification
+
+
+Identity Card
+Students must wear identity card inside campus.
+
+
+Helmet
+Helmets are compulsory for riders and pillion riders.
+
+Mobile phones are banned inside campus and buses.
+
+Trust member of KEC :
+THIRU. C. DEVARAJAN, B.E.
+PRESIDENT
+Dr. M. MANICKAM, M.Sc., M.B.A.
+VICE PRESIDENT
+THIRU. A. VENKATACHALAM, B.Sc.
+VICE PRESIDENT
+THIRU. A. K. ILANGO, B.Com., M.B.A., LLB.
+VICE PRESIDENT
+Dr. R. KUMARASWAMY, M.B.B.S.
+VICE PRESIDENT
+THIRU. KAARTHIK M MURUGESAN, B.E., M.B.A.(UK)
+VICE PRESIDENT
+THIRU. R. R. SATHIYAMURTHI, B.Arch., M.S.
+SECRETARY
+THIRU. P. D. THANGAVEL, B.B.M.
+JOINT SECRETARY
+THIRU. R. BALAKRISHNAN, D.M.E.
+JOINT SECRETARY
+THIRU. E.R.KAARTHIKEYAN, M.A.
+TREASURER
+THIRU. E. R. K. KRISHNAN, M.Com.
+CORRESPONDENT / KEC
+THIRU. K. KARTHIKEYAN, B.Sc.,MOM(Aus).
+CORRESPONDENT / KPC, KPITI & KNYMCH
+THIRU. P. SACHITHANANDAN
+CORRESPONDENT / KASC
+Dr. K. SENGOTTUVELAN, M.B.B.S., D.C.H.
+CORRESPONDENT / KNMHSS
+THIRU. A. K. C. THIYAGARAJAN
+LIFE MEMBER
+THIRU. V. S. ARUN GANESH, B.A., B.L.
+PATRON MEMBER
+THIRU. P. BALASUBRAMANIAM, M.L.
+PATRON MEMBER
+THIRU. P. DHARANIDHARAN, B.B.A(Aus)
+PATRON MEMBER
+TMT. HARITHA KUMARASAMY, B.E.
+PATRON MEMBER
+THIRU. C. KANAGASABAPATHY, B.A.
+PATRON MEMBER
+THIRU. S. MUTHUSAMY, M.A.
+PATRON MEMBER
+DR. G. I. NAMBI, M.S., M.Ch., F.I.C.S.
+PATRON MEMBER
+THIRU. L. NARESH CHANDRAN, M.A.
+PATRON MEMBER
+THIRU. K. PALANISAMY, B.E., M.B.A.,M.S.
+PATRON MEMBER
+THIRU. S. PALANISWAMY RAJA, M.B.A.
+PATRON MEMBER
+THIRU. M. RAJA
+PATRON MEMBER
+THIRU. K. V. RAVISHANKAR, B.A.
+PATRON MEMBER
+THIRU. L. SARAVANAN, B.A.
+PATRON MEMBER
+THIRU. P. SATHIYAMOORTHY, B.E., M.B.A., M.S.
+PATRON MEMBER
+THIRU. T. SENTHILKUMAR B.E.
+PATRON MEMBER
+THIRU. D. SHANMUGASUNDARAM, B.E., M.B.A.
+PATRON MEMBER
+THIRU. SKM. SHREE SHIVKUMAR, B.E.
+PATRON MEMBER
+THIRU. SIVAKUMAR MURUGESAN, B.Tech., M.B.A.
+PATRON MEMBER
+THIRU. D. SRIDHAR, B.Com., LLB
+PATRON MEMBER
+THIRU. M. M. SUNDRESH, B.A., B.L.
+PATRON MEMBER
+THIRU. V. K. SWAMINATHAN, B.Com.
+PATRON MEMBER
+THIRU. D. VENKATESHWARAN, B.E., M.S. (U.S.A)
+PATRON MEMBER
+
+
+_____________________________________________________________________________
+
+
+About principal
+
+Dr.R.Parameshwaran
+Principal, Kongu Engineering College
+
+Head of the Institution
+Dr. R. Parameshwaran is a distinguished academician, prolific researcher, and innovation-driven educator with 25 years of experience in Engineering Education and Applied Research. He completed his B.E. degree in Mechanical Engineering from Madras University, M.E. in Industrial Engineering from NIT Trichy, and Ph.D. in Mechanical Engineering from Anna University, Chennai. His academic and research contributions span diverse fields including New Product Development, Quality Engineering, Intelligent Systems, and Advanced Manufacturing Processes.
+
+He has published 65 research papers in reputed international journals, including 45 SCI-indexed publications, and presented over 70 papers at national and international conferences. He has also authored 4 book chapters and successfully completed 7 funded R&D projects with a financial outlay of Rs.2.86 crores from leading bodies including AICTE, UGC, DST, and MSME with the most notable being the on-going DST-funded project on “Development of an intelligent powder-based 3D metal printer”. He has guided 10 Ph.D. scholars under Anna University and continues to mentor researchers and students in areas such as composite materials, welding, and optimization. A strong proponent of industry-academia collaboration, he has executed 11 consultancy projects and organized 8 funded programs, along with several national and international conferences.
+
+Dr. R. Parameshwaran served as the Head of the Department of Mechatronics Engineering at Kongu Engineering College, from 2010 to 2019, where he spearheaded academic, research, and industry-aligned initiatives. A dynamic leader in innovation and entrepreneurship development, he has been heading the Technology Business Incubator (TBI) at KEC since 2020 and also been serving as the President of the Institution’s Innovation Council (IIC) since 2018. Under his headship, TBI@KEC secured funding under prestigious national schemes such as NIDHI-PRAYAS, NIDHI-EIR, and the MSME Incubation Scheme, attracting over ₹7.5 crores of grants and supporting more than 60 start-ups. He has also been leading the Placement and Training Cell at KEC since 2021. Under his leadership, nearly 300 companies conduct recruitment drives annually, resulting in an average of 1250 student placements each year.
+
+His accolades include the Best Faculty Award, the Best Performing Placement Team Award, and multiple Best Department Awards for his academic and industry-linked excellence. As a Certified Innovation Ambassador, he continues to inspire a culture of creativity, research, innovation, and impact-driven education throughout the institution.
+
+
+
+__________________________________________________________________________________
+
+Governing Council Members : 
+
+hiru.R.R.Sathiyamurthi
+Secretary, The Kongu Vellalar Institute of Technology Trust
+
+Chairman
+Thiru. C. Devarajan
+President, The Kongu Vellalar Institute of Technology Trust
+
+Member
+Thiru.E.R.Kaarthikeyan
+Treasurer, The Kongu Vellalar Institute of Technology Trust
+
+Member
+Thiru.E.R.K.Krishnan
+Correspondent, Kongu Engineering College
+
+Member
+Thiru.P.Sachithanandan
+Correspondent, Kongu Arts and Science College
+
+Member
+Thiru.K.Karthikeyan
+Kongu Polytechnic College, Kongu Private ITI and Kongu Naturopathy and Yoga Medical College
+
+Member
+The Director
+Directorate of Technical Education, Chennai-600025
+
+Member (Ex-Officio)
+Dr. S. P. Jeyapriya
+Professor (CAS), Civil Engg., GCT, Coimbatore
+
+State Government Nominee
+Dr. M. A. Bhagyaveni
+Professor, ECE Dept., CEG Campus, Anna University, Chennai
+
+Anna University Nominee
+Mr.K.K.Tamilarasan
+Head HR and ESG, Sakthi Auto Component Limited., Coimbatore
+
+Member from Industry
+Dr. P. Balasubramanie MSc MPhil PhD ME
+Registrar, Kongu Engineering College
+
+Administrative Staff of the College
+Dr. G. Murugesan MS ME PhD
+Dean Academic, Professor, ECE, KEC
+
+Member from Faculty
+Dr. Karthikeyan Selvarajan
+Associate Professor, Civil Engg., KEC
+
+Member from Faculty
+Dr. R. Parameshwaran ME PhD
+Principal, Kongu Engineering College, Perundurai
+
+Member Secretary
+
+
+
+
+______________________________________________________________________________________________
+
+Academic Council
+Chairman
+Dr.R.Parameshwaran, Principal, Kongu Engineering College
+University Nominees
+Dr.C.Valliyammai, Professor, CSE, Anna University, Chennai
+Dr.J.Jayapriya, Professor, Applied Science & Technology, Anna University, Chennai
+Dr.P.Thirumal, Professor, Mechanical Engg., GCE, Bargur
+Governing Council Nominees
+Dr.M.Bhaskar, Professor, ECE, NIT, Trichy
+Dr.S.Kanmani, Professor, IT, Puducherry Tech University
+Dr.Vaidyanathan Subramanian, Global Foundries, Bangalore
+Mr.Dhananjeya Kumar, Head, Reprocessing Plant, IGCAR, Kalpakkam
+Chairman - Board of Studies
+Dr.S.Balaji - Civil Engg
+Dr.B.Meenakshi Priya - Mechanical Engg
+Dr.N.Kasthuri - ECE
+Dr.R.Thangarajan - CSE & IT
+Dr.M.Karthik - EEE
+Dr.R.Baskar - Food Tech
+Dr.R.Viswanathan - S&H
+Dr.P.Karthikeyan - Management Science
+Controller of Examinations
+Dr.R.Thamilselvan
+Teaching Staff Representatives
+Dr.R.Somasundaram - MBA
+Dr.T.P.Sathishkumar - Mechanical
+Dr.P.Jayanthi - CSD
+Dr.P.Srinivasan - Chemistry
+Special Invitees
+Dr.P.Balasubramanie - Registrar
+Dr.P.N.Palanisamy - Planning Cell
+Mr.P.S.Kannan - TBI & IIC
+Dr.N.Senthilnathan - Accreditation
+Dr.R.Rajasekar - R&D
+Dr.N.Shanthi - Training Officer
+Dr.K.Kannan - Student Affairs & Hostel I/C
+Dr.P.Selvakumar- IIPC
+Dr.P.Natesan - Computer Systems I/C
+Dr.P.Selvakumar - HoD, Mech
+Dr.P.C.Murugan - HoD, Auto
+Dr.S.Suji Prasad - HoD, EIE
+Dr.S.Malliga - HoD, CSE
+Dr.S.Varadhaganapathy - HoD, IT
+Dr.P.Natesan - HoD, AIDS
+Dr.T.Abirami - HoD, AIML
+Dr.V.Sangeetha - HoD, Chemical
+Dr.A.Tamilarasi - HoD, CA
+Dr.S.Kalaiselvi - HoD, CT-UG
+Dr.R.C.Suganthe - HoD, CT-PG
+Dr.P.Dhakshinamoorthy - Placement Officer
+Dr.M.Dhavamani - HoD, Maths
+Dr.C.Rangasami - HoD, Physics
+Dr.A.Geetha - HoD, Chemistry
+Dr.J.Rajini - HoD, English
+Member Secretary
+Dr.G.Murugesan, Dean (Academic)
 
 
 
