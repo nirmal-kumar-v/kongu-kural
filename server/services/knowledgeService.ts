@@ -274,6 +274,13 @@ export function resolveCategoryFromQuery(query: string): string | null {
   ) {
     return 'wifi';
   }
+  if (
+    /\b(academic schedule|academic calendar|calendar|schedule|cat 1|cat 2|cat 3|cat-1|cat-2|cat-3|ca test|ca test-1|ca test-2|ca test-3|retest|re test|improvement test|last working day|project review|viva voce|project report submission|practical exam|practical exams|theory exam|theory exams|commencement of classes|reopening|even semester reopening|odd semester reopening|தேர்வு|கால அட்டவணை|நாட்காட்டி)\b/i.test(
+      q
+    )
+  ) {
+    return 'academic_calendar';
+  }
   return null;
 }
 
@@ -934,7 +941,7 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
           return;
         }
 
-        if (heading.includes('8.1')) {
+        if (heading.match(/8\.1\b/)) {
           addChunk({
             documentTitle: docTitle,
             mainHeading: 'Academic Programmes & Regulations',
@@ -997,6 +1004,71 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
             departmentId: 'general',
             category: 'wifi',
             sectionTitle: 'Campus Wi-Fi Registration — Form, Kongu_Wifi SSID & Connection Guide',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.6')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Schedule & Calendar 2026-27',
+            subHeading: 'Odd Semester Schedule (Senior Semesters: BE/BTech, ME/MTech, BSc, MSc, MCA, BArch)',
+            headingPath: ['Academics', 'Academic Schedule 2026-27', 'Odd Semester', 'Senior Semesters'],
+            departmentId: 'general',
+            category: 'academic_calendar',
+            sectionTitle: 'Academic Schedule 2026–27 — Odd Semester (Senior Semesters)',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.7')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Schedule & Calendar 2026-27',
+            subHeading: 'Odd Semester Schedule (First Semester Programmes: BE/BTech, ME/MTech, BSc, MSc, MBA, MCA, BArch)',
+            headingPath: ['Academics', 'Academic Schedule 2026-27', 'Odd Semester', 'First Semester'],
+            departmentId: 'general',
+            category: 'academic_calendar',
+            sectionTitle: 'Academic Schedule 2026–27 — Odd Semester (First Semester Programmes)',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.8')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Schedule & Calendar 2026-27',
+            subHeading: 'Even Semester Schedule (All Programmes & Batches: BE/BTech, ME/MTech, BSc, MSc, MCA, BArch, MBA)',
+            headingPath: ['Academics', 'Academic Schedule 2026-27', 'Even Semester'],
+            departmentId: 'general',
+            category: 'academic_calendar',
+            sectionTitle: 'Academic Schedule 2026–27 — Even Semester (All Programmes & Batches)',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.9')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Schedule & Calendar 2026-27',
+            subHeading: 'Master Date-by-Date Schedule & Event Calendar (Activities by Date)',
+            headingPath: ['Academics', 'Academic Schedule 2026-27', 'Master Date Index'],
+            departmentId: 'general',
+            category: 'academic_calendar',
+            sectionTitle: 'Academic Schedule 2026–27 — Master Date-by-Date Schedule & Event Calendar',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.10')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Schedule & Calendar 2026-27',
+            subHeading: 'Frequently Asked Questions — CAT Dates, Exams, Practicals, Deadlines & Reopening',
+            headingPath: ['Academics', 'Academic Schedule 2026-27', 'FAQs'],
+            departmentId: 'general',
+            category: 'academic_calendar',
+            sectionTitle: 'Academic Schedule 2026–27 — FAQs & Specific Exam/CAT Lookups',
             content,
             urls: extractUrls(content),
             lineNumber: startL,
@@ -1123,6 +1195,10 @@ const SYNONYM_MAP: Record<string, string[]> = {
   wireless: ['wifi', 'wi-fi', 'wireless', 'kongu_wifi'],
   kongu_wifi: ['wifi', 'wi-fi', 'wireless', 'kongu_wifi', 'netid', 'firewall'],
   netid: ['netid', 'firewall', 'wifi', 'wi-fi', 'kongu_wifi'],
+  cat: ['cat', 'ca test', 'continuous assessment', 'exam', 'test'],
+  'ca test': ['cat', 'ca test', 'continuous assessment', 'test'],
+  calendar: ['calendar', 'academic calendar', 'schedule', 'academic schedule'],
+  schedule: ['schedule', 'academic schedule', 'calendar', 'academic calendar'],
   lpa: ['lpa', 'salary', 'package', 'placement'],
   faculty: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'assistant professor', 'associate professor', 'hod'],
   staff: ['faculty', 'staff', 'teacher', 'teachers', 'professor', 'professors', 'teaching faculty'],
@@ -1424,7 +1500,20 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     'wi-fi',
     'wifi registration',
     'registration form',
-    'mac address'
+    'mac address',
+    'cat 1',
+    'cat 2',
+    'cat 3',
+    'ca test-1',
+    'ca test-2',
+    'ca test-3',
+    'project review',
+    'viva voce',
+    'last working day',
+    'academic schedule',
+    'academic calendar',
+    'reopening',
+    'improvement test'
   ];
 
   for (const cp of COMMON_PHRASES) {
@@ -1618,6 +1707,14 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
       expanded.add('form');
       expanded.add('netid');
       expanded.add('firewall');
+    } else if (category === 'academic_calendar') {
+      expanded.add('academic');
+      expanded.add('calendar');
+      expanded.add('schedule');
+      expanded.add('cat');
+      expanded.add('test');
+      expanded.add('exam');
+      expanded.add('semester');
     }
   }
 
@@ -1775,7 +1872,8 @@ const SPECIFIC_DOMAIN_KEYWORDS = new Set([
   'cloud', 'computing', 'deep', 'learning', 'programming', 'devops', 'cryptography',
   'ragging', 'dress', 'dresscode', 'helmet', 'mobile', 'attendance', 'discipline', 'penalty', 'fine',
   'governing', 'council', 'academic', 'trust', 'patron', 'devarajan', 'sathiyamurthi', 'parameshwaran',
-  'wifi', 'wi-fi', 'kongu_wifi', 'wireless', 'netid', 'firewall'
+  'wifi', 'wi-fi', 'kongu_wifi', 'wireless', 'netid', 'firewall',
+  'calendar', 'schedule', 'cat', 'viva', 'reopening'
 ]);
 
 export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeChunk[]): boolean {
@@ -1788,7 +1886,8 @@ export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeC
     'cloud computing', 'deep learning', 'data structures', 'dress code', 'act no.7', 'act no 7',
     'governing council', 'academic council', 'working hours', 'library hours', 'computer centre',
     'kongu fm', 'first graduate', '7.5%', 'parameshwaran', 'devarajan', 'sathiyamurthi', 'murugan',
-    'kongu_wifi', 'wi-fi', 'wifi'
+    'kongu_wifi', 'wi-fi', 'wifi',
+    'academic schedule', 'academic calendar', 'cat 1', 'cat 2', 'cat 3', 'ca test', 'project review', 'last working day'
   ]) {
     if (clean.includes(phrase)) {
       for (const chunk of candidates.slice(0, 8)) {
