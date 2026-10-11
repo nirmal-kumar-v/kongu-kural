@@ -172,7 +172,35 @@ export function resolveDepartmentFromQuery(query: string): DepartmentDef | null 
 export function resolveCategoryFromQuery(query: string): string | null {
   const q = query.toLowerCase();
   if (
-    /\b(bus|buses|transport|transportation|route|routes|shuttle|shuttles|vehicle|two-wheelers?|helmets?|parking|bus fee|van|sakthivel|பேருந்து|பஸ்|வழித்தடம்|perunthu|tranport|transpot)\b/i.test(
+    /\b(curriculum|syllabus|course|courses|subject|subjects|semester|sem|semesters|regulation|regulations|r2024|r2022|elective|electives|credits|lab|laboratory|cloud computing|deep learning|data structures|python|devops|cryptography|c programming|24[a-z]{2,3}\d{2}|பாடம்|பாடங்கள்|பாடத்திட்டம்|செமஸ்டர்|செமஸ்டரில்|கிளவுட்|கம்ப்யூட்டிங்|padippanga|padikkanum)\b/i.test(
+      q
+    )
+  ) {
+    return 'curriculum';
+  }
+  if (
+    /\b(rule|rules|regulation|regulations|discipline|conduct|ragging|dress code|dress|uniform|churidar|dupatta|shoes|helmet|helmets|mobile|cell phone|phone|attendance|leave|hall ticket|malpractice|expulsion|suspension|penalty|fine|fined|prohibition|act no\.?\s*7|விதிகள்|விதிமுறைகள்|ஆடை கட்டுப்பாடு|டிரஸ்|அபராதம்|தண்டனை|வருகை|ஹெல்மெட்)\b/i.test(
+      q
+    )
+  ) {
+    return 'rules';
+  }
+  if (
+    /\b(trust|trustee|trustees|kvitt|governing council|academic council|board of studies|patron|patron members|office bearer|office bearers|correspondent|treasurer|president|secretary|vice president|joint secretary|devarajan|sathiyamurthi|valliyammai|bhagyaveni|tamilarasan|thamilselvan|அறக்கட்டளை|ஆட்சி மன்றம்|கல்வி மன்றம்|தலைவர்|செயலாளர்)\b/i.test(
+      q
+    )
+  ) {
+    return 'governance';
+  }
+  if (
+    /\b(principal|head of the institution|head of institution|parameshwaran|parameshwar|principal's|principals|முதல்வர்)\b/i.test(
+      q
+    )
+  ) {
+    return 'principal';
+  }
+  if (
+    /\b(bus|buses|transport|transportation|route|routes|shuttle|shuttles|vehicle|two-wheelers?|parking|bus fee|van|sakthivel|பேருந்து|பஸ்|வழித்தடம்|perunthu|tranport|transpot)\b/i.test(
       q
     )
   ) {
@@ -233,7 +261,7 @@ export function resolveCategoryFromQuery(query: string): string | null {
   ) {
     return 'sports';
   }
-  if (/\b(course|courses|programme|programmes|degree|curriculum|syllabus|autonomous|regulation|பாடம்|பாடத்திட்டம்)\b/i.test(
+  if (/\b(programme|programmes|degree|autonomous|பாடம்|பாடத்திட்டம்)\b/i.test(
     q
   )
   ) {
@@ -330,7 +358,7 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
       continue;
     }
 
-    // 2. CAMPUS LEADERSHIP & DEPARTMENT HEADS (HODs)
+    // 2. CAMPUS LEADERSHIP, ADMINISTRATION, PRINCIPAL & GOVERNANCE
     if (
       line.startsWith('SECTION 2:') ||
       line === 'Engineering & Technology Departments' ||
@@ -338,10 +366,57 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
       line === 'Science & Humanities Departments' ||
       line === 'Central Campus Administration Contacts'
     ) {
-      const startLine = i + 1;
-      const hodLines: string[] = [];
-      const secName = line.startsWith('SECTION 2:') ? 'Campus Leadership & HOD Directory' : line;
+      let curHeading = '## 2.1 Department Heads & Central Administration Directory';
+      let curStartLine = i + 1;
+      const curLines: string[] = [];
       i++;
+
+      const flushSection2Chunk = (heading: string, linesArr: string[], startL: number) => {
+        if (linesArr.length === 0) return;
+        const content = linesArr.join('\n').trim();
+        if (content.length < 20) return;
+
+        let cat = 'hod';
+        let subHeading = heading.replace(/^##\s*\d+\.\d+\s*/, '').trim();
+        let secTitle = `Leadership & HOD Directory — ${subHeading}`;
+        let headPath = ['Administration', 'Leadership', subHeading];
+
+        if (heading.includes('2.3') || heading.includes('Trust') || heading.includes('KVITT')) {
+          cat = 'governance';
+          secTitle = 'KVITT Trust — Office Bearers & Patron Members';
+          headPath = ['Governance', 'KVITT Trust'];
+        } else if (heading.includes('2.4') || heading.includes('Principal')) {
+          cat = 'principal';
+          secTitle = 'Principal Profile — Dr. R. Parameshwaran';
+          headPath = ['Administration', 'Principal'];
+        } else if (heading.includes('2.5') || heading.includes('Governing Council')) {
+          cat = 'governance';
+          secTitle = 'Governing Council — Members & Nominees';
+          headPath = ['Governance', 'Governing Council'];
+        } else if (heading.includes('2.6') || heading.includes('Academic Council')) {
+          cat = 'governance';
+          secTitle = 'Academic Council — Members & Board of Studies Chairpersons';
+          headPath = ['Governance', 'Academic Council'];
+        } else if (heading.includes('2.2')) {
+          cat = 'hod';
+          secTitle = 'Leadership & HOD Directory — FAQs';
+          headPath = ['Administration', 'Leadership FAQs'];
+        }
+
+        addChunk({
+          documentTitle: docTitle,
+          mainHeading: 'Campus Leadership, Principal & Governance',
+          subHeading,
+          headingPath: headPath,
+          departmentId: 'general',
+          category: cat,
+          sectionTitle: secTitle,
+          content,
+          urls: extractUrls(content),
+          lineNumber: startL,
+        });
+      };
+
       while (
         i < lines.length &&
         !lines[i].trim().startsWith('SECTION 3:') &&
@@ -349,42 +424,19 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
         !lines[i].trim().startsWith('////')
       ) {
         const cur = lines[i].trim();
-        if (cur.startsWith('## 2.2')) {
-          if (hodLines.length > 0) {
-            const content = hodLines.join('\n').trim();
-            addChunk({
-              documentTitle: docTitle,
-              mainHeading: 'Campus Leadership & Department Heads',
-              subHeading: 'HOD & Administration Directory',
-              headingPath: ['Administration', 'Department Heads (HODs)'],
-              departmentId: 'general',
-              category: 'hod',
-              sectionTitle: 'Leadership & HOD Directory',
-              content,
-              urls: extractUrls(content),
-              lineNumber: startLine,
-            });
-            hodLines.length = 0;
-          }
+        if (cur.match(/^##\s*2\.\d+/)) {
+          flushSection2Chunk(curHeading, curLines, curStartLine);
+          curHeading = cur;
+          curStartLine = i + 1;
+          curLines.length = 0;
+          curLines.push(cur);
+          i++;
+          continue;
         }
-        if (cur && !cur.startsWith('=') && !cur.startsWith('---')) hodLines.push(cur);
+        if (cur && !cur.startsWith('=') && !cur.startsWith('---')) curLines.push(cur);
         i++;
       }
-      if (hodLines.length > 0) {
-        const content = hodLines.join('\n').trim();
-        addChunk({
-          documentTitle: docTitle,
-          mainHeading: 'Campus Leadership & Department Heads',
-          subHeading: secName,
-          headingPath: ['Administration', 'Department Heads (HODs)', secName],
-          departmentId: 'general',
-          category: 'hod',
-          sectionTitle: `Leadership & HOD Directory — ${secName}`,
-          content,
-          urls: extractUrls(content),
-          lineNumber: startLine,
-        });
-      }
+      flushSection2Chunk(curHeading, curLines, curStartLine);
       continue;
     }
 
@@ -686,12 +738,20 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
           const content = secLines.join('\n').trim();
           if (content.length > 50) {
             let cat = 'overview';
-            if (secTitle.includes('PROGRAMMES') || secTitle.includes('INTAKE')) cat = 'intake';
-            else if (secTitle.includes('ADMISSION') || secTitle.includes('COUNSELLING')) cat = 'admission';
-            else if (secTitle.includes('CUT-OFF') || secTitle.includes('RANKS')) cat = 'cutoff';
-            else if (secTitle.includes('FEES') || secTitle.includes('SCHOLARSHIPS')) cat = 'fees';
-            else if (secTitle.includes('PLACEMENTS')) cat = 'placement_general';
-            else if (secTitle.includes('WORKING HOURS')) cat = 'working_hours';
+            const upperSec = secTitle.toUpperCase();
+            if (upperSec.includes('PROGRAMME') || upperSec.includes('INTAKE')) cat = 'intake';
+            else if (upperSec.includes('ADMISSION') || upperSec.includes('COUNSELLING') || upperSec.includes('LATERAL ENTRY')) cat = 'admission';
+            else if (upperSec.includes('CUT-OFF') || upperSec.includes('RANK')) cat = 'cutoff';
+            else if (upperSec.includes('FEE') || upperSec.includes('SCHOLARSHIP')) cat = 'scholarship';
+            else if (upperSec.includes('PLACEMENT')) cat = 'placement';
+            else if (upperSec.includes('WORKING HOURS')) cat = 'working_hours';
+            else if (upperSec.includes('HOSTEL')) cat = 'hostel';
+            else if (upperSec.includes('TRANSPORT')) cat = 'transport';
+            else if (upperSec.includes('SPORTS') || upperSec.includes('PHYSICAL EDUCATION')) cat = 'sports';
+            else if (upperSec.includes('RULE') || upperSec.includes('DISCIPLIN') || upperSec.includes('CONDUCT')) cat = 'rules';
+            else if (upperSec.includes('TRUST') || upperSec.includes('COUNCIL')) cat = 'governance';
+            else if (upperSec.includes('ADMINISTRATION') || upperSec.includes('LEADERSHIP')) cat = 'principal';
+            else if (upperSec.includes('CURRICULUM') || upperSec.includes('ACADEMIC SYSTEM')) cat = 'curriculum';
 
             addChunk({
               documentTitle: docTitle,
@@ -718,13 +778,29 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
       if (secLines.length > 0) {
         const content = secLines.join('\n').trim();
         if (content.length > 50) {
+          let cat = 'overview';
+          const upperSec = secTitle.toUpperCase();
+          if (upperSec.includes('PROGRAMME') || upperSec.includes('INTAKE')) cat = 'intake';
+          else if (upperSec.includes('ADMISSION') || upperSec.includes('COUNSELLING') || upperSec.includes('LATERAL ENTRY')) cat = 'admission';
+          else if (upperSec.includes('CUT-OFF') || upperSec.includes('RANK')) cat = 'cutoff';
+          else if (upperSec.includes('FEE') || upperSec.includes('SCHOLARSHIP')) cat = 'scholarship';
+          else if (upperSec.includes('PLACEMENT')) cat = 'placement';
+          else if (upperSec.includes('WORKING HOURS')) cat = 'working_hours';
+          else if (upperSec.includes('HOSTEL')) cat = 'hostel';
+          else if (upperSec.includes('TRANSPORT')) cat = 'transport';
+          else if (upperSec.includes('SPORTS') || upperSec.includes('PHYSICAL EDUCATION')) cat = 'sports';
+          else if (upperSec.includes('RULE') || upperSec.includes('DISCIPLIN') || upperSec.includes('CONDUCT')) cat = 'rules';
+          else if (upperSec.includes('TRUST') || upperSec.includes('COUNCIL')) cat = 'governance';
+          else if (upperSec.includes('ADMINISTRATION') || upperSec.includes('LEADERSHIP')) cat = 'principal';
+          else if (upperSec.includes('CURRICULUM') || upperSec.includes('ACADEMIC SYSTEM')) cat = 'curriculum';
+
           addChunk({
             documentTitle: docTitle,
             mainHeading: 'Institutional Knowledge Base',
             subHeading: secTitle,
             headingPath: ['Structured Knowledge Base', secTitle],
             departmentId: 'general',
-            category: 'overview',
+            category: cat,
             sectionTitle: `KEC Knowledge — ${secTitle}`,
             content,
             urls: extractUrls(content),
@@ -785,90 +861,144 @@ function parseKnowledgeText(rawText: string): { chunks: KnowledgeChunk[]; sectio
       continue;
     }
 
-    // 8. ACADEMIC PROGRAMMES, AUTONOMOUS REGULATIONS, ADMISSIONS, SCHOLARSHIPS & COLLEGE WORKING HOURS
+    // 8. ACADEMIC PROGRAMMES, AUTONOMOUS REGULATIONS, ADMISSIONS, SCHOLARSHIPS, CURRICULUM & RULES
     if (
       line.startsWith('SECTION 8:') ||
       line.startsWith('Kongu Engineering College (KEC) is a leading autonomous')
     ) {
-      const startLine = i + 1;
-      const acadLines: string[] = [];
+      let curHeading = '## 8.0 Overview';
+      let curStartLine = i + 1;
+      const curLines: string[] = [];
       i++;
-      while (i < lines.length) {
-        const cur = lines[i].trim();
-        if (cur.startsWith('## 8.1 Frequently Asked Questions')) {
-          if (acadLines.length > 0) {
-            const fullText = acadLines.join('\n').trim();
 
-            // Extract working hours & timings into dedicated high-priority chunk
-            const timingsMatch = fullText.match(/⏰ College Timings[\s\S]*?(?=📞 General Enquiries|$)/);
-            if (timingsMatch) {
-              addChunk({
-                documentTitle: docTitle,
-                mainHeading: 'Campus Operations & Working Hours',
-                subHeading: 'College Working Hours, Class & Library Timings',
-                headingPath: ['Campus Life', 'Working Hours'],
-                departmentId: 'general',
-                category: 'working_hours',
-                sectionTitle: 'College Timings — Class Hours, Office Hours & Library Timings',
-                content: timingsMatch[0],
-                urls: extractUrls(timingsMatch[0]),
-                lineNumber: startLine,
-              });
-            }
+      const flushSection8Chunk = (heading: string, linesArr: string[], startL: number) => {
+        if (linesArr.length === 0) return;
+        const content = linesArr.join('\n').trim();
+        if (content.length < 20) return;
 
-            // Extract scholarships into dedicated chunk
-            const schMatch = fullText.match(/🎓 Financial Aid & Fee Concessions[\s\S]*?(?=\*Courses and Departments|$)/);
-            if (schMatch) {
-              addChunk({
-                documentTitle: docTitle,
-                mainHeading: 'Financial Aid & Fee Concessions',
-                subHeading: '7.5% Govt School Waiver, First Graduate & Merit Scholarships',
-                headingPath: ['Admissions', 'Scholarships'],
-                departmentId: 'general',
-                category: 'scholarship',
-                sectionTitle: 'Scholarships & Fee Concessions — 7.5% Govt Quota & First Graduate',
-                content: schMatch[0],
-                urls: extractUrls(schMatch[0]),
-                lineNumber: startLine,
-              });
-            }
-
-            // Academic Programmes & Regulations
+        if (heading === '## 8.0 Overview') {
+          // Extract working hours & timings into dedicated high-priority chunk
+          const timingsMatch = content.match(/⏰ College Timings[\s\S]*?(?=📞 General Enquiries|$)/);
+          if (timingsMatch) {
             addChunk({
               documentTitle: docTitle,
-              mainHeading: 'Academic Programmes & Regulations',
-              subHeading: 'Academic Tracks, Autonomous Curriculum & Admissions',
-              headingPath: ['Academics', 'Programmes & Regulations'],
+              mainHeading: 'Campus Operations & Working Hours',
+              subHeading: 'College Working Hours, Class & Library Timings',
+              headingPath: ['Campus Life', 'Working Hours'],
               departmentId: 'general',
-              category: 'academics',
-              sectionTitle: 'Academics — Programmes, Autonomous Curriculum & Syllabus',
-              content: fullText,
-              urls: extractUrls(fullText),
-              lineNumber: startLine,
+              category: 'working_hours',
+              sectionTitle: 'College Timings — Class Hours, Office Hours & Library Timings',
+              content: timingsMatch[0],
+              urls: extractUrls(timingsMatch[0]),
+              lineNumber: startL,
             });
-
-            acadLines.length = 0;
           }
+
+          // Extract scholarships into dedicated chunk
+          const schMatch = content.match(/🎓 Financial Aid & Fee Concessions[\s\S]*?(?=\*Courses and Departments|$)/);
+          if (schMatch) {
+            addChunk({
+              documentTitle: docTitle,
+              mainHeading: 'Financial Aid & Fee Concessions',
+              subHeading: '7.5% Govt School Waiver, First Graduate & Merit Scholarships',
+              headingPath: ['Admissions', 'Scholarships'],
+              departmentId: 'general',
+              category: 'scholarship',
+              sectionTitle: 'Scholarships & Fee Concessions — 7.5% Govt Quota & First Graduate',
+              content: schMatch[0],
+              urls: extractUrls(schMatch[0]),
+              lineNumber: startL,
+            });
+          }
+
+          // Academic Programmes & Regulations overview
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Programmes & Regulations',
+            subHeading: 'Academic Tracks, Autonomous Curriculum & Admissions',
+            headingPath: ['Academics', 'Programmes & Regulations'],
+            departmentId: 'general',
+            category: 'academics',
+            sectionTitle: 'Academics — Programmes, Autonomous Curriculum & Syllabus',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+          return;
         }
-        if (cur && !cur.startsWith('=')) acadLines.push(cur);
+
+        if (heading.includes('8.1')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Academic Programmes & Regulations',
+            subHeading: 'Academics, Timings & Scholarships FAQs',
+            headingPath: ['Academics', 'FAQs'],
+            departmentId: 'general',
+            category: 'academics',
+            sectionTitle: 'Academics — Frequently Asked Questions & Answers',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.2')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Curriculum and Syllabus',
+            subHeading: 'B.Tech. Information Technology (IT) Department — Regulation 2024',
+            headingPath: ['Academics', 'Curriculum', 'Information Technology Department', 'IT Department', 'Regulation 2024'],
+            departmentId: 'it',
+            departmentName: 'Information Technology',
+            category: 'curriculum',
+            sectionTitle: 'Curriculum & Syllabus — B.Tech Information Technology (IT) Regulation 2024',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.3')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Curriculum and Syllabus',
+            subHeading: 'B.E. Computer Science and Engineering (CSE) Department — Regulation 2024',
+            headingPath: ['Academics', 'Curriculum', 'Computer Science and Engineering Department', 'CSE Department', 'Regulation 2024'],
+            departmentId: 'cse',
+            departmentName: 'Computer Science and Engineering',
+            category: 'curriculum',
+            sectionTitle: 'Curriculum & Syllabus — B.E Computer Science and Engineering (CSE) Regulation 2024',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        } else if (heading.includes('8.4')) {
+          addChunk({
+            documentTitle: docTitle,
+            mainHeading: 'Institutional Rules & Student Regulations',
+            subHeading: 'Working Timings, Discipline, Dress Code, Ragging & Regulations',
+            headingPath: ['Campus Regulations', 'Rules & Discipline'],
+            departmentId: 'general',
+            category: 'rules',
+            sectionTitle: 'College Regulations — Rules, Working Timings, Discipline, Ragging & Dress Code',
+            content,
+            urls: extractUrls(content),
+            lineNumber: startL,
+          });
+        }
+      };
+
+      while (i < lines.length) {
+        const cur = lines[i].trim();
+        if (cur.match(/^##\s*8\.\d+/)) {
+          flushSection8Chunk(curHeading, curLines, curStartLine);
+          curHeading = cur;
+          curStartLine = i + 1;
+          curLines.length = 0;
+          curLines.push(cur);
+          i++;
+          continue;
+        }
+        if (cur && !cur.startsWith('=')) curLines.push(cur);
         i++;
       }
-
-      if (acadLines.length > 0) {
-        const content = acadLines.join('\n').trim();
-        addChunk({
-          documentTitle: docTitle,
-          mainHeading: 'Academic Programmes & Regulations',
-          subHeading: 'Academics, Timings & Scholarships FAQs',
-          headingPath: ['Academics', 'FAQs'],
-          departmentId: 'general',
-          category: 'academics',
-          sectionTitle: 'Academics — Frequently Asked Questions & Answers',
-          content,
-          urls: extractUrls(content),
-          lineNumber: startLine,
-        });
-      }
+      flushSection8Chunk(curHeading, curLines, curStartLine);
       continue;
     }
 
@@ -939,7 +1069,9 @@ const STOP_WORDS = new Set([
   'which', 'who', 'whom', 'where', 'when', 'why', 'are', 'was', 'were', 'will', 'would',
   'with', 'from', 'this', 'that', 'last', 'year', 'years',
   'tamil', 'nadu', 'current', 'state', 'government',
-  'many', 'members', 'member', 'number', 'count', 'total'
+  'many', 'members', 'member', 'number', 'count', 'total',
+  'study', 'studies', 'studyin', 'studying',
+  'எந்த', 'எப்போது', 'எங்கே', 'யார்', 'என்ன', 'எவ்வளவு', 'எப்படி'
 ]);
 
 const SYNONYM_MAP: Record<string, string[]> = {
@@ -1001,6 +1133,50 @@ const SYNONYM_MAP: Record<string, string[]> = {
   concession: ['concession', 'scholarship', 'fee waiver', 'waiver', 'first graduate', 'concessions'],
   concessions: ['concession', 'scholarship', 'fee waiver', 'waiver', 'first graduate', 'concessions'],
   waiver: ['waiver', 'fee waiver', 'scholarship', '7.5%', 'concession'],
+  // Curricula, Courses, Subjects, Regulations, Semesters
+  curriculum: ['curriculum', 'syllabus', 'course', 'courses', 'subject', 'subjects', 'semester', 'sem', 'regulation', 'r2024'],
+  curriculums: ['curriculum', 'syllabus', 'course', 'courses', 'subject', 'subjects', 'semester', 'regulation'],
+  syllabus: ['syllabus', 'curriculum', 'course', 'courses', 'subject', 'subjects', 'semester'],
+  course: ['course', 'courses', 'subject', 'subjects', 'curriculum', 'syllabus'],
+  courses: ['course', 'courses', 'subject', 'subjects', 'curriculum', 'syllabus'],
+  subject: ['subject', 'subjects', 'course', 'courses', 'curriculum', 'syllabus'],
+  subjects: ['subject', 'subjects', 'course', 'courses', 'curriculum', 'syllabus'],
+  semester: ['semester', 'sem', 'curriculum', 'syllabus', 'course', 'subjects'],
+  semesters: ['semester', 'sem', 'curriculum', 'syllabus', 'course', 'subjects'],
+  sem: ['semester', 'sem', 'curriculum', 'syllabus', 'course'],
+  regulation: ['regulation', 'regulations', 'r2024', 'r2022', 'autonomous', 'curriculum'],
+  regulations: ['regulation', 'regulations', 'r2024', 'r2022', 'rules', 'curriculum'],
+  cloud: ['cloud', 'cloud computing', '24itc52', '24cs601'],
+  computing: ['computing', 'cloud computing', 'computer systems'],
+  ragging: ['ragging', 'anti-ragging', 'act no.7', 'penalty', 'discipline', 'suspension', 'prohibition', 'fine'],
+  dress: ['dress code', 'dress', 'uniform', 'shoes', 'churidar', 'trousers', 'dupatta'],
+  dresscode: ['dress code', 'dress', 'uniform', 'shoes', 'churidar', 'trousers', 'dupatta'],
+  uniform: ['dress code', 'uniform', 'dress', 'churidar', 'trousers'],
+  helmet: ['helmet', 'helmets', 'two-wheeler', 'pillion', 'rules'],
+  helmets: ['helmet', 'helmets', 'two-wheeler', 'pillion', 'rules'],
+  mobile: ['mobile', 'cell phone', 'phone', 'banned', 'rules'],
+  rule: ['rules', 'regulation', 'regulations', 'discipline', 'conduct', 'penalty'],
+  rules: ['rules', 'regulation', 'regulations', 'discipline', 'conduct', 'penalty'],
+  conduct: ['conduct', 'discipline', 'rules', 'regulations'],
+  discipline: ['discipline', 'conduct', 'rules', 'regulations', 'penalty'],
+  penalty: ['penalty', 'fine', 'ragging', 'imprisonment', 'expulsion', 'suspension'],
+  fine: ['fine', 'penalty', 'rules', 'bus fee fine', 'late fee'],
+  fines: ['fine', 'penalty', 'rules'],
+  attendance: ['attendance', 'leave', 'lecture hour', 'rules'],
+  identity: ['identity card', 'id card', 'rules'],
+  governing: ['governing council', 'governing', 'council', 'sathiyamurthi', 'devarajan'],
+  trust: ['trust', 'kvitt', 'trustee', 'trustees', 'office bearers', 'patron'],
+  trustee: ['trust', 'kvitt', 'trustee', 'trustees', 'office bearers'],
+  trustees: ['trust', 'kvitt', 'trustee', 'trustees', 'office bearers'],
+  council: ['governing council', 'academic council', 'council', 'members'],
+  patron: ['patron', 'patron members', 'kvitt', 'trust'],
+  principal: ['principal', 'dr. r. parameshwaran', 'head of institution', 'head of the institution'],
+  coe: ['controller of examinations', 'coe', 'thamilselvan', 'academic council'],
+  dean: ['dean', 'dean academic', 'murugesan'],
+  registrar: ['registrar', 'balasubramanie'],
+  radio: ['kongu fm', 'fm', '90.4mhz', 'radio', 'broadcast'],
+  fm: ['kongu fm', 'fm', '90.4mhz', 'radio', 'broadcast'],
+  broadcast: ['broadcast', 'kongu fm', '90.4mhz', 'timings'],
   // Tamil Script Mappings to English knowledge concepts
   'விடுதி': ['hostel', 'hostels', 'mess', 'accommodation'],
   'கட்டணம்': ['fee', 'fees', 'cost'],
@@ -1019,6 +1195,31 @@ const SYNONYM_MAP: Record<string, string[]> = {
   'தரவரிசை': ['rank', 'ranks', 'closing rank'],
   'நூலகம்': ['library', 'library hours'],
   'விளையாட்டு': ['sports', 'gym', 'ground', 'stadium'],
+  'கிளவுட்': ['cloud', 'cloud computing'],
+  'கம்ப்யூட்டிங்': ['computing', 'cloud computing'],
+  'செமஸ்டர்': ['semester', 'sem', 'curriculum', 'syllabus'],
+  'செமஸ்டரில்': ['semester', 'sem', 'curriculum', 'syllabus'],
+  'பாடம்': ['course', 'subject', 'curriculum', 'syllabus'],
+  'பாடங்கள்': ['course', 'courses', 'subject', 'subjects'],
+  'பாடத்திட்டம்': ['curriculum', 'syllabus', 'course'],
+  'படிப்பார்கள்': ['study', 'curriculum', 'course', 'semester'],
+  'படிப்பு': ['study', 'programme', 'degree'],
+  'ஆடை': ['dress code', 'dress', 'rules'],
+  'கட்டுப்பாடு': ['rules', 'discipline', 'regulations'],
+  'ராகிங்': ['ragging', 'anti-ragging', 'act no.7', 'penalty'],
+  'ஹெல்மெட்': ['helmet', 'rules'],
+  'முதல்வர்': ['principal', 'parameshwaran'],
+  'விதிமுறைகள்': ['rules', 'regulations', 'discipline'],
+  'விதிகள்': ['rules', 'regulations', 'discipline'],
+  'அபராதம்': ['fine', 'penalty'],
+  'தண்டனை': ['penalty', 'imprisonment', 'fine'],
+  'வருகை': ['attendance', 'rules'],
+  'அடையாள அட்டை': ['identity card', 'id card'],
+  'வானொலி': ['kongu fm', 'fm', '90.4mhz', 'radio'],
+  'அலைவரிசை': ['kongu fm', 'fm', '90.4mhz', 'radio'],
+  'அறக்கட்டளை': ['trust', 'kvitt'],
+  'ஆட்சி மன்றம்': ['governing council', 'council'],
+  'கல்வி மன்றம்': ['academic council', 'council'],
   // Tanglish Mappings (Tamil written in English letters)
   viduthi: ['hostel', 'hostels', 'mess', 'accommodation'],
   kattanam: ['fee', 'fees', 'cost'],
@@ -1038,6 +1239,18 @@ const SYNONYM_MAP: Record<string, string[]> = {
   mudhal: ['first graduate', 'first-generation'],
   thangum: ['hostel', 'accommodation'],
   saapadu: ['mess', 'food'],
+  padippanga: ['study', 'semester', 'curriculum', 'course'],
+  padippaanga: ['study', 'semester', 'curriculum', 'course'],
+  padipanga: ['study', 'semester', 'curriculum', 'course'],
+  padika: ['study', 'semester', 'curriculum', 'course'],
+  padikkanum: ['study', 'semester', 'curriculum', 'course'],
+  varum: ['offered', 'scheduled', 'semester', 'curriculum'],
+  varudhu: ['offered', 'scheduled', 'semester', 'curriculum'],
+  varumla: ['offered', 'scheduled', 'semester', 'curriculum'],
+  eppo: ['when', 'timing', 'semester'],
+  eppodhu: ['when', 'timing', 'semester'],
+  enga: ['where', 'location'],
+  engae: ['where', 'location'],
   // Common conversational spelling mistakes & typos
   hostal: ['hostel', 'hostels', 'mess'],
   hosetl: ['hostel', 'hostels', 'mess'],
@@ -1091,7 +1304,10 @@ export const KEY_CAMPUS_TERMS = [
   'placement', 'placements', 'hostel', 'hostels', 'warden',
   'library', 'timing', 'timings', 'transport', 'shuttle',
   'cutoff', 'cutoffs', 'salary', 'salaries', 'package',
-  'concession', 'autonomous', 'curriculum', 'syllabus'
+  'concession', 'autonomous', 'curriculum', 'syllabus',
+  'semester', 'semesters', 'course', 'courses', 'subject',
+  'ragging', 'dresscode', 'helmet', 'mobile', 'discipline',
+  'governance', 'trust', 'trustee', 'council', 'academic'
 ];
 
 export function levenshteinDistance(a: string, b: string): number {
@@ -1118,14 +1334,16 @@ export interface NormalizedQueryContext {
   department: DepartmentDef | null;
   category: string | null;
   expandedTerms: string[];
+  phrases: string[];
   intendedSummary: string;
 }
 
 /**
  * Understands the user's intended question before searching the knowledge base:
  * - Detects department even with severe typos or colloquial names.
- * - Detects category (transport, timings, scholarship, faculty, placement, etc.).
+ * - Detects category (transport, timings, scholarship, faculty, placement, curriculum, rules, governance, etc.).
  * - Maps Tamil, Tanglish, and misspelled tokens to core English search concepts.
+ * - Extracts exact multi-word key phrases and entity names.
  * - Applies Levenshtein fuzzy correction against key campus terms.
  */
 export function understandAndNormalizeQuery(query: string): NormalizedQueryContext {
@@ -1134,6 +1352,55 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
 
   let dept = resolveDepartmentFromQuery(query);
   let category = resolveCategoryFromQuery(query);
+
+  const detectedPhrases: string[] = [];
+  const COMMON_PHRASES = [
+    'cloud computing',
+    'deep learning',
+    'data structures',
+    'dress code',
+    'act no.7',
+    'act no 7',
+    'governing council',
+    'academic council',
+    'board of studies',
+    'office bearers',
+    'patron members',
+    'working hours',
+    'class hours',
+    'library hours',
+    'computer centre',
+    'kongu fm',
+    '90.4mhz',
+    'first graduate',
+    '7.5%',
+    'dr. r. parameshwaran',
+    'parameshwaran',
+    'dr. p. c. murugan',
+    'p. c. murugan',
+    'thiru. c. devarajan',
+    'devarajan',
+    'thiru. r. r. sathiyamurthi',
+    'sathiyamurthi',
+    'dr. m. a. bhagyaveni',
+    'bhagyaveni',
+    'k. k. tamilarasan',
+    'tamilarasan',
+    'dr. c. valliyammai',
+    'valliyammai',
+    'dr. r. thamilselvan',
+    'thamilselvan',
+    'dr. g. murugesan',
+    'murugesan',
+    'dr. s. varadhaganapathy',
+    'varadhaganapathy'
+  ];
+
+  for (const cp of COMMON_PHRASES) {
+    if (lower.includes(cp)) {
+      detectedPhrases.push(cp);
+    }
+  }
 
   const tokens = lower
     .replace(/[^\w\s\u0B80-\u0BFF-]/g, ' ')
@@ -1169,6 +1436,83 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     }
   }
 
+  // Cross-lingual concept bridge for Tamil script in query
+  if (lower.includes('கிளவுட்') || lower.includes('கம்ப்யூட்டிங்')) {
+    detectedPhrases.push('cloud computing');
+    expanded.add('cloud');
+    expanded.add('computing');
+    expanded.add('cloud computing');
+    if (!category) category = 'curriculum';
+  }
+  if (lower.includes('செமஸ்டர்') || lower.includes('செமஸ்டரில்')) {
+    expanded.add('semester');
+    expanded.add('curriculum');
+    if (!category) category = 'curriculum';
+  }
+  if (lower.includes('பாடம்') || lower.includes('பாடத்திட்டம்') || lower.includes('பாடங்கள்')) {
+    expanded.add('curriculum');
+    expanded.add('syllabus');
+    expanded.add('course');
+    if (!category) category = 'curriculum';
+  }
+  if (lower.includes('ஆடை') || lower.includes('டிரஸ்')) {
+    detectedPhrases.push('dress code');
+    expanded.add('dress');
+    expanded.add('dress code');
+    expanded.add('rules');
+    if (!category) category = 'rules';
+  }
+  if (lower.includes('ராகிங்')) {
+    expanded.add('ragging');
+    expanded.add('penalty');
+    expanded.add('rules');
+    if (!category) category = 'rules';
+  }
+  if (lower.includes('ஹெல்மெட்')) {
+    expanded.add('helmet');
+    expanded.add('rules');
+    if (!category) category = 'rules';
+  }
+  if (lower.includes('முதல்வர்')) {
+    expanded.add('principal');
+    expanded.add('parameshwaran');
+    if (!category) category = 'principal';
+  }
+  if (lower.includes('அறக்கட்டளை')) {
+    expanded.add('trust');
+    expanded.add('kvitt');
+    if (!category) category = 'governance';
+  }
+  if (lower.includes('ஆட்சி மன்றம்')) {
+    detectedPhrases.push('governing council');
+    expanded.add('governing');
+    expanded.add('council');
+    if (!category) category = 'governance';
+  }
+  if (lower.includes('கல்வி மன்றம்')) {
+    detectedPhrases.push('academic council');
+    expanded.add('academic');
+    expanded.add('council');
+    if (!category) category = 'governance';
+  }
+
+  // Conversational Tanglish bridge
+  if (lower.includes('padippanga') || lower.includes('padika') || lower.includes('padikkanum') || lower.includes('padippaanga')) {
+    expanded.add('curriculum');
+    expanded.add('syllabus');
+    expanded.add('semester');
+    if (!category) category = 'curriculum';
+  }
+  if (lower.includes('varum') || lower.includes('varudhu')) {
+    expanded.add('semester');
+    expanded.add('curriculum');
+  }
+  if (lower.includes('sem ') || lower.endsWith('sem') || lower.includes('semester')) {
+    expanded.add('semester');
+    expanded.add('curriculum');
+    if (!category) category = 'curriculum';
+  }
+
   // If department or category wasn't resolved directly, try from expanded terms
   if (!dept) {
     for (const exp of expanded) {
@@ -1191,7 +1535,23 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
 
   if (category) {
     expanded.add(category);
-    if (category === 'transport') {
+    if (category === 'curriculum') {
+      expanded.add('curriculum');
+      expanded.add('syllabus');
+      expanded.add('semester');
+      expanded.add('course');
+    } else if (category === 'rules') {
+      expanded.add('rules');
+      expanded.add('discipline');
+      expanded.add('regulations');
+    } else if (category === 'governance') {
+      expanded.add('trust');
+      expanded.add('governing');
+      expanded.add('council');
+    } else if (category === 'principal') {
+      expanded.add('principal');
+      expanded.add('parameshwaran');
+    } else if (category === 'transport') {
       expanded.add('bus');
       expanded.add('timing');
       expanded.add('timings');
@@ -1217,6 +1577,7 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
   const intendedSummary = [
     dept ? `Dept: ${dept.name}` : null,
     category ? `Category: ${category}` : null,
+    `Phrases: ${detectedPhrases.join(', ') || 'None'}`,
     `Terms: ${Array.from(expanded).slice(0, 8).join(', ')}`,
   ]
     .filter(Boolean)
@@ -1227,15 +1588,16 @@ export function understandAndNormalizeQuery(query: string): NormalizedQueryConte
     department: dept,
     category,
     expandedTerms: Array.from(expanded),
+    phrases: detectedPhrases,
     intendedSummary,
   };
 }
 
 /**
- * Strict Department-First Retrieval:
- * 1. For department queries (e.g. IT, EIE, Mech), strictly filters chunks to that department
- * 2. Never retrieves or mixes other departments' faculty or records
- * 3. Preserves table structure and heading hierarchy in returned evidence
+ * Global Intelligent Information Retrieval Engine:
+ * 1. Strict Department-First Retrieval when asking for department staff or placement figures.
+ * 2. Cross-domain semantic & hybrid retrieval across curriculum, rules, governance, principal, admissions, hostels, transport, scholarships.
+ * 3. Exact phrase & entity matching to retrieve precise facts irrespective of phrasing.
  */
 export function getCandidatePassages(
   query: string,
@@ -1250,7 +1612,7 @@ export function getCandidatePassages(
   const targetDept = norm.department;
   const targetCategory = norm.category;
 
-  // CASE 1: DEPARTMENT-SCOPED QUERY (e.g. IT faculty, EIE staff, Mechanical placement)
+  // CASE 1: DEPARTMENT-SCOPED QUERY FOR FACULTY / PLACEMENTS / INTAKE / HOD
   if (targetDept && (targetCategory === 'faculty' || targetCategory === 'placement' || targetCategory === 'intake' || targetCategory === 'hod')) {
     // Collect all chunks matching this department
     const deptChunks = knowledge.chunks.filter((c) => c.departmentId === targetDept.id);
@@ -1274,10 +1636,11 @@ export function getCandidatePassages(
     }
   }
 
-  // CASE 2: GENERAL OR OPEN-ENDED QUERY
+  // CASE 2: GENERAL OR OPEN-ENDED QUERY (HYBRID & PHRASE RETRIEVAL)
   const searchTerms = new Set<string>(norm.expandedTerms);
 
-  // Score candidate pool
+  // Candidate pool: if targetDept is set, prioritize department chunks + general chunks
+  // If no targetDept is set, search all chunks across college
   const candidatePool = targetDept
     ? knowledge.chunks.filter((c) => c.departmentId === targetDept.id || c.departmentId === 'general')
     : knowledge.chunks;
@@ -1289,6 +1652,18 @@ export function getCandidatePassages(
     const lowerHeadPath = chunk.headingPath.join(' ').toLowerCase();
     const matchedConcepts = new Set<string>();
 
+    // 1. Exact multi-word phrase matching (highest precision for topics like "cloud computing", "dress code", "act no.7", etc.)
+    for (const phrase of norm.phrases) {
+      if (lowerSection.includes(phrase) || lowerHeadPath.includes(phrase)) {
+        score += 200;
+        matchedConcepts.add(phrase);
+      } else if (lowerContent.includes(phrase)) {
+        score += 150;
+        matchedConcepts.add(phrase);
+      }
+    }
+
+    // 2. Individual search terms
     for (const term of searchTerms) {
       let termMatched = false;
       if (lowerHeadPath.includes(term) || lowerSection.includes(term)) {
@@ -1304,15 +1679,23 @@ export function getCandidatePassages(
       }
     }
 
+    // 3. Multi-concept synergy
     if (matchedConcepts.size > 1) {
       score *= 1 + matchedConcepts.size * 1.5;
     }
 
-    if (targetDept && chunk.departmentId === targetDept.id) {
-      score += 200; // Strong boost for target department
-    }
+    // 4. Category alignment
     if (targetCategory && chunk.category === targetCategory) {
-      score += 150; // Strong boost for target category
+      score += 160;
+    }
+
+    // 5. Department alignment
+    if (targetDept && chunk.departmentId === targetDept.id) {
+      if (targetCategory && chunk.category === targetCategory) {
+        score += 250;
+      } else if (!targetCategory) {
+        score += 60;
+      }
     }
 
     return { chunk, score, matchedCount: matchedConcepts.size };
@@ -1340,13 +1723,34 @@ const SPECIFIC_DOMAIN_KEYWORDS = new Set([
   'faculty', 'staff', 'professor', 'hod',
   'mechanical', 'mechatronics', 'automobile', 'civil', 'chemical', 'cse', 'it', 'eee', 'ece', 'eie', 'mba', 'mca', 'food', 'aiml', 'aids', 'csd',
   'bus', 'buses', 'transport', 'route', 'routes', 'shuttle', 'sakthivel',
-  'timing', 'timings', 'hours', 'working', 'office', 'library', 'tnea', 'tancet'
+  'timing', 'timings', 'hours', 'working', 'office', 'library', 'tnea', 'tancet',
+  'curriculum', 'syllabus', 'course', 'courses', 'subject', 'subjects', 'semester', 'sem', 'regulation', 'r2024',
+  'cloud', 'computing', 'deep', 'learning', 'programming', 'devops', 'cryptography',
+  'ragging', 'dress', 'dresscode', 'helmet', 'mobile', 'attendance', 'discipline', 'penalty', 'fine',
+  'governing', 'council', 'academic', 'trust', 'patron', 'devarajan', 'sathiyamurthi', 'parameshwaran'
 ]);
 
 export function hasStrongKnowledgeCoverage(query: string, candidates: KnowledgeChunk[]): boolean {
   if (!candidates || candidates.length === 0) return false;
 
   const clean = query.toLowerCase();
+
+  // 1. Direct multi-word phrase match against top candidate chunks
+  for (const phrase of [
+    'cloud computing', 'deep learning', 'data structures', 'dress code', 'act no.7', 'act no 7',
+    'governing council', 'academic council', 'working hours', 'library hours', 'computer centre',
+    'kongu fm', 'first graduate', '7.5%', 'parameshwaran', 'devarajan', 'sathiyamurthi', 'murugan'
+  ]) {
+    if (clean.includes(phrase)) {
+      for (const chunk of candidates.slice(0, 8)) {
+        if (chunk.content.toLowerCase().includes(phrase) || chunk.sectionTitle.toLowerCase().includes(phrase)) {
+          return true;
+        }
+      }
+    }
+  }
+
+  // 2. Token overlap and domain keyword matching
   const tokens = clean
     .replace(/[^\w\s\u0B80-\u0BFF-]/g, ' ')
     .split(/\s+/)
